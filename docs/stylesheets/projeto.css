@@ -1,0 +1,110 @@
+/* Adaptações do Grupo 09 sobre o sistema visual compartilhado com o Grupo 04. */
+.fcte-note { color: var(--rm-texto-suave); font-size: .7rem; }
+.fcte-sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }
+.rm-hero__painel { pointer-events: none; }
+.fcte-window-dots { display: flex; gap: .35rem; flex: none; }
+.fcte-chat-demo { min-width: 0; }
+.fcte-chat-demo .rm-demo__corpo { min-height: 18rem; }
+.fcte-chat-demo .rm-chat__pergunta { min-height: 3.8rem; }
+.fcte-chat-demo .rm-chat__resposta { min-height: 6.5rem; }
+.fcte-chat-demo .rm-chat__resposta small { font-size: .48rem; font-weight: 500; letter-spacing: .02em; opacity: .75; }
+.fcte-chat-demo .rm-chat__q, .fcte-chat-demo .rm-chat__r { line-height: 1.65; }
+.fcte-chat-demo .rm-demo__rodape { flex-direction: column; gap: .25rem; min-height: 2.2rem; }
+.fcte-chat-demo .rm-chat__fontes a { color: var(--unb-azul); text-decoration: underline; text-underline-offset: 2px; }
+.fcte-chat-demo figcaption { line-height: 1.5; }
+.fcte-demo-pause { flex: none; border: 1px solid #b8c5d3; border-radius: .3rem; padding: .25rem .4rem; background: transparent; color: #31465c; font: 600 .48rem var(--rm-fonte); cursor: pointer; }
+.fcte-demo-pause:hover { background: #d1dce8; }
+.fcte-demo-pause:disabled { cursor: default; }
+.fcte-demo-static .rm-demo__abas button::after { animation: none; }
+.fcte-motion-paused *, .fcte-motion-paused *::after { animation-play-state: paused !important; }
+.md-typeset .fcte-etapas { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+.fcte-etapas .rm-etapa:nth-child(-n+4)::before { background: var(--unb-verde); border-color: var(--unb-verde); color: white; }
+.fcte-pendente { opacity: .75; }
+.fcte-vector { display: flex; gap: 4px; align-items: center; height: 5rem; padding: .6rem; background: #e7eef8; border-radius: .4rem; }
+.fcte-vector i { display: block; flex: 1; min-height: 2px; background: var(--unb-verde); height: var(--h); border-radius: 2px; }
+.fcte-vector i[data-negative] { background: var(--unb-azul); }
+.fcte-pipeline { border: 1px solid var(--rm-borda); border-radius: var(--rm-raio); overflow: hidden; background: var(--rm-superficie); }
+.fcte-pipeline__tabs { display: flex; flex-wrap: wrap; gap: .4rem; padding: .8rem; background: rgba(0,63,122,.045); border-bottom: 1px solid var(--rm-borda); }
+.fcte-pipeline__tabs button, .fcte-filter, .fcte-select { font: 600 .7rem var(--rm-fonte); border: 1px solid var(--rm-borda); border-radius: .4rem; padding: .5rem .65rem; background: var(--rm-superficie); color: var(--md-default-fg-color); }
+.fcte-pipeline__tabs button { cursor: pointer; }
+.fcte-pipeline__tabs button[aria-selected="true"] { color: white; background: var(--unb-azul); border-color: var(--unb-azul); }
+.fcte-pipeline__tabs button[data-pending] { border-style: dashed; }
+.fcte-pipeline__panel { padding: 1rem 1.2rem; min-height: 10rem; }
+.fcte-pipeline__panel h3 { margin-top: .5rem; }
+.fcte-pipeline__panel dl { display: grid; grid-template-columns: 5rem minmax(0,1fr); gap: .4rem .8rem; font-size: .73rem; }
+.fcte-pipeline__panel dt { font-weight: 700; }
+.fcte-pipeline__panel dd { margin: 0; overflow-wrap: anywhere; }
+.fcte-explorer { margin: 1rem 0; padding: 1rem; border: 1px solid var(--rm-borda); border-radius: var(--rm-raio); background: var(--rm-superficie); }
+.fcte-explorer label { display: block; font-size: .7rem; font-weight: 700; margin-bottom: .4rem; }
+.fcte-select { width: 100%; margin-bottom: .8rem; }
+.fcte-explorer pre { white-space: pre-wrap; overflow-wrap: anywhere; }
+.fcte-explorer__meta { display: flex; flex-wrap: wrap; gap: .4rem; }
+.fcte-explorer__id { overflow-wrap: anywhere; font: .65rem var(--rm-mono); }
+.fcte-catalog-controls { display: flex; flex-wrap: wrap; gap: .6rem; align-items: center; margin: 1rem 0; }
+.fcte-filter { min-width: 12rem; flex: 1; }
+.fcte-catalog-list { max-height: 29rem; overflow: auto; border: 1px solid var(--rm-borda); border-radius: .5rem; }
+.fcte-catalog-list article { padding: .65rem .8rem; border-bottom: 1px solid var(--rm-borda); font-size: .72rem; }
+.fcte-catalog-list article:last-child { border-bottom: 0; }
+.fcte-catalog-list article p { margin: .25rem 0 0; }
+.fcte-map-layout { display: grid; grid-template-columns: minmax(0,1.65fr) minmax(13rem,1fr); gap: 1rem; align-items: start; }
+.fcte-map-canvas { width: 100%; height: clamp(20rem, 55vh, 28rem); border: 1px solid var(--rm-borda); border-radius: .5rem; isolation: isolate; z-index: 0; background: #e5e9e4; }
+.fcte-map-canvas.leaflet-container { font-family: var(--rm-fonte); }
+.fcte-map-canvas .fcte-map-pin { display: grid; place-items: center; color: white; background: var(--unb-verde); border: 2px solid white; border-radius: 50%; box-shadow: 0 1px 5px #0006; font: 800 12px var(--rm-fonte); }
+.fcte-map-canvas .fcte-map-pin.is-excluded { background: #687785; }
+.fcte-map-canvas .fcte-map-pin.is-selected { border: 3px solid var(--fcte-amarelo); box-shadow: 0 0 0 3px #003f7a88; }
+.fcte-map-canvas .fcte-map-pin:focus-visible { outline: 3px solid var(--fcte-amarelo); outline-offset: 3px; }
+.fcte-map-canvas .leaflet-control-attribution { color: #344454; background: #fffffff0; }
+.fcte-map-canvas .leaflet-control-attribution a { color: #003f7a; }
+.fcte-map-canvas .leaflet-tooltip { color: #263746; background: white; font-family: var(--rm-fonte); }
+.fcte-map-toolbar { display: flex; gap: .65rem; align-items: center; flex-wrap: wrap; margin-top: .65rem; font-size: .65rem; }
+.fcte-map-toolbar button { padding: .45rem .65rem; border: 1px solid var(--rm-borda); border-radius: .4rem; background: var(--rm-superficie); color: var(--md-default-fg-color); cursor: pointer; font: 600 .65rem var(--rm-fonte); }
+.fcte-map-status { padding: .65rem; border-left: 3px solid var(--fcte-laranja); font-size: .7rem; }
+.fcte-map-detail { padding: .9rem; border-radius: .5rem; border: 1px solid var(--rm-borda); background: var(--rm-superficie); font-size: .72rem; }
+.fcte-map-detail h3 { margin-top: .3rem; }
+.fcte-map-detail code { overflow-wrap: anywhere; }
+.fcte-map-legend { display: flex; flex-wrap: wrap; gap: .5rem 1rem; font-size: .65rem; margin-top: .5rem; }
+.fcte-map-legend span::before { content: ""; display: inline-block; width: .5rem; height: .5rem; border-radius: 50%; background: var(--unb-verde); margin-right: .25rem; }
+.fcte-map-legend span:last-child::before { background: #83909d; }
+.fcte-map-empty { margin: .3rem 0; font-size: .65rem; color: var(--rm-texto-suave); }
+.fcte-copy-note { font-size: .68rem; color: var(--rm-texto-suave); }
+.fcte-status-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: .8rem; margin: 1rem 0; }
+.fcte-status { padding: .9rem; border: 1px solid var(--rm-borda); border-top: 3px solid var(--unb-verde); border-radius: .4rem; background: var(--rm-superficie); }
+.fcte-status strong { display: block; font-size: 1rem; margin-bottom: .25rem; }
+.fcte-status span { font-size: .7rem; color: var(--rm-texto-suave); }
+.fcte-status--pending { border-top-color: var(--fcte-laranja); }
+button:focus-visible, [role="button"]:focus-visible, select:focus-visible, input:focus-visible { outline: 3px solid var(--fcte-laranja); outline-offset: 3px; }
+[data-md-color-scheme="slate"] .fcte-pipeline__tabs button[aria-selected="true"] { background: #0a4f93; }
+@media (max-width: 760px) {
+  .fcte-map-layout { grid-template-columns: 1fr; }
+  .fcte-status-grid { grid-template-columns: 1fr; }
+  .fcte-chat-demo .rm-chat__pergunta { margin-left: 1rem; }
+  .fcte-pipeline__panel { padding: .8rem; }
+}
+@media screen and (max-width: 60em) {
+  .md-typeset .fcte-etapas { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media screen and (max-width: 420px) {
+  .md-typeset .fcte-etapas { grid-template-columns: 1fr; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .fcte-vector *, .fcte-pipeline *, .fcte-map * { animation: none !important; transition: none !important; }
+}
+
+/* Fluxo SVG e esteira reutilizam os componentes do Grupo 04 em extra.css.
+   Sem largura mínima forçada: as estações cabem na área de apresentação. */
+.rm-est, .rm-fluxo { width: 100%; min-width: 0; }
+.rm-est [hidden], .rm-fluxo [hidden] { display: none !important; }
+.rm-est__visual, .rm-est__info { min-width: 0; }
+.rm-est__mono, .rm-est__nums, .rm-est__cab, .rm-est__tam { overflow-wrap: anywhere; }
+.rm-est__painel pre { white-space: pre-wrap; }
+.rm-fluxo__svg .rm-no.rm-g09.rm-ativo rect { stroke: var(--fcte-laranja); fill: rgba(243,147,37,.14); }
+.rm-fluxo__svg .rm-no.rm-comum.rm-ativo rect { stroke: var(--md-typeset-a-color); fill: rgba(0,63,122,.14); }
+.rm-fluxo__btn:disabled { opacity: .4; cursor: default; }
+.rm-est:focus-visible, .rm-fluxo:focus-visible { outline: 3px solid var(--fcte-laranja); outline-offset: 4px; }
+.rm-est:fullscreen, .rm-fluxo:fullscreen { width: 100%; height: 100%; max-width: none; margin: 0; border-radius: 0; }
+.rm-fluxo:fullscreen .rm-fluxo__svg { max-height: 68vh; }
+@media (max-width: 44em) {
+  .rm-fluxo__controles { margin-left: 0; flex-wrap: wrap; }
+  .rm-est__ctr { flex-wrap: wrap; }
+  .rm-est__docs .rm-est__doc { font-size: .45rem; }
+}

@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block extrahead %}
+  {{ super() }}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;0,700;0,800;1,400&family=Source+Code+Pro:wght@400;500&display=swap" rel="stylesheet">
+{% endblock %}
+{% block announce %}
+  Grupo 09 · 79 chunks e embeddings preparados ·
+  <a href="{{ 'entrega-2/evidencias/' | url }}">ver evidências</a> ·
+  busca vetorial e respostas RAG ainda pendentes
+{% endblock %}

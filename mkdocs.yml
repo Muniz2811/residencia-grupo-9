@@ -1,0 +1,149 @@
+site_name: Coleta FCTE · Grupo 09
+site_description: Mapeamento do campus Gama, coleta revisada e preparação de uma base RAG rastreável · Residência em IA · UnB/FCTE
+site_author: Grupo 09 · Residência em IA · UnB/FCTE
+site_url: !ENV [SITE_URL, "http://127.0.0.1:8001/"]
+repo_url: !ENV [REPO_URL, ""]
+repo_name: !ENV [REPO_NAME, "Grupo 09"]
+edit_uri: ""
+dev_addr: 127.0.0.1:8001
+copyright: "Residência em IA · UnB/FCTE · Grupo 09 | Piloto documentado em 09/11/2026 | Coleta, mapa, chunks e embeddings"
+
+theme:
+  name: material
+  custom_dir: overrides
+  language: pt-BR
+  font: false
+  icon:
+    logo: material/map-marker-radius
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-night
+        name: Ativar tema escuro
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-sunny
+        name: Ativar tema claro
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.tracking
+    - navigation.sections
+    - navigation.indexes
+    - navigation.path
+    - navigation.top
+    - navigation.footer
+    - toc.follow
+    - search.highlight
+    - search.suggest
+    - search.share
+    - content.tabs.link
+    - content.tooltips
+    - content.code.copy
+    - announce.dismiss
+
+extra:
+  generator: false
+
+extra_css:
+  - stylesheets/extra.css
+  - stylesheets/projeto.css
+extra_javascript:
+  - javascripts/evidencias.js
+  - javascripts/projeto.js
+  - javascripts/visao.js
+  - javascripts/esteira.js
+
+watch:
+  - overrides
+  - includes
+
+plugins:
+  - search:
+      lang: pt
+  - termynal:
+      title: terminal
+      buttons: macos
+      prompt_literal_start: ["$"]
+
+markdown_extensions:
+  - abbr
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.snippets:
+      check_paths: true
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - footnotes
+  - def_list
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
+nav:
+  - Início: index.md
+  - Visão do projeto:
+      - visao/index.md
+      - Como funciona · animado: visao/como-funciona.md
+      - Esteira do RAG · animada: visao/esteira-rag.md
+      - Escopo e integração: visao/escopo.md
+      - Etapas e decisões: visao/roadmap.md
+  - Entrega 1:
+      - entrega-1/index.md
+      - Cenário escolhido: entrega-1/cenario.md
+      - Problema: entrega-1/problema.md
+      - Mapa de stakeholders: entrega-1/stakeholders.md
+      - Personas: entrega-1/personas.md
+      - Requisitos funcionais e não funcionais: entrega-1/requisitos.md
+      - Riscos: entrega-1/riscos.md
+      - Premissas: entrega-1/premissas.md
+      - Métricas de sucesso: entrega-1/metricas.md
+      - Guiding questions: entrega-1/guiding-questions.md
+      - Essential Question da equipe: entrega-1/essential-question.md
+  - Coleta e mapeamento:
+      - coleta/index.md
+      - Fluxo de coleta: coleta/fluxo.md
+      - Mapeamento do campus: coleta/mapeamento.md
+      - Dados e privacidade: coleta/dados.md
+  - Entrega 2:
+      - entrega-2/index.md
+      - Base de conhecimento: entrega-2/base-de-conhecimento.md
+      - Estratégia de chunking: entrega-2/chunking.md
+      - Estratégia de embeddings: entrega-2/embeddings.md
+      - Banco vetorial · planejado: entrega-2/banco-vetorial.md
+      - Arquitetura: entrega-2/arquitetura.md
+      - Pipeline de ingestão: entrega-2/pipeline-ingestao.md
+      - Evidências atuais: entrega-2/evidencias.md
+      - Avaliação e métricas: entrega-2/avaliacao.md
+      - Reproduzir o piloto: entrega-2/como-executar.md
+  - Sobre e publicação:
+      - sobre/index.md
+      - Referências: sobre/referencias.md
+      - Publicar o MkDocs: sobre/publicacao.md
+
+validation:
+  links:
+    anchors: warn

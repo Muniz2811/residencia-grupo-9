@@ -1,0 +1,71 @@
+{% extends "main.html" %}
+{% block tabs %}
+{{ super() }}
+<section class="rm-hero" aria-labelledby="rm-hero-titulo">
+  <canvas class="rm-hero__painel" aria-hidden="true"></canvas>
+  <div class="rm-hero__inner md-grid">
+    <div class="rm-hero__texto">
+      <p class="rm-sobretitulo">Residência em IA · UnB/FCTE · Challenge 2 · Grupo 09</p>
+      <h1 id="rm-hero-titulo" class="rm-hero__titulo"><span class="rm-marca">Coleta <span>FCTE</span></span>: conhecer o campus começa com <span class="rm-destaque">lugares e fontes verificáveis</span></h1>
+      <p class="rm-hero__chamada">Fotos revisadas, documentos institucionais e mapeamento da equipe para organizar informações sobre <span class="rm-digitando" data-palavras="salas e laboratórios|linhas e horários de ônibus|limites do assistente" aria-hidden="true">salas e laboratórios</span><span class="rm-cursor" aria-hidden="true"></span><span class="fcte-sr-only">salas, transporte e limites do assistente</span>. Uma base rastreável para o assistente do campus Gama.</p>
+      <div class="rm-hero__acoes">
+        <a class="md-button md-button--primary" href="{{ 'entrega-1/' | url }}">Entrega 1 · definição do projeto</a>
+        <a class="md-button rm-botao-claro" href="{{ 'visao/como-funciona/' | url }}">Como funciona</a>
+        <a class="md-button rm-botao-claro" href="{{ 'entrega-2/' | url }}">Entrega 2 · estado atual</a>
+      </div>
+    </div>
+    <figure class="rm-demo fcte-chat-demo" data-hero-demo aria-label="Exemplos ilustrativos de perguntas ao assistente do campus">
+      <div class="rm-demo__barra"><span class="fcte-window-dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="rm-demo__url">Coleta FCTE · assistente do campus</span><button type="button" class="fcte-demo-pause" data-demo-pause aria-pressed="false" aria-controls="hero-query-panel">Pausar animações</button></div>
+      <div class="rm-demo__abas" role="tablist" aria-label="Exemplos de perguntas">
+        <button type="button" role="tab" id="hero-tab-0" aria-controls="hero-query-panel" aria-selected="true" data-query-tab="0">Sala</button>
+        <button type="button" role="tab" id="hero-tab-1" aria-controls="hero-query-panel" aria-selected="false" tabindex="-1" data-query-tab="1">Ônibus</button>
+        <button type="button" role="tab" id="hero-tab-2" aria-controls="hero-query-panel" aria-selected="false" tabindex="-1" data-query-tab="2">Fora do escopo</button>
+      </div>
+      <div id="hero-query-panel" class="rm-demo__corpo" role="tabpanel" aria-labelledby="hero-tab-0" tabindex="0">
+        <div class="rm-chat__pergunta"><b>Estudante</b><span class="rm-chat__q" aria-hidden="true"></span><span class="fcte-sr-only" data-question-readable></span></div>
+        <ul class="rm-chat__trechos" aria-label="Contexto do exemplo"></ul>
+        <div class="rm-chat__resposta"><b>Assistente FCTE <small>exemplo</small></b><span class="rm-chat__r" aria-hidden="true"></span><span class="fcte-sr-only" data-answer-readable></span></div>
+        <div class="rm-demo__rodape"><span class="rm-chat__info">Prévia ilustrativa</span><span class="rm-chat__fontes"></span></div>
+      </div>
+      <figcaption>Exemplos ilustrativos do comportamento previsto. Consulta RAG e transporte ainda não implementados.</figcaption>
+    </figure>
+  </div>
+</section>
+{% endblock %}
+
+{% block content %}
+<section class="rm-numeros rm-revelar" aria-label="Números observados do projeto">
+  <div class="rm-numero"><b data-contar="27">27</b><span>HTMLs preservados com hash</span></div>
+  <div class="rm-numero"><b data-contar="5">5</b><span>páginas no piloto + um KML</span></div>
+  <div class="rm-numero"><b data-contar="79">79</b><span>chunks e vetores preparados</span></div>
+  <div class="rm-numero"><b data-contar="384">384</b><span>dimensões por embedding</span></div>
+</section>
+
+<section class="rm-secao rm-revelar" aria-labelledby="estado-projeto">
+  <h2 id="estado-projeto">O que já temos, o que vem depois</h2>
+  <p>Avançamos por etapas. Cada número abaixo corresponde a um artefato; pendências continuam identificadas como pendências.</p>
+  <div class="rm-linha-tempo fcte-etapas" role="list">
+    <div class="rm-etapa" role="listitem"><a href="{{ 'coleta/' | url }}"><small>Disponível</small><strong>Coleta mobile</strong><span>Foto, localização obrigatória, sugestão da IA e revisão humana.</span></a></div>
+    <div class="rm-etapa" role="listitem"><a href="{{ 'entrega-2/base-de-conhecimento/' | url }}"><small>Adquirido</small><strong>Fontes preservadas</strong><span>27 HTMLs com origem e hash; curadoria completa ainda pendente.</span></a></div>
+    <div class="rm-etapa" role="listitem"><a href="{{ 'entrega-2/chunking/' | url }}"><small>Executado no piloto</small><strong>Preparação e chunks</strong><span>Cinco páginas e um KML em 79 unidades rastreáveis.</span></a></div>
+    <div class="rm-etapa" role="listitem"><a href="{{ 'entrega-2/embeddings/' | url }}"><small>Executado no piloto</small><strong>Embeddings locais</strong><span>E5-small, 384 dimensões, normalização L2 e verificação técnica.</span></a></div>
+    <div class="rm-etapa fcte-pendente" role="listitem"><a href="{{ 'entrega-2/banco-vetorial/' | url }}"><small>Próxima etapa</small><strong>Busca e resposta</strong><span>Chroma, recuperação, geração fundamentada e avaliação.</span></a></div>
+  </div>
+</section>
+
+<section class="rm-secao rm-revelar" aria-labelledby="frentes-projeto">
+  <h2 id="frentes-projeto">Três frentes, uma base com procedência</h2>
+  <div class="rm-cartoes">
+    <a class="rm-cartao" href="{{ 'coleta/fluxo/' | url }}"><small>Observação de campo</small><strong>Coletar e revisar</strong><span>Registrar ambientes e separar sugestões automáticas de descrições confirmadas.</span><em>FastAPI · Gemini opcional · Supabase</em></a>
+    <a class="rm-cartao" href="{{ 'coleta/mapeamento/' | url }}"><small>Inventário geográfico</small><strong>Identificar os lugares</strong><span>14 pontos do KML preservados, 11 usados no piloto, com limites e ambiguidades registrados.</span><em>KML · GeoJSON · IDs de locais</em></a>
+    <a class="rm-cartao" href="{{ 'entrega-2/arquitetura/' | url }}"><small>Preparação do conhecimento</small><strong>Recuperar com fontes</strong><span>Organizar evidências textuais para a futura consulta, com citações até o documento original.</span><em>Chunks · multilingual-e5-small · Chroma planejado</em></a>
+  </div>
+</section>
+
+<section class="rm-secao rm-revelar" aria-labelledby="pipeline-home">
+  <h2 id="pipeline-home">Acompanhe a preparação</h2>
+  <p>Selecione uma etapa para ver suas entradas, saídas e situação real. Para apresentar o processo completo, abra a <a href="{{ 'visao/esteira-rag/' | url }}">esteira RAG animada</a>.</p>
+  <div data-pipeline></div>
+</section>
+<div class="rm-conteudo">{{ page.content }}</div>
+{% endblock %}

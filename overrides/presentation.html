@@ -1,0 +1,10 @@
+{% extends "main.html" %}
+{% block extrahead %}
+  {{ super() }}
+  <style>
+    /* Mesma grade centralizada de 61rem do Material usada pelo Grupo 04.
+       As barras laterais são ocultadas no front matter das duas páginas. */
+    .md-main__inner .md-content { min-width: 0; }
+    @media print { .rm-fluxo__topo, .rm-est__topo { display: none; } }
+  </style>
+{% endblock %}
