@@ -5,12 +5,15 @@
 - [Grupo 04 · RUmo](https://github.com/maykonjuso/residencia-grupo-4) — estrutura visual de referência e proposta de colaboração.
 - [Fontes do nosso catálogo](../entrega-2/base-de-conhecimento.md) — URLs e recorte dos documentos adquiridos.
 
+A identidade visual, o diagrama SVG e a esteira animada foram adaptados do repositório do Grupo 04, na revisão `877a08667cd9c6debfce266568e705c7f2d2caa9`. Os cenários, artefatos e resultados apresentados são do Grupo 09; resultados de recuperação do outro grupo não foram incorporados como nossos. Este site não é um serviço oficial da UnB.
+
 ## Extração, estrutura e geografia
 
 - [Beautiful Soup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/) — extração da estrutura HTML.
 - [KML Reference](https://developers.google.com/kml/documentation/kmlreference) — elementos, marcadores e coordenadas.
 - [Coordenadas no Google Maps](https://support.google.com/maps/answer/18539?hl=pt-BR) e [exportação do My Maps](https://support.google.com/mymaps/answer/3109452?hl=pt-BR).
 - [Termos do Google Maps](https://www.google.com/help/terms_maps/) e [licença do OpenStreetMap](https://www.openstreetmap.org/copyright) — considerar procedência antes de distribuir dados cartográficos.
+- [Leaflet 1.9.4](https://leafletjs.com/reference-1.9.4.html) e [política de tiles do OpenStreetMap](https://operations.osmfoundation.org/policies/tiles/) — mapa-base e marcadores do campus.
 
 ## Chunking e embeddings
 

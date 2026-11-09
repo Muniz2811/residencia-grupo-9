@@ -2,6 +2,8 @@
 
 O aplicativo de coleta registra evidências sobre o campus. O mapeamento organiza a identidade e a posição dos lugares. Esses dados podem alimentar o conhecimento textual depois de revisão.
 
+As fontes, referências técnicas e créditos da identidade visual estão reunidos em [Referências](referencias.md).
+
 <div class="rm-cartoes">
   <a class="rm-cartao" href="fluxo/"><small>Aplicativo implementado</small><strong>Foto → local → análise → revisão</strong><span>Quatro telas para registrar ambientes pelo celular, com coordenadas obrigatórias.</span></a>
   <a class="rm-cartao" href="mapeamento/"><small>Inventário inicial</small><strong>14 marcadores do KML</strong><span>Veja nomes, coordenadas e o recorte dos 11 pontos usados na preparação textual.</span></a>

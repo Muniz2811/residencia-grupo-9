@@ -111,6 +111,12 @@ nav:
       - Esteira do RAG · animada: visao/esteira-rag.md
       - Escopo e integração: visao/escopo.md
       - Etapas e decisões: visao/roadmap.md
+  - Coleta e mapeamento:
+      - coleta/index.md
+      - Fluxo de coleta: coleta/fluxo.md
+      - Mapeamento do campus: coleta/mapeamento.md
+      - Dados e privacidade: coleta/dados.md
+      - Referências: coleta/referencias.md
   - Entrega 1:
       - entrega-1/index.md
       - Cenário escolhido: entrega-1/cenario.md
@@ -123,11 +129,6 @@ nav:
       - Métricas de sucesso: entrega-1/metricas.md
       - Guiding questions: entrega-1/guiding-questions.md
       - Essential Question da equipe: entrega-1/essential-question.md
-  - Coleta e mapeamento:
-      - coleta/index.md
-      - Fluxo de coleta: coleta/fluxo.md
-      - Mapeamento do campus: coleta/mapeamento.md
-      - Dados e privacidade: coleta/dados.md
   - Entrega 2:
       - entrega-2/index.md
       - Base de conhecimento: entrega-2/base-de-conhecimento.md
@@ -139,11 +140,6 @@ nav:
       - Evidências atuais: entrega-2/evidencias.md
       - Avaliação e métricas: entrega-2/avaliacao.md
       - Reproduzir o piloto: entrega-2/como-executar.md
-  - Sobre e publicação:
-      - sobre/index.md
-      - Referências: sobre/referencias.md
-      - Publicar o MkDocs: sobre/publicacao.md
-
 validation:
   links:
     anchors: warn

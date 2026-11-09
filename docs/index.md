@@ -16,4 +16,4 @@ hide:
 !!! info "Documentação de um trabalho em etapas"
     O mapa e os exploradores deste site leem arquivos exportados do piloto. Não enviam perguntas a modelos, não consultam o banco de coleta e não executam um RAG no navegador.
 
-Comece pela [Entrega 1 · definição do projeto](entrega-1/index.md). Explore [Como funciona](visao/como-funciona.md) e a [esteira RAG animada](visao/esteira-rag.md). Acompanhe também o [checklist da Entrega 2](entrega-2/index.md), o [escopo da colaboração](visao/escopo.md) e o [tutorial de publicação](sobre/publicacao.md).
+Comece pela [Entrega 1 · definição do projeto](entrega-1/index.md). Explore [Como funciona](visao/como-funciona.md) e a [esteira RAG animada](visao/esteira-rag.md). Acompanhe também o [checklist da Entrega 2](entrega-2/index.md), o [escopo da colaboração](visao/escopo.md) e as [referências](coleta/referencias.md).

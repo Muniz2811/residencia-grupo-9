@@ -1,6 +1,6 @@
 # Coleta FCTE · Grupo 09
 
-Documentação MkDocs do mapeamento da FCTE e da preparação do RAG. Identidade visual adaptada do [Grupo 04](https://github.com/maykonjuso/residencia-grupo-4), com seus créditos em [Sobre](docs/sobre/index.md).
+Documentação MkDocs do mapeamento da FCTE e da preparação do RAG. Identidade visual adaptada do [Grupo 04](https://github.com/maykonjuso/residencia-grupo-4), com seus créditos em [Referências](docs/coleta/referencias.md).
 
 ## Executar
 
@@ -48,6 +48,19 @@ python scripts/sync_evidence.py --rag-root ../unb-gama-rag
 
 ## Publicar
 
-Siga o [tutorial completo](docs/sobre/publicacao.md): criar um repositório GitHub vazio, enviar `main`, selecionar **Settings → Pages → Source: GitHub Actions** e acompanhar o workflow. A URL é configurada automaticamente durante o build no GitHub.
+No repositório [Muniz2811/residencia-grupo-9](https://github.com/Muniz2811/residencia-grupo-9), selecione **Settings → Pages → Source: GitHub Actions**. Depois, envie as alterações a partir desta pasta:
+
+```powershell
+.\.venv\Scripts\python.exe -m mkdocs build --strict
+git add .
+git commit -m "docs: atualizar documentação"
+git push
+```
+
+Acompanhe **Actions → Publicar documentação**. Cada push em `main` dispara o workflow; também é possível usar **Run workflow**. Caso a execução inicial tenha falhado antes de habilitar Pages, execute-a novamente. A URL é configurada automaticamente durante o build:
+
+**https://muniz2811.github.io/residencia-grupo-9/**
+
+O diretório `site/` é gerado pelo MkDocs e não precisa ser commitado. O workflow usa somente as dependências de documentação e não executa o RAG.
 
 Este é um repositório independente do aplicativo de coleta e do diretório de implementação RAG. O deploy do MkDocs não modifica esses projetos.
