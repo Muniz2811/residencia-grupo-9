@@ -24,7 +24,7 @@ Abra **http://127.0.0.1:8002**. Para gerar e conferir o site:
 - Entrega 2: 27 fontes aprovadas, 25 indexadas, 94 chunks e E5 de 384 dimensões.
 - Chroma local persistente, busca híbrida E5/BM25/RRF, contexto curto e Gemini.
 - Demonstrações com perguntas, rankings, respostas, referências, IDs e versões.
-- Avaliação inicial densa de 15 perguntas e verificações posteriores da correção, sem misturar seus resultados.
+- Reavaliação híbrida completa das 15 perguntas, com respostas, 75 trechos, 49 fatos e 16 citações julgados; todas as tentativas preservadas e histórico denso separado.
 - Código de reprodução e exportações públicas por lista permitida.
 
 O site é estático e não executa o RAG. Não publica chaves, fotos, originais integrais, logs brutos, Chroma, pesos ou a matriz completa. A documentação não implica deploy do backend.

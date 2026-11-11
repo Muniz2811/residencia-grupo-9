@@ -7,7 +7,7 @@ O protótipo **recupera informações do campus e responde com fontes**. A aplic
 <div class="fcte-status-grid">
   <div class="fcte-status"><strong>25 documentos</strong><span>27 aprovados; dois bloqueados na aquisição</span></div>
   <div class="fcte-status"><strong>94 × 384</strong><span>Chunks e embeddings E5 no Chroma local</span></div>
-  <div class="fcte-status"><strong>15 perguntas</strong><span>Avaliação inicial com acertos e falhas registrados</span></div>
+  <div class="fcte-status"><strong>15/15 coletadas</strong><span>Rodada híbrida completa, com revisão e tentativas registradas</span></div>
 </div>
 
 ## Correspondência com o enunciado
@@ -34,7 +34,7 @@ Pense numa biblioteca. Os documentos são os livros; os chunks são fichas de co
 [Ver uma consulta real](demonstracao.md){ .md-button }
 
 !!! info "O que a avaliação mostrou"
-    A primeira rodada usou busca densa: encontrou evidência em **11/12 perguntas respondíveis**, mas apenas **16/75 trechos** eram relevantes. Houve quatro falhas técnicas. Depois adicionamos BM25/RRF e contexto curto de conversa, verificando cabines e LEMA. Os percentuais anteriores não são uma avaliação da configuração nova.
+    A rodada híbrida foi concluída nas **15 perguntas**, com uma retentativa técnica registrada. Recuperação: **12/12 respondíveis**; precisão: **16/75 trechos**; fundamentação: **48/49 fatos**; rastreabilidade: **16/16 citações**; ausência: **3/3**. Persistência confirmada novamente. Q04 requer revisão de uma denominação e Q07 ficou parcial; a precisão continua abaixo da meta. [Ver avaliação completa](avaliacao.md).
 
 ## Limites da conclusão
 

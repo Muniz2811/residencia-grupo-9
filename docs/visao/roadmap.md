@@ -13,6 +13,7 @@
 | Consulta e geração | API + chat do PWA, Gemini e fontes | Implementados |
 | Avaliação inicial | 15 perguntas com rubrica e julgamento assistido | Resultados e falhas registrados |
 | Correção posterior | BM25/RRF e contexto curto | Cabines e LEMA verificados em chamadas reais |
+| Reavaliação híbrida completa | 15 saídas válidas, 75 trechos e 49 fatos julgados | Uma retentativa técnica; resultados atuais publicados |
 | Orquestrador comum | Integração com o Grupo 04 | Proposta futura |
 
 O retrato anterior de 79 chunks com cinco HTMLs e um KML é histórico. Não deve ser somado à coleção ativa nem aparecer como estado atual.
@@ -28,4 +29,4 @@ O retrato anterior de 79 chunks com cinco HTMLs e um KML é histórico. Não dev
 
 ## Próximos passos de qualidade
 
-Medir a configuração híbrida sob protocolo congelado, revisar ruído e vigência, investigar granularidade dos diretórios, fazer revisão humana dos julgamentos e reservar perguntas novas. Ingerir fichas/KML só depois de revisão e rastreabilidade próprias. Rotas, transporte programado estruturado e o orquestrador são evoluções do produto.
+Com a reavaliação híbrida concluída, revisar ruído, vigência e hierarquia dos títulos; investigar seleção de evidências para perguntas compostas; fazer revisão humana dos julgamentos e reservar perguntas novas. Ingerir fichas/KML só depois de revisão e rastreabilidade próprias. Rotas, transporte programado estruturado e o orquestrador são evoluções do produto.

@@ -21,7 +21,7 @@ Escolha um cenário e clique em **▶ Reproduzir** ou avance com **▶|**. Cada 
 | Ingestão | Catálogo → original → chunks → embeddings → Chroma | 25 fontes e 94 registros persistidos |
 | Consulta do Grupo 09 | PWA → API → busca → Gemini → resposta com fontes | Execução real da localização do LEMA |
 | Integração dos grupos | Encaminhamento e composição de fontes por domínio | Proposta; orquestrador comum não implementado |
-| Pergunta sem dado atual | Consulta sobre ocupação da I10 → insuficiência | Registro real da avaliação inicial densa |
+| Pergunta sem dado atual | Consulta sobre ocupação da I10 → insuficiência | Registro real da reavaliação híbrida completa |
 
 Use **◀**, **▶|**, **Tela cheia** ou o teclado. Movimento reduzido desativa o deslocamento dos pacotes. As setas representam etapas do fluxo, não velocidades ou latências medidas.
 

@@ -80,12 +80,17 @@ Se a porta 5173 já estiver em uso pelo PWA, use a instância aberta. Reinicie a
 ## Avaliar
 
 ```powershell
-# Chama Gemini real: uma rodada nova, uma tentativa por questão
-.\.venv\Scripts\python.exe scripts/avaliar_rag.py executar
+# Chama Gemini real; repete somente falhas técnicas e preserva todas as tentativas
+.\.venv\Scripts\python.exe scripts/avaliar_rag.py executar --max-tentativas 5 --intervalo 8
+
+# Reabrir e consultar o banco em processos novos, sem ingestão nem Gemini
+.\.venv\Scripts\python.exe scripts/avaliar_rag.py persistencia avaliacao/resultados/PASTA_DA_RODADA
 
 # Depois de preencher julgamentos da rodada e registrar persistência
 .\.venv\Scripts\python.exe scripts/avaliar_rag.py calcular avaliacao/resultados/PASTA_DA_RODADA
 ```
+
+O modo `--retomar avaliacao/resultados/PASTA_DA_RODADA` continua apenas questões sem saída válida, conferindo se a configuração foi preservada. Uma resposta incorreta ou insuficiente não é refeita para melhorar a nota. Sem opções, o padrão continua uma tentativa por questão.
 
 Não execute novas chamadas apenas para reproduzir o Pages. O cálculo não cria julgamentos semânticos automaticamente. O [gabarito](../assets/downloads/gabarito.json) e as [métricas já medidas](avaliacao.md) estão disponíveis para inspeção.
 

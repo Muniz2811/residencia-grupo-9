@@ -1,5 +1,5 @@
 {
-  "executado_em": "2026-11-11T17:18:07.761441+00:00",
+  "executado_em": "2026-11-11T18:41:40.705924+00:00",
   "sem_ingestao": true,
   "sem_gemini": true,
   "modelos_em_modo_offline": true,
@@ -31,24 +31,24 @@
       "colecao": "fcte-796894d0d378f4f8d429",
       "recuperados": [
         {
-          "chunk_id": "c_df45b0823ed5a0bc",
-          "source_id": "DOC-018",
-          "distancia": 0.13252830505371094
-        },
-        {
           "chunk_id": "c_f2c6f00293fae365",
           "source_id": "DOC-005",
           "distancia": 0.13906073570251465
         },
         {
+          "chunk_id": "c_df45b0823ed5a0bc",
+          "source_id": "DOC-018",
+          "distancia": 0.13252830505371094
+        },
+        {
+          "chunk_id": "c_0904be5ddfac8a87",
+          "source_id": "DOC-005",
+          "distancia": 0.16061687469482422
+        },
+        {
           "chunk_id": "c_cd613d115a6c619e",
           "source_id": "DOC-018",
           "distancia": 0.144400954246521
-        },
-        {
-          "chunk_id": "c_5faca10e6e792b67",
-          "source_id": "DOC-006",
-          "distancia": 0.15164780616760254
         },
         {
           "chunk_id": "c_0cf9944816258a3e",

@@ -1,24 +1,24 @@
 ## Cosmos · registro real
 
-**Etapa:** Avaliação inicial · busca densa. **Método:** `densa`.
+**Etapa:** Reavaliação completa · busca híbrida. **Método:** `hibrida_rrf`.
 
-**Pergunta:** O COSMOS fica no térreo da UAC, sala 101, certo?
+**Pergunta:** Em qual prédio, andar e sala fica o laboratório COSMOS?
 
 **Resposta registrada:**
 
-> O laboratório COSMOS fica localizado no Prédio LDTEA, no 2º andar, sala 304. [1]
+> O laboratório COSMOS fica localizado no Prédio LDTEA, no 2º andar, Sala 304. [1]
 
-Execução: `cf170f2a-ffff-419b-8f37-a5092f403934` · `2026-11-11T15:19:33.851970+00:00` · modelo `gemini-3.5-flash-lite`.
+Execução: `2eaa73f0-6d35-425e-a67c-42381c332d2e` · `2026-11-11T18:37:31.179353+00:00` · modelo `gemini-3.5-flash-lite`.
 
-Prompt `campus-rag-v1`; mesma coleção de 94 chunks. O ranking abaixo é o registrado nessa execução.
+Prompt `campus-rag-v2`; mesma coleção de 94 chunks. O ranking abaixo é o registrado nessa execução.
 
 | Posição | Chunk / fonte | Distância cosseno | Usado na resposta? |
 |---:|---|---:|---|
-| 1 | `c_df45b0823ed5a0bc` · DOC-018 | 0.148859 | Não |
-| 2 | `c_f2c6f00293fae365` · DOC-005 | 0.152717 | Sim |
-| 3 | `c_0cf9944816258a3e` · DOC-006 | 0.156527 | Não |
-| 4 | `c_2d85dbef5af80376` · DOC-018 | 0.157690 | Não |
-| 5 | `c_0e12f3858918d20b` · DOC-005 | 0.159852 | Não |
+| 1 | `c_f2c6f00293fae365` · DOC-005 | 0.139061 | Sim |
+| 2 | `c_df45b0823ed5a0bc` · DOC-018 | 0.132528 | Não |
+| 3 | `c_0904be5ddfac8a87` · DOC-005 | 0.160617 | Não |
+| 4 | `c_cd613d115a6c619e` · DOC-018 | 0.144401 | Não |
+| 5 | `c_0cf9944816258a3e` · DOC-006 | 0.153397 | Não |
 
 ### Evidências citadas
 
@@ -26,25 +26,25 @@ Prompt `campus-rag-v1`; mesma coleção de 94 chunks. O ranking abaixo é o regi
 
 ## Biblioteca · registro real
 
-**Etapa:** Avaliação inicial · busca densa. **Método:** `densa`.
+**Etapa:** Reavaliação completa · busca híbrida. **Método:** `hibrida_rrf`.
 
 **Pergunta:** Na biblioteca do Gama há lugar para estudar sozinho e em grupo?
 
 **Resposta registrada:**
 
-> A Biblioteca do Campus Gama dispõe de cabines individuais para estudo e mesas para estudo em grupo. [1]
+> A Biblioteca do Campus Gama dispõe de espaço para estudo com cabines individuais e mesas para estudo em grupo. [1]
 
-Execução: `fbe2df88-dced-4170-bfc7-da7b05e3cf96` · `2026-11-11T15:19:06.407819+00:00` · modelo `gemini-3.5-flash-lite`.
+Execução: `9035962c-8018-4696-8888-a04ee2418e98` · `2026-11-11T18:38:19.880337+00:00` · modelo `gemini-3.5-flash-lite`.
 
-Prompt `campus-rag-v1`; mesma coleção de 94 chunks. O ranking abaixo é o registrado nessa execução.
+Prompt `campus-rag-v2`; mesma coleção de 94 chunks. O ranking abaixo é o registrado nessa execução.
 
 | Posição | Chunk / fonte | Distância cosseno | Usado na resposta? |
 |---:|---|---:|---|
 | 1 | `c_c8a0b710c3c50b09` · DOC-012 | 0.125138 | Sim |
-| 2 | `c_17241a7563801760` · DOC-008 | 0.140344 | Não |
-| 3 | `c_1cfe0848c545f27c` · DOC-012 | 0.141437 | Não |
+| 2 | `c_1cfe0848c545f27c` · DOC-012 | 0.141437 | Não |
+| 3 | `c_17241a7563801760` · DOC-008 | 0.140344 | Não |
 | 4 | `c_5faca10e6e792b67` · DOC-006 | 0.141811 | Não |
-| 5 | `c_0a5abc6e344294e8` · DOC-023 | 0.167065 | Não |
+| 5 | `c_ff640f1875faa059` · DOC-002 | 0.172656 | Não |
 
 ### Evidências citadas
 
@@ -52,17 +52,17 @@ Prompt `campus-rag-v1`; mesma coleção de 94 chunks. O ranking abaixo é o regi
 
 ## Ausencia · registro real
 
-**Etapa:** Avaliação inicial · busca densa. **Método:** `densa`.
+**Etapa:** Reavaliação completa · busca híbrida. **Método:** `hibrida_rrf`.
 
 **Pergunta:** A sala I10 está livre agora?
 
 **Resposta registrada:**
 
-> A base de conhecimento não possui informações sobre a ocupação atual ou disponibilidade da sala I10.
+> Não há informações nos trechos recuperados sobre a ocupação atual ou a disponibilidade da sala I10.
 
-Execução: `54ec3595-e6db-493b-82d3-0ff97bc29f09` · `2026-11-11T15:19:42.604793+00:00` · modelo `gemini-3.5-flash-lite`.
+Execução: `fd1ef96f-814b-4a7d-be70-36818ea6757a` · `2026-11-11T18:40:00.093553+00:00` · modelo `gemini-3.5-flash-lite`.
 
-Prompt `campus-rag-v1`; mesma coleção de 94 chunks. O ranking abaixo é o registrado nessa execução.
+Prompt `campus-rag-v2`; mesma coleção de 94 chunks. O ranking abaixo é o registrado nessa execução.
 
 | Posição | Chunk / fonte | Distância cosseno | Usado na resposta? |
 |---:|---|---:|---|
@@ -76,9 +76,35 @@ Prompt `campus-rag-v1`; mesma coleção de 94 chunks. O ranking abaixo é o regi
 
 Não houve afirmação com fonte emitida: o sistema declarou ausência. Os trechos recuperados não comprovam ocupação atual.
 
+## Lema · registro real
+
+**Etapa:** Reavaliação completa · busca híbrida. **Método:** `hibrida_rrf`.
+
+**Pergunta:** Qual é a localização do LEMA?
+
+**Resposta registrada:**
+
+> O Laboratório de Estruturas e Materiais Aeroespaciais (LEMA) está localizado no Prédio LDTEA, no térreo, na sala 103. [1]
+
+Execução: `0b0f7b77-8451-4360-91f2-f497954bce4c` · `2026-11-11T18:37:50.407359+00:00` · modelo `gemini-3.5-flash-lite`.
+
+Prompt `campus-rag-v2`; mesma coleção de 94 chunks. O ranking abaixo é o registrado nessa execução.
+
+| Posição | Chunk / fonte | Distância cosseno | Usado na resposta? |
+|---:|---|---:|---|
+| 1 | `c_84847b7559c2bfb8` · DOC-015 | 0.146771 | Não |
+| 2 | `c_f2c6f00293fae365` · DOC-005 | 0.160813 | Sim |
+| 3 | `c_436a2249e7a6d0fb` · DOC-027 | 0.214183 | Não |
+| 4 | `c_4e7588ca515d195f` · DOC-016 | 0.152038 | Não |
+| 5 | `c_f1e118670e2e6123` · DOC-016 | 0.154056 | Não |
+
+### Evidências citadas
+
+- **DOC-005 · Diretório de laboratórios da FCTE**, versão `2026-11-11`, seção Laboratórios FCTE > Laboratórios de Engenharia Aeroespacial. Excerto: “Laboratório de Estruturas e Materiais Aeroespaciais – LEMA … Local: Prédio LDTEA – Térreo – Sala 103”. [Abrir fonte](https://fcte.unb.br/homologa_laboratorios/).
+
 ## Cabines · registro real
 
-**Etapa:** Verificação posterior · busca híbrida. **Método:** `hibrida_rrf`.
+**Etapa:** Verificação de conversa · busca híbrida. **Método:** `hibrida_rrf`.
 
 **Pergunta:** e cabines de estudo individual ?
 
@@ -109,29 +135,3 @@ Biblioteca Campus Gama – BCE. e cabines de estudo individual ?
 ```
 
 O contexto anterior identifica o assunto; os fatos precisam de evidência na recuperação atual.
-
-## Lema · registro real
-
-**Etapa:** Verificação posterior · busca híbrida. **Método:** `hibrida_rrf`.
-
-**Pergunta:** Qual é a localização do LEMA?
-
-**Resposta registrada:**
-
-> O Laboratório de Estruturas e Materiais Aeroespaciais (LEMA) está localizado no Prédio LDTEA, no térreo, na sala 103. [1]
-
-Execução: `3b0b6497-b098-4ec3-a922-eb0d2b8af0bf` · `2026-11-11T17:30:41.378681+00:00` · modelo `gemini-3.5-flash-lite`.
-
-Prompt `campus-rag-v2`; mesma coleção de 94 chunks. O ranking abaixo é o registrado nessa execução.
-
-| Posição | Chunk / fonte | Distância cosseno | Usado na resposta? |
-|---:|---|---:|---|
-| 1 | `c_84847b7559c2bfb8` · DOC-015 | 0.146771 | Não |
-| 2 | `c_f2c6f00293fae365` · DOC-005 | 0.160813 | Sim |
-| 3 | `c_436a2249e7a6d0fb` · DOC-027 | 0.214183 | Não |
-| 4 | `c_4e7588ca515d195f` · DOC-016 | 0.152038 | Não |
-| 5 | `c_f1e118670e2e6123` · DOC-016 | 0.154056 | Não |
-
-### Evidências citadas
-
-- **DOC-005 · Diretório de laboratórios da FCTE**, versão `2026-11-11`, seção Laboratórios FCTE > Laboratórios de Engenharia Aeroespacial. Excerto: “Laboratório de Estruturas e Materiais Aeroespaciais – LEMA … Local: Prédio LDTEA – Térreo – Sala 103”. [Abrir fonte](https://fcte.unb.br/homologa_laboratorios/).

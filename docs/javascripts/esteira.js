@@ -41,7 +41,7 @@
     });return s;
   }
   var EXEMPLOS=["lema","cabines","cosmos","ausencia"].map(function(id){var r=E.demos.find(function(d){return d.id===id;});return r?{id:id,pergunta:r.question,registro:r}:null;}).filter(Boolean);
-  var CENARIOS=[{id:"lema",nome:"LEMA"},{id:"cabines",nome:"Cabines · conversa"},{id:"cosmos",nome:"COSMOS · avaliação inicial"},{id:"ausencia",nome:"Sem dados atuais"}];
+  var CENARIOS=[{id:"lema",nome:"LEMA"},{id:"cabines",nome:"Cabines · conversa"},{id:"cosmos",nome:"COSMOS"},{id:"ausencia",nome:"Sem dados atuais"}];
   var INGESTAO=[
     {nome:"Fontes",sub:"27 aprovadas · 25 indexadas",dur:5200,titulo:"1. Catalogar, aprovar e preservar fontes",texto:"O catálogo tem <b>27 aprovações expressas</b>. Duas aquisições foram bloqueadas: DOC-014 e DOC-024. As outras 25 fontes textuais formam a coleção ativa. KML e coleta continuam como inventários separados. Aprovação não garante vigência ou confirmação em campo.",numeros:[["27","aprovadas"],["25","indexadas"]],arquivo:"catalogo/fontes.csv · data/originais/",desenhar:function(p,d,ctx){var grid=el("div","rm-est__docs");E.sources.forEach(function(s,i){var c=el("span","rm-est__doc rm-eixo--"+(s.indexed?eixo(s.id):"apoio"),esc(s.id)+(s.indexed?"":" ×"));c.title=s.status;grid.appendChild(c);ctx.depois(60+i*45,function(){c.classList.add("rm-on");});});p.appendChild(grid);p.appendChild(legenda());}},
     {nome:"Extração",sub:"HTML → texto",dur:5500,titulo:"2. Preservar original e extrair conteúdo",texto:"O original fica com versão e SHA-256. A extração remove a moldura da página e organiza títulos, seções e parágrafos. Regras de escopo excluem RU; a revisão precisa conferir ambiguidades. O desenho é esquemático e o excerto é de um chunk real.",numeros:[["25","fontes disponíveis"]],arquivo:"scripts/01_adquirir.py · scripts/02_extrair.py",desenhar:function(p,d,ctx){var line=el("div","rm-est__linha"),sample=exemplo("DOC-012");line.appendChild(painel("HTML esquemático","<nav>Menu</nav>\n<main>\n"+exc(sample)+"\n</main>"));line.appendChild(seta());line.appendChild(chunk(sample));p.appendChild(line);}},
@@ -137,6 +137,7 @@
       desenhar:function(p, d, ctx) {
         var chat = el("div", "rm-est__chat");
         var anterior = E.demos.find(function(x) { return x.request_id === d.registro.previous_request_id; });
+        if (!anterior && d.registro.previous_answer) anterior = {answer:d.registro.previous_answer};
         if (anterior) {
           var contexto = balao("Assistente FCTE · mensagem anterior", anterior.answer, false);
           contexto.classList.add("rm-on", "rm-est__balao--anterior"); chat.appendChild(contexto);

@@ -17,7 +17,8 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-ROUND = '20261111T151703Z'
+ROUND = '20261111T183730Z'
+BASELINE_ROUND = '20261111T151703Z'
 
 
 def sha(path):
@@ -110,7 +111,7 @@ def main():
     baseline = read_json(round_dir / 'execucoes.json')
     metrics = read_json(round_dir / 'metricas.json')
     judgments = {q['id']: q for q in read_json(round_dir / 'julgamentos.json')['perguntas']}
-    correction = read_json(round_dir / 'correcao-conversa.json')
+    correction = read_json(rag / 'avaliacao/resultados' / BASELINE_ROUND / 'correcao-conversa.json')
     def public_demo(item, name, label, question_id=None):
         log, result = item['log_backend'], item['resposta']
         relevant = {t['chunk_id']: t['relevante'] for t in judgments[question_id]['trechos']} if question_id else {}
@@ -126,11 +127,27 @@ def main():
                                'rrf': t.get('score_rrf')} for t in log['recuperacao']['trechos']],
                 'claims': result['claims'], 'source_ids': [s['id'] for s in result['sources']],
                 'previous_request_id': log.get('previousRequestId')}
+    if not baseline.get('concluida') or not baseline['configuracao_preservada']:
+        raise ValueError('A rodada precisa estar completa e preservar a configuração')
     demos = [public_demo(next(q for q in baseline['execucoes'] if q['id'] == qid), name,
-                         'Avaliação inicial · busca densa', qid)
-             for qid, name in [('Q11', 'cosmos'), ('Q06', 'biblioteca'), ('Q13', 'ausencia')]]
-    demos += [public_demo(correction['execucoes'][i], name, 'Verificação posterior · busca híbrida')
-              for i, name in [(0, 'cabines'), (2, 'lema')]]
+                         'Reavaliação completa · busca híbrida', qid)
+             for qid, name in [('Q01', 'cosmos'), ('Q06', 'biblioteca'), ('Q13', 'ausencia'), ('Q03', 'lema')]]
+    demos += [public_demo(correction['execucoes'][0], 'cabines', 'Verificação de conversa · busca híbrida')]
+    previous_id = demos[-1]['previous_request_id']
+    historical = read_json(rag / 'avaliacao/resultados' / BASELINE_ROUND / 'execucoes.json')
+    demos[-1]['previous_answer'] = next(
+        e['resposta']['answer'] for e in historical['execucoes']
+        if e.get('resposta', {}).get('requestId') == previous_id)
+    evaluation = {'round': ROUND, 'started_at': baseline['inicio'], 'finished_at': baseline['fim'],
+                  'protocol': baseline['protocolo'],
+                  'questions': [public_demo(item, item['id'], 'Reavaliação completa · busca híbrida', item['id'])
+                                for item in baseline['execucoes']],
+                  'attempts': [{'id': t['id'], 'attempt': t['tentativa'], 'http_status': t.get('http_status'),
+                                'started_at': t['inicio'], 'duration_s': t['duracao_s'],
+                                'request_id': t.get('log_backend', {}).get('requestId'),
+                                'status': t.get('resposta', {}).get('status'),
+                                'error': t.get('resposta', {}).get('detail', t.get('erro_transporte'))}
+                               for t in baseline['tentativas']]}
     downloads = ROOT / 'docs/assets/downloads'
     previous = read_json(downloads / 'evidencias.json') if (downloads / 'evidencias.json').exists() else {}
     points = previous.get('points', [])
@@ -153,7 +170,7 @@ def main():
             'integrity': {'chunks_sha256': sha(chunks_path), 'vectors_sha256': sha(vectors_path),
                           'manifest_sha256': sha(manifest_path)},
             'limitations': ['Site estático: reproduz registros, sem chamadas à API.',
-                            'Métricas da rodada inicial densa, anteriores à busca híbrida.',
+                            'Reavaliação híbrida das mesmas perguntas conhecidas; não é holdout.',
                             'Julgamento assistido único, sem dupla revisão humana.',
                             'KML é inventário separado da coleção ativa de 94 chunks.']}
     downloads.mkdir(parents=True, exist_ok=True)
@@ -161,6 +178,9 @@ def main():
         path.write_text(json.dumps(value, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
     save(downloads / 'evidencias.json', data); save(downloads / 'demonstracoes.json', demos)
     save(downloads / 'metricas.json', metrics); save(downloads / 'gabarito.json', read_json(round_dir / 'gabarito.json'))
+    save(downloads / 'avaliacao.json', evaluation)
+    save(downloads / 'julgamentos.json', read_json(round_dir / 'julgamentos.json'))
+    save(downloads / 'metricas-iniciais.json', read_json(rag / 'avaliacao/resultados' / BASELINE_ROUND / 'metricas.json'))
     persistence = read_json(round_dir / 'persistencia.json')
     proof = {k: v for k, v in persistence.items() if k != 'processos_novos'}
     proof['processos_novos'] = [{'comando': p['comando'], 'exit_code': p['exit_code'],
@@ -196,8 +216,8 @@ def main():
         demos_md += ['']
     (ROOT / 'includes/demonstracoes.md').write_text('\n'.join(demos_md), encoding='utf-8')
     gold = {q['id']: q for q in read_json(round_dir / 'gabarito.json')['perguntas']}
-    results_md = ['| ID | Pergunta | Relevantes / retornados | Fatos sustentados / produzidos | Resultado |',
-                  '|---|---|---:|---:|---|']
+    results_md = ['| ID | Pergunta | Relevantes / retornados | Fatos sustentados / produzidos | Tentativas | Resultado |',
+                  '|---|---|---:|---:|---:|---|']
     for q in metrics['por_pergunta']:
         item = next(e for e in baseline['execucoes'] if e['id'] == q['id'])
         if item['http_status'] == 504:
@@ -207,12 +227,26 @@ def main():
         elif item['http_status'] != 200:
             outcome = f"Falha técnica (HTTP {item['http_status']})"
         elif item['resposta']['status'] == 'answered':
-            outcome = 'Resposta com fontes'
+            outcome = 'Resposta com fontes' if q['resposta_completa'] else 'Resposta com fontes; requer revisão'
         else:
             outcome = 'Abstenção indevida: evidência não recuperada' if gold[q['id']]['respondiveis'] else 'Ausência reconhecida corretamente'
         facts = f"{q['fatos_sustentados']}/{q['fatos']}" if q['fatos'] else 'Não aplicável'
-        results_md.append(f"| {q['id']} | {gold[q['id']]['pergunta']} | {q['relevantes']}/{q['recuperados']} | {facts} | {outcome} |")
+        tries = metrics['execucao_tecnica']['tentativas_por_pergunta'][q['id']]
+        results_md.append(f"| {q['id']} | {gold[q['id']]['pergunta']} | {q['relevantes']}/{q['recuperados']} | {facts} | {tries} | {outcome} |")
     (ROOT / 'includes/resultados.md').write_text('\n'.join(results_md) + '\n', encoding='utf-8')
+    answers_md = []
+    for d in evaluation['questions']:
+        j = judgments[d['id']]
+        answers_md += [f"### {d['id']} · {d['question']}", '', '> ' + d['answer'].replace('\n', '\n> '), '',
+                       f"**Conferência:** {j['observacoes']}", '',
+                       f"**Execução:** `{d['request_id']}` · `{d['executed_at']}`.", '', '**Fontes citadas:**', '']
+        for i, cid in enumerate(d['source_ids'], 1):
+            t = next(t for t in d['retrieved'] if t['id'] == cid)
+            answers_md.append(f"- [{i}] [{t['title']}]({t['url']}) · `{cid}` · versão `{t['version']}` · {t['section']}.")
+        if not d['source_ids']:
+            answers_md.append('Nenhuma: resposta de ausência, sem afirmar um fato de ocupação ou transporte ao vivo.')
+        answers_md += ['']
+    (ROOT / 'includes/respostas-avaliadas.md').write_text('\n'.join(answers_md), encoding='utf-8')
     (ROOT / 'docs/javascripts/evidencias.js').write_text(
         'window.FCTE_EVIDENCIAS = ' + json.dumps(data, ensure_ascii=False) + ';\n', encoding='utf-8')
     with (downloads / 'fontes.csv').open('w', encoding='utf-8', newline='') as handle:

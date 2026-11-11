@@ -1,14 +1,14 @@
 {
-  "versao": "diagnostico-1",
+  "versao": "diagnostico-2-hibrido",
   "avaliador": "Codex, julgamento assistido único; sem dupla revisão humana",
-  "natureza": "Diagnóstico inicial não cego. Perguntas selecionadas após conhecer o corpus; algumas já apareceram nas demonstrações. Não é teste independente de generalização.",
+  "natureza": "Reavaliação diagnóstica das mesmas 15 perguntas na busca híbrida e prompt v2. Conjunto conhecido, usado no diagnóstico e ajuste; não é teste cego nem holdout.",
   "rubrica": {
     "relevancia": "Um chunk é relevante quando contém evidência específica para pelo menos uma parte pedida ou para corrigir a premissa. Mencionar biblioteca, laboratório ou ônibus sem responder não basta. Perguntas sem resposta têm zero evidências relevantes para o fato solicitado.",
     "fundamentacao": "Separar a resposta em afirmações factuais atômicas, incluindo afirmações adicionais em mensagens de insuficiência. Julgar cada uma somente pelos chunks citados. Frases sobre incapacidade do sistema, orientações sem fato adicional e apresentação não entram no denominador. Uma omissão não é alucinação: registrar cobertura separadamente.",
     "rastreabilidade": "Contar cada vínculo claim-chunk uma vez por claim, resolvendo ID, texto, documento, versão, SHA do original, seção e URL. Conferir no arquivo de chunks, catálogo, texto extraído e original preservado. Resolução de ID não prova suporte semântico.",
     "ausencia": "Acerto exige admitir a falta do dado solicitado sem inventar resposta. Erro técnico não conta como abstenção correta. Status insufficient sozinho não basta.",
     "premissa": "Conta como respondível: há evidência corretiva na base. Verificar correção explícita da suposição falsa.",
-    "falhas": "Uma tentativa por pergunta, sem escolher melhor resposta nem tentar novamente automaticamente. Erros técnicos são registrados. R/P usam recuperação preservada se houver; ausência de recuperação conta como falha em R. F não recebe nota fictícia onde não há resposta.",
+    "falhas": "Primeira resposta HTTP 200 válida de cada questão. Repetir somente falhas técnicas, com espera e registro de TODAS as tentativas. Não repetir resposta incorreta ou insuficiente para escolher outra mais favorável. Publicar métricas semânticas da resposta selecionada e disponibilidade técnica por chamada e na primeira tentativa separadamente.",
     "denominadores": "R sobre 12 respondíveis. P principal sobre todos os trechos retornados nas 15 perguntas; P_respondiveis também reportada. F sobre todas as afirmações factuais produzidas; T sobre vínculos de citação. A sobre três sem resposta. Denominador zero = não aplicável."
   },
   "metas_piloto": {

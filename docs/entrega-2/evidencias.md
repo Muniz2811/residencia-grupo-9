@@ -21,7 +21,10 @@ Este filtro procura palavras nos metadados exportados. Não executa E5, BM25 ou 
 | [Evidências JSON](../assets/downloads/evidencias.json) | Catálogo, IDs dos chunks, exemplos, componentes vetoriais, integridade, demonstrações e métricas |
 | [Fontes CSV](../assets/downloads/fontes.csv) | 27 fontes, disponibilidade, revisão, validade e 25 indexadas |
 | [Demonstrações JSON](../assets/downloads/demonstracoes.json) | Perguntas, respostas, rankings, excertos, fontes e IDs de cinco execuções selecionadas |
-| [Métricas JSON](../assets/downloads/metricas.json) | Numeradores, denominadores, metas e resultados por pergunta da primeira rodada |
+| [Métricas JSON](../assets/downloads/metricas.json) | Numeradores, denominadores, metas e resultados da rodada híbrida completa |
+| [Avaliação JSON](../assets/downloads/avaliacao.json) | Quinze perguntas, respostas, rankings e todas as 16 chamadas, incluindo a retentativa |
+| [Julgamentos JSON](../assets/downloads/julgamentos.json) | Revisão de 75 trechos, 49 fatos e 16 vínculos de citação |
+| [Métricas históricas](../assets/downloads/metricas-iniciais.json) | Rodada densa anterior, mantida separada dos resultados atuais |
 | [Gabarito e rubrica](../assets/downloads/gabarito.json) | Quinze perguntas, evidências esperadas, regras e metas anteriores às chamadas |
 | [Persistência JSON](../assets/downloads/persistencia.json) | Sucesso, data, modo offline e hashes iguais antes/depois |
 | [Código do RAG](../assets/downloads/codigo-piloto.zip) | Código atual, configuração, catálogo e dependências, sem dados privados ou modelo |

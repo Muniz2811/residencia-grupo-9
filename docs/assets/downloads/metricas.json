@@ -1,11 +1,11 @@
 {
-  "avaliador": "Codex, julgamento assistido único por leitura de resposta e evidências; sem segunda revisão humana",
-  "execucao": "20261111T151703Z",
+  "avaliador": "Codex, julgamento assistido único por leitura; sem dupla revisão humana",
+  "execucao": "20261111T183730Z",
   "configuracao_preservada": true,
   "hit_at_5": {
-    "numerador": 11,
+    "numerador": 12,
     "denominador": 12,
-    "valor": 0.9166666666666666,
+    "valor": 1.0,
     "meta": 0.8,
     "atingiu_meta": true
   },
@@ -24,25 +24,25 @@
     "atingiu_meta": false
   },
   "fundamentacao": {
-    "numerador": 35,
-    "denominador": 35,
-    "valor": 1.0,
+    "numerador": 48,
+    "denominador": 49,
+    "valor": 0.9795918367346939,
     "meta": 0.95,
     "atingiu_meta": true
   },
   "rastreabilidade": {
-    "numerador": 14,
-    "denominador": 14,
+    "numerador": 16,
+    "denominador": 16,
     "valor": 1.0,
     "meta": 1.0,
     "atingiu_meta": true
   },
   "ausencia": {
-    "numerador": 2,
+    "numerador": 3,
     "denominador": 3,
-    "valor": 0.6666666666666666,
+    "valor": 1.0,
     "meta": 1.0,
-    "atingiu_meta": false
+    "atingiu_meta": true
   },
   "persistencia": {
     "valor": 1,
@@ -50,16 +50,16 @@
     "atingiu_meta": true
   },
   "disponibilidade": {
-    "numerador": 11,
+    "numerador": 15,
     "denominador": 15,
-    "valor": 0.7333333333333333,
+    "valor": 1.0,
     "meta": null,
     "atingiu_meta": null
   },
   "cobertura_respostas_respondiveis": {
-    "numerador": 8,
+    "numerador": 10,
     "denominador": 12,
-    "valor": 0.6666666666666666,
+    "valor": 0.8333333333333334,
     "meta": null,
     "atingiu_meta": null
   },
@@ -75,15 +75,15 @@
       "id": "Q01",
       "respondivel": true,
       "tipo": "direta",
-      "http_ok": false,
+      "http_ok": true,
       "relevantes": 1,
       "recuperados": 5,
-      "fatos_sustentados": 0,
-      "fatos": 0,
-      "citacoes_resolvidas": 0,
-      "citacoes": 0,
+      "fatos_sustentados": 3,
+      "fatos": 3,
+      "citacoes_resolvidas": 1,
+      "citacoes": 1,
       "ausencia_correta": null,
-      "resposta_completa": false,
+      "resposta_completa": true,
       "premissa_corrigida": null
     },
     {
@@ -106,14 +106,14 @@
       "respondivel": true,
       "tipo": "sigla",
       "http_ok": true,
-      "relevantes": 0,
+      "relevantes": 1,
       "recuperados": 5,
-      "fatos_sustentados": 0,
-      "fatos": 0,
-      "citacoes_resolvidas": 0,
-      "citacoes": 0,
+      "fatos_sustentados": 3,
+      "fatos": 3,
+      "citacoes_resolvidas": 1,
+      "citacoes": 1,
       "ausencia_correta": null,
-      "resposta_completa": false,
+      "resposta_completa": true,
       "premissa_corrigida": null
     },
     {
@@ -123,27 +123,27 @@
       "http_ok": true,
       "relevantes": 3,
       "recuperados": 5,
-      "fatos_sustentados": 8,
+      "fatos_sustentados": 7,
       "fatos": 8,
-      "citacoes_resolvidas": 3,
-      "citacoes": 3,
+      "citacoes_resolvidas": 2,
+      "citacoes": 2,
       "ausencia_correta": null,
-      "resposta_completa": true,
+      "resposta_completa": false,
       "premissa_corrigida": null
     },
     {
       "id": "Q05",
       "respondivel": true,
       "tipo": "localizacao",
-      "http_ok": false,
+      "http_ok": true,
       "relevantes": 2,
       "recuperados": 5,
-      "fatos_sustentados": 0,
-      "fatos": 0,
-      "citacoes_resolvidas": 0,
-      "citacoes": 0,
+      "fatos_sustentados": 2,
+      "fatos": 2,
+      "citacoes_resolvidas": 1,
+      "citacoes": 1,
       "ausencia_correta": null,
-      "resposta_completa": false,
+      "resposta_completa": true,
       "premissa_corrigida": null
     },
     {
@@ -166,14 +166,14 @@
       "respondivel": true,
       "tipo": "servico",
       "http_ok": true,
-      "relevantes": 2,
+      "relevantes": 1,
       "recuperados": 5,
-      "fatos_sustentados": 6,
-      "fatos": 6,
-      "citacoes_resolvidas": 3,
-      "citacoes": 3,
+      "fatos_sustentados": 3,
+      "fatos": 3,
+      "citacoes_resolvidas": 1,
+      "citacoes": 1,
       "ausencia_correta": null,
-      "resposta_completa": true,
+      "resposta_completa": false,
       "premissa_corrigida": null
     },
     {
@@ -210,15 +210,15 @@
       "id": "Q10",
       "respondivel": true,
       "tipo": "informacao_temporal_atribuida",
-      "http_ok": false,
+      "http_ok": true,
       "relevantes": 2,
       "recuperados": 5,
-      "fatos_sustentados": 0,
-      "fatos": 0,
-      "citacoes_resolvidas": 0,
-      "citacoes": 0,
+      "fatos_sustentados": 8,
+      "fatos": 8,
+      "citacoes_resolvidas": 2,
+      "citacoes": 2,
       "ausencia_correta": null,
-      "resposta_completa": false,
+      "resposta_completa": true,
       "premissa_corrigida": null
     },
     {
@@ -228,8 +228,8 @@
       "http_ok": true,
       "relevantes": 1,
       "recuperados": 5,
-      "fatos_sustentados": 3,
-      "fatos": 3,
+      "fatos_sustentados": 4,
+      "fatos": 4,
       "citacoes_resolvidas": 1,
       "citacoes": 1,
       "ausencia_correta": null,
@@ -285,16 +285,52 @@
       "id": "Q15",
       "respondivel": false,
       "tipo": "sem_resposta",
-      "http_ok": false,
+      "http_ok": true,
       "relevantes": 0,
       "recuperados": 5,
       "fatos_sustentados": 0,
       "fatos": 0,
       "citacoes_resolvidas": 0,
       "citacoes": 0,
-      "ausencia_correta": false,
+      "ausencia_correta": true,
       "resposta_completa": false,
       "premissa_corrigida": null
     }
-  ]
+  ],
+  "execucao_tecnica": {
+    "total_chamadas": 16,
+    "falhas": 1,
+    "retentativas": 1,
+    "sucesso_primeira_tentativa": {
+      "numerador": 14,
+      "denominador": 15,
+      "valor": 0.9333333333333333,
+      "meta": null,
+      "atingiu_meta": null
+    },
+    "sucesso_por_chamada": {
+      "numerador": 15,
+      "denominador": 16,
+      "valor": 0.9375,
+      "meta": null,
+      "atingiu_meta": null
+    },
+    "tentativas_por_pergunta": {
+      "Q01": 1,
+      "Q02": 1,
+      "Q03": 1,
+      "Q04": 1,
+      "Q05": 1,
+      "Q06": 1,
+      "Q07": 1,
+      "Q08": 1,
+      "Q09": 1,
+      "Q10": 2,
+      "Q11": 1,
+      "Q12": 1,
+      "Q13": 1,
+      "Q14": 1,
+      "Q15": 1
+    }
+  }
 }

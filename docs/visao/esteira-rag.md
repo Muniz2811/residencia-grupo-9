@@ -16,7 +16,7 @@ Na fase **Pergunta**, acompanhe a mensagem sendo digitada, a busca dos trechos, 
 <div class="rm-est" data-esteira tabindex="0" aria-label="Esteira animada da ingestão e consulta do RAG FCTE"></div>
 
 !!! info "Registros reais, reprodução estática"
-    Contagens, chunks e componentes vetoriais são dos artefatos atuais: **25 fontes, 94 chunks e 384 dimensões**. LEMA e cabines usam registros da correção híbrida; COSMOS e ausência usam a avaliação inicial densa, com identificação em cada cenário. Os controles não chamam a API nem consomem cota Gemini.
+    Contagens, chunks e componentes vetoriais são dos artefatos atuais: **25 fontes, 94 chunks e 384 dimensões**. LEMA, COSMOS e ausência usam a nova avaliação híbrida completa; cabines demonstra a continuidade de conversa em uma execução adicional identificada. Os controles não chamam a API nem consomem cota Gemini.
 
 ## Da fonte ao banco
 

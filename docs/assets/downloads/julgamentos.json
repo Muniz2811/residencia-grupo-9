@@ -1,0 +1,1282 @@
+{
+  "avaliador": "Codex, julgamento assistido único por leitura; sem dupla revisão humana",
+  "julgado_em": "2026-11-11T18:43:16.915330+00:00",
+  "protocolo": "Mesmas 15 perguntas conhecidas, gabarito congelado antes da rodada híbrida. Primeira saída válida por questão; nenhuma repetição por erro semântico. Relevância exige evidência específica, admitindo resposta parcial. Fatos decompostos manualmente, incluindo ressalva explícita de vigência. Citações conferidas mecanicamente até versão e hash do original.",
+  "nota_fundamentacao": "Na Q04, a denominação composta Secretaria de Graduação de Enfermagem foi considerada sem suporte suficiente. Essa ambiguidade foi subestimada pelo julgamento anterior; não apresentar diferenças de fundamentação entre rodadas como efeito isolado do algoritmo.",
+  "perguntas": [
+    {
+      "id": "Q01",
+      "trechos": [
+        {
+          "chunk_id": "c_f2c6f00293fae365",
+          "relevante": true,
+          "motivo": "Associa o COSMOS ao LDTEA, segundo andar, sala 304."
+        },
+        {
+          "chunk_id": "c_df45b0823ed5a0bc",
+          "relevante": false,
+          "motivo": "Não informa a localização específica do COSMOS; coincidência temática não basta."
+        },
+        {
+          "chunk_id": "c_0904be5ddfac8a87",
+          "relevante": false,
+          "motivo": "Não informa a localização específica do COSMOS; coincidência temática não basta."
+        },
+        {
+          "chunk_id": "c_cd613d115a6c619e",
+          "relevante": false,
+          "motivo": "Não informa a localização específica do COSMOS; coincidência temática não basta."
+        },
+        {
+          "chunk_id": "c_0cf9944816258a3e",
+          "relevante": false,
+          "motivo": "Não informa a localização específica do COSMOS; coincidência temática não basta."
+        }
+      ],
+      "fatos": [
+        {
+          "claim": 0,
+          "texto": "O COSMOS fica no prédio LDTEA.",
+          "chunk_ids_citados": [
+            "c_f2c6f00293fae365"
+          ],
+          "sustentado": true,
+          "justificativa": "Conferido por leitura dos chunks citados e, para a vigência, dos respectivos metadados."
+        },
+        {
+          "claim": 0,
+          "texto": "O COSMOS fica no segundo andar.",
+          "chunk_ids_citados": [
+            "c_f2c6f00293fae365"
+          ],
+          "sustentado": true,
+          "justificativa": "Conferido por leitura dos chunks citados e, para a vigência, dos respectivos metadados."
+        },
+        {
+          "claim": 0,
+          "texto": "O COSMOS fica na sala 304.",
+          "chunk_ids_citados": [
+            "c_f2c6f00293fae365"
+          ],
+          "sustentado": true,
+          "justificativa": "Conferido por leitura dos chunks citados e, para a vigência, dos respectivos metadados."
+        }
+      ],
+      "citacoes": [
+        {
+          "claim": 0,
+          "chunk_id": "c_f2c6f00293fae365",
+          "resolvida": true,
+          "prova": {
+            "source_id": "DOC-005",
+            "versao": "2026-11-11",
+            "secoes": [
+              "Laboratórios FCTE > Laboratórios de Engenharia Aeroespacial"
+            ],
+            "url": "https://fcte.unb.br/homologa_laboratorios/",
+            "sha256_original": "dc417807f148d3dbb2d21e1242b64a19727079bab599d9b61c629ebcfd1f3e09",
+            "original": "data/originais/DOC-005/2026-11-11/original.html",
+            "extraido": "data/extraido/DOC-005__2026-11-11.json"
+          }
+        }
+      ],
+      "resposta_completa": true,
+      "ausencia_correta": null,
+      "premissa_corrigida": null,
+      "observacoes": "Resposta atende ao solicitado com evidência recuperada. A vigência das páginas é desconhecida; fundamentação textual não comprova situação atual."
+    },
+    {
+      "id": "Q02",
+      "trechos": [
+        {
+          "chunk_id": "c_f2c6f00293fae365",
+          "relevante": true,
+          "motivo": "Localiza o CPL no Contêiner 07."
+        },
+        {
+          "chunk_id": "c_df45b0823ed5a0bc",
+          "relevante": false,
+          "motivo": "Não informa onde está o CPL."
+        },
+        {
+          "chunk_id": "c_553a868a5910bf1c",
+          "relevante": false,
+          "motivo": "Não informa onde está o CPL."
+        },
+        {
+          "chunk_id": "c_d9b12bba2ecf376c",
+          "relevante": false,
+          "motivo": "Não informa onde está o CPL."
+        },
+        {
+          "chunk_id": "c_86466a41ada2febd",
+          "relevante": false,
+          "motivo": "Não informa onde está o CPL."
+        }
+      ],
+      "fatos": [
+        {
+          "claim": 0,
+          "texto": "O CPL está no Contêiner 07.",
+          "chunk_ids_citados": [
+            "c_f2c6f00293fae365"
+          ],
+          "sustentado": true,
+          "justificativa": "Conferido por leitura dos chunks citados e, para a vigência, dos respectivos metadados."
+        }
+      ],
+      "citacoes": [
+        {
+          "claim": 0,
+          "chunk_id": "c_f2c6f00293fae365",
+          "resolvida": true,
+          "prova": {
+            "source_id": "DOC-005",
+            "versao": "2026-11-11",
+            "secoes": [
+              "Laboratórios FCTE > Laboratórios de Engenharia Aeroespacial"
+            ],
+            "url": "https://fcte.unb.br/homologa_laboratorios/",
+            "sha256_original": "dc417807f148d3dbb2d21e1242b64a19727079bab599d9b61c629ebcfd1f3e09",
+            "original": "data/originais/DOC-005/2026-11-11/original.html",
+            "extraido": "data/extraido/DOC-005__2026-11-11.json"
+          }
+        }
+      ],
+      "resposta_completa": true,
+      "ausencia_correta": null,
+      "premissa_corrigida": null,
+      "observacoes": "Resposta atende ao solicitado com evidência recuperada. A vigência das páginas é desconhecida; fundamentação textual não comprova situação atual."
+    },
+    {
+      "id": "Q03",
+      "trechos": [
+        {
+          "chunk_id": "c_84847b7559c2bfb8",
+          "relevante": false,
+          "motivo": "Não informa a localização do LEMA; equipamentos e outros laboratórios não respondem."
+        },
+        {
+          "chunk_id": "c_f2c6f00293fae365",
+          "relevante": true,
+          "motivo": "Associa LEMA a LDTEA, térreo, sala 103."
+        },
+        {
+          "chunk_id": "c_436a2249e7a6d0fb",
+          "relevante": false,
+          "motivo": "Não informa a localização do LEMA; equipamentos e outros laboratórios não respondem."
+        },
+        {
+          "chunk_id": "c_4e7588ca515d195f",
+          "relevante": false,
+          "motivo": "Não informa a localização do LEMA; equipamentos e outros laboratórios não respondem."
+        },
+        {
+          "chunk_id": "c_f1e118670e2e6123",
+          "relevante": false,
+          "motivo": "Não informa a localização do LEMA; equipamentos e outros laboratórios não respondem."
+        }
+      ],
+      "fatos": [
+        {
+          "claim": 0,
+          "texto": "O LEMA fica no prédio LDTEA.",
+          "chunk_ids_citados": [
+            "c_f2c6f00293fae365"
+          ],
+          "sustentado": true,
+          "justificativa": "Conferido por leitura dos chunks citados e, para a vigência, dos respectivos metadados."
+        },
+        {
+          "claim": 0,
+          "texto": "O LEMA fica no térreo.",
+          "chunk_ids_citados": [
+            "c_f2c6f00293fae365"
+          ],
+          "sustentado": true,
+          "justificativa": "Conferido por leitura dos chunks citados e, para a vigência, dos respectivos metadados."
+        },
+        {
+          "claim": 0,
+          "texto": "O LEMA fica na sala 103.",
+          "chunk_ids_citados": [
+            "c_f2c6f00293fae365"
+          ],
+          "sustentado": true,
+          "justificativa": "Conferido por leitura dos chunks citados e, para a vigência, dos respectivos metadados."
+        }
+      ],
+      "citacoes": [
+        {
+          "claim": 0,
+          "chunk_id": "c_f2c6f00293fae365",
+          "resolvida": true,
+          "prova": {
+            "source_id": "DOC-005",
+            "versao": "2026-11-11",
+            "secoes": [
+              "Laboratórios FCTE > Laboratórios de Engenharia Aeroespacial"
+            ],
+            "url": "https://fcte.unb.br/homologa_laboratorios/",
+            "sha256_original": "dc417807f148d3dbb2d21e1242b64a19727079bab599d9b61c629ebcfd1f3e09",
+            "original": "data/originais/DOC-005/2026-11-11/original.html",
+            "extraido": "data/extraido/DOC-005__2026-11-11.json"
+          }
+        }
+      ],
+      "resposta_completa": true,
+      "ausencia_correta": null,
+      "premissa_corrigida": null,
+      "observacoes": "O diretório correto foi recuperado em segundo lugar e a localização do LEMA foi respondida, corrigindo a falha de recuperação da rodada densa."
+    },
+    {
+      "id": "Q04",
+      "trechos": [
+        {
+          "chunk_id": "c_45e04c73c85bdc29",
+          "relevante": true,
+          "motivo": "Lista explicitamente setores da UED."
+        },
+        {
+          "chunk_id": "c_cce3adec306aa20f",
+          "relevante": true,
+          "motivo": "Descreve laboratórios instalados na UED."
+        },
+        {
+          "chunk_id": "c_0cf9944816258a3e",
+          "relevante": false,
+          "motivo": "Não associa um setor específico à UED; referência genérica ao campus/UAC/SOU não basta."
+        },
+        {
+          "chunk_id": "c_729881e9497a432e",
+          "relevante": false,
+          "motivo": "Não associa um setor específico à UED; referência genérica ao campus/UAC/SOU não basta."
+        },
+        {
+          "chunk_id": "c_96bceb5f834a79e6",
+          "relevante": true,
+          "motivo": "Associa Enfermagem, Gestão de Pessoas e Pós-Graduação à UED; o título-pai não comprova a denominação composta criada na resposta."
+        }
+      ],
+      "fatos": [
+        {
+          "claim": 0,
+          "texto": "Há salas de professores na UED.",
+          "chunk_ids_citados": [
+            "c_45e04c73c85bdc29"
+          ],
+          "sustentado": true,
+          "justificativa": "Conferido por leitura dos chunks citados e, para a vigência, dos respectivos metadados."
+        },
+        {
+          "claim": 0,
+          "texto": "Há serviços de secretaria na UED.",
+          "chunk_ids_citados": [
+            "c_45e04c73c85bdc29"
+          ],
+          "sustentado": true,
+          "justificativa": "Conferido por leitura dos chunks citados e, para a vigência, dos respectivos metadados."
+        },
+        {
+          "claim": 0,
+          "texto": "Há laboratórios na UED.",
+          "chunk_ids_citados": [
+            "c_45e04c73c85bdc29"
+          ],
+          "sustentado": true,
+          "justificativa": "Conferido por leitura dos chunks citados e, para a vigência, dos respectivos metadados."
+        },
+        {
+          "claim": 0,
+          "texto": "Há diretoria na UED.",
+          "chunk_ids_citados": [
+            "c_45e04c73c85bdc29"
+          ],
+          "sustentado": true,
+          "justificativa": "Conferido por leitura dos chunks citados e, para a vigência, dos respectivos metadados."
+        },
+        {
+          "claim": 0,
+          "texto": "Há coordenação acadêmica na UED.",
+          "chunk_ids_citados": [
+            "c_45e04c73c85bdc29"
+          ],
+          "sustentado": true,
+          "justificativa": "Conferido por leitura dos chunks citados e, para a vigência, dos respectivos metadados."
+        },
+        {
+          "claim": 1,
+          "texto": "Há uma Secretaria de Graduação de Enfermagem na UED.",
+          "chunk_ids_citados": [
+            "c_96bceb5f834a79e6"
+          ],
+          "sustentado": false,
+          "justificativa": "Os rótulos Secretaria de Graduação e ENFERMAGEM aparecem na hierarquia extraída, mas não comprovam a denominação composta Secretaria de Graduação de Enfermagem. A revisão exige suporte explícito para essa associação."
+        },
+        {
+          "claim": 1,
+          "texto": "Há atendimento de Gestão de Pessoas na UED.",
+          "chunk_ids_citados": [
+            "c_96bceb5f834a79e6"
+          ],
+          "sustentado": true,
+          "justificativa": "Conferido por leitura dos chunks citados e, para a vigência, dos respectivos metadados."
+        },
+        {
+          "claim": 1,
+          "texto": "Há atendimento de Pós-Graduação na UED.",
+          "chunk_ids_citados": [
+            "c_96bceb5f834a79e6"
+          ],
+          "sustentado": true,
+          "justificativa": "Conferido por leitura dos chunks citados e, para a vigência, dos respectivos metadados."
+        }
+      ],
+      "citacoes": [
+        {
+          "claim": 0,
+          "chunk_id": "c_45e04c73c85bdc29",
+          "resolvida": true,
+          "prova": {
+            "source_id": "DOC-001",
+            "versao": "2026-11-11",
+            "secoes": [
+              "Infraestrutura"
+            ],
+            "url": "https://fcte.unb.br/infraestrutura/",
+            "sha256_original": "ceadfb0cc3356250926466b5f5490f14b208273953e0be1d4a1f054f9b3781f9",
+            "original": "data/originais/DOC-001/2026-11-11/original.html",
+            "extraido": "data/extraido/DOC-001__2026-11-11.json"
+          }
+        },
+        {
+          "claim": 1,
+          "chunk_id": "c_96bceb5f834a79e6",
+          "resolvida": true,
+          "prova": {
+            "source_id": "DOC-002",
+            "versao": "2026-11-11",
+            "secoes": [
+              "Secretaria de Graduação > ENFERMAGEM",
+              "Secretaria de Graduação > GESTÃO DE PESSOAS",
+              "Secretaria de Graduação > PÓS-GRADUAÇÃO"
+            ],
+            "url": "https://fcte.unb.br/contato/",
+            "sha256_original": "984d9c12fb8e5c32e284225c900c32b3cc412d05ee0e541945d42890503f4640",
+            "original": "data/originais/DOC-002/2026-11-11/original.html",
+            "extraido": "data/extraido/DOC-002__2026-11-11.json"
+          }
+        }
+      ],
+      "resposta_completa": false,
+      "ausencia_correta": null,
+      "premissa_corrigida": null,
+      "observacoes": "Os setores gerais estão sustentados. A expressão “Secretaria de Graduação de Enfermagem” combina o título-pai com o subtítulo ENFERMAGEM; o trecho não estabelece essa denominação institucional. Um fato foi marcado sem suporte suficiente. Também há ambiguidade UAC/UED para secretaria entre páginas. Requer revisão de extração e redação."
+    },
+    {
+      "id": "Q05",
+      "trechos": [
+        {
+          "chunk_id": "c_45e04c73c85bdc29",
+          "relevante": true,
+          "motivo": "Localiza biblioteca e auditório na UAC."
+        },
+        {
+          "chunk_id": "c_17241a7563801760",
+          "relevante": false,
+          "motivo": "Não situa biblioteca ou auditório em uma unidade; assunto biblioteca/laboratórios isoladamente não basta."
+        },
+        {
+          "chunk_id": "c_0cf9944816258a3e",
+          "relevante": true,
+          "motivo": "Relaciona a biblioteca ao prédio da UAC; evidência parcial para a pergunta composta."
+        },
+        {
+          "chunk_id": "c_cce3adec306aa20f",
+          "relevante": false,
+          "motivo": "Não situa biblioteca ou auditório em uma unidade; assunto biblioteca/laboratórios isoladamente não basta."
+        },
+        {
+          "chunk_id": "c_d18e321ba2d41ac7",
+          "relevante": false,
+          "motivo": "Não situa biblioteca ou auditório em uma unidade; assunto biblioteca/laboratórios isoladamente não basta."
+        }
+      ],
+      "fatos": [
+        {
+          "claim": 0,
+          "texto": "A biblioteca fica na UAC.",
+          "chunk_ids_citados": [
+            "c_45e04c73c85bdc29"
+          ],
+          "sustentado": true,
+          "justificativa": "Conferido por leitura dos chunks citados e, para a vigência, dos respectivos metadados."
+        },
+        {
+          "claim": 0,
+          "texto": "O auditório fica na UAC.",
+          "chunk_ids_citados": [
+            "c_45e04c73c85bdc29"
+          ],
+          "sustentado": true,
+          "justificativa": "Conferido por leitura dos chunks citados e, para a vigência, dos respectivos metadados."
+        }
+      ],
+      "citacoes": [
+        {
+          "claim": 0,
+          "chunk_id": "c_45e04c73c85bdc29",
+          "resolvida": true,
+          "prova": {
+            "source_id": "DOC-001",
+            "versao": "2026-11-11",
+            "secoes": [
+              "Infraestrutura"
+            ],
+            "url": "https://fcte.unb.br/infraestrutura/",
+            "sha256_original": "ceadfb0cc3356250926466b5f5490f14b208273953e0be1d4a1f054f9b3781f9",
+            "original": "data/originais/DOC-001/2026-11-11/original.html",
+            "extraido": "data/extraido/DOC-001__2026-11-11.json"
+          }
+        }
+      ],
+      "resposta_completa": true,
+      "ausencia_correta": null,
+      "premissa_corrigida": null,
+      "observacoes": "Resposta atende ao solicitado com evidência recuperada. A vigência das páginas é desconhecida; fundamentação textual não comprova situação atual."
+    },
+    {
+      "id": "Q06",
+      "trechos": [
+        {
+          "chunk_id": "c_c8a0b710c3c50b09",
+          "relevante": true,
+          "motivo": "Informa cabines individuais e mesas para estudo em grupo."
+        },
+        {
+          "chunk_id": "c_1cfe0848c545f27c",
+          "relevante": false,
+          "motivo": "Não confirma espaços de estudo individual ou em grupo na biblioteca."
+        },
+        {
+          "chunk_id": "c_17241a7563801760",
+          "relevante": false,
+          "motivo": "Não confirma espaços de estudo individual ou em grupo na biblioteca."
+        },
+        {
+          "chunk_id": "c_5faca10e6e792b67",
+          "relevante": false,
+          "motivo": "Não confirma espaços de estudo individual ou em grupo na biblioteca."
+        },
+        {
+          "chunk_id": "c_ff640f1875faa059",
+          "relevante": false,
+          "motivo": "Não confirma espaços de estudo individual ou em grupo na biblioteca."
+        }
+      ],
+      "fatos": [
+        {
+          "claim": 0,
+          "texto": "A biblioteca tem cabines para estudo individual.",
+          "chunk_ids_citados": [
+            "c_c8a0b710c3c50b09"
+          ],
+          "sustentado": true,
+          "justificativa": "Conferido por leitura dos chunks citados e, para a vigência, dos respectivos metadados."
+        },
+        {
+          "claim": 0,
+          "texto": "A biblioteca tem mesas para estudo em grupo.",
+          "chunk_ids_citados": [
+            "c_c8a0b710c3c50b09"
+          ],
+          "sustentado": true,
+          "justificativa": "Conferido por leitura dos chunks citados e, para a vigência, dos respectivos metadados."
+        }
+      ],
+      "citacoes": [
+        {
+          "claim": 0,
+          "chunk_id": "c_c8a0b710c3c50b09",
+          "resolvida": true,
+          "prova": {
+            "source_id": "DOC-012",
+            "versao": "2026-11-11",
+            "secoes": [
+              "BIBLIOTECA SETORIAL CAMPUS GAMA"
+            ],
+            "url": "https://bce.unb.br/biblioteca-campus-gama/",
+            "sha256_original": "5dccfb997d528f349e05ff457ef3aa6d37e315caaf86a604de87b3995388da01",
+            "original": "data/originais/DOC-012/2026-11-11/original.html",
+            "extraido": "data/extraido/DOC-012__2026-11-11.json"
+          }
+        }
+      ],
+      "resposta_completa": true,
+      "ausencia_correta": null,
+      "premissa_corrigida": null,
+      "observacoes": "Resposta atende ao solicitado com evidência recuperada. A vigência das páginas é desconhecida; fundamentação textual não comprova situação atual."
+    },
+    {
+      "id": "Q07",
+      "trechos": [
+        {
+          "chunk_id": "c_17241a7563801760",
+          "relevante": false,
+          "motivo": "Não estabelece a regra de acesso ou empréstimo para pessoas de fora da UnB."
+        },
+        {
+          "chunk_id": "c_1cfe0848c545f27c",
+          "relevante": true,
+          "motivo": "Informa acesso externo sem credenciamento ou agendamento; não esclarece empréstimo externo."
+        },
+        {
+          "chunk_id": "c_c8a0b710c3c50b09",
+          "relevante": false,
+          "motivo": "Não estabelece a regra de acesso ou empréstimo para pessoas de fora da UnB."
+        },
+        {
+          "chunk_id": "c_5faca10e6e792b67",
+          "relevante": false,
+          "motivo": "Não estabelece a regra de acesso ou empréstimo para pessoas de fora da UnB."
+        },
+        {
+          "chunk_id": "c_67bff220dfeab17f",
+          "relevante": false,
+          "motivo": "Não estabelece a regra de acesso ou empréstimo para pessoas de fora da UnB."
+        }
+      ],
+      "fatos": [
+        {
+          "claim": 0,
+          "texto": "A biblioteca é aberta à comunidade externa.",
+          "chunk_ids_citados": [
+            "c_1cfe0848c545f27c"
+          ],
+          "sustentado": true,
+          "justificativa": "Conferido por leitura dos chunks citados e, para a vigência, dos respectivos metadados."
+        },
+        {
+          "claim": 0,
+          "texto": "O acesso externo dispensa credenciamento.",
+          "chunk_ids_citados": [
+            "c_1cfe0848c545f27c"
+          ],
+          "sustentado": true,
+          "justificativa": "Conferido por leitura dos chunks citados e, para a vigência, dos respectivos metadados."
+        },
+        {
+          "claim": 0,
+          "texto": "O acesso externo dispensa agendamento.",
+          "chunk_ids_citados": [
+            "c_1cfe0848c545f27c"
+          ],
+          "sustentado": true,
+          "justificativa": "Conferido por leitura dos chunks citados e, para a vigência, dos respectivos metadados."
+        }
+      ],
+      "citacoes": [
+        {
+          "claim": 0,
+          "chunk_id": "c_1cfe0848c545f27c",
+          "resolvida": true,
+          "prova": {
+            "source_id": "DOC-012",
+            "versao": "2026-11-11",
+            "secoes": [
+              "Serviços",
+              "Comunidade Externa"
+            ],
+            "url": "https://bce.unb.br/biblioteca-campus-gama/",
+            "sha256_original": "5dccfb997d528f349e05ff457ef3aa6d37e315caaf86a604de87b3995388da01",
+            "original": "data/originais/DOC-012/2026-11-11/original.html",
+            "extraido": "data/extraido/DOC-012__2026-11-11.json"
+          }
+        }
+      ],
+      "resposta_completa": false,
+      "ausencia_correta": null,
+      "premissa_corrigida": null,
+      "observacoes": "Resposta parcial: confirma acesso externo, mas omite se visitantes podem pegar livros emprestados. O chunk c_d18e321ba2d41ac7, que restringe empréstimo à comunidade acadêmica, existe na base e ficou fora do top-5 desta consulta. Os três fatos produzidos estão sustentados; a omissão reduz cobertura, não fundamentação."
+    },
+    {
+      "id": "Q08",
+      "trechos": [
+        {
+          "chunk_id": "c_7487f9e90557b28d",
+          "relevante": true,
+          "motivo": "Explica a lista por e-mail, pré-seleção, entrega e incorporação de doações."
+        },
+        {
+          "chunk_id": "c_1cfe0848c545f27c",
+          "relevante": false,
+          "motivo": "Não explica o procedimento de doação; contato genérico e outros serviços não bastam."
+        },
+        {
+          "chunk_id": "c_17241a7563801760",
+          "relevante": false,
+          "motivo": "Não explica o procedimento de doação; contato genérico e outros serviços não bastam."
+        },
+        {
+          "chunk_id": "c_ff640f1875faa059",
+          "relevante": false,
+          "motivo": "Não explica o procedimento de doação; contato genérico e outros serviços não bastam."
+        },
+        {
+          "chunk_id": "c_3d4281f8af790336",
+          "relevante": false,
+          "motivo": "Não explica o procedimento de doação; contato genérico e outros serviços não bastam."
+        }
+      ],
+      "fatos": [
+        {
+          "claim": 0,
+          "texto": "O interessado em doar deve enviar e-mail.",
+          "chunk_ids_citados": [
+            "c_7487f9e90557b28d"
+          ],
+          "sustentado": true,
+          "justificativa": "Conferido por leitura dos chunks citados e, para a vigência, dos respectivos metadados."
+        },
+        {
+          "claim": 0,
+          "texto": "A lista deve conter os títulos.",
+          "chunk_ids_citados": [
+            "c_7487f9e90557b28d"
+          ],
+          "sustentado": true,
+          "justificativa": "Conferido por leitura dos chunks citados e, para a vigência, dos respectivos metadados."
+        },
+        {
+          "claim": 0,
+          "texto": "A lista deve conter os autores.",
+          "chunk_ids_citados": [
+            "c_7487f9e90557b28d"
+          ],
+          "sustentado": true,
+          "justificativa": "Conferido por leitura dos chunks citados e, para a vigência, dos respectivos metadados."
+        },
+        {
+          "claim": 0,
+          "texto": "A lista deve conter a edição.",
+          "chunk_ids_citados": [
+            "c_7487f9e90557b28d"
+          ],
+          "sustentado": true,
+          "justificativa": "Conferido por leitura dos chunks citados e, para a vigência, dos respectivos metadados."
+        },
+        {
+          "claim": 0,
+          "texto": "A lista deve conter o ISBN.",
+          "chunk_ids_citados": [
+            "c_7487f9e90557b28d"
+          ],
+          "sustentado": true,
+          "justificativa": "Conferido por leitura dos chunks citados e, para a vigência, dos respectivos metadados."
+        },
+        {
+          "claim": 1,
+          "texto": "O horário de entrega é marcado após a indicação dos materiais pré-selecionados.",
+          "chunk_ids_citados": [
+            "c_7487f9e90557b28d"
+          ],
+          "sustentado": true,
+          "justificativa": "Conferido por leitura dos chunks citados e, para a vigência, dos respectivos metadados."
+        },
+        {
+          "claim": 1,
+          "texto": "A entrega ocorre na Biblioteca do Campus Gama.",
+          "chunk_ids_citados": [
+            "c_7487f9e90557b28d"
+          ],
+          "sustentado": true,
+          "justificativa": "Conferido por leitura dos chunks citados e, para a vigência, dos respectivos metadados."
+        },
+        {
+          "claim": 2,
+          "texto": "O estado de conservação é conferido no dia da entrega.",
+          "chunk_ids_citados": [
+            "c_7487f9e90557b28d"
+          ],
+          "sustentado": true,
+          "justificativa": "Conferido por leitura dos chunks citados e, para a vigência, dos respectivos metadados."
+        },
+        {
+          "claim": 2,
+          "texto": "Os itens aprovados são incorporados ao acervo.",
+          "chunk_ids_citados": [
+            "c_7487f9e90557b28d"
+          ],
+          "sustentado": true,
+          "justificativa": "Conferido por leitura dos chunks citados e, para a vigência, dos respectivos metadados."
+        },
+        {
+          "claim": 2,
+          "texto": "A incorporação ocorre após processamento técnico.",
+          "chunk_ids_citados": [
+            "c_7487f9e90557b28d"
+          ],
+          "sustentado": true,
+          "justificativa": "Conferido por leitura dos chunks citados e, para a vigência, dos respectivos metadados."
+        }
+      ],
+      "citacoes": [
+        {
+          "claim": 0,
+          "chunk_id": "c_7487f9e90557b28d",
+          "resolvida": true,
+          "prova": {
+            "source_id": "DOC-012",
+            "versao": "2026-11-11",
+            "secoes": [
+              "BIBLIOTECA SETORIAL CAMPUS GAMA > Doações",
+              "BIBLIOTECA SETORIAL CAMPUS GAMA > Responsável",
+              "BIBLIOTECA SETORIAL CAMPUS GAMA > Funcionamento"
+            ],
+            "url": "https://bce.unb.br/biblioteca-campus-gama/",
+            "sha256_original": "5dccfb997d528f349e05ff457ef3aa6d37e315caaf86a604de87b3995388da01",
+            "original": "data/originais/DOC-012/2026-11-11/original.html",
+            "extraido": "data/extraido/DOC-012__2026-11-11.json"
+          }
+        },
+        {
+          "claim": 1,
+          "chunk_id": "c_7487f9e90557b28d",
+          "resolvida": true,
+          "prova": {
+            "source_id": "DOC-012",
+            "versao": "2026-11-11",
+            "secoes": [
+              "BIBLIOTECA SETORIAL CAMPUS GAMA > Doações",
+              "BIBLIOTECA SETORIAL CAMPUS GAMA > Responsável",
+              "BIBLIOTECA SETORIAL CAMPUS GAMA > Funcionamento"
+            ],
+            "url": "https://bce.unb.br/biblioteca-campus-gama/",
+            "sha256_original": "5dccfb997d528f349e05ff457ef3aa6d37e315caaf86a604de87b3995388da01",
+            "original": "data/originais/DOC-012/2026-11-11/original.html",
+            "extraido": "data/extraido/DOC-012__2026-11-11.json"
+          }
+        },
+        {
+          "claim": 2,
+          "chunk_id": "c_7487f9e90557b28d",
+          "resolvida": true,
+          "prova": {
+            "source_id": "DOC-012",
+            "versao": "2026-11-11",
+            "secoes": [
+              "BIBLIOTECA SETORIAL CAMPUS GAMA > Doações",
+              "BIBLIOTECA SETORIAL CAMPUS GAMA > Responsável",
+              "BIBLIOTECA SETORIAL CAMPUS GAMA > Funcionamento"
+            ],
+            "url": "https://bce.unb.br/biblioteca-campus-gama/",
+            "sha256_original": "5dccfb997d528f349e05ff457ef3aa6d37e315caaf86a604de87b3995388da01",
+            "original": "data/originais/DOC-012/2026-11-11/original.html",
+            "extraido": "data/extraido/DOC-012__2026-11-11.json"
+          }
+        }
+      ],
+      "resposta_completa": true,
+      "ausencia_correta": null,
+      "premissa_corrigida": null,
+      "observacoes": "Resposta atende ao solicitado com evidência recuperada. A vigência das páginas é desconhecida; fundamentação textual não comprova situação atual."
+    },
+    {
+      "id": "Q09",
+      "trechos": [
+        {
+          "chunk_id": "c_a329b12b7f9edc9c",
+          "relevante": true,
+          "motivo": "Explica inserir origem/destino e quais resultados a pesquisa geral retorna."
+        },
+        {
+          "chunk_id": "c_436a2249e7a6d0fb",
+          "relevante": false,
+          "motivo": "Não explica a pesquisa por origem/destino; menu/promessa geral ou pesquisa por número de linha não substituem a instrução."
+        },
+        {
+          "chunk_id": "c_a98948e2bed7c50a",
+          "relevante": false,
+          "motivo": "Não explica a pesquisa por origem/destino; menu/promessa geral ou pesquisa por número de linha não substituem a instrução."
+        },
+        {
+          "chunk_id": "c_651a8b71267b928b",
+          "relevante": false,
+          "motivo": "Não explica a pesquisa por origem/destino; menu/promessa geral ou pesquisa por número de linha não substituem a instrução."
+        },
+        {
+          "chunk_id": "c_c588ea758007149f",
+          "relevante": false,
+          "motivo": "Não explica a pesquisa por origem/destino; menu/promessa geral ou pesquisa por número de linha não substituem a instrução."
+        }
+      ],
+      "fatos": [
+        {
+          "claim": 0,
+          "texto": "A pesquisa geral recebe local de partida ou destino.",
+          "chunk_ids_citados": [
+            "c_a329b12b7f9edc9c"
+          ],
+          "sustentado": true,
+          "justificativa": "Conferido por leitura dos chunks citados e, para a vigência, dos respectivos metadados."
+        },
+        {
+          "claim": 0,
+          "texto": "A pesquisa permite acessar horários.",
+          "chunk_ids_citados": [
+            "c_a329b12b7f9edc9c"
+          ],
+          "sustentado": true,
+          "justificativa": "Conferido por leitura dos chunks citados e, para a vigência, dos respectivos metadados."
+        },
+        {
+          "claim": 0,
+          "texto": "A pesquisa permite acessar linhas disponíveis.",
+          "chunk_ids_citados": [
+            "c_a329b12b7f9edc9c"
+          ],
+          "sustentado": true,
+          "justificativa": "Conferido por leitura dos chunks citados e, para a vigência, dos respectivos metadados."
+        },
+        {
+          "claim": 0,
+          "texto": "A pesquisa permite acessar pontos de parada próximos.",
+          "chunk_ids_citados": [
+            "c_a329b12b7f9edc9c"
+          ],
+          "sustentado": true,
+          "justificativa": "Conferido por leitura dos chunks citados e, para a vigência, dos respectivos metadados."
+        }
+      ],
+      "citacoes": [
+        {
+          "claim": 0,
+          "chunk_id": "c_a329b12b7f9edc9c",
+          "resolvida": true,
+          "prova": {
+            "source_id": "DOC-026",
+            "versao": "2026-11-11",
+            "secoes": [
+              "Pesquisa Geral"
+            ],
+            "url": "https://dfnoponto.semob.df.gov.br/pesquisa-geral/",
+            "sha256_original": "9a760a58c4e8f61261975bcbf3675ef1aa68d73a01f741320e5f21f2551e4120",
+            "original": "data/originais/DOC-026/2026-11-11/original.html",
+            "extraido": "data/extraido/DOC-026__2026-11-11.json"
+          }
+        }
+      ],
+      "resposta_completa": true,
+      "ausencia_correta": null,
+      "premissa_corrigida": null,
+      "observacoes": "Resposta atende ao solicitado com evidência recuperada. A vigência das páginas é desconhecida; fundamentação textual não comprova situação atual."
+    },
+    {
+      "id": "Q10",
+      "trechos": [
+        {
+          "chunk_id": "c_1cfe0848c545f27c",
+          "relevante": false,
+          "motivo": "Não especifica o horário da biblioteca; horário de secretaria/direção não pode ser transferido."
+        },
+        {
+          "chunk_id": "c_7487f9e90557b28d",
+          "relevante": true,
+          "motivo": "Horário explícito da biblioteca, com exceção de feriados."
+        },
+        {
+          "chunk_id": "c_17241a7563801760",
+          "relevante": false,
+          "motivo": "Não especifica o horário da biblioteca; horário de secretaria/direção não pode ser transferido."
+        },
+        {
+          "chunk_id": "c_ff640f1875faa059",
+          "relevante": true,
+          "motivo": "Horário explícito do atendimento presencial da biblioteca na UAC."
+        },
+        {
+          "chunk_id": "c_89297cda3ce1be6c",
+          "relevante": false,
+          "motivo": "Não especifica o horário da biblioteca; horário de secretaria/direção não pode ser transferido."
+        }
+      ],
+      "fatos": [
+        {
+          "claim": 0,
+          "texto": "A biblioteca funciona de segunda a sexta-feira.",
+          "chunk_ids_citados": [
+            "c_7487f9e90557b28d"
+          ],
+          "sustentado": true,
+          "justificativa": "Conferido por leitura dos chunks citados e, para a vigência, dos respectivos metadados."
+        },
+        {
+          "claim": 0,
+          "texto": "O funcionamento indicado exclui feriados.",
+          "chunk_ids_citados": [
+            "c_7487f9e90557b28d"
+          ],
+          "sustentado": true,
+          "justificativa": "Conferido por leitura dos chunks citados e, para a vigência, dos respectivos metadados."
+        },
+        {
+          "claim": 0,
+          "texto": "A abertura informada é às 7h.",
+          "chunk_ids_citados": [
+            "c_7487f9e90557b28d"
+          ],
+          "sustentado": true,
+          "justificativa": "Conferido por leitura dos chunks citados e, para a vigência, dos respectivos metadados."
+        },
+        {
+          "claim": 0,
+          "texto": "O fechamento informado é às 19h.",
+          "chunk_ids_citados": [
+            "c_7487f9e90557b28d"
+          ],
+          "sustentado": true,
+          "justificativa": "Conferido por leitura dos chunks citados e, para a vigência, dos respectivos metadados."
+        },
+        {
+          "claim": 1,
+          "texto": "O atendimento presencial da biblioteca ocorre na UAC.",
+          "chunk_ids_citados": [
+            "c_ff640f1875faa059"
+          ],
+          "sustentado": true,
+          "justificativa": "Conferido por leitura dos chunks citados e, para a vigência, dos respectivos metadados."
+        },
+        {
+          "claim": 1,
+          "texto": "O atendimento ocorre de segunda a sexta-feira.",
+          "chunk_ids_citados": [
+            "c_ff640f1875faa059"
+          ],
+          "sustentado": true,
+          "justificativa": "Conferido por leitura dos chunks citados e, para a vigência, dos respectivos metadados."
+        },
+        {
+          "claim": 1,
+          "texto": "O atendimento começa às 7h.",
+          "chunk_ids_citados": [
+            "c_ff640f1875faa059"
+          ],
+          "sustentado": true,
+          "justificativa": "Conferido por leitura dos chunks citados e, para a vigência, dos respectivos metadados."
+        },
+        {
+          "claim": 1,
+          "texto": "O atendimento termina às 19h.",
+          "chunk_ids_citados": [
+            "c_ff640f1875faa059"
+          ],
+          "sustentado": true,
+          "justificativa": "Conferido por leitura dos chunks citados e, para a vigência, dos respectivos metadados."
+        }
+      ],
+      "citacoes": [
+        {
+          "claim": 0,
+          "chunk_id": "c_7487f9e90557b28d",
+          "resolvida": true,
+          "prova": {
+            "source_id": "DOC-012",
+            "versao": "2026-11-11",
+            "secoes": [
+              "BIBLIOTECA SETORIAL CAMPUS GAMA > Doações",
+              "BIBLIOTECA SETORIAL CAMPUS GAMA > Responsável",
+              "BIBLIOTECA SETORIAL CAMPUS GAMA > Funcionamento"
+            ],
+            "url": "https://bce.unb.br/biblioteca-campus-gama/",
+            "sha256_original": "5dccfb997d528f349e05ff457ef3aa6d37e315caaf86a604de87b3995388da01",
+            "original": "data/originais/DOC-012/2026-11-11/original.html",
+            "extraido": "data/extraido/DOC-012__2026-11-11.json"
+          }
+        },
+        {
+          "claim": 1,
+          "chunk_id": "c_ff640f1875faa059",
+          "resolvida": true,
+          "prova": {
+            "source_id": "DOC-002",
+            "versao": "2026-11-11",
+            "secoes": [
+              "Secretaria de Graduação > ADMINISTRAÇÃO",
+              "Secretaria de Graduação > BIBLIOTECA"
+            ],
+            "url": "https://fcte.unb.br/contato/",
+            "sha256_original": "984d9c12fb8e5c32e284225c900c32b3cc412d05ee0e541945d42890503f4640",
+            "original": "data/originais/DOC-002/2026-11-11/original.html",
+            "extraido": "data/extraido/DOC-002__2026-11-11.json"
+          }
+        }
+      ],
+      "resposta_completa": true,
+      "ausencia_correta": null,
+      "premissa_corrigida": null,
+      "observacoes": "A primeira tentativa falhou com HTTP 502; a segunda respondeu com horários documentados. As duas tentativas foram preservadas; o erro técnico não foi descartado da taxa por chamada."
+    },
+    {
+      "id": "Q11",
+      "trechos": [
+        {
+          "chunk_id": "c_f2c6f00293fae365",
+          "relevante": true,
+          "motivo": "Permite corrigir prédio, andar e sala atribuídos incorretamente ao COSMOS."
+        },
+        {
+          "chunk_id": "c_0e12f3858918d20b",
+          "relevante": false,
+          "motivo": "Não informa prédio, andar e sala do COSMOS; descrição de outros locais não corrige a premissa."
+        },
+        {
+          "chunk_id": "c_df45b0823ed5a0bc",
+          "relevante": false,
+          "motivo": "Não informa prédio, andar e sala do COSMOS; descrição de outros locais não corrige a premissa."
+        },
+        {
+          "chunk_id": "c_45e04c73c85bdc29",
+          "relevante": false,
+          "motivo": "Não informa prédio, andar e sala do COSMOS; descrição de outros locais não corrige a premissa."
+        },
+        {
+          "chunk_id": "c_2d85dbef5af80376",
+          "relevante": false,
+          "motivo": "Não informa prédio, andar e sala do COSMOS; descrição de outros locais não corrige a premissa."
+        }
+      ],
+      "fatos": [
+        {
+          "claim": 0,
+          "texto": "O COSMOS fica no LDTEA.",
+          "chunk_ids_citados": [
+            "c_f2c6f00293fae365"
+          ],
+          "sustentado": true,
+          "justificativa": "Conferido por leitura dos chunks citados e, para a vigência, dos respectivos metadados."
+        },
+        {
+          "claim": 0,
+          "texto": "O COSMOS fica no segundo andar.",
+          "chunk_ids_citados": [
+            "c_f2c6f00293fae365"
+          ],
+          "sustentado": true,
+          "justificativa": "Conferido por leitura dos chunks citados e, para a vigência, dos respectivos metadados."
+        },
+        {
+          "claim": 0,
+          "texto": "O COSMOS fica na sala 304.",
+          "chunk_ids_citados": [
+            "c_f2c6f00293fae365"
+          ],
+          "sustentado": true,
+          "justificativa": "Conferido por leitura dos chunks citados e, para a vigência, dos respectivos metadados."
+        },
+        {
+          "claim": 0,
+          "texto": "A vigência temporal do diretório não está informada nos metadados.",
+          "chunk_ids_citados": [
+            "c_f2c6f00293fae365"
+          ],
+          "sustentado": true,
+          "justificativa": "Conferido por leitura dos chunks citados e, para a vigência, dos respectivos metadados."
+        }
+      ],
+      "citacoes": [
+        {
+          "claim": 0,
+          "chunk_id": "c_f2c6f00293fae365",
+          "resolvida": true,
+          "prova": {
+            "source_id": "DOC-005",
+            "versao": "2026-11-11",
+            "secoes": [
+              "Laboratórios FCTE > Laboratórios de Engenharia Aeroespacial"
+            ],
+            "url": "https://fcte.unb.br/homologa_laboratorios/",
+            "sha256_original": "dc417807f148d3dbb2d21e1242b64a19727079bab599d9b61c629ebcfd1f3e09",
+            "original": "data/originais/DOC-005/2026-11-11/original.html",
+            "extraido": "data/extraido/DOC-005__2026-11-11.json"
+          }
+        }
+      ],
+      "resposta_completa": true,
+      "ausencia_correta": null,
+      "premissa_corrigida": true,
+      "observacoes": "Corrige os três elementos da premissa falsa e atribui a localização ao diretório com vigência desconhecida. A ressalva temporal também foi contabilizada como fato de metadados."
+    },
+    {
+      "id": "Q12",
+      "trechos": [
+        {
+          "chunk_id": "c_c8a0b710c3c50b09",
+          "relevante": false,
+          "motivo": "Não identifica o prédio da biblioteca como UAC ou UED."
+        },
+        {
+          "chunk_id": "c_1cfe0848c545f27c",
+          "relevante": false,
+          "motivo": "Não identifica o prédio da biblioteca como UAC ou UED."
+        },
+        {
+          "chunk_id": "c_17241a7563801760",
+          "relevante": false,
+          "motivo": "Não identifica o prédio da biblioteca como UAC ou UED."
+        },
+        {
+          "chunk_id": "c_ff640f1875faa059",
+          "relevante": true,
+          "motivo": "Localiza a biblioteca na UAC, corrigindo a premissa UED."
+        },
+        {
+          "chunk_id": "c_5faca10e6e792b67",
+          "relevante": false,
+          "motivo": "Não identifica o prédio da biblioteca como UAC ou UED."
+        }
+      ],
+      "fatos": [
+        {
+          "claim": 0,
+          "texto": "A biblioteca do Campus Gama fica na UAC.",
+          "chunk_ids_citados": [
+            "c_ff640f1875faa059"
+          ],
+          "sustentado": true,
+          "justificativa": "Conferido por leitura dos chunks citados e, para a vigência, dos respectivos metadados."
+        }
+      ],
+      "citacoes": [
+        {
+          "claim": 0,
+          "chunk_id": "c_ff640f1875faa059",
+          "resolvida": true,
+          "prova": {
+            "source_id": "DOC-002",
+            "versao": "2026-11-11",
+            "secoes": [
+              "Secretaria de Graduação > ADMINISTRAÇÃO",
+              "Secretaria de Graduação > BIBLIOTECA"
+            ],
+            "url": "https://fcte.unb.br/contato/",
+            "sha256_original": "984d9c12fb8e5c32e284225c900c32b3cc412d05ee0e541945d42890503f4640",
+            "original": "data/originais/DOC-002/2026-11-11/original.html",
+            "extraido": "data/extraido/DOC-002__2026-11-11.json"
+          }
+        }
+      ],
+      "resposta_completa": true,
+      "ausencia_correta": null,
+      "premissa_corrigida": true,
+      "observacoes": "Corrige a premissa: UAC, conforme DOC-002, em vez de confirmar UED."
+    },
+    {
+      "id": "Q13",
+      "trechos": [
+        {
+          "chunk_id": "c_cd638caa1b0d517e",
+          "relevante": false,
+          "motivo": "Não há medição da ocupação da sala I10 no momento da pergunta."
+        },
+        {
+          "chunk_id": "c_0904be5ddfac8a87",
+          "relevante": false,
+          "motivo": "Não há medição da ocupação da sala I10 no momento da pergunta."
+        },
+        {
+          "chunk_id": "c_78aefd971e83ca2c",
+          "relevante": false,
+          "motivo": "Não há medição da ocupação da sala I10 no momento da pergunta."
+        },
+        {
+          "chunk_id": "c_def12e461bfc328e",
+          "relevante": false,
+          "motivo": "Não há medição da ocupação da sala I10 no momento da pergunta."
+        },
+        {
+          "chunk_id": "c_3ec499d6018e067b",
+          "relevante": false,
+          "motivo": "Não há medição da ocupação da sala I10 no momento da pergunta."
+        }
+      ],
+      "fatos": [],
+      "citacoes": [],
+      "resposta_completa": false,
+      "ausencia_correta": true,
+      "premissa_corrigida": null,
+      "observacoes": "Ausência corretamente reconhecida: não há ocupação atual da I10. Sem afirmações externas a avaliar."
+    },
+    {
+      "id": "Q14",
+      "trechos": [
+        {
+          "chunk_id": "c_c8a0b710c3c50b09",
+          "relevante": false,
+          "motivo": "Não há contagem atual de pessoas na biblioteca."
+        },
+        {
+          "chunk_id": "c_7487f9e90557b28d",
+          "relevante": false,
+          "motivo": "Não há contagem atual de pessoas na biblioteca."
+        },
+        {
+          "chunk_id": "c_17241a7563801760",
+          "relevante": false,
+          "motivo": "Não há contagem atual de pessoas na biblioteca."
+        },
+        {
+          "chunk_id": "c_5faca10e6e792b67",
+          "relevante": false,
+          "motivo": "Não há contagem atual de pessoas na biblioteca."
+        },
+        {
+          "chunk_id": "c_ff640f1875faa059",
+          "relevante": false,
+          "motivo": "Não há contagem atual de pessoas na biblioteca."
+        }
+      ],
+      "fatos": [],
+      "citacoes": [],
+      "resposta_completa": false,
+      "ausencia_correta": true,
+      "premissa_corrigida": null,
+      "observacoes": "Ausência corretamente reconhecida: não há contagem atual de pessoas na biblioteca."
+    },
+    {
+      "id": "Q15",
+      "trechos": [
+        {
+          "chunk_id": "c_bdf6877d01ab763b",
+          "relevante": false,
+          "motivo": "Não há previsão de passagem de ônibus na entrada da FCTE para o instante solicitado."
+        },
+        {
+          "chunk_id": "c_02bee2be0e28a57f",
+          "relevante": false,
+          "motivo": "Não há previsão de passagem de ônibus na entrada da FCTE para o instante solicitado."
+        },
+        {
+          "chunk_id": "c_45e04c73c85bdc29",
+          "relevante": false,
+          "motivo": "Não há previsão de passagem de ônibus na entrada da FCTE para o instante solicitado."
+        },
+        {
+          "chunk_id": "c_38179b5938368adb",
+          "relevante": false,
+          "motivo": "Não há previsão de passagem de ônibus na entrada da FCTE para o instante solicitado."
+        },
+        {
+          "chunk_id": "c_ce46e880e27ab7af",
+          "relevante": false,
+          "motivo": "Não há previsão de passagem de ônibus na entrada da FCTE para o instante solicitado."
+        }
+      ],
+      "fatos": [],
+      "citacoes": [],
+      "resposta_completa": false,
+      "ausencia_correta": true,
+      "premissa_corrigida": null,
+      "observacoes": "Ausência corretamente reconhecida para previsão em cinco minutos. A mensagem é ampla ao mencionar horários: o corpus descreve o serviço DF no Ponto, mas não contém tabela operacional nem dados ao vivo. Não interpretar como ausência de qualquer documento sobre transporte."
+    }
+  ]
+}
