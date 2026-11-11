@@ -1,5 +1,5 @@
 /* Identidade e componentes do Grupo 04 adaptados aos artefatos do Grupo 09.
-   Interações locais de documentação; não há endpoint de consulta RAG. */
+   Interações do site estático: não chamam o endpoint RAG da aplicação. */
 (function () {
   "use strict";
   const data = window.FCTE_EVIDENCIAS;
@@ -38,8 +38,8 @@
     const campusHero = root.closest(".rm-hero");
     const scenes = [
       { question: "Onde fica a sala 304 do laboratório COSMOS?", answer: "O diretório de laboratórios da FCTE indica o COSMOS no prédio LDTEA, no 2º andar, sala 304. Confira a fonte para confirmar a informação.", context: ["DOC-005 · Diretório de laboratórios", "COSMOS · localização descrita na fonte"], status: "Sala · exemplo baseado em documento", source: "Fonte: DOC-005", url: data.examples.find(e => e.source_id === "DOC-005")?.source_url },
-      { question: "Qual ônibus pego amanhã para chegar à FCTE às 8h?", answer: "De qual região você sairá e em qual ponto pretende embarcar? Precisamos desses dados para consultar as linhas e os horários programados até o campus, considerando a caminhada final.", context: ["Origem + destino + dia e horário", "Linhas e horários programados · integração futura"], status: "Transporte · funcionalidade planejada", source: "Sem linha ou horário calculados" },
-      { question: "Me passa uma receita de bolo de chocolate?", answer: "Meu foco é orientar sobre locais e deslocamentos da FCTE. Posso ajudar a localizar uma sala ou planejar sua ida ao campus.", context: ["Pergunta fora do domínio do campus", "Reconhecer o limite e orientar a conversa"], status: "Fora do escopo · exemplo de redirecionamento", source: "Sem consulta à base" }
+      { question: "Qual ônibus pego amanhã para chegar à FCTE às 8h?", answer: "O planejador de viagens ainda é uma evolução do projeto. Hoje posso explicar onde consultar linhas e horários; não calculo qual ônibus pegar nem a chegada ao campus.", context: ["Origem + destino + dia e horário", "Linhas e horários programados · integração futura"], status: "Transporte · funcionalidade planejada", source: "Sem linha ou horário calculados" },
+      { question: "Me passa uma receita de bolo de chocolate?", answer: "Meu foco é orientar sobre locais e deslocamentos da FCTE. Posso ajudar a localizar um ambiente e consultar orientações documentais do campus.", context: ["Pergunta fora do domínio do campus", "Reconhecer o limite e orientar a conversa"], status: "Fora do escopo · exemplo de redirecionamento", source: "Sem consulta à base" }
     ];
     const duration = 11000, timers = new Set();
     let current = 0, cycle = null, paused = false, hovering = false, focused = false;
@@ -133,7 +133,7 @@
     const ctx = element.getContext("2d");
     if (!ctx) return;
     // Fichas flutuantes e repulsão do cursor adaptadas do fundo do Grupo 04.
-    const terms = ["Cálculo 1", "Álgebra Linear", "Física 1", "Engenharia de Software", "Aeroespacial", "Automotiva", "Eletrônica", "Energia", "UAC", "UED", "LDTEA", "COSMOS · sala 304", "Biblioteca Gama", "Praça da FCTE", "Salas e laboratórios", "Linhas de ônibus", "Horários programados", "Caminhada até o campus", "KML → GeoJSON", "79 chunks", "E5 · 384 dim", "Fonte + revisão", "Coleta FCTE", "UnB Gama"];
+    const terms = ["Cálculo 1", "Álgebra Linear", "Física 1", "Engenharia de Software", "Aeroespacial", "Automotiva", "Eletrônica", "Energia", "UAC", "UED", "LDTEA", "COSMOS · sala 304", "Biblioteca Gama", "Praça da FCTE", "Salas e laboratórios", "Linhas de ônibus", "Horários programados", "Caminhada até o campus", "KML → GeoJSON", "94 chunks", "E5 · 384 dim", "Fonte + revisão", "Coleta FCTE", "UnB Gama"];
     const host = element.closest(".rm-hero"), mouse = { x: -1000, y: -1000 };
     let width = 0, height = 0, cards = [], frame = null, previous = 0;
     let paused = host.classList.contains("fcte-motion-paused"), visible = true;
@@ -184,26 +184,18 @@
     if ("IntersectionObserver" in window) new IntersectionObserver(entries => { visible = entries[0].isIntersecting; refresh(); }).observe(host);
     resize();
   }
-  const stages = [
-    ["01 · Adquirir", "Executado", "27 HTMLs públicos e KML da equipe", "Originais + manifesto com URL, data e SHA-256", "O Word da FAQ exige extração adicional. HTML de iframe não contém resultados externos."],
-    ["02 · Preparar", "Piloto executado", "Cinco páginas selecionadas", "Texto principal com rótulos, seletores e limitações", "Revisão humana final e vigência ainda pendentes; não há vinte documentos curados."],
-    ["03 · Mapear", "Piloto executado", "14 marcadores do KML", "14 pontos GeoJSON; 11 elegíveis para os chunks", "RU fora do recorte; dois Laboratório sem identidade. Pontos não são contornos ou rotas."],
-    ["04 · Dividir", "Executado", "Seções e entidades dos cinco HTMLs + KML", "79 chunks; 47–246 tokens na entrada completa", "300 é alvo, 480 é teto operacional; sobreposição efetiva foi zero."],
-    ["05 · Codificar", "Executado", "79 entradas com passage: e revisão fixada", "79 × 384 valores float32, normalizados em L2", "Inferência local de E5; nenhuma chamada ao Gemini. Não mede relevância da recuperação."],
-    ["06 · Indexar", "Planejado", "Vetores e vínculo por chunk_id", "Coleção Chroma persistida", "Etapa ainda não implementada; o arquivo NPY não é um banco vetorial."],
-    ["07 · Consultar", "Planejado", "Pergunta, recuperação e evidências", "Resposta com fontes + avaliação manual", "Ainda não há execução de consulta RAG, respostas ou métricas de recuperação."],
-  ];
+  const stages = [["01 · Adquirir", "Executado", "27 referências catalogadas", "25 originais disponíveis com versão e hash", "DOC-014 e DOC-024 têm aquisição bloqueada, sem vetores fictícios."], ["02 · Curar", "Aprovação registrada", "Catálogo, escopo, revisão e limitações", "27 aprovações expressas; 25 fontes indexáveis", "Aprovação não é confirmação em campo ou garantia de vigência."], ["03 · Extrair", "Executado", "HTMLs e regras por site/fonte", "Títulos, seções e parágrafos em JSON", "Original preservado. Extração heurística pode exigir correção editorial."], ["04 · Dividir", "Executado", "Textos aprovados e entidades", "94 chunks; 17–300 tokens, mediana 202", "Alvo 300; sobreposição até 40 só em subdivisão; limite técnico 512."], ["05 · Codificar", "Executado", "94 entradas com passage:", "94 × 384 valores float32, normalizados", "E5 local, revisão fixa. A pergunta usa query: no mesmo espaço."], ["06 · Indexar", "Persistência comprovada", "Vetores, textos e metadados", "Chroma local com 94 registros e manifesto", "Reabertura e consulta em processos novos sem ingestão confirmadas."], ["07 · Consultar", "Implementado e avaliado", "Pergunta e contexto curto opcional", "Busca híbrida, Gemini, fontes e registro", "A primeira rodada de 15 perguntas é densa; verificações posteriores são separadas."]];
   function pipeline() {
     document.querySelectorAll("[data-pipeline]").forEach((root, number) => {
       root.className = "fcte-pipeline";
       const base = "pipeline-" + number;
-      root.innerHTML = '<div class="fcte-pipeline__tabs" role="tablist" aria-label="Etapas da preparação">' + stages.map((stage, i) => '<button type="button" role="tab" id="' + base + '-tab-' + i + '" aria-controls="' + base + '-panel"' + (i > 4 ? " data-pending" : "") + '>' + esc(stage[0]) + '</button>').join("") + '</div><div id="' + base + '-panel" class="fcte-pipeline__panel" role="tabpanel" tabindex="0"></div>';
+      root.innerHTML = '<div class="fcte-pipeline__tabs" role="tablist" aria-label="Etapas da preparação">' + stages.map((stage, i) => '<button type="button" role="tab" id="' + base + '-tab-' + i + '" aria-controls="' + base + '-panel"' + "" + '>' + esc(stage[0]) + '</button>').join("") + '</div><div id="' + base + '-panel" class="fcte-pipeline__panel" role="tabpanel" tabindex="0"></div>';
       const buttons = [...root.querySelectorAll("button")], panel = root.querySelector("[role=tabpanel]");
       function show(index) {
         buttons.forEach((button, i) => { button.setAttribute("aria-selected", String(i === index)); button.tabIndex = i === index ? 0 : -1; });
         const stage = stages[index];
         panel.setAttribute("aria-labelledby", buttons[index].id);
-        panel.innerHTML = '<span class="selo ' + (index > 4 ? "selo--laranja" : "selo--verde") + '">' + esc(stage[1]) + '</span><h3>' + esc(stage[0]) + '</h3><dl><dt>Entrada</dt><dd>' + esc(stage[2]) + '</dd><dt>Saída</dt><dd>' + esc(stage[3]) + '</dd></dl><p class="fcte-note">' + esc(stage[4]) + '</p>';
+        panel.innerHTML = '<span class="selo ' + "selo--verde" + '">' + esc(stage[1]) + '</span><h3>' + esc(stage[0]) + '</h3><dl><dt>Entrada</dt><dd>' + esc(stage[2]) + '</dd><dt>Saída</dt><dd>' + esc(stage[3]) + '</dd></dl><p class="fcte-note">' + esc(stage[4]) + '</p>';
       }
       keyboardTabs(buttons, show); show(0);
     });
@@ -211,24 +203,24 @@
   function explorer() {
     document.querySelectorAll("[data-chunk-explorer]").forEach((root, number) => {
       root.className = "fcte-explorer";
-      root.innerHTML = '<label for="artifact-select-' + number + '">Escolha um artefato real do piloto</label><select id="artifact-select-' + number + '" class="fcte-select">' + data.examples.map((e, i) => '<option value="' + i + '">' + esc(e.source_id + " · " + e.section) + '</option>').join("") + '</select><div data-artifact-detail></div>';
+      root.innerHTML = '<label for="artifact-select-' + number + '">Escolha um chunk real da coleção ativa</label><select id="artifact-select-' + number + '" class="fcte-select">' + data.examples.map((e, i) => '<option value="' + i + '">' + esc(e.source_id + " · " + e.section) + '</option>').join("") + '</select><div data-artifact-detail></div>';
       const select = root.querySelector("select"), detail = root.querySelector("[data-artifact-detail]");
       function show() {
         const e = data.examples[Number(select.value)];
-        detail.innerHTML = '<div class="fcte-explorer__meta"><span class="selo">' + esc(e.source_id) + '</span><span class="selo selo--verde">' + e.input_tokens + ' tokens completos</span><span class="selo selo--laranja">Rascunho</span></div><h3>' + esc(e.section) + '</h3><p class="fcte-explorer__id">' + esc(e.chunk_id) + '</p><blockquote>' + excerpt(e) + '</blockquote><p class="fcte-note">Prévia de até 18 palavras. A contagem de tokens se refere à entrada completa, não só à prévia.</p><details><summary>Conferir origem e vínculo</summary><p>SHA-256 do original: <code>' + esc(e.source_sha256) + '</code></p><p>Intervalo no texto preparado: <code>' + e.source_span.char_start + '–' + e.source_span.char_end + '</code>. Linha do vetor: <code>' + e.row + '</code>.</p><pre>' + esc(e.selectors.join("\n") || e.point_id) + '</pre></details>' + bars(e.vector) + '<p class="fcte-note">16 de 384 dimensões reais. Norma L2: ' + e.vector.l2_norm.toFixed(7) + '.</p>';
+        detail.innerHTML = '<div class="fcte-explorer__meta"><span class="selo">' + esc(e.source_id) + '</span><span class="selo selo--verde">' + e.input_tokens + ' tokens completos</span><span class="selo selo--verde">Aprovado</span></div><h3>' + esc(e.section) + '</h3><p class="fcte-explorer__id">' + esc(e.chunk_id) + '</p><blockquote>' + excerpt(e) + '</blockquote><p class="fcte-note">Excerto curto selecionado. Os tokens são da entrada completa.</p><details><summary>Conferir origem e vínculo</summary><p>Versão: <code>' + esc(e.version) + '</code>. Validade: ' + esc(e.validity) + '.</p><p>SHA-256 do original: <code>' + esc(e.source_sha256) + '</code></p><p>Linha do vetor: <code>' + e.row + '</code>. Rastreabilidade por fonte, seção, versão e hash.</p></details>' + bars(e.vector) + '<p class="fcte-note">16 de 384 dimensões reais. Norma L2: ' + e.vector.l2_norm.toFixed(7) + '.</p>';
       }
       select.addEventListener("change", show); show();
     });
   }
   function catalog() {
     document.querySelectorAll("[data-chunk-catalog]").forEach((root, index) => {
-      root.innerHTML = '<div class="fcte-catalog-controls"><label for="chunk-filter-' + index + '">Filtrar metadados</label><input class="fcte-filter" type="search" id="chunk-filter-' + index + '" placeholder="Ex.: COSMOS, biblioteca, MAP-001"><span data-count aria-live="polite"></span></div><div class="fcte-catalog-list" data-list></div><p class="fcte-note">Filtro textual do catálogo exportado. Não usa embeddings nem executa recuperação RAG.</p>';
+      root.innerHTML = '<div class="fcte-catalog-controls"><label for="chunk-filter-' + index + '">Filtrar metadados</label><input class="fcte-filter" type="search" id="chunk-filter-' + index + '" placeholder="Ex.: biblioteca, DOC-005, Infraestrutura"><span data-count aria-live="polite"></span></div><div class="fcte-catalog-list" data-list></div><p class="fcte-note">Filtro textual do catálogo exportado. Não usa embeddings nem executa recuperação RAG.</p>';
       const input = root.querySelector("input"), list = root.querySelector("[data-list]"), count = root.querySelector("[data-count]");
       function show() {
         const term = normalize(input.value);
         const hits = data.chunks.filter(c => normalize(c.id + " " + c.section + " " + c.source_id).includes(term));
         count.textContent = hits.length + " de " + data.chunks.length;
-        list.innerHTML = hits.map(c => '<article><b>' + esc(c.section) + '</b><p class="fcte-explorer__id">' + esc(c.id) + '</p><p>' + esc(c.source_id) + " · " + c.input_tokens + ' tokens · rascunho</p></article>').join("") || "<p>Nenhum metadado corresponde ao filtro.</p>";
+        list.innerHTML = hits.map(c => '<article><b>' + esc(c.section) + '</b><p class="fcte-explorer__id">' + esc(c.id) + '</p><p>' + esc(c.source_id) + " · " + c.input_tokens + ' tokens · aprovado</p></article>').join("") || "<p>Nenhum metadado corresponde ao filtro.</p>";
       }
       input.addEventListener("input", show); show();
     });
@@ -239,7 +231,7 @@
       root.dataset.ready = "true";
       const points = data.points;
       if (!points.length) { root.textContent = "Nenhum marcador disponível nesta exportação."; return; }
-      root.innerHTML = '<label for="map-select-' + index + '">Selecionar marcador da equipe</label><select class="fcte-select" id="map-select-' + index + '">' + points.map((p, i) => '<option value="' + i + '">' + (i + 1) + " · " + esc(p.name) + (p.eligible ? "" : " · fora dos chunks") + '</option>').join("") + '</select><div class="fcte-map-layout"><div><div class="fcte-map-canvas" data-map-canvas role="region" aria-label="Mapa do campus Gama com os marcadores da equipe"></div><p class="fcte-map-status" data-map-status role="status" hidden></p><div class="fcte-map-toolbar"><button type="button" data-map-fit>Ver todos os pontos</button><a data-map-external target="_blank" rel="noopener">Abrir no OpenStreetMap ↗</a></div><div class="fcte-map-legend"><span>Marcadores do piloto</span><span>Preservados, fora dos chunks</span></div></div><div class="fcte-map-detail" data-map-detail></div></div>';
+      root.innerHTML = '<label for="map-select-' + index + '">Selecionar marcador da equipe</label><select class="fcte-select" id="map-select-' + index + '">' + points.map((p, i) => '<option value="' + i + '">' + (i + 1) + " · " + esc(p.name) + (p.eligible ? "" : " · não selecionado no inventário") + '</option>').join("") + '</select><div class="fcte-map-layout"><div><div class="fcte-map-canvas" data-map-canvas role="region" aria-label="Mapa do campus Gama com os marcadores da equipe"></div><p class="fcte-map-status" data-map-status role="status" hidden></p><div class="fcte-map-toolbar"><button type="button" data-map-fit>Ver todos os pontos</button><a data-map-external target="_blank" rel="noopener">Abrir no OpenStreetMap ↗</a></div><div class="fcte-map-legend"><span>Selecionados no inventário</span><span>A revisar / fora do escopo</span></div></div><div class="fcte-map-detail" data-map-detail></div></div>';
       const select = root.querySelector("select"), detail = root.querySelector("[data-map-detail]");
       const canvas = root.querySelector("[data-map-canvas]"), status = root.querySelector("[data-map-status]");
       const fit = root.querySelector("[data-map-fit]"), external = root.querySelector("[data-map-external]");
@@ -253,12 +245,12 @@
           const element = marker.getElement();
           element?.classList.toggle("is-selected", i === value);
           element?.setAttribute("aria-pressed", String(i === value));
-          element?.setAttribute("aria-label", (i + 1) + " · " + points[i].name + (points[i].eligible ? " · usado no piloto" : " · fora dos chunks"));
+          element?.setAttribute("aria-label", (i + 1) + " · " + points[i].name + (points[i].eligible ? " · selecionado no inventário" : " · não selecionado no inventário"));
           marker.setZIndexOffset(i === value ? 1000 : 0);
         });
         external.href = 'https://www.openstreetmap.org/?mlat=' + encodeURIComponent(p.coordinates[1]) + '&mlon=' + encodeURIComponent(p.coordinates[0]) + '#map=18/' + p.coordinates[1] + '/' + p.coordinates[0];
         if (pan && campusMap) campusMap.panTo([p.coordinates[1], p.coordinates[0]], { animate: !reduced });
-        detail.innerHTML = '<span class="selo ' + (p.eligible ? "selo--verde" : "selo--cinza") + '">' + (p.eligible ? "Usado no piloto" : "Fora dos chunks") + '</span><h3>' + esc(p.name) + '</h3><p>' + esc(p.description || "Marcador sem descrição adicional no KML.") + '</p><p>Latitude: <code>' + p.coordinates[1] + '</code><br>Longitude: <code>' + p.coordinates[0] + '</code></p><p class="fcte-explorer__id">' + esc(p.id) + '</p>' + (p.building_id ? '<p>Associação textual: <b>' + esc(p.building_id) + '</b>.</p>' : "") + (p.candidate_building_id ? '<p>Associação candidata: <b>' + esc(p.candidate_building_id) + '</b>; confirmar em campo.</p>' : "") + '<p class="fcte-note">Fonte: anotação da equipe no KML. Ponto sem contorno e sem verificação de acesso atual.</p>';
+        detail.innerHTML = '<span class="selo ' + (p.eligible ? "selo--verde" : "selo--cinza") + '">' + (p.eligible ? "Selecionado no inventário" : "Não selecionado no inventário") + '</span><h3>' + esc(p.name) + '</h3><p>' + esc(p.description || "Marcador sem descrição adicional no KML.") + '</p><p>Latitude: <code>' + p.coordinates[1] + '</code><br>Longitude: <code>' + p.coordinates[0] + '</code></p><p class="fcte-explorer__id">' + esc(p.id) + '</p>' + (p.building_id ? '<p>Associação textual: <b>' + esc(p.building_id) + '</b>.</p>' : "") + (p.candidate_building_id ? '<p>Associação candidata: <b>' + esc(p.candidate_building_id) + '</b>; confirmar em campo.</p>' : "") + '<p class="fcte-note">Fonte: anotação da equipe no KML. Ponto sem contorno e sem verificação de acesso atual.</p>';
       }
       select.addEventListener("change", () => show(Number(select.value)));
       const initial = Math.max(0, points.findIndex(p => p.name.startsWith("UAC -")));

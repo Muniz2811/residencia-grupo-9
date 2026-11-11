@@ -5,30 +5,32 @@ hide:
   - toc
 ---
 
-# Esteira do RAG
+# A esteira do RAG, passo a passo
 
-O conhecimento percorre duas fases: **ingestão**, que prepara as fontes, e **consulta**, que recuperará evidências para uma pergunta. A animação usa contagens, IDs, excertos e componentes de vetores exportados do piloto.
+O conhecimento percorre duas fases: **ingestão**, que prepara documentos, chunks, embeddings e o Chroma persistente, e **consulta**, que recupera evidências e gera uma resposta com fontes. Pense numa biblioteca: primeiro organizamos o catálogo; depois o atendente procura as fichas para cada pergunta.
 
-Clique em **▶ Reproduzir** para percorrer as duas fases ou selecione uma estação. Na fase de pergunta, escolha COSMOS, biblioteca ou ausência de dados atuais. As setas **← →** também navegam e **Tela cheia** abre o modo de apresentação.
+Clique em **▶ Reproduzir**, avance com **▶|** ou selecione uma estação. Na fase de pergunta, escolha LEMA, cabines, COSMOS ou ausência de dados atuais. As setas **← →** também navegam; **Tela cheia** abre o modo de apresentação.
 
-<div class="rm-est" data-esteira tabindex="0" aria-label="Esteira animada do RAG do Coleta FCTE"></div>
+<div class="rm-est" data-esteira tabindex="0" aria-label="Esteira animada da ingestão e consulta do RAG FCTE"></div>
 
-!!! warning "Estado real do trabalho"
-    Foram preparados 79 chunks e seus embeddings. Chroma, embedding da pergunta, recuperação e geração de resposta ainda não foram executados. Os exemplos de consulta são gabaritos propostos; não há ranking, similaridades ou respostas geradas apresentados como resultados.
+!!! info "Registros reais, reprodução estática"
+    Contagens, chunks e componentes vetoriais são dos artefatos atuais: **25 fontes, 94 chunks e 384 dimensões**. LEMA e cabines usam registros da correção híbrida; COSMOS e ausência usam a avaliação inicial densa, com identificação em cada cenário. Os controles não chamam a API nem consomem cota Gemini.
 
-## Da fonte ao vetor
+## Da fonte ao banco
 
-1. Preservar HTMLs e o KML com origem e hash.
-2. Selecionar conteúdo pertinente e extrair seções, setores e laboratórios.
-3. Preservar os 14 marcadores e selecionar 11 para o recorte textual.
-4. Preparar 79 chunks com vínculos até fonte, seção e trecho.
-5. Gerar embeddings locais E5 de 384 dimensões com prefixo `passage: ` e normalização L2.
-6. Persistir o índice no Chroma e verificar sua reabertura — próxima etapa.
+1. Catalogar 27 fontes aprovadas; excluir da indexação as duas com aquisição bloqueada.
+2. Preservar original, versão e SHA-256; extrair títulos e parágrafos.
+3. Gerar 94 chunks: alvo 300 tokens, até 40 de sobreposição somente em subdivisões, sem misturar fontes.
+4. Codificar com E5 local, `passage: `, 384 dimensões e normalização L2.
+5. Persistir no Chroma e conferir a reabertura sem repetir a ingestão.
 
 ## Da pergunta à resposta
 
-A pergunta receberá o prefixo `query: ` e será vetorizada com o mesmo modelo. A busca deverá selecionar evidências pertinentes, considerando metadados. O gerador receberá somente a pergunta e o contexto identificado e deverá citar as fontes ou reconhecer a ausência de dados.
+A aplicação pode recuperar o assunto da consulta anterior em complementos curtos. A pergunta recebe `query: ` e é codificada com o mesmo E5. A busca atual combina cosseno e BM25 por RRF; o gerador recebe até cinco trechos identificados. O backend confere os IDs citados e registra o resultado.
 
-O KML oferece pontos de referência; não comprova acessibilidade, rota de caminhada ou identificação de salas. A busca textual e cálculos geográficos têm funções distintas.
+O histórico ajuda a entender a pergunta, mas não substitui evidência. Quando o contexto não sustenta a resposta, o sistema deve reconhecer insuficiência nos trechos recuperados. O índice não fornece ocupação ao vivo ou trajeto entre prédios.
 
-Os controles são locais e não consomem API. Consulte [chunking](../entrega-2/chunking.md), [embeddings](../entrega-2/embeddings.md), [avaliação](../entrega-2/avaliacao.md) e [evidências exportadas](../entrega-2/evidencias.md) para os detalhes reproduzíveis.
+!!! warning "Interpretação visual"
+    Barras mostram componentes reais de um vetor de documento. Os pontos agrupados por fonte são um esquema ilustrativo, não uma projeção calculada dos embeddings ou mapa geográfico. Não desenhamos valores inventados para o vetor da pergunta, cujos componentes não foram exportados.
+
+Continue na [demonstração com rankings e fontes](../entrega-2/demonstracao.md), nos [resultados medidos](../entrega-2/avaliacao.md), na [estratégia de chunking](../entrega-2/chunking.md) ou no [banco vetorial](../entrega-2/banco-vetorial.md).

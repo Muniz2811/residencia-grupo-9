@@ -1,58 +1,85 @@
-# Avaliação e métricas
+# Avaliação executada e métricas
 
-## O que já foi medido
+## O que foi avaliado
 
-Hoje temos estatísticas e verificações de preparação/vetorização, apresentadas em [embeddings](embeddings.md): tokens, formato da matriz, valores finitos, normalização, hashes e correspondência de IDs.
+Rodada `20261111T151703Z`, em **11/11/2026, aproximadamente 12h17–12h19 de Brasília**. Quinze perguntas, uma tentativa por pergunta, sem retries automáticos ou seleção da melhor resposta. Gabarito, rubrica e metas foram registrados antes das chamadas.
 
-**Ainda não há Hit@5, precisão da busca, MRR ou qualidade de resposta medidos.** Não houve consulta RAG nem conjunto final de perguntas executado.
+| Grupo | Quantidade |
+|---|---:|
+| Respondíveis: diretas, paráfrases, siglas e serviços | 10 |
+| Respondíveis com premissa incorreta | 2 |
+| Sem resposta na base: dados atuais de ocupação ou transporte | 3 |
+| Total | **15** |
 
-## Protocolo previsto
+A configuração avaliada foi E5 + Chroma, **busca densa**, 30 candidatos, até cinco trechos, máximo dois por fonte, perguntas independentes, prompt `campus-rag-v1`. Gerador `gemini-3.5-flash-lite`, temperatura 0,1. Base de 25 fontes e 94 chunks.
 
-Preparar **16 perguntas respondíveis e quatro sem resposta**, incluindo paráfrases, siglas e premissas incorretas, conforme as [metas da Entrega 1](../entrega-1/metricas.md). Para cada pergunta, registrar previamente fontes, passagens relevantes e fatos esperados. As metas são pelo menos 13/16 acertos de recuperação no top-5, 13/16 respostas corretas e fundamentadas, 90% de citações pertinentes e 4/4 reconhecimentos de ausência; ainda não foram medidas.
+O julgamento foi feito por **Codex como avaliador assistido único**, lendo respostas e trechos. Não houve dupla revisão humana nem concordância entre avaliadores. O conjunto é diagnóstico, escolhido conhecendo o corpus; alguns exemplos já tinham aparecido na conversa. Não é teste cego de generalização.
 
-Perguntas usadas para ajuste serão identificadas; algumas ficarão reservadas para conferência final. Uma amostra pequena será descrita como avaliação inicial do protótipo, com contagens e exemplos de falha.
+!!! warning "Separar as versões"
+    Depois dessa rodada corrigimos a busca com BM25/RRF e contexto curto de conversa. Três verificações reais confirmaram cabines com/sem contexto e localização do LEMA. **Os percentuais abaixo são da versão anterior**, não uma nota automática da busca híbrida atual.
 
-## Métricas principais
+## Fórmulas, interpretação e resultados
 
-| Métrica | Cálculo e interpretação |
-|---|---|
-| Hit@5 | Perguntas respondíveis com pelo menos uma evidência relevante no top-5 ÷ total de respondíveis |
-| Precision@5 | Resultados relevantes nas cinco primeiras posições ÷ 5; apresentar média por pergunta e declarar posições ausentes |
-| Recall@k | Evidências relevantes recuperadas ÷ evidências relevantes do gabarito; exige conjunto esperado definido |
-| MRR@k | Média de `1 / posição da primeira evidência relevante`, ou zero quando ausente no corte |
-| nDCG@k | Qualidade da ordenação por posição e grau de relevância, normalizada pelo ranking ideal |
-| Fundamentação | Afirmações sustentadas pelo contexto recuperado ÷ afirmações factuais produzidas |
-| Cobertura da resposta | Fatos esperados corretamente atendidos ÷ fatos esperados no gabarito |
-| Citações | Medir referências resolvíveis, suporte pela fonte citada e cobertura das afirmações que precisam de referência |
-| Abstenção | Acertos nas perguntas sem resposta; registrar recusas indevidas nas respondíveis |
+| Aspecto | Fórmula usada | Conta real | Resultado | Meta local |
+|---|---|---|---:|---:|
+| Recuperação · Hit@5 | Perguntas respondíveis com ≥1 trecho relevante ÷ respondíveis | 11/12 | **91,67%** | ≥80% |
+| Precisão dos trechos, geral | Trechos relevantes ÷ retornados, nas 15 perguntas | 16/75 | **21,33%** | ≥40% |
+| Precisão nas respondíveis | Trechos relevantes ÷ retornados, nas 12 respondíveis | 16/60 | **26,67%** | ≥50% |
+| Fundamentação | Fatos sustentados pelos trechos citados ÷ fatos produzidos | 35/35 | **100%** | ≥95% |
+| Rastreabilidade | Vínculos de citação resolvidos até fonte/versão ÷ emitidos | 14/14 | **100%** | 100% |
+| Reconhecimento de ausência | Ausências corretamente declaradas ÷ perguntas sem resposta | 2/3 | **66,67%** | 100% |
+| Persistência | Reabertura e consulta em processo novo, sem ingestão | Sucesso | **1** | 1 |
 
-Hit@5 não será chamado de recall. Uma referência pode existir e ainda assim não sustentar a afirmação. Uma resposta pode ser fiel e incompleta; uma resposta vazia não receberá nota máxima automática de fundamentação.
+As metas foram locais, definidas antes da rodada. Não são padrões universais da literatura. Recuperação, fundamentação, rastreabilidade e persistência atingiram suas metas nesta amostra. Precisão e ausência ponta a ponta não atingiram.
 
-## Exemplo de cálculo, não resultado
+A fórmula chamada de taxa de recuperação no plano é **Hit@5**: conta perguntas com ao menos um acerto. Recall@5 clássico exigiria contar todas as evidências relevantes existentes e qual fração foi recuperada. Não trocamos as definições.
 
-Se uma pergunta recuperar dois trechos relevantes em cinco, sua Precision@5 será `2/5 = 40%`. Se uma resposta contiver quatro afirmações e só três tiverem suporte, sua fundamentação será `3/4 = 75%`.
+## Regras de julgamento
 
-Esses valores são **ilustrativos**. Nenhum percentual desse exemplo foi medido no piloto.
+**Relevância:** conter evidência específica para pelo menos parte da pergunta ou para corrigir a premissa. Mencionar o mesmo assunto ou aparecer na fonte correta não basta. Evidência parcial pode ser relevante sem permitir resposta completa.
 
-## Como comparar chunkings
+**Fundamentação:** decompor a resposta em fatos verificáveis e avaliar o suporte nos chunks citados. “LDTEA, segundo andar, sala 304” contém três fatos. Não confundir omissão com invenção. Mensagens de incapacidade sem fato externo adicional não entram no denominador; denominador zero é não aplicável, não 100%.
 
-Usar o mesmo corpus, modelo, perguntas e orçamento de contexto. O gabarito terá passagens estáveis no texto, para não depender da divisão específica em chunks.
+**Rastreabilidade:** contar cada ligação afirmação–chunk, mesmo quando uma fonte reaparece. Conferimos ID, texto, fonte, seção, versão, URL e hash do original nos artefatos locais. Resolver o ID não prova que a fonte sustenta a afirmação.
 
-Se `E` for a união das evidências esperadas e `R`, a união das passagens recuperadas, com fonte/versão identificadas:
+**Ausência:** exigir admissão da falta do dado sem inventar resposta. Erro HTTP não é abstenção correta. Recusar uma pergunta respondível é falha de cobertura.
 
-```text
-cobertura de evidência = |E ∩ R| / |E|
-precisão de evidência  = |E ∩ R| / |R|
-IoU                   = |E ∩ R| / |E ∪ R|
-```
+O gabarito inicial não era exaustivo quanto às fontes. Evidência adicional pertinente, como DOC-002 para localizar a biblioteca, foi aceita após leitura e registrada, sem reescrever o gabarito para esconder essa descoberta.
 
-Intervalos sobrepostos não contam duas vezes. Convenções para conjuntos vazios serão declaradas. Isso permite distinguir evidência útil, conteúdo desnecessário e repetição causada pela sobreposição.
+## Uma leitura simples dos números
 
-## Referências metodológicas
+Na Q06, a evidência sobre cabines apareceu em primeiro lugar, mas os quatro trechos restantes não respondiam à questão. Houve acerto de recuperação, com precisão **1/5 = 20%**. A resposta continha dois fatos sustentados: cabines individuais e mesas em grupo.
 
-- [BEIR](https://arxiv.org/abs/2104.08663): avaliação de recuperação e comparação com baseline lexical BM25.
-- [RAGAs](https://aclanthology.org/2024.eacl-demo.16/) e [Faithfulness](https://docs.ragas.io/en/stable/concepts/metrics/available_metrics/faithfulness/): relevância do contexto e fidelidade às evidências.
-- [ARES](https://arxiv.org/abs/2311.09476): relevância, fidelidade e validação por anotações humanas.
-- [Avaliação de chunking da Chroma](https://www.trychroma.com/research/evaluating-chunking): análise de recuperação no nível de trechos/tokens.
+Na Q03, a localização do LEMA existia no diretório, mas não veio ao top-5. O Gemini evitou inventar uma sala, porém o sistema deixou de responder algo que poderia responder.
 
-Esses trabalhos orientam o protocolo; não implicam frameworks de avaliação instalados ou notas automáticas já geradas. A primeira avaliação será manual e auditável, sem criação de suíte de testes automatizados.
+Na Q01, a localização do COSMOS veio em segundo lugar e o Gemini excedeu 90 segundos. Recuperação acertou; disponibilidade falhou. Não houve fato gerado para julgar fundamentação.
+
+## Falhas técnicas e cobertura
+
+- **11/15 respostas HTTP 200, 73,33%.** Houve um timeout e três indisponibilidades do provedor na geração. Os registros não isolam a causa externa; não atribuímos tudo à conexão do usuário.
+- **8/12 perguntas respondíveis atendidas completamente, 66,67%.** Três falhas técnicas e uma abstenção indevida explicam as quatro ausentes.
+- Duas premissas erradas foram corrigidas, **2/2**.
+- Entre as perguntas sem resposta que receberam saída válida houve duas abstenções corretas, **2/2**. O resultado ponta a ponta permanece **2/3**, incluindo a falha técnica.
+
+**35/35 de fundamentação não significa 100% das perguntas respondidas corretamente.** É a proporção de fatos sustentados entre os fatos que chegaram a ser produzidos, neste julgamento e amostra.
+
+## Quinze perguntas e resultados
+
+--8<-- "includes/resultados.md"
+
+## Persistência e limitações adicionais
+
+Reabrimos o banco em dois processos novos, sem ingestão e com cache de modelos em modo offline. A autoconsulta validou o vetor persistido e uma consulta semântica sobre COSMOS recuperou a evidência esperada. Ambos terminaram com código zero e o manifesto permaneceu igual. [Comprovação](../assets/downloads/persistencia.json).
+
+Há ambiguidade de secretaria UED/UAC e respostas no presente que não atribuíram explicitamente à fonte a vigência desconhecida. A fundamentação textual não comprova atualidade nem resolução de conflitos. A amostra não cobre igualmente as 25 fontes.
+
+As metas iniciais da [Entrega 1](../entrega-1/metricas.md) eram hipóteses de planejamento. Esta página registra o protocolo efetivamente executado de quinze perguntas; não o apresenta como execução de um conjunto de vinte que não ocorreu.
+
+## Próxima avaliação
+
+Congelar a configuração híbrida e seu prompt, julgar outra rodada e reservar perguntas novas para conferência. Comparar com a busca densa sob condições controladas, sem escolher casos favoráveis. Dupla revisão humana, BM25 isolado, comparação com Gemini sem RAG e outros chunkings são melhorias futuras, não resultados já obtidos.
+
+[Baixar métricas](../assets/downloads/metricas.json){ .md-button }
+[Baixar gabarito e rubrica](../assets/downloads/gabarito.json){ .md-button }
+
+Referências: [Introduction to Information Retrieval · avaliação](https://nlp.stanford.edu/IR-book/pdf/08eval.pdf) para precisão/recall; [Ragas · Faithfulness](https://docs.ragas.io/en/stable/concepts/metrics/available_metrics/faithfulness/) para suporte das afirmações. O Ragas não foi executado como avaliador automático nesta rodada.

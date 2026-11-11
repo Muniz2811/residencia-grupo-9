@@ -1,0 +1,458 @@
+[
+  {
+    "id": "cosmos",
+    "label": "Avaliação inicial · busca densa",
+    "question": "O COSMOS fica no térreo da UAC, sala 101, certo?",
+    "query": "O COSMOS fica no térreo da UAC, sala 101, certo?",
+    "request_id": "cf170f2a-ffff-419b-8f37-a5092f403934",
+    "executed_at": "2026-11-11T15:19:33.851970+00:00",
+    "status": "answered",
+    "answer": "O laboratório COSMOS fica localizado no Prédio LDTEA, no 2º andar, sala 304. [1]",
+    "model": "gemini-3.5-flash-lite",
+    "base_version": "796894d0d378f4f8d42929dc5a5eef75e22c70d2eeafd62d880171be67051267",
+    "prompt_version": "campus-rag-v1",
+    "method": "densa",
+    "retrieved": [
+      {
+        "id": "c_df45b0823ed5a0bc",
+        "source_id": "DOC-018",
+        "title": "COSMOS – Computational Aerospace Simulations & Modeling Laboratory",
+        "section": "Computational Aerospace Simulations & Modeling Laboratory​",
+        "version": "2026-11-11",
+        "url": "https://lite.unb.br/computational-aerospace-simulations-modeling-laboratory/",
+        "excerpt": "COSMOS – Computational Aerospace Simulations & Modeling Laboratory Computational Aerospace Simulations & Modeling Laboratory​ O Computational Aerospace Simulations",
+        "distance": 0.14885932207107544,
+        "rank": 1,
+        "relevant": false,
+        "rrf": null
+      },
+      {
+        "id": "c_f2c6f00293fae365",
+        "source_id": "DOC-005",
+        "title": "Diretório de laboratórios da FCTE",
+        "section": "Laboratórios FCTE > Laboratórios de Engenharia Aeroespacial",
+        "version": "2026-11-11",
+        "url": "https://fcte.unb.br/homologa_laboratorios/",
+        "excerpt": "Computational Aerospace Simulations & Modeling Laboratory – COSMOS … Local: Prédio LDTEA – 2º andar – Sala 304",
+        "distance": 0.1527169942855835,
+        "rank": 2,
+        "relevant": true,
+        "rrf": null
+      },
+      {
+        "id": "c_0cf9944816258a3e",
+        "source_id": "DOC-006",
+        "title": "Laboratórios de ensino",
+        "section": "",
+        "version": "2026-11-11",
+        "url": "https://software.unb.br/laboratorios-de-ensino/",
+        "excerpt": "Laboratórios de ensino Laboratório de Software: laboratório com 40 computadores individuais para disciplinas intermediárias de computação/programação; Laboratório de",
+        "distance": 0.15652668476104736,
+        "rank": 3,
+        "relevant": false,
+        "rrf": null
+      },
+      {
+        "id": "c_2d85dbef5af80376",
+        "source_id": "DOC-018",
+        "title": "COSMOS – Computational Aerospace Simulations & Modeling Laboratory",
+        "section": "Computational Aerospace Simulations & Modeling Laboratory​ > Contribuição para Inovação e Formação",
+        "version": "2026-11-11",
+        "url": "https://lite.unb.br/computational-aerospace-simulations-modeling-laboratory/",
+        "excerpt": "COSMOS – Computational Aerospace Simulations & Modeling Laboratory Computational Aerospace Simulations & Modeling Laboratory​ Contribuição para Inovação e",
+        "distance": 0.1576904058456421,
+        "rank": 4,
+        "relevant": false,
+        "rrf": null
+      },
+      {
+        "id": "c_0e12f3858918d20b",
+        "source_id": "DOC-005",
+        "title": "Diretório de laboratórios da FCTE",
+        "section": "Laboratórios FCTE > Laboratórios de Engenharia Automotiva",
+        "version": "2026-11-11",
+        "url": "https://fcte.unb.br/homologa_laboratorios/",
+        "excerpt": "Diretório de laboratórios da FCTE Laboratórios FCTE Laboratórios de Engenharia Automotiva Automotive Research Center – ARC Site: https://lite.unb.br/2024/11/14/automotive-research-center/",
+        "distance": 0.15985172986984253,
+        "rank": 5,
+        "relevant": false,
+        "rrf": null
+      }
+    ],
+    "claims": [
+      {
+        "text": "O laboratório COSMOS fica localizado no Prédio LDTEA, no 2º andar, sala 304.",
+        "sourceIds": [
+          "c_f2c6f00293fae365"
+        ]
+      }
+    ],
+    "source_ids": [
+      "c_f2c6f00293fae365"
+    ],
+    "previous_request_id": null
+  },
+  {
+    "id": "biblioteca",
+    "label": "Avaliação inicial · busca densa",
+    "question": "Na biblioteca do Gama há lugar para estudar sozinho e em grupo?",
+    "query": "Na biblioteca do Gama há lugar para estudar sozinho e em grupo?",
+    "request_id": "fbe2df88-dced-4170-bfc7-da7b05e3cf96",
+    "executed_at": "2026-11-11T15:19:06.407819+00:00",
+    "status": "answered",
+    "answer": "A Biblioteca do Campus Gama dispõe de cabines individuais para estudo e mesas para estudo em grupo. [1]",
+    "model": "gemini-3.5-flash-lite",
+    "base_version": "796894d0d378f4f8d42929dc5a5eef75e22c70d2eeafd62d880171be67051267",
+    "prompt_version": "campus-rag-v1",
+    "method": "densa",
+    "retrieved": [
+      {
+        "id": "c_c8a0b710c3c50b09",
+        "source_id": "DOC-012",
+        "title": "Biblioteca Campus Gama – BCE",
+        "section": "BIBLIOTECA SETORIAL CAMPUS GAMA",
+        "version": "2026-11-11",
+        "url": "https://bce.unb.br/biblioteca-campus-gama/",
+        "excerpt": "espaço para estudo com cabines individuais e mesas para estudo em grupo",
+        "distance": 0.12513822317123413,
+        "rank": 1,
+        "relevant": true,
+        "rrf": null
+      },
+      {
+        "id": "c_17241a7563801760",
+        "source_id": "DOC-008",
+        "title": "Biblioteca – Engenharia de Software",
+        "section": "",
+        "version": "2026-11-11",
+        "url": "https://software.unb.br/biblioteca/",
+        "excerpt": "Biblioteca – Engenharia de Software A biblioteca do Campus Gama conta atualmente com 2810 exemplares de livros físicos",
+        "distance": 0.1403435468673706,
+        "rank": 2,
+        "relevant": false,
+        "rrf": null
+      },
+      {
+        "id": "c_1cfe0848c545f27c",
+        "source_id": "DOC-012",
+        "title": "Biblioteca Campus Gama – BCE",
+        "section": "Serviços > Comunidade Externa",
+        "version": "2026-11-11",
+        "url": "https://bce.unb.br/biblioteca-campus-gama/",
+        "excerpt": "Biblioteca Campus Gama – BCE Serviços Os empréstimos poderão ser feitos durante o horário de funcionamento da biblioteca,",
+        "distance": 0.14143675565719604,
+        "rank": 3,
+        "relevant": false,
+        "rrf": null
+      },
+      {
+        "id": "c_5faca10e6e792b67",
+        "source_id": "DOC-006",
+        "title": "Laboratórios de ensino",
+        "section": "",
+        "version": "2026-11-11",
+        "url": "https://software.unb.br/laboratorios-de-ensino/",
+        "excerpt": "Laboratórios de ensino O espaço físico da Faculdade do Gama é de aproximadamente 5.200 m2 e incluem salas",
+        "distance": 0.14181071519851685,
+        "rank": 4,
+        "relevant": false,
+        "rrf": null
+      },
+      {
+        "id": "c_0a5abc6e344294e8",
+        "source_id": "DOC-023",
+        "title": "Laboratório BioGama",
+        "section": "Laboratório BioGama",
+        "version": "2026-11-11",
+        "url": "https://lite.unb.br/laboratorio-biogama/",
+        "excerpt": "Laboratório BioGama Laboratório BioGama O Laboratório BioGama, coordenado pela Dra. Patricia Regina Sobral Braga, é um centro de",
+        "distance": 0.16706502437591553,
+        "rank": 5,
+        "relevant": false,
+        "rrf": null
+      }
+    ],
+    "claims": [
+      {
+        "text": "A Biblioteca do Campus Gama dispõe de cabines individuais para estudo e mesas para estudo em grupo.",
+        "sourceIds": [
+          "c_c8a0b710c3c50b09"
+        ]
+      }
+    ],
+    "source_ids": [
+      "c_c8a0b710c3c50b09"
+    ],
+    "previous_request_id": null
+  },
+  {
+    "id": "ausencia",
+    "label": "Avaliação inicial · busca densa",
+    "question": "A sala I10 está livre agora?",
+    "query": "A sala I10 está livre agora?",
+    "request_id": "54ec3595-e6db-493b-82d3-0ff97bc29f09",
+    "executed_at": "2026-11-11T15:19:42.604793+00:00",
+    "status": "insufficient",
+    "answer": "A base de conhecimento não possui informações sobre a ocupação atual ou disponibilidade da sala I10.",
+    "model": "gemini-3.5-flash-lite",
+    "base_version": "796894d0d378f4f8d42929dc5a5eef75e22c70d2eeafd62d880171be67051267",
+    "prompt_version": "campus-rag-v1",
+    "method": "densa",
+    "retrieved": [
+      {
+        "id": "c_cd638caa1b0d517e",
+        "source_id": "DOC-005",
+        "title": "Diretório de laboratórios da FCTE",
+        "section": "Laboratórios FCTE > Laboratórios de Engenharia de Software",
+        "version": "2026-11-11",
+        "url": "https://fcte.unb.br/homologa_laboratorios/",
+        "excerpt": "Diretório de laboratórios da FCTE Laboratórios FCTE Laboratórios de Engenharia de Software Laboratório de Inteligência Artificial – AILAB",
+        "distance": 0.16292285919189453,
+        "rank": 1,
+        "relevant": false,
+        "rrf": null
+      },
+      {
+        "id": "c_0904be5ddfac8a87",
+        "source_id": "DOC-005",
+        "title": "Diretório de laboratórios da FCTE",
+        "section": "Laboratórios FCTE > Laboratórios de Engenharia de Software",
+        "version": "2026-11-11",
+        "url": "https://fcte.unb.br/homologa_laboratorios/",
+        "excerpt": "Diretório de laboratórios da FCTE Laboratórios FCTE Laboratórios de Engenharia de Software Centro de Estudos Desenvolvimento e Inovação",
+        "distance": 0.1643739938735962,
+        "rank": 2,
+        "relevant": false,
+        "rrf": null
+      },
+      {
+        "id": "c_78aefd971e83ca2c",
+        "source_id": "DOC-016",
+        "title": "Quem somos LITE",
+        "section": "Ambiente Multiusuário",
+        "version": "2026-11-11",
+        "url": "https://lite.unb.br/quem-somos/",
+        "excerpt": "Quem somos LITE Ambiente Multiusuário O Laboratório Integrado de Tecnologias em Engenharias (LITE) oferece um ambiente multiusuário altamente",
+        "distance": 0.17003625631332397,
+        "rank": 3,
+        "relevant": false,
+        "rrf": null
+      },
+      {
+        "id": "c_def12e461bfc328e",
+        "source_id": "DOC-011",
+        "title": "Laboratórios de pesquisa",
+        "section": "",
+        "version": "2026-11-11",
+        "url": "https://software.unb.br/laboratorios-de-pesquisa/",
+        "excerpt": "Laboratórios de pesquisa Desde 2011, o corpo docente do curso de Engenharia de Software vêm criando laboratórios de",
+        "distance": 0.17127728462219238,
+        "rank": 4,
+        "relevant": false,
+        "rrf": null
+      },
+      {
+        "id": "c_3ec499d6018e067b",
+        "source_id": "DOC-025",
+        "title": "DF no Ponto – apresentação",
+        "section": "Agora, perder o ônibus é coisa do passado. > Planejamento de rota inteligente > Agora, perder o ônibus é coisa do passado. > Horários em tempo real > Agora, perder o ônibus é coisa do passado. > Alertas de serviço > Agora, perder o ônibus é coisa do passado. > Favoritos personalizados",
+        "version": "2026-11-11",
+        "url": "https://dfnoponto.semob.df.gov.br/",
+        "excerpt": "DF no Ponto – apresentação Agora, perder o ônibus é coisa do passado. Planejamento de rota inteligente Descubra",
+        "distance": 0.17294496297836304,
+        "rank": 5,
+        "relevant": false,
+        "rrf": null
+      }
+    ],
+    "claims": [],
+    "source_ids": [],
+    "previous_request_id": null
+  },
+  {
+    "id": "cabines",
+    "label": "Verificação posterior · busca híbrida",
+    "question": "e cabines de estudo individual ?",
+    "query": "Biblioteca Campus Gama – BCE. e cabines de estudo individual ?",
+    "request_id": "071e88ec-7cbb-49ec-8229-b054b1b68c15",
+    "executed_at": "2026-11-11T17:30:30.862779+00:00",
+    "status": "answered",
+    "answer": "A Biblioteca do Campus Gama dispoe de espaco para estudo com cabines individuais. [1]",
+    "model": "gemini-3.5-flash-lite",
+    "base_version": "796894d0d378f4f8d42929dc5a5eef75e22c70d2eeafd62d880171be67051267",
+    "prompt_version": "campus-rag-v2",
+    "method": "hibrida_rrf",
+    "retrieved": [
+      {
+        "id": "c_c8a0b710c3c50b09",
+        "source_id": "DOC-012",
+        "title": "Biblioteca Campus Gama – BCE",
+        "section": "BIBLIOTECA SETORIAL CAMPUS GAMA",
+        "version": "2026-11-11",
+        "url": "https://bce.unb.br/biblioteca-campus-gama/",
+        "excerpt": "espaço para estudo com cabines individuais e mesas para estudo em grupo",
+        "distance": 0.09942042827606201,
+        "rank": 1,
+        "relevant": null,
+        "rrf": 0.03278688524590164
+      },
+      {
+        "id": "c_1cfe0848c545f27c",
+        "source_id": "DOC-012",
+        "title": "Biblioteca Campus Gama – BCE",
+        "section": "Serviços > Comunidade Externa",
+        "version": "2026-11-11",
+        "url": "https://bce.unb.br/biblioteca-campus-gama/",
+        "excerpt": "Biblioteca Campus Gama – BCE Serviços Os empréstimos poderão ser feitos durante o horário de funcionamento da biblioteca,",
+        "distance": 0.11464953422546387,
+        "rank": 2,
+        "relevant": null,
+        "rrf": 0.031746031746031744
+      },
+      {
+        "id": "c_17241a7563801760",
+        "source_id": "DOC-008",
+        "title": "Biblioteca – Engenharia de Software",
+        "section": "",
+        "version": "2026-11-11",
+        "url": "https://software.unb.br/biblioteca/",
+        "excerpt": "Biblioteca – Engenharia de Software A biblioteca do Campus Gama conta atualmente com 2810 exemplares de livros físicos",
+        "distance": 0.12856727838516235,
+        "rank": 3,
+        "relevant": null,
+        "rrf": 0.030303030303030304
+      },
+      {
+        "id": "c_5faca10e6e792b67",
+        "source_id": "DOC-006",
+        "title": "Laboratórios de ensino",
+        "section": "",
+        "version": "2026-11-11",
+        "url": "https://software.unb.br/laboratorios-de-ensino/",
+        "excerpt": "Laboratórios de ensino O espaço físico da Faculdade do Gama é de aproximadamente 5.200 m2 e incluem salas",
+        "distance": 0.14664334058761597,
+        "rank": 4,
+        "relevant": null,
+        "rrf": 0.029631255487269532
+      },
+      {
+        "id": "c_45e04c73c85bdc29",
+        "source_id": "DOC-001",
+        "title": "Infraestrutura da FCTE",
+        "section": "Infraestrutura",
+        "version": "2026-11-11",
+        "url": "https://fcte.unb.br/infraestrutura/",
+        "excerpt": "Infraestrutura da FCTE Infraestrutura A atual sede do campus da FCTE conta com uma Unidade Acadêmica (UAC), uma",
+        "distance": 0.17099833488464355,
+        "rank": 5,
+        "relevant": null,
+        "rrf": 0.0266900790166813
+      }
+    ],
+    "claims": [
+      {
+        "text": "A Biblioteca do Campus Gama dispoe de espaco para estudo com cabines individuais.",
+        "sourceIds": [
+          "c_c8a0b710c3c50b09"
+        ]
+      }
+    ],
+    "source_ids": [
+      "c_c8a0b710c3c50b09"
+    ],
+    "previous_request_id": "fbe2df88-dced-4170-bfc7-da7b05e3cf96"
+  },
+  {
+    "id": "lema",
+    "label": "Verificação posterior · busca híbrida",
+    "question": "Qual é a localização do LEMA?",
+    "query": "Qual é a localização do LEMA?",
+    "request_id": "3b0b6497-b098-4ec3-a922-eb0d2b8af0bf",
+    "executed_at": "2026-11-11T17:30:41.378681+00:00",
+    "status": "answered",
+    "answer": "O Laboratório de Estruturas e Materiais Aeroespaciais (LEMA) está localizado no Prédio LDTEA, no térreo, na sala 103. [1]",
+    "model": "gemini-3.5-flash-lite",
+    "base_version": "796894d0d378f4f8d42929dc5a5eef75e22c70d2eeafd62d880171be67051267",
+    "prompt_version": "campus-rag-v2",
+    "method": "hibrida_rrf",
+    "retrieved": [
+      {
+        "id": "c_84847b7559c2bfb8",
+        "source_id": "DOC-015",
+        "title": "Serviços LITE",
+        "section": "Serviços > Materiais e Estruturas > LATAME – Laboratório de Tecnologias Ambientais, Materiais e Energia > Serviços > Materiais e Estruturas > BioGama > Serviços > Materiais e Estruturas > LEMA > Serviços > Materiais e Estruturas > LabTermo > Serviços > Materiais e Estruturas > LTB > Serviços > Materiais e Estruturas > NANOTEC",
+        "version": "2026-11-11",
+        "url": "https://lite.unb.br/servicos/",
+        "excerpt": "Serviços LITE Serviços > Materiais e Estruturas LATAME – Laboratório de Tecnologias Ambientais, Materiais e Energia Equipamentos: Sistemas",
+        "distance": 0.1467711329460144,
+        "rank": 1,
+        "relevant": null,
+        "rrf": 0.032266458495966696
+      },
+      {
+        "id": "c_f2c6f00293fae365",
+        "source_id": "DOC-005",
+        "title": "Diretório de laboratórios da FCTE",
+        "section": "Laboratórios FCTE > Laboratórios de Engenharia Aeroespacial",
+        "version": "2026-11-11",
+        "url": "https://fcte.unb.br/homologa_laboratorios/",
+        "excerpt": "Laboratório de Estruturas e Materiais Aeroespaciais – LEMA … Local: Prédio LDTEA – Térreo – Sala 103",
+        "distance": 0.16081291437149048,
+        "rank": 2,
+        "relevant": null,
+        "rrf": 0.03128054740957967
+      },
+      {
+        "id": "c_436a2249e7a6d0fb",
+        "source_id": "DOC-027",
+        "title": "DF no Ponto – pesquisa por linhas",
+        "section": "Pesquisa por Linhas",
+        "version": "2026-11-11",
+        "url": "https://dfnoponto.semob.df.gov.br/pesquisa-por-linhas/",
+        "excerpt": "DF no Ponto – pesquisa por linhas Pesquisa por Linhas Fazer uma pesquisa por linhas no DF NO",
+        "distance": 0.21418333053588867,
+        "rank": 3,
+        "relevant": null,
+        "rrf": 0.01639344262295082
+      },
+      {
+        "id": "c_4e7588ca515d195f",
+        "source_id": "DOC-016",
+        "title": "Quem somos LITE",
+        "section": "Laboratórios Integrados:",
+        "version": "2026-11-11",
+        "url": "https://lite.unb.br/quem-somos/",
+        "excerpt": "Quem somos LITE Laboratórios Integrados: LabTermo – Laboratório de Termofluidos: Especializado em pesquisas envolvendo fluidos térmicos, fundamentais para",
+        "distance": 0.15203797817230225,
+        "rank": 4,
+        "relevant": null,
+        "rrf": 0.016129032258064516
+      },
+      {
+        "id": "c_f1e118670e2e6123",
+        "source_id": "DOC-016",
+        "title": "Quem somos LITE",
+        "section": "Laboratórios Integrados:",
+        "version": "2026-11-11",
+        "url": "https://lite.unb.br/quem-somos/",
+        "excerpt": "Quem somos LITE Laboratórios Integrados: LabMicro – Laboratório de Microeletrônica e Sistemas Embarcados: Desenvolve soluções em microeletrônica e",
+        "distance": 0.15405648946762085,
+        "rank": 5,
+        "relevant": null,
+        "rrf": 0.015873015873015872
+      }
+    ],
+    "claims": [
+      {
+        "text": "O Laboratório de Estruturas e Materiais Aeroespaciais (LEMA) está localizado no Prédio LDTEA, no térreo, na sala 103.",
+        "sourceIds": [
+          "c_f2c6f00293fae365"
+        ]
+      }
+    ],
+    "source_ids": [
+      "c_f2c6f00293fae365"
+    ],
+    "previous_request_id": null
+  }
+]

@@ -1,54 +1,67 @@
 # Estratégia de chunking
 
-<span class="selo selo--verde">Executada no piloto</span>
+<span class="selo selo--verde">94 chunks aprovados e indexados</span>
 
-## Decisão
+## A ideia: fichas que fazem sentido sozinhas
 
-Dividir por **estrutura HTML, assunto e entidade**. A unidade deve conter contexto suficiente para ser compreendida quando recuperada.
+Se entregarmos a página inteira da biblioteca a cada pergunta, levamos serviços, doações, horários e acervo juntos, mesmo quando a pessoa só quer saber sobre cabines. Se cortarmos demais, uma sala pode ficar sem o nome do laboratório. Nosso corte busca preservar contexto sem carregar o documento inteiro.
 
-| Conteúdo | Unidade preservada |
-|---|---|
-| Infraestrutura e salas de aula | Texto coerente sobre o prédio e seus recursos |
-| Atendimento | Setor + local + condições de atendimento e contato institucional |
-| Laboratório | Nome + prédio/andar/sala ou contêiner |
-| Biblioteca | Assunto, mantendo condições de acesso e empréstimo relacionadas |
-| KML | Marcador identificado + descrição + coordenada informada |
+## Estratégia implementada: `agrupar_irmaos`
 
-Unidades curtas permanecem inteiras. Não juntamos laboratórios diferentes para preencher um tamanho, nem separamos nome e localização apenas por uma contagem fixa.
+1. Preservar título, seção e parágrafos do texto extraído.
+2. Agrupar seções vizinhas com o mesmo título-pai enquanto couberem no alvo.
+3. Manter rótulos no texto para não perder a associação entre assunto e informação.
+4. Subdividir seção longa por parágrafo, depois frase e, em último caso, palavras.
+5. Nunca misturar documentos diferentes no mesmo chunk.
 
-## O significado dos limites
+É um método estrutural com limite medido por tokens, não um modelo que descobre automaticamente mudanças de assunto. A alternativa `por_secao` existe para comparação futura, mas não houve experimento que provasse qual é melhor neste corpus.
 
-| Parâmetro | Valor | Justificativa |
-|---|---|---|
-| Limite técnico do E5 | 512 tokens | Contrato de entrada do modelo |
-| Teto operacional | 480 tokens completos | Margem conservadora nossa; não é exigência do E5 |
-| Alvo de subdivisão | 300 tokens completos | Ponto inicial para equilibrar foco e contexto nas seções que precisarem de corte |
-| Sobreposição prevista | Aproximadamente até 40 tokens | Continuidade entre partes da mesma seção longa; sujeito ao custo de repetição |
-| Sobreposição aplicada neste piloto | 0 | Nenhuma unidade exigiu subdivisão |
+## Por que 300, 40 e 512?
 
-Uma unidade coerente entre 300 e 480 pode permanecer inteira. Prefixo, título, campus, seção e tokens especiais entram na contagem; o valor não é uma estimativa por palavras ou caracteres. O tokenizer é o do E5, na revisão fixada do modelo, com truncamento desativado.
+| Parâmetro | Configuração real | Justificativa e limite |
+|---|---:|---|
+| Alvo completo | **300 tokens** | Equilíbrio inicial entre foco e contexto, com margem abaixo do limite do E5 |
+| Sobreposição | **Até 40 tokens** | Continuidade somente quando uma seção longa é subdividida |
+| Máximo do modelo na configuração | **512 tokens** | Restrição técnica; verificar antes da codificação, sem truncar silenciosamente |
 
-**300 e 40 não foram demonstrados como ótimos.** São parâmetros iniciais de engenharia. Seções longas serão subdivididas preferindo fronteiras de parágrafo, frase e palavra. Sobreposição nunca atravessa entidades diferentes.
+Token não é palavra: uma palavra pode virar várias unidades do tokenizer. Contamos prefixo `passage: `, título, conteúdo e tokens especiais usando o tokenizer real do E5. Os parâmetros 300/40 são escolhas iniciais de engenharia, **não valores ótimos comprovados**.
+
+A sobreposição usa apenas unidades inteiras que caibam no limite. Pode ser menor que 40 ou zero; não repetimos um pedaço arbitrário de frase para atingir a contagem. Não há sobreposição entre todos os chunks. O teto operacional antigo de 480 não é a regra do pipeline atual.
 
 ## Resultado observado
 
-Foram preparados 79 chunks: 68 dos cinco HTMLs e 11 do mapa. O mínimo foi **47 tokens**, a mediana **76**, a média **81,4** e o máximo **246**, considerando a entrada completa. Por isso, o fallback de subdivisão não foi necessário no recorte efetivo.
+| Estatística da base ativa | Valor |
+|---|---:|
+| Documentos | 25 |
+| Chunks | 94 |
+| Mínimo de tokens completos | 17 |
+| Mediana | 202 |
+| Máximo | 300 |
 
-Cada chunk conserva ID, fonte, seção, texto, entrada preparada para embedding, tokens, hash do original, seletor CSS ou posição do Placemark e intervalo no texto preparado. Os rótulos editoriais são distinguidos dos títulos originais.
+## Exemplo: a página da biblioteca
 
-## Fundamentação metodológica
-
-| Referência | Aplicação e limite |
+| Chunk real | Conteúdo principal |
 |---|---|
-| [LangChain — divisão por cabeçalhos](https://docs.langchain.com/oss/python/integrations/splitters/markdown_header_metadata_splitter) | Técnica documentada de preservar estrutura e metadados; aplicada ao HTML sem depender do framework |
-| [Dense X Retrieval — EMNLP 2024](https://aclanthology.org/2024.emnlp-main.845/) | Mostra a importância de investigar granularidade; não demonstra resultado neste campus e não implementamos seu método de proposições |
-| [Chroma — Evaluating Chunking Strategies](https://www.trychroma.com/research/evaluating-chunking) | Motiva avaliar evidência, redundância e orçamento de contexto; não fornece um tamanho universal |
-| [Model card E5](https://huggingface.co/intfloat/multilingual-e5-small) | Define o limite e os prefixos do modelo |
+| `c_c8a0b710c3c50b09` | Apresentação, espaços de estudo e acervo |
+| `c_7487f9e90557b28d` | Doações e funcionamento |
+| `c_1cfe0848c545f27c` | Serviços e acesso da comunidade externa |
+| `c_d18e321ba2d41ac7` | Regras de atendimento e empréstimos |
+| `c_dd4b3a6b44449326` | Produções acadêmicas |
 
-## Comparação futura
+Todos apontam para DOC-012. Recuperar o chunk de monografias não responde a uma pergunta sobre cabines, embora a fonte seja a mesma. A relevância deve ser avaliada no **conteúdo do trecho**, não só no documento correto.
 
-A primeira alternativa será janela fixa de 300 tokens com 40 de sobreposição, sobre os mesmos textos limpos e títulos. Manteremos corpus, modelo, perguntas e orçamento de contexto controlados. O gabarito apontará para passagens estáveis, não apenas IDs de chunks que mudam com a divisão.
+No diretório de laboratórios, um chunk reúne CPL, COSMOS e LEMA preservando suas localizações. Isso mantém associações, mas divide a representação entre vários assuntos. Comparar uma unidade por laboratório é uma melhoria a investigar, sem afirmar que já foi testada.
 
-Avaliaremos Hit@5 e ranking, cobertura de evidências e conteúdo irrelevante recuperado. Intervalos sobrepostos da mesma evidência serão unidos antes da contagem. Essa comparação ainda não foi executada.
+## Rastreabilidade
 
-Veja os [exemplos de chunks](evidencias.md) e o [protocolo de avaliação](avaliacao.md).
+Cada chunk guarda `chunk_id`, `source_id`, versão, hash do original, texto, título, seções, posição, campus, abrangência, revisão, validade, aprovação e entidades. O ID é derivado desses elementos e da configuração, incluindo conteúdo. Alterar a divisão ou o texto muda sua identidade.
+
+Não há seletor CSS ou intervalo de caracteres por chunk nesta implementação: a rastreabilidade ativa usa fonte, versão, seções, texto e hash. Os exemplos do site foram atualizados para esse contrato.
+
+[Explorar chunks e vetores](evidencias.md){ .md-button }
+
+## Referências e comparação futura
+
+A [estrutura por cabeçalhos](https://docs.langchain.com/oss/python/integrations/splitters/markdown_header_metadata_splitter) é uma técnica documentada, sem dependência do LangChain no nosso corte. O [model card do E5](https://huggingface.co/intfloat/multilingual-e5-small) orienta o contrato do modelo; a [pesquisa de avaliação de chunking da Chroma](https://www.trychroma.com/research/evaluating-chunking) motiva medir o efeito da divisão em vez de assumir um tamanho universal.
+
+Comparações devem manter corpus, modelo, perguntas e orçamento de contexto controlados. O gabarito aponta para fonte e passagem, e não somente IDs que mudam com o chunking. Não apresentamos uma comparação ainda não executada como resultado.

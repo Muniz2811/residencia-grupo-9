@@ -108,3 +108,10 @@ button:focus-visible, [role="button"]:focus-visible, select:focus-visible, input
   .rm-est__ctr { flex-wrap: wrap; }
   .rm-est__docs .rm-est__doc { font-size: .45rem; }
 }
+
+/* Ranking de execuções reais, mantendo as margens e controles da apresentação. */
+.rm-est__ranking { width: 100%; margin: 0; padding: .4rem 1.1rem; font-size: .65rem; }
+.rm-est__ranking li { padding: .35rem 0; overflow-wrap: anywhere; }
+.rm-est__ranking small { color: var(--rm-texto-suave); }
+.rm-est__visual > .rm-est__painel { max-width: 100%; }
+.rm-est__visual > .rm-est__fonte { margin-bottom: .6rem; }

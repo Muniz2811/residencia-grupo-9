@@ -11,7 +11,7 @@
       <div class="rm-hero__acoes">
         <a class="md-button md-button--primary" href="{{ 'entrega-1/' | url }}">Entrega 1 · definição do projeto</a>
         <a class="md-button rm-botao-claro" href="{{ 'visao/como-funciona/' | url }}">Como funciona</a>
-        <a class="md-button rm-botao-claro" href="{{ 'entrega-2/' | url }}">Entrega 2 · estado atual</a>
+        <a class="md-button rm-botao-claro" href="{{ 'entrega-2/' | url }}">Entrega 2 · RAG implementado</a>
       </div>
     </div>
     <figure class="rm-demo fcte-chat-demo" data-hero-demo aria-label="Exemplos ilustrativos de perguntas ao assistente do campus">
@@ -27,7 +27,7 @@
         <div class="rm-chat__resposta"><b>Assistente FCTE <small>exemplo</small></b><span class="rm-chat__r" aria-hidden="true"></span><span class="fcte-sr-only" data-answer-readable></span></div>
         <div class="rm-demo__rodape"><span class="rm-chat__info">Prévia ilustrativa</span><span class="rm-chat__fontes"></span></div>
       </div>
-      <figcaption>Exemplos ilustrativos do comportamento previsto. Consulta RAG e transporte ainda não implementados.</figcaption>
+      <figcaption>Prévia ilustrativa: consultas documentais já funcionam na aplicação local. Planejador de transporte continua futuro.</figcaption>
     </figure>
   </div>
 </section>
@@ -35,9 +35,9 @@
 
 {% block content %}
 <section class="rm-numeros rm-revelar" aria-label="Números observados do projeto">
-  <div class="rm-numero"><b data-contar="27">27</b><span>HTMLs preservados com hash</span></div>
-  <div class="rm-numero"><b data-contar="5">5</b><span>páginas no piloto + um KML</span></div>
-  <div class="rm-numero"><b data-contar="79">79</b><span>chunks e vetores preparados</span></div>
+  <div class="rm-numero"><b data-contar="27">27</b><span>fontes aprovadas no catálogo</span></div>
+  <div class="rm-numero"><b data-contar="25">25</b><span>fontes textuais indexadas</span></div>
+  <div class="rm-numero"><b data-contar="94">94</b><span>chunks e vetores no Chroma</span></div>
   <div class="rm-numero"><b data-contar="384">384</b><span>dimensões por embedding</span></div>
 </section>
 
@@ -46,10 +46,10 @@
   <p>Avançamos por etapas. Cada número abaixo corresponde a um artefato; pendências continuam identificadas como pendências.</p>
   <div class="rm-linha-tempo fcte-etapas" role="list">
     <div class="rm-etapa" role="listitem"><a href="{{ 'coleta/' | url }}"><small>Disponível</small><strong>Coleta mobile</strong><span>Foto, localização obrigatória, sugestão da IA e revisão humana.</span></a></div>
-    <div class="rm-etapa" role="listitem"><a href="{{ 'entrega-2/base-de-conhecimento/' | url }}"><small>Adquirido</small><strong>Fontes preservadas</strong><span>27 HTMLs com origem e hash; curadoria completa ainda pendente.</span></a></div>
-    <div class="rm-etapa" role="listitem"><a href="{{ 'entrega-2/chunking/' | url }}"><small>Executado no piloto</small><strong>Preparação e chunks</strong><span>Cinco páginas e um KML em 79 unidades rastreáveis.</span></a></div>
-    <div class="rm-etapa" role="listitem"><a href="{{ 'entrega-2/embeddings/' | url }}"><small>Executado no piloto</small><strong>Embeddings locais</strong><span>E5-small, 384 dimensões, normalização L2 e verificação técnica.</span></a></div>
-    <div class="rm-etapa fcte-pendente" role="listitem"><a href="{{ 'entrega-2/banco-vetorial/' | url }}"><small>Próxima etapa</small><strong>Busca e resposta</strong><span>Chroma, recuperação, geração fundamentada e avaliação.</span></a></div>
+    <div class="rm-etapa" role="listitem"><a href="{{ 'entrega-2/base-de-conhecimento/' | url }}"><small>Catalogado e aprovado</small><strong>Fontes preservadas</strong><span>27 aprovações, 25 fontes disponíveis; originais com versão, hash e ressalvas.</span></a></div>
+    <div class="rm-etapa" role="listitem"><a href="{{ 'entrega-2/chunking/' | url }}"><small>Implementado</small><strong>Preparação e chunks</strong><span>25 documentos em 94 chunks, com origem e configuração preservadas.</span></a></div>
+    <div class="rm-etapa" role="listitem"><a href="{{ 'entrega-2/embeddings/' | url }}"><small>Implementado</small><strong>Embeddings locais</strong><span>E5-small, 384 dimensões, normalização L2 e verificação técnica.</span></a></div>
+    <div class="rm-etapa" role="listitem"><a href="{{ 'entrega-2/banco-vetorial/' | url }}"><small>Implementado e demonstrado</small><strong>Busca e resposta</strong><span>Chroma persistente, busca híbrida, Gemini e avaliação inicial de 15 perguntas.</span></a></div>
   </div>
 </section>
 
@@ -57,13 +57,13 @@
   <h2 id="frentes-projeto">Três frentes, uma base com procedência</h2>
   <div class="rm-cartoes">
     <a class="rm-cartao" href="{{ 'coleta/fluxo/' | url }}"><small>Observação de campo</small><strong>Coletar e revisar</strong><span>Registrar ambientes e separar sugestões automáticas de descrições confirmadas.</span><em>FastAPI · Gemini opcional · Supabase</em></a>
-    <a class="rm-cartao" href="{{ 'coleta/mapeamento/' | url }}"><small>Inventário geográfico</small><strong>Identificar os lugares</strong><span>14 pontos do KML preservados, 11 usados no piloto, com limites e ambiguidades registrados.</span><em>KML · GeoJSON · IDs de locais</em></a>
-    <a class="rm-cartao" href="{{ 'entrega-2/arquitetura/' | url }}"><small>Preparação do conhecimento</small><strong>Recuperar com fontes</strong><span>Organizar evidências textuais para a futura consulta, com citações até o documento original.</span><em>Chunks · multilingual-e5-small · Chroma planejado</em></a>
+    <a class="rm-cartao" href="{{ 'coleta/mapeamento/' | url }}"><small>Inventário geográfico</small><strong>Identificar os lugares</strong><span>14 pontos preservados em inventário separado; sua ingestão no índice ativo é futura.</span><em>KML · GeoJSON · IDs de locais</em></a>
+    <a class="rm-cartao" href="{{ 'entrega-2/arquitetura/' | url }}"><small>Preparação do conhecimento</small><strong>Recuperar com fontes</strong><span>Recuperar evidências e responder com citações até fonte, seção e versão.</span><em>E5 · Chroma · BM25/RRF · Gemini</em></a>
   </div>
 </section>
 
 <section class="rm-secao rm-revelar" aria-labelledby="pipeline-home">
-  <h2 id="pipeline-home">Acompanhe a preparação</h2>
+  <h2 id="pipeline-home">Acompanhe o pipeline completo</h2>
   <p>Selecione uma etapa para ver suas entradas, saídas e situação real. Para apresentar o processo completo, abra a <a href="{{ 'visao/esteira-rag/' | url }}">esteira RAG animada</a>.</p>
   <div data-pipeline></div>
 </section>

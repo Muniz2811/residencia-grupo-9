@@ -27,7 +27,7 @@ flowchart LR
 
 O objetivo é manter as evidências de cada módulo identificadas. A composição não deve converter ausência de dados de um sistema em uma resposta inventada pelo outro.
 
-O contrato `POST /perguntar` mencionado pelo Grupo 04 é uma proposta de interface comum. Nosso protótipo atual de coleta tem suas próprias rotas, como `/api/analyze`; isso não representa uma API RAG já disponível.
+O contrato `POST /perguntar` mencionado pelo Grupo 04 é uma proposta de interface comum. O módulo RAG atual oferece `POST /api/v1/chat`, consumido pelo PWA local. A coleta mantém `/api/analyze` em outro projeto. Ter a API local não significa que o contrato comum ou o orquestrador já estejam implementados.
 
 ## Transporte e caronas
 

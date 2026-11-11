@@ -1,32 +1,43 @@
-# Entrega 2 · Conhecimento e preparação do RAG
+# Entrega 2 · Base de conhecimento e protótipo RAG
 
-O enunciado pede uma base curada, vinte documentos-fonte, estratégias de indexação, banco vetorial e demonstração fundamentada. **A entrega completa ainda está em andamento.** Esta documentação registra o estágio efetivamente executado.
+<span class="selo selo--verde">Implementado e demonstrado localmente</span>
 
-## Correspondência com os requisitos
-
-| Requisito | Evidência atual | Situação |
-|---|---|---|
-| Base de conhecimento curada | Aquisição e preparação de um recorte, com limitações | Em andamento |
-| Mínimo de 20 documentos-fonte | 27 HTMLs adquiridos; cinco HTMLs e um KML preparados | Curadoria mínima ainda pendente |
-| Estratégia de chunking | Regras por estrutura/entidade e 79 chunks | Executada no piloto |
-| Estratégia de embeddings | E5 fixado; 79 vetores de 384 dimensões | Executada no piloto |
-| Banco vetorial | Chroma persistido é a proposta | Não implementado |
-| Consulta submetida | Roteiro e perguntas candidatas | Não executada como RAG |
-| Recuperação dos chunks | Vetores disponíveis para a etapa seguinte | Não executada |
-| Resposta fundamentada | Estratégia de contexto e citações | Não executada |
-| Evidência das fontes da resposta | Rastreabilidade dos chunks já preparada | Falta resposta real com referências |
-| Diagrama de arquitetura | Componentes atuais e propostos identificados | Documentado |
-| Pipeline de ingestão | Aquisição, preparação e embeddings registrados | Documentado e parcialmente executado |
-
-!!! warning "Contagens diferentes"
-    27 HTMLs salvos não são 27 textos aprovados. Os 79 chunks vieram de **seis fontes do piloto**, contando o KML uma vez. Ainda não há vinte documentos curados, coleção vetorial ou taxa de acerto de recuperação medida.
-
-## Resultado observado
+O protótipo **recupera informações do campus e responde com fontes**. A aplicação FCTE Campus usa uma API Python com embeddings locais, Chroma persistente e Gemini. Esta entrega apresenta artefatos, execução real e avaliação; o Pages reproduz os registros sem executar o modelo no navegador.
 
 <div class="fcte-status-grid">
-  <div class="fcte-status"><strong>79 chunks</strong><span>68 dos cinco HTMLs e 11 do KML</span></div>
-  <div class="fcte-status"><strong>79 × 384</strong><span>Matriz de embeddings locais normalizados</span></div>
-  <div class="fcte-status fcte-status--pending"><strong>Próximo: Chroma</strong><span>Persistência e consulta ainda pendentes</span></div>
+  <div class="fcte-status"><strong>25 documentos</strong><span>27 aprovados; dois bloqueados na aquisição</span></div>
+  <div class="fcte-status"><strong>94 × 384</strong><span>Chunks e embeddings E5 no Chroma local</span></div>
+  <div class="fcte-status"><strong>15 perguntas</strong><span>Avaliação inicial com acertos e falhas registrados</span></div>
 </div>
 
-Os documentos estão em [base de conhecimento](base-de-conhecimento.md). As decisões de tamanho e contexto estão em [chunking](chunking.md), e os parâmetros usados em [embeddings](embeddings.md). Os [exploradores de evidências](evidencias.md) leem artefatos existentes.
+## Correspondência com o enunciado
+
+| Exigência | O que entregamos | Onde conferir |
+|---|---|---|
+| Base curada | Catálogo, aprovação expressa, versões, limitações e seleção dos indexáveis | [Base](base-de-conhecimento.md) |
+| Mínimo de 20 documentos-fonte | **25 fontes efetivamente indexadas**, sem contar chunks como novas fontes | [Catálogo](base-de-conhecimento.md#catalogo-das-fontes) |
+| Estratégia de chunking | Estrutura de títulos e seções, alvo 300, sobreposição até 40 quando há subdivisão | [Chunking](chunking.md) |
+| Estratégia de embeddings | E5 multilíngue small fixado, 384 dimensões, prefixos e normalização | [Embeddings](embeddings.md) |
+| Banco vetorial implementado | Chroma persistente, coleção ativa e reabertura comprovada | [Banco](banco-vetorial.md) |
+| Consulta submetida | Perguntas e IDs de execuções reais | [Demonstração](demonstracao.md) |
+| Recuperação dos relevantes | Top-5 registrado com IDs, fontes e distâncias | [Demonstração](demonstracao.md) |
+| Resposta fundamentada | Respostas reais, afirmações e fontes; limites da verificação | [Demonstração](demonstracao.md) |
+| Evidência das fontes | Documento, seção, versão, hash e URL | [Evidências](evidencias.md) |
+| Diagrama de arquitetura | Ingestão, consulta local, Gemini externo e integração com o PWA | [Arquitetura](arquitetura.md) |
+| Pipeline de ingestão | Etapas, scripts, entradas, saídas e reconstrução | [Pipeline](pipeline-ingestao.md) |
+
+## Entenda antes de olhar o código
+
+Pense numa biblioteca. Os documentos são os livros; os chunks são fichas de consulta; o E5 organiza as fichas por significado; o Chroma guarda o catálogo; BM25 procura palavras e siglas; o Gemini escreve a resposta com as fichas encontradas. **Não treinamos o Gemini com os documentos**: enviamos evidências a cada pergunta.
+
+[Ver a esteira animada](../visao/esteira-rag.md){ .md-button .md-button--primary }
+[Ver uma consulta real](demonstracao.md){ .md-button }
+
+!!! info "O que a avaliação mostrou"
+    A primeira rodada usou busca densa: encontrou evidência em **11/12 perguntas respondíveis**, mas apenas **16/75 trechos** eram relevantes. Houve quatro falhas técnicas. Depois adicionamos BM25/RRF e contexto curto de conversa, verificando cabines e LEMA. Os percentuais anteriores não são uma avaliação da configuração nova.
+
+## Limites da conclusão
+
+O mínimo de fontes, indexação, consulta, resposta, rastreabilidade e documentação estão demonstrados. Isso conclui o protótipo desta entrega, sem declarar qualidade perfeita ou operação em produção. Ainda precisamos reduzir ruído, revisar vigência e ambiguidades e ampliar a avaliação humana. O orquestrador comum, ocupação de salas, transporte em tempo real e rotas continuam fora do implementado.
+
+O piloto antigo de cinco páginas e KML foi substituído na coleção ativa por **25 páginas e 94 chunks**. O mapa de 14 pontos continua como inventário separado; não é apresentado como parte desse índice.

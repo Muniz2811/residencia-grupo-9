@@ -6,7 +6,7 @@ As fontes, referências técnicas e créditos da identidade visual estão reunid
 
 <div class="rm-cartoes">
   <a class="rm-cartao" href="fluxo/"><small>Aplicativo implementado</small><strong>Foto → local → análise → revisão</strong><span>Quatro telas para registrar ambientes pelo celular, com coordenadas obrigatórias.</span></a>
-  <a class="rm-cartao" href="mapeamento/"><small>Inventário inicial</small><strong>14 marcadores do KML</strong><span>Veja nomes, coordenadas e o recorte dos 11 pontos usados na preparação textual.</span></a>
+  <a class="rm-cartao" href="mapeamento/"><small>Inventário inicial</small><strong>14 marcadores do KML</strong><span>Veja nomes, coordenadas e os 11 pontos selecionados no inventário, separado do índice atual.</span></a>
   <a class="rm-cartao" href="dados/"><small>Procedência</small><strong>Dados e revisão humana</strong><span>Como fotos, sugestões automáticas, descrições e coordenadas são separados.</span></a>
 </div>
 
@@ -16,4 +16,4 @@ Uma coleta da **Praça da FCTE**, identificada por `77b0b0e5-29a7-44d5-be76-de5f
 
 A descrição menciona vegetação e bancos. O export não informa o arquivo da foto, a identidade do revisor ou acurácia GPS. Esses campos permanecem pendentes na preparação da ficha.
 
-Essa coleta foi preservada, mas não está entre os seis documentos do piloto atual: cinco páginas institucionais e o KML. A Praça da FCTE também não foi automaticamente identificada como a “Praça Solar” do mapa.
+Essa coleta foi preservada separadamente e não integra a coleção textual ativa de 25 fontes e 94 chunks. O KML também permanece como inventário independente. A Praça da FCTE não foi automaticamente identificada como a “Praça Solar” do mapa.

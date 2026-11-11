@@ -2,33 +2,56 @@
 
 <div data-pipeline></div>
 
-## Entradas e saídas
+## Da página institucional ao índice
 
-| Etapa | Entrada | Saída | Estado |
+| Etapa | Entrada | Saída real | Comando |
 |---|---|---|---|
-| Aquisição | Catálogo de URLs | HTMLs originais, origem, data e hashes | Executada para 27 endereços |
-| Seleção | Conteúdo principal dos HTMLs | Cinco páginas prioritárias | Executada |
-| Preparação | Artigo e regras por tipo | Texto, seções, seletores e limitações | Executada como rascunho |
-| Mapeamento | KML de 14 pontos | GeoJSON completo e 11 unidades elegíveis | Executado |
-| Chunking | Unidades preparadas | 79 chunks e contagens reais | Executado |
-| Embeddings | Entradas completas dos chunks | Matriz, IDs por linha e manifesto | Executados |
-| Indexação | Vetores e metadados aprovados | Coleção vetorial persistida | Pendente |
-| Consulta e avaliação | Perguntas, contexto e gabaritos | Respostas, fontes e métricas | Pendentes |
+| Aquisição | Catálogo de URLs | Originais HTML com versão, data e SHA-256 | `01_adquirir.py` |
+| Extração | Original e regras por site/fonte | JSON com títulos, seções, parágrafos e origem | `02_extrair.py` |
+| Curadoria e validação | Catálogo e aprovação expressa | 27 aprovações, 25 indexáveis e dois bloqueios registrados | `03_validar_catalogo.py` |
+| Normalização | Nomes e siglas documentados | IDs de entidades nos metadados, sem reescrever o texto | Usada na preparação dos chunks |
+| Chunking | Texto das fontes aprovadas e indexáveis | 94 chunks e manifesto de contagem | `04_chunks.py` |
+| Embeddings | Chunks com prefixo `passage: ` | Matriz E5 94 × 384 e IDs no NPZ | `05_indexar.py` |
+| Indexação | Vetores explícitos, textos e metadados | Coleção Chroma e manifesto publicado após conferência | `05_indexar.py` |
+| Persistência | Coleção já criada | Reabertura, validação e consulta sem ingestão | `06_conferir.py` |
 
-## Regras de procedência
+Os números são da execução de 11/11/2026. DOC-014 e DOC-024 não foram indexados por bloqueio de aquisição. Aprovar a fonte não cria um texto que não foi obtido.
 
-O original não é reescrito. A extração registra seletores CSS ou posição do Placemark e intervalos no texto preparado. O manifesto de preparação liga as saídas à configuração, ao script e ao tokenizer usado.
+```mermaid
+flowchart LR
+  U[URLs catalogadas] --> O[Originais preservados]
+  O --> T[Textos extraídos]
+  T --> C[Chunks aprovados]
+  C --> V[Vetores E5 locais]
+  V --> I[Chroma e manifesto]
+  A[Aprovação, abrangência e validade] --> C
+  I --> P[Reabertura comprovada]
+```
 
-Na codificação, a implementação confere o hash dos chunks, os IDs, a revisão do tokenizer, o tamanho completo das entradas e a integridade dos pesos. O manifesto de embeddings registra a configuração e os hashes das saídas numéricas.
+## O original permanece original
 
-## Atualização
+A limpeza ocorre em arquivos derivados. Removemos elementos de navegação, scripts e trechos fora do escopo conforme regras explícitas, preservando a cópia adquirida. O hash do original acompanha o extraído e o chunk. Extração é heurística e ainda precisa de conferência para ambiguidades e conteúdo desnecessário.
 
-Nova versão de uma fonte exige nova preparação e vetorização compatível. O índice futuro deverá retirar trechos superados do conjunto ativo; a existência de vetores antigos não autoriza continuar exibindo informação vencida como atual.
+O pipeline atual registra fonte, versão, título e seção; não registra intervalos de caracteres ou seletores por chunk como fazia o piloto anterior. O código e a documentação usam o mesmo contrato.
 
-O catálogo aprovado será separado das referências candidatas. Uma extração bem formada não confirma, por si só, a atualidade de horários, o funcionamento de equipamentos ou uma associação geográfica.
+## Atualização sem duplicar e sem misturar versões
 
-## Sem mistura com dados pessoais
+1. Registrar a nova versão da fonte, seu hash e revisão.
+2. Extrair e revisar o conteúdo; retirar do conjunto ativo o que for rejeitado ou vencido.
+3. Regenerar chunks e embeddings compatíveis.
+4. Usar IDs estáveis na coleção de destino e conferir completude.
+5. Publicar o manifesto somente depois da indexação válida.
 
-O pipeline textual não ingere endereço residencial, contatos de carona ou fotos privadas como um corpus público. A exportação de coletas será revisada antes da incorporação, preservando a distinção entre sugestão automática e descrição final.
+A identidade da coleção considera corpus, modelo, configuração de embeddings, distância e bibliotecas. Modelos incompatíveis não compartilham vetores. Coleções antigas podem ser preservadas, mas só o manifesto define a ativa. Há lock de indexação; reabrir a API normalmente não reingere documentos.
 
-As [evidências do piloto](evidencias.md) permitem conferir o que já foi produzido. O [guia de reprodução](como-executar.md) apresenta os comandos e suas dependências.
+Alterar somente BM25, top-k ou o prompt não muda necessariamente a assinatura do índice. Por isso os logs também registram busca, parâmetros do gerador e hash do prompt.
+
+## A consulta é outra esteira
+
+Na consulta calculamos apenas o vetor da pergunta. Depois vêm busca híbrida, seleção, geração e citações. Nem aquisição nem chunking devem rodar para cada mensagem. A [esteira animada](../visao/esteira-rag.md) separa esses momentos, e a [arquitetura](arquitetura.md) mostra as fronteiras.
+
+## Dados pessoais e publicação
+
+O corpus não inclui endereço residencial, contato de carona ou fotos privadas. O exportador desta documentação publica apenas metadados, excertos curtos e perguntas públicas selecionadas. Não copia a pasta de logs, `.env`, pesos, banco ou páginas integrais para o Pages.
+
+O [guia de execução](como-executar.md) explica como reconstruir e consultar. Os [artefatos exportados](evidencias.md) podem ser conferidos sem executar modelos.

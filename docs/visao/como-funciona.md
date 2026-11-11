@@ -5,24 +5,24 @@ hide:
   - toc
 ---
 
-# Como funciona
+# Como o FCTE Campus funciona
 
-Escolha um cenário e clique em **▶ Reproduzir** ou avance com **▶|**. Cada passo destaca os componentes do diagrama e anima os dados percorrendo as setas. A estrutura SVG, os controles e os efeitos foram adaptados diretamente do Grupo 04 ao nosso piloto.
+Escolha um cenário e clique em **▶ Reproduzir** ou avance com **▶|**. Cada passo destaca os componentes e anima os dados nas setas. A identidade e os efeitos seguem a referência do Grupo 04, com conteúdo da nossa implementação.
 
-<div class="rm-fluxo" data-fluxo data-cenario="1" tabindex="0" aria-label="Diagrama animado do Coleta FCTE e integração proposta"></div>
+<div class="rm-fluxo" data-fluxo data-cenario="1" tabindex="0" aria-label="Diagrama animado do RAG local e integração futura"></div>
 
-!!! info "Uma apresentação do projeto"
-    Os controles animam o diagrama localmente. Não enviam fotos, não chamam Gemini e não executam consultas. A preparação foi executada até os embeddings; consulta RAG e integração entre grupos permanecem planejadas. O aplicativo de coleta está documentado no [fluxo de coleta](../coleta/fluxo.md).
+!!! info "Implementado e proposto aparecem separados"
+    O **PWA, a API RAG local, a busca híbrida, o Chroma e a geração Gemini estão implementados**. A consulta do Grupo 09 vai diretamente do PWA à API, sem passar pelo orquestrador. A conexão comum com RU e disciplinas do Grupo 04 permanece proposta. Esta animação reproduz registros e não chama os serviços.
 
 ## Quatro cenários
 
 | Percurso | O que acompanha | Situação |
 |---|---|---|
-| Antes das perguntas: ingestão | Fontes → extração e chunks → embeddings → futura persistência | Executado até os embeddings; Chroma pendente |
-| Consulta do campus | Pergunta → embedding → busca → contexto → resposta com fontes | Arquitetura planejada; embeddings dos documentos já preparados |
-| Integração com o Grupo 04 | Encaminhamento ao módulo responsável e composição com fontes identificadas | Proposta de colaboração, sem orquestrador comum implementado |
-| Pergunta sem base | Ausência de ocupação atual de sala → reconhecimento da limitação | Comportamento esperado, ainda não avaliado |
+| Ingestão | Catálogo → original → chunks → embeddings → Chroma | 25 fontes e 94 registros persistidos |
+| Consulta do Grupo 09 | PWA → API → busca → Gemini → resposta com fontes | Execução real da localização do LEMA |
+| Integração dos grupos | Encaminhamento e composição de fontes por domínio | Proposta; orquestrador comum não implementado |
+| Pergunta sem dado atual | Consulta sobre ocupação da I10 → insuficiência | Registro real da avaliação inicial densa |
 
-Use **▶ Reproduzir**, **◀**, **▶|** e **Tela cheia**. Com foco na apresentação, as setas do teclado navegam e Home/End selecionam início/fim. Movimento reduzido desativa o movimento dos pacotes.
+Use **◀**, **▶|**, **Tela cheia** ou o teclado. Movimento reduzido desativa o deslocamento dos pacotes. As setas representam etapas do fluxo, não velocidades ou latências medidas.
 
-A [Entrega 1](../entrega-1/index.md) concentra as definições do projeto. A [arquitetura técnica](../entrega-2/arquitetura.md) detalha separação entre coleta, dados geográficos e RAG. Continue na [esteira RAG animada](esteira-rag.md).
+A [esteira do RAG](esteira-rag.md) detalha cada transformação. A [Entrega 2](../entrega-2/index.md) reúne artefatos, [demonstrações](../entrega-2/demonstracao.md), [arquitetura](../entrega-2/arquitetura.md) e [avaliação](../entrega-2/avaliacao.md). A definição do projeto continua na [Entrega 1](../entrega-1/index.md).

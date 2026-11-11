@@ -1,0 +1,218 @@
+{
+  "versao": "diagnostico-1",
+  "avaliador": "Codex, julgamento assistido único; sem dupla revisão humana",
+  "natureza": "Diagnóstico inicial não cego. Perguntas selecionadas após conhecer o corpus; algumas já apareceram nas demonstrações. Não é teste independente de generalização.",
+  "rubrica": {
+    "relevancia": "Um chunk é relevante quando contém evidência específica para pelo menos uma parte pedida ou para corrigir a premissa. Mencionar biblioteca, laboratório ou ônibus sem responder não basta. Perguntas sem resposta têm zero evidências relevantes para o fato solicitado.",
+    "fundamentacao": "Separar a resposta em afirmações factuais atômicas, incluindo afirmações adicionais em mensagens de insuficiência. Julgar cada uma somente pelos chunks citados. Frases sobre incapacidade do sistema, orientações sem fato adicional e apresentação não entram no denominador. Uma omissão não é alucinação: registrar cobertura separadamente.",
+    "rastreabilidade": "Contar cada vínculo claim-chunk uma vez por claim, resolvendo ID, texto, documento, versão, SHA do original, seção e URL. Conferir no arquivo de chunks, catálogo, texto extraído e original preservado. Resolução de ID não prova suporte semântico.",
+    "ausencia": "Acerto exige admitir a falta do dado solicitado sem inventar resposta. Erro técnico não conta como abstenção correta. Status insufficient sozinho não basta.",
+    "premissa": "Conta como respondível: há evidência corretiva na base. Verificar correção explícita da suposição falsa.",
+    "falhas": "Uma tentativa por pergunta, sem escolher melhor resposta nem tentar novamente automaticamente. Erros técnicos são registrados. R/P usam recuperação preservada se houver; ausência de recuperação conta como falha em R. F não recebe nota fictícia onde não há resposta.",
+    "denominadores": "R sobre 12 respondíveis. P principal sobre todos os trechos retornados nas 15 perguntas; P_respondiveis também reportada. F sobre todas as afirmações factuais produzidas; T sobre vínculos de citação. A sobre três sem resposta. Denominador zero = não aplicável."
+  },
+  "metas_piloto": {
+    "observacao": "Metas locais de aceitação, registradas antes das chamadas; não são limiares universais da literatura.",
+    "hit_at_5": 0.8,
+    "precisao_todas": 0.4,
+    "precisao_respondiveis": 0.5,
+    "fundamentacao": 0.95,
+    "rastreabilidade": 1.0,
+    "ausencia": 1.0,
+    "persistencia": 1
+  },
+  "perguntas": [
+    {
+      "id": "Q01",
+      "tipo": "direta",
+      "respondiveis": true,
+      "exposicao": "Tema já demonstrado",
+      "pergunta": "Em qual prédio, andar e sala fica o laboratório COSMOS?",
+      "evidencias": [
+        {
+          "source_id": "DOC-005",
+          "trecho": "COSMOS: Prédio LDTEA – 2º andar – Sala 304"
+        }
+      ],
+      "referencia": "Segundo a fonte, o COSMOS fica no LDTEA, 2º andar, sala 304."
+    },
+    {
+      "id": "Q02",
+      "tipo": "sigla",
+      "respondiveis": true,
+      "pergunta": "Onde encontro o CPL (Chemical Propulsion Laboratory)?",
+      "evidencias": [
+        {
+          "source_id": "DOC-005",
+          "trecho": "CPL, Chemical Propulsion Laboratory: Local Contêiner 07"
+        }
+      ],
+      "referencia": "Contêiner 07, de acordo com a página de laboratórios."
+    },
+    {
+      "id": "Q03",
+      "tipo": "sigla",
+      "respondiveis": true,
+      "pergunta": "Qual é a localização do LEMA?",
+      "evidencias": [
+        {
+          "source_id": "DOC-005",
+          "trecho": "LEMA: Prédio LDTEA – Térreo – Sala 103"
+        }
+      ],
+      "referencia": "Prédio LDTEA, térreo, sala 103."
+    },
+    {
+      "id": "Q04",
+      "tipo": "parafrase",
+      "respondiveis": true,
+      "pergunta": "Quais setores ficam na Unidade de Ensino e Docência (UED)?",
+      "evidencias": [
+        {
+          "source_id": "DOC-001",
+          "trecho": "Na UED estão locadas as salas de professores, os serviços de secretaria, laboratórios, diretoria e coordenação acadêmica."
+        }
+      ],
+      "referencia": "Salas de professores, secretaria, laboratórios, diretoria e coordenação acadêmica."
+    },
+    {
+      "id": "Q05",
+      "tipo": "localizacao",
+      "respondiveis": true,
+      "pergunta": "Em qual unidade ficam a biblioteca e o auditório do campus?",
+      "evidencias": [
+        {
+          "source_id": "DOC-001",
+          "trecho": "Na UAC, estão locadas salas de aula, laboratórios de informática, biblioteca e auditório."
+        },
+        {
+          "source_id": "DOC-006",
+          "trecho": "UAC, mesmo prédio da biblioteca: evidência parcial apenas da biblioteca."
+        }
+      ],
+      "referencia": "Ambos na Unidade Acadêmica (UAC), segundo a página de infraestrutura."
+    },
+    {
+      "id": "Q06",
+      "tipo": "parafrase",
+      "respondiveis": true,
+      "exposicao": "Tema já discutido com o usuário",
+      "pergunta": "Na biblioteca do Gama há lugar para estudar sozinho e em grupo?",
+      "evidencias": [
+        {
+          "source_id": "DOC-012",
+          "trecho": "espaço para estudo com cabines individuais e mesas para estudo em grupo"
+        }
+      ],
+      "referencia": "A página informa cabines individuais e mesas para estudo em grupo."
+    },
+    {
+      "id": "Q07",
+      "tipo": "servico",
+      "respondiveis": true,
+      "pergunta": "Pessoas de fora da UnB podem usar a Biblioteca do Campus Gama? Podem pegar livros emprestados?",
+      "evidencias": [
+        {
+          "source_id": "DOC-012",
+          "trecho": "aberta à comunidade externa, sem necessidade de credenciamento ou agendamento; empréstimo apenas para comunidade acadêmica da UnB; comunidade externa pode realizar consulta local"
+        }
+      ],
+      "referencia": "Público externo pode acessar e consultar localmente; empréstimo é restrito à comunidade acadêmica da UnB."
+    },
+    {
+      "id": "Q08",
+      "tipo": "procedimento",
+      "respondiveis": true,
+      "pergunta": "Como doar livros para a Biblioteca do Campus Gama?",
+      "evidencias": [
+        {
+          "source_id": "DOC-012",
+          "trecho": "enviar e-mail com títulos, autores, edição e ISBN; pré-seleção; agendar entrega; conferir conservação"
+        }
+      ],
+      "referencia": "Enviar lista por e-mail com títulos, autores, edição e ISBN; aguardar pré-seleção e agendamento; aprovação depende da conservação."
+    },
+    {
+      "id": "Q09",
+      "tipo": "transporte_documental",
+      "respondiveis": true,
+      "exposicao": "Tema já discutido com o usuário",
+      "pergunta": "Como faço uma pesquisa por origem ou destino no DF no Ponto?",
+      "evidencias": [
+        {
+          "source_id": "DOC-026",
+          "trecho": "pesquisa por origem e destino; linhas, horários e pontos"
+        }
+      ],
+      "referencia": "Usar a busca por origem/destino descrita no portal, para consultar linhas, horários e pontos. Não fornecer previsão ao vivo."
+    },
+    {
+      "id": "Q10",
+      "tipo": "informacao_temporal_atribuida",
+      "respondiveis": true,
+      "pergunta": "Qual é o horário de funcionamento informado na página da Biblioteca Campus Gama?",
+      "evidencias": [
+        {
+          "source_id": "DOC-012",
+          "trecho": "Segunda a sexta-feira (exceto feriados) das 7h às 19h"
+        }
+      ],
+      "referencia": "A página informa segunda a sexta, exceto feriados, das 7h às 19h. Não garante abertura neste instante."
+    },
+    {
+      "id": "Q11",
+      "tipo": "premissa_incorreta",
+      "respondiveis": true,
+      "pergunta": "O COSMOS fica no térreo da UAC, sala 101, certo?",
+      "evidencias": [
+        {
+          "source_id": "DOC-005",
+          "trecho": "COSMOS: Prédio LDTEA – 2º andar – Sala 304"
+        }
+      ],
+      "referencia": "Corrigir: LDTEA, segundo andar, sala 304; não confirmar a premissa."
+    },
+    {
+      "id": "Q12",
+      "tipo": "premissa_incorreta",
+      "respondiveis": true,
+      "pergunta": "A biblioteca do Gama fica na UED, não é?",
+      "evidencias": [
+        {
+          "source_id": "DOC-001",
+          "trecho": "Na UAC [...] biblioteca e auditório"
+        },
+        {
+          "source_id": "DOC-006",
+          "trecho": "UAC, mesmo prédio da biblioteca"
+        }
+      ],
+      "referencia": "Corrigir: a biblioteca fica na UAC, segundo a infraestrutura."
+    },
+    {
+      "id": "Q13",
+      "tipo": "sem_resposta",
+      "respondiveis": false,
+      "exposicao": "Caso já usado na demonstração e mencionado no prompt como limite geral",
+      "pergunta": "A sala I10 está livre agora?",
+      "evidencias": [],
+      "referencia": "Não há dados atuais de ocupação; declarar insuficiência."
+    },
+    {
+      "id": "Q14",
+      "tipo": "sem_resposta",
+      "respondiveis": false,
+      "pergunta": "Quantas pessoas estão neste momento na Biblioteca do Campus Gama?",
+      "evidencias": [],
+      "referencia": "Não há contagem de pessoas em tempo real; declarar insuficiência."
+    },
+    {
+      "id": "Q15",
+      "tipo": "sem_resposta",
+      "respondiveis": false,
+      "pergunta": "Qual ônibus passa na entrada da FCTE daqui a cinco minutos?",
+      "evidencias": [],
+      "referencia": "A base não fornece passagens em tempo real para esse ponto e instante; declarar insuficiência."
+    }
+  ]
+}

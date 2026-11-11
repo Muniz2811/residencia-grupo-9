@@ -8,12 +8,16 @@ hide:
 
 ## Leitura rápida
 
-1. **O problema.** Informações sobre prédios, ambientes e serviços do campus Gama estão espalhadas entre páginas institucionais, mapas e observações de campo.
-2. **Nossa frente.** O Grupo 09 organiza esse conhecimento com coleta revisada, identificação de locais e preparação de uma base textual rastreável. RU e disciplinas são módulos do Grupo 04.
-3. **O que foi executado.** Aquisição de 27 HTMLs; seleção de cinco páginas; importação do KML; preparação de 79 chunks e geração local de 79 embeddings de 384 dimensões.
-4. **O que está pendente.** Curadoria completa de vinte documentos, banco vetorial, consulta RAG, geração de respostas e avaliação da recuperação. Os números do piloto não representam esses resultados.
+1. **O problema:** informações sobre prédios, ambientes e serviços do campus Gama estão espalhadas entre documentos, mapas e observações.
+2. **Nossa frente:** coleta revisada, inventário de locais e um assistente que recupera texto e mostra a fonte. RU e disciplinas pertencem ao Grupo 04.
+3. **Implementado:** 27 fontes aprovadas, 25 indexadas, 94 chunks, E5 de 384 dimensões, Chroma persistente, busca híbrida e resposta Gemini no PWA local.
+4. **Avaliado:** quinze perguntas na primeira versão densa, com julgamentos, métricas e falhas técnicas registrados; correção posterior das cabines e do LEMA verificada separadamente.
+5. **Ainda evolui:** qualidade da recuperação, revisão de vigência, ingestão de KML/coletas, rotas e integração entre grupos.
 
-!!! info "Documentação de um trabalho em etapas"
-    O mapa e os exploradores deste site leem arquivos exportados do piloto. Não enviam perguntas a modelos, não consultam o banco de coleta e não executam um RAG no navegador.
+!!! info "Este Pages é documentação"
+    Animações e exploradores reproduzem artefatos e execuções reais exportadas. Não solicitam chaves, não consultam o banco privado da coleta e não executam Gemini neste navegador.
 
-Comece pela [Entrega 1 · definição do projeto](entrega-1/index.md). Explore [Como funciona](visao/como-funciona.md) e a [esteira RAG animada](visao/esteira-rag.md). Acompanhe também o [checklist da Entrega 2](entrega-2/index.md), o [escopo da colaboração](visao/escopo.md) e as [referências](coleta/referencias.md).
+[Entrega 2 · implementação e evidências](entrega-2/index.md){ .md-button .md-button--primary }
+[Demonstração real](entrega-2/demonstracao.md){ .md-button }
+
+Explore [Como funciona](visao/como-funciona.md), a [esteira animada](visao/esteira-rag.md), o [banco vetorial](entrega-2/banco-vetorial.md) e a [avaliação](entrega-2/avaliacao.md). A [Entrega 1](entrega-1/index.md) preserva a definição do projeto; as [referências](coleta/referencias.md) identificam as fontes técnicas e a identidade compartilhada.

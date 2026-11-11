@@ -4,18 +4,18 @@ template: mapping.html
 
 # Mapeamento do campus
 
-O arquivo `Mapeamento.kml` fornecido pela equipe contém **14 marcadores Point**. O piloto preservou todos em GeoJSON e preparou texto para 11 deles.
+O arquivo `Mapeamento.kml` fornecido pela equipe contém **14 marcadores Point**. Todos foram preservados no inventário geográfico. Onze foram selecionados no piloto histórico, mas **nenhum deles compõe a coleção textual ativa de 94 chunks**.
 
 <div data-campus-map data-map-tiles="https://tile.openstreetmap.org/{z}/{x}/{y}.png"></div>
 
 <noscript>O mapa interativo requer JavaScript. Os quantitativos e as limitações estão descritos abaixo; os dados exportados podem ser consultados no arquivo de evidências.</noscript>
 
 !!! info "Como ler o mapa"
-    O fundo cartográfico é do OpenStreetMap; os 14 pontos sobrepostos são anotações da equipe no KML. Use o zoom, arraste o mapa ou selecione um marcador para conferir sua ficha. Os pontos cinza foram preservados, mas ficaram fora dos chunks. O mapa-base não confirma os nomes, acessibilidade ou condições atuais dos locais anotados; esta página não calcula rotas.
+    O fundo cartográfico é do OpenStreetMap; os 14 pontos sobrepostos são anotações da equipe no KML. Use o zoom, arraste o mapa ou selecione um marcador para conferir sua ficha. Os pontos cinza precisam de revisão ou ficaram fora do recorte do inventário. As cores não indicam presença no índice atual. O mapa-base não confirma os nomes, acessibilidade ou condições atuais dos locais anotados; esta página não calcula rotas.
 
 O mapa-base requer conexão à internet. A visualização usa [Leaflet 1.9.4](https://leafletjs.com/reference-1.9.4.html) e preserva a [atribuição do OpenStreetMap](https://www.openstreetmap.org/copyright), conforme sua [política de uso dos tiles](https://operations.osmfoundation.org/policies/tiles/). Não solicita a localização do dispositivo.
 
-## O que entrou no piloto
+## Seleção do inventário geográfico
 
 O inventário inclui entradas, estacionamentos, UAC, quadra, área externa e contêiner. O RU ficou fora do recorte textual. Dois pontos chamados apenas **“Laboratório”** aguardam identificação; não receberam nomes inferidos a partir da posição.
 
@@ -30,7 +30,7 @@ O inventário inclui entradas, estacionamentos, UAC, quadra, área externa e con
 
 O KML é **um documento-fonte**. Cada ponto pode gerar uma unidade de recuperação, sem se tornar uma fonte original independente.
 
-## Como ajuda o RAG
+## Integração futura com o RAG
 
 Uma consulta futura poderá recuperar a descrição do UAC e resolver seu ponto por ID. Coordenadas ficam também em formato estruturado para uso geográfico.
 

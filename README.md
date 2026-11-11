@@ -1,6 +1,6 @@
 # Coleta FCTE · Grupo 09
 
-Documentação MkDocs do mapeamento da FCTE e da preparação do RAG. Identidade visual adaptada do [Grupo 04](https://github.com/maykonjuso/residencia-grupo-4), com seus créditos em [Referências](docs/coleta/referencias.md).
+Documentação MkDocs do mapeamento da FCTE e da implementação do RAG. Identidade visual adaptada do [Grupo 04](https://github.com/maykonjuso/residencia-grupo-4), com seus créditos em [Referências](docs/coleta/referencias.md).
 
 ## Executar
 
@@ -10,7 +10,7 @@ python -m venv .venv
 .\.venv\Scripts\python.exe -m mkdocs serve
 ```
 
-Abra **http://127.0.0.1:8001**. Para gerar e conferir o site:
+Abra **http://127.0.0.1:8002**. Para gerar e conferir o site:
 
 ```powershell
 .\.venv\Scripts\python.exe -m mkdocs build --strict
@@ -19,15 +19,15 @@ Abra **http://127.0.0.1:8001**. Para gerar e conferir o site:
 ## Conteúdo
 
 - Entrega 1: pacote de definição do projeto, com os dez tópicos solicitados.
-- Visão, escopo e proposta de colaboração com o Grupo 04; fluxos e esteira RAG animados, com controles de apresentação.
-- Aplicativo de coleta, revisão humana, armazenamento e privacidade.
-- Mapeamento com os 14 marcadores reais do KML; 11 no piloto.
-- 27 HTMLs adquiridos, cinco páginas selecionadas e 79 chunks.
-- 79 embeddings E5 de 384 dimensões e verificações técnicas.
-- Arquitetura, ingestão, avaliação planejada e pendências explícitas.
-- Exploradores estáticos de metadados, amostras e vetores reais.
+- Visão e esteira animadas, com controles, movimento reduzido e registros reais.
+- Coleta e inventário geográfico, separados da coleção textual ativa.
+- Entrega 2: 27 fontes aprovadas, 25 indexadas, 94 chunks e E5 de 384 dimensões.
+- Chroma local persistente, busca híbrida E5/BM25/RRF, contexto curto e Gemini.
+- Demonstrações com perguntas, rankings, respostas, referências, IDs e versões.
+- Avaliação inicial densa de 15 perguntas e verificações posteriores da correção, sem misturar seus resultados.
+- Código de reprodução e exportações públicas por lista permitida.
 
-Banco vetorial, consulta RAG e métricas de recuperação continuam pendentes. O site não executa o RAG e não contém credenciais, fotos privadas, pesos ou a matriz completa de vetores.
+O site é estático e não executa o RAG. Não publica chaves, fotos, originais integrais, logs brutos, Chroma, pesos ou a matriz completa. A documentação não implica deploy do backend.
 
 ## Organização
 

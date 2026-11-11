@@ -1,32 +1,31 @@
 # Etapas e decisões
 
-O trabalho avança por etapas. Esta é a sequência observada no projeto; não é uma declaração de que todas as entregas acadêmicas já foram concluídas.
+## Estado em 11/11/2026
 
 | Etapa | Resultado | Situação |
 |---|---|---|
-| Coleta de ambientes | Interface mobile, GPS confirmado, análise opcional e revisão | Implementada |
-| Aquisição documental | 27 HTMLs preservados com metadados e hashes | Executada |
-| Seleção do piloto | Cinco HTMLs e um KML | Executada |
-| Preparação | Unidades por seção/entidade; ambiguidades registradas | Executada como rascunho |
-| Chunking | 79 chunks com origem e contagem real de tokens | Executado |
-| Embeddings | Matriz 79 × 384, normalização e correspondência por ID | Executados |
-| Curadoria final | Aprovação e vigência do conjunto mínimo de vinte documentos | Pendente |
-| Banco vetorial | Coleção persistida e reabertura demonstrada | Pendente |
-| Consulta e resposta | Recuperação, geração fundamentada e fontes | Pendente |
-| Avaliação | Perguntas/gabaritos e métricas observadas | Pendente |
+| Coleta | Interface mobile, GPS, análise e revisão | Projeto separado implementado |
+| Mapeamento | 14 pontos da equipe preservados | Inventário separado do índice atual |
+| Curadoria | 27 aprovações expressas, duas aquisições bloqueadas | 25 fontes utilizáveis |
+| Extração e chunking | Estrutura por seções, 94 chunks | Executados |
+| Embeddings | E5 local, matriz 94 × 384 | Executados |
+| Banco vetorial | Chroma e manifesto da coleção ativa | Persistido e reaberto sem ingestão |
+| Consulta e geração | API + chat do PWA, Gemini e fontes | Implementados |
+| Avaliação inicial | 15 perguntas com rubrica e julgamento assistido | Resultados e falhas registrados |
+| Correção posterior | BM25/RRF e contexto curto | Cabines e LEMA verificados em chamadas reais |
+| Orquestrador comum | Integração com o Grupo 04 | Proposta futura |
 
-## Decisões que delimitam o piloto
+O retrato anterior de 79 chunks com cinco HTMLs e um KML é histórico. Não deve ser somado à coleção ativa nem aparecer como estado atual.
 
-- Fotos ficam como evidência; o primeiro índice será textual.
-- A descrição sugerida pela IA não vira automaticamente uma observação humana.
-- Não há envio de prints de mapas ao Gemini para identificar prédios.
-- O KML é uma fonte, mesmo quando gera vários marcadores ou chunks.
-- A sobreposição só será usada ao subdividir a mesma seção; foi zero neste recorte.
-- Embeddings são locais e separados do modelo gerador.
-- A integração entre grupos será uma evolução, preservando entregas independentes.
+## Decisões preservadas
 
-## Próximo marco técnico
+- Fotos não entram no índice textual; sugestões de IA não viram confirmação humana automaticamente.
+- KML e geografia serão integrados por contrato, sem inventar salas a partir de coordenadas.
+- Não enviamos print de mapa ao Gemini para identificar prédios.
+- E5 representa texto localmente; Gemini gera resposta com evidências e depende de internet/cota.
+- O índice é derivado, versionado e reconstruível. A coleta mantém seu armazenamento independente.
+- A avaliação inicial densa fica preservada após a correção híbrida; não reutilizamos suas notas como resultado novo.
 
-O próximo marco do RAG é implementar persistência e consulta vetorial. Depois virão a geração com fontes e a avaliação manual registrada. A implementação está pausada enquanto esta documentação é organizada.
+## Próximos passos de qualidade
 
-Antes de ampliar a base, também precisaremos tratar a FAQ em Word, identificar os dois laboratórios genéricos do KML e conferir associações e vigências dos locais.
+Medir a configuração híbrida sob protocolo congelado, revisar ruído e vigência, investigar granularidade dos diretórios, fazer revisão humana dos julgamentos e reservar perguntas novas. Ingerir fichas/KML só depois de revisão e rastreabilidade próprias. Rotas, transporte programado estruturado e o orquestrador são evoluções do produto.

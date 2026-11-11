@@ -1,48 +1,57 @@
-# Base de conhecimento
+# Base de conhecimento curada
 
-## Aquisição
+## O que compõe a base ativa
 
-Foram preservados **27 HTMLs**, com resposta HTTP 200, origem, data, tamanho e SHA-256. O conjunto ocupa aproximadamente **3,24 MiB**. Há 26 páginas com texto no HTML e um visualizador Word da FAQ BCE que exige extração do documento subjacente.
+São **27 fontes aprovadas expressamente pelo responsável, Pedro, em 11/11/2026**, das quais **25 foram adquiridas, extraídas e indexadas**. Incluem infraestrutura, atendimento, salas, biblioteca, laboratórios, serviços e orientações documentais do DF no Ponto.
 
-Os originais são snapshots das respostas HTML. Imagens, CSS e resultados externos de iframes não foram adquiridos. As páginas de pesquisa do DF no Ponto, por exemplo, contêm orientações, mas não incluem no snapshot as tabelas consultadas pelo sistema incorporado.
+DOC-014, visualizador de dúvidas frequentes da BCE, e DOC-024, página de biomassa do PCTec, têm aquisição bloqueada e `indexavel=false`. Não geraram conteúdo ou vetores fictícios. O mínimo de vinte documentos é atendido pelas 25 fontes utilizáveis.
 
-Dois endereços precisaram ser atualizados por links institucionais: a FAQ BCE e o laboratório de biomassa do PCTec. O histórico permanece no projeto RAG.
+Uma página com vários chunks conta como uma fonte. Fontes distintas do mesmo portal podem ser documentos diferentes quando têm conteúdo próprio; cópias e menus não ampliam a contagem. O catálogo não deve ser confundido com 27 confirmações independentes do mesmo fato.
 
-## Recorte de cinco páginas
+## Curadoria e procedência
 
-| Fonte | Motivo da seleção | Chunks |
-|---|---|---|
-| DOC-001 · Infraestrutura | Associa edifícios a usos institucionais | 1 |
-| DOC-002 · Contato | Localiza doze setores e seus atendimentos | 12 |
-| DOC-005 · Laboratórios | Preserva nome e localização de 48 laboratórios | 48 |
-| DOC-007 · Salas de aula | Descreve ambientes e recursos da UAC | 1 |
-| DOC-012 · Biblioteca Campus Gama | Serviços, espaços e condições de acesso | 6 |
+O catálogo guarda ID, título, URL, tipo, campus/abrangência, coleta, revisão, responsável, status, validade, versão, SHA-256 e limitações. O registro de aprovação foi preservado; a extração e o indexador não aprovam fontes automaticamente.
 
-O KML da equipe é uma sexta fonte, com 11 chunks elegíveis. A coleta da praça foi preservada separadamente, fora do recorte atual.
+| Conferência | Tratamento atual |
+|---|---|
+| Procedência | URLs institucionais e originais preservados por versão |
+| Escopo | Gama, UnB geral aplicável e DF; RU excluído pelas regras configuradas |
+| Disponibilidade | Bloqueios explicitados e excluídos da indexação |
+| Integridade | Hash do original ligado ao extraído, chunk e manifesto |
+| Revisão | Aprovação expressa registrada, com data e responsável |
+| Vigência | **Desconhecida** quando não informada; coleta não substitui validade |
+| Duplicidade | IDs e versões controlados; sem alegar deduplicação semântica exaustiva |
+| Limitações | Ambiguidades, estrutura da página e ausência de confirmação em campo preservadas |
 
-## Curadoria aplicada e pendências
+!!! warning "Aprovação não é confirmação de atualidade"
+    A aprovação pelo responsável permite o uso na entrega; não representa auditoria independente de cada frase, inspeção física dos locais ou garantia de que um horário permanece vigente.
 
-- Extração do artigo principal, sem menus e endereço genérico do rodapé do Darcy Ribeiro.
-- Remoção de escalas e contatos pessoais desnecessários nos diretórios.
-- Tratamento do destaque duplicado da Secretaria de Graduação.
-- Preservação de códigos de sala e de múltiplas localizações de um laboratório.
-- Exclusão do trecho da biblioteca que menciona FCE, por ambiguidade de campus.
-- Registro de que horários e estatísticas não têm vigência confirmada.
+## Exemplos de ressalvas reais
 
-O DOC-001 faz uma referência genérica a secretaria na UED; o DOC-002 identifica especificamente a Secretaria de Graduação na UAC. A geração futura precisará preservar essa distinção, sem tratar toda secretaria como um único setor.
+- DOC-001 menciona serviços de secretaria na UED; DOC-002 situa especificamente a Secretaria de Graduação na UAC. Podem ser serviços diferentes ou informação divergente. A resposta deve preservar a distinção.
+- A URL do diretório DOC-005 contém `homologa`; confirmar se é a publicação institucional definitiva.
+- Os textos preparados podem conter contatos e trechos pouco úteis. A documentação pública mostra apenas excertos curtos selecionados e metadados, não os logs brutos ou páginas integrais.
+- Números de acervo e horários sem vigência não são dados ao vivo.
 
-**A aprovação humana final continua pendente.** A preparação não alterou `approved_for_production_index=false`. Conteúdo histórico, expirado, duvidoso ou incompatível com o campus não deve entrar no índice ativo por mera existência de um arquivo.
-
-## Catálogo das 27 referências
-
-Documentos diferentes do mesmo portal podem contar separadamente se possuem conteúdo próprio. Vários chunks da mesma página continuam sendo uma fonte. Cópias e menus não ampliam a contagem.
+## Catálogo das fontes
 
 --8<-- "includes/fontes.md"
 
 [Baixar catálogo CSV](../assets/downloads/fontes.csv){ .md-button }
 
-## Metadados necessários à base aprovada
+## Onde ficam os materiais
 
-Cada fonte terá identificador, título, URL/caminho, tipo, campus/abrangência, data de coleta, revisão, vigência, status, hash/versão e limitações. A data de download não será usada como substituto da validade da informação.
+```text
+catalogo/fontes.csv                         catálogo de curadoria
+catalogo/aprovacao.json                     registro de aprovação
+data/originais/<DOC>/<versao>/original.html snapshot preservado, fora do Git
+data/extraido/<DOC>__<versao>.json           texto com títulos e parágrafos
+data/chunks/chunks.jsonl                    trechos aprovados
+data/index/manifesto.json                   identidade da coleção ativa
+```
 
-Os hashes provam identidade de arquivos; não provam veracidade ou ausência de duplicidade semântica. O conjunto mínimo de vinte fontes depende de concluir essa curadoria.
+O hash identifica os bytes de uma versão, não sua veracidade. Nova aquisição pode trazer uma página diferente; reprodutibilidade exata depende de preservar os originais daquela execução.
+
+## Coleta e mapa são entradas futuras
+
+O KML de 14 pontos e a ficha da praça permanecem separados da coleção textual ativa. Uma integração futura deverá importar somente descrições humanas revisadas, com IDs e procedência, distinguindo-as de sugestões da IA. Fotos não são indexadas neste RAG. Veja o [inventário geográfico](../coleta/mapeamento.md).
