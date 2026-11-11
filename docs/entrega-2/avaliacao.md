@@ -63,7 +63,18 @@ Na Q01, a localização do COSMOS veio em segundo lugar e o Gemini excedeu 90 se
 
 **35/35 de fundamentação não significa 100% das perguntas respondidas corretamente.** É a proporção de fatos sustentados entre os fatos que chegaram a ser produzidos, neste julgamento e amostra.
 
-## Quinze perguntas e resultados
+## Quinze perguntas e resultados da versão inicial
+
+Esta tabela é o **registro histórico da primeira rodada**, anterior à correção da busca. As falhas continuam registradas para não transformar tentativas malsucedidas em acertos.
+
+!!! info "O que significam as falhas técnicas?"
+    **Q05, Q10 e Q15 — HTTP 502:** o backend já havia recuperado os cinco trechos, mas a chamada ao Gemini retornou erro. O registro contém a mensagem “O Gemini está indisponível”. O código original devolvido pelo provedor não foi preservado; não é possível afirmar se a causa foi sobrecarga ou outra falha externa.
+
+    **Q01 — HTTP 504:** a geração excedeu o timeout configurado de 90 segundos. O trecho correto do COSMOS já havia sido recuperado.
+
+    Esses códigos indicam **falha ao gerar a resposta**, não ausência de informação, erro do Chroma ou falha do Pages. Sem resposta produzida, a fundamentação é “não aplicável”.
+
+**Resposta com fontes** significa que o sistema respondeu citando trechos. **Ausência reconhecida corretamente** significa que faltavam dados na base, como ocupação em tempo real. **Abstenção indevida**, na Q03, significa que havia informação, mas a busca daquela versão não a recuperou. O LEMA foi recuperado e respondido na [verificação posterior](demonstracao.md#lema-registro-real).
 
 --8<-- "includes/resultados.md"
 

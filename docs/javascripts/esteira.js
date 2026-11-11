@@ -49,13 +49,231 @@
     {nome:"Embeddings",sub:"E5-small · 384 dim",dur:6000,titulo:"4. Cada ficha recebe um vetor",texto:"O <b>multilingual-e5-small</b> codifica os chunks localmente com <code>passage: </code>. São 384 componentes float32 normalizados. Entradas são contadas antes do encode, sem truncamento silencioso acima de 512 tokens. As barras exibem valores reais de um documento.",numeros:[["94 × 384","matriz"],["CPU","local"],["16","por lote"]],arquivo:"src/unb_gama_rag/embeddings.py · data/index/vetores/",desenhar:function(p,d,ctx){var s=exemplo("DOC-012"),line=el("div","rm-est__linha");line.appendChild(chunk(s));line.appendChild(seta());line.appendChild(caixaModelo("E5-small","passage: · L2"));line.appendChild(seta());line.appendChild(vetor(s,ctx));p.appendChild(line);}},
     {nome:"Chroma",sub:"persistido e reaberto",dur:6000,titulo:"5. Guardar e conferir o catálogo vetorial",texto:"Chroma <b>PersistentClient</b> guarda 94 registros no disco local. IDs estáveis e upsert evitam duplicação; o manifesto aponta a coleção ativa. Reabertura e consulta foram confirmadas em processos novos sem ingestão. O desenho agrupa por fonte; não é projeção de embeddings nem mapa físico.",numeros:[["94","registros"],["1","persistência confirmada"]],arquivo:"data/index/chroma/ · data/index/manifesto.json",desenhar:function(p,d,ctx){p.appendChild(mapa(ctx));p.appendChild(painel("Coleção ativa",E.index.collection+"\n94 chunks · cosseno\n25 fontes · disco local"));}}
   ];
-  var CONSULTA=[
-    {nome:"Pergunta",sub:"registro real",dur:4500,titulo:"1. Receber a mensagem na API",texto:"A aplicação envia texto à API local. Complementos podem carregar previousRequestId; o backend usa o assunto de um registro anterior da mesma base. Cada cenário abaixo identifica método, pergunta e execução reais. Este site apenas reproduz o registro.",arquivo:"PWA → /api/rag/chat → API /api/v1/chat",desenhar:function(p,d,ctx){p.appendChild(el("div","rm-est__alerta",esc(d.registro.label)));var b=painel("Pergunta submetida",d.pergunta);p.appendChild(b);if(d.registro.query!==d.pergunta)p.appendChild(painel("Consulta contextualizada",d.registro.query));}},
-    {nome:"Vetor",sub:"query: · E5",dur:4800,titulo:"2. Representar a consulta no mesmo espaço",texto:"O E5 da pergunta usa query:, mesma revisão, dimensão e normalização dos documentos. O vetor foi calculado na execução. Seus componentes não foram exportados, por isso não desenhamos números inventados. Os vetores dos documentos não são recalculados a cada pergunta.",arquivo:"src/unb_gama_rag/embeddings.py",desenhar:function(p,d){var line=el("div","rm-est__linha");line.appendChild(painel("Entrada","query: "+d.registro.query));line.appendChild(seta());line.appendChild(caixaModelo("E5-small","384 componentes · L2"));p.appendChild(line);}},
-    {nome:"Recuperação",sub:"ranking registrado",dur:6500,titulo:"3. Recuperar e selecionar evidências",texto:"A configuração atual combina busca densa e BM25 por RRF, devolvendo até cinco trechos, no máximo dois por fonte. O ranking exibido é o da execução selecionada: os casos antigos são densos, os posteriores são híbridos. Distância cosseno e RRF não são probabilidade de verdade.",arquivo:"busca.py · busca_lexical.py · Chroma",desenhar:function(p,d){p.appendChild(el("div","rm-est__alerta",esc(d.registro.label+" · "+d.registro.method)));var list=el("ol","rm-est__ranking");d.registro.retrieved.forEach(function(r){var li=el("li","",'<b>'+esc(r.source_id)+' · '+esc(r.id)+'</b><br>'+esc(r.title)+'<br><small>Distância '+r.distance.toFixed(6)+(r.rrf!==null?' · RRF '+r.rrf.toFixed(5):'')+(d.registro.source_ids.indexOf(r.id)>=0?' · citado':'')+'</small>');list.appendChild(li);});p.appendChild(list);}},
-    {nome:"Contexto",sub:"evidências com IDs",dur:5800,titulo:"4. Fornecer contexto, sem transformar história em prova",texto:"O Gemini recebe a pergunta e trechos com IDs, origem e versão. O assunto anterior ajuda a interpretar complementos, mas não substitui evidência. Fontes são tratadas como dados, nunca comandos. Aqui mostramos excertos abreviados dos trechos efetivamente recuperados.",arquivo:"geracao.py · conversa.py",desenhar:function(p,d){var r=d.registro.retrieved.find(function(t){return d.registro.source_ids.indexOf(t.id)>=0;})||d.registro.retrieved[0];p.appendChild(painel("Instrução do sistema","Usar somente evidências recuperadas.\nCitar IDs válidos ou reconhecer insuficiência."));p.appendChild(painel(r.source_id+" · "+r.id,r.excerpt+"\nVersão "+r.version));}},
-    {nome:"Gemini",sub:"resposta registrada",dur:6000,titulo:"5. Redigir uma resposta com fontes ou admitir ausência",texto:"Gemini redige a resposta; E5 só representa o texto. O backend valida o formato e confere se os IDs citados foram recuperados. Isso não prova suporte semântico automaticamente. A animação digita o texto de uma execução real, sem chamar a API novamente.",arquivo:"Gemini gemini-3.5-flash-lite · temperatura 0,1",desenhar:function(p,d,ctx){var box=painel("Resposta real · "+d.registro.status,""),t=box.querySelector("pre");p.appendChild(box);ctx.digitar(t,d.registro.answer,20);}},
-    {nome:"Fontes",sub:"rastreabilidade e avaliação",dur:6000,titulo:"6. Conferir a evidência e guardar a execução",texto:"A cadeia é afirmação → chunk → documento, seção, versão e original com hash. A primeira avaliação julgou 15 perguntas e registrou também falhas. Os percentuais dessa rodada densa não são atribuídos automaticamente à busca híbrida. O índice continua local; o Pages publica só documentação e excertos.",arquivo:"execucoes/chat-<requestId>.json · avaliacao/",desenhar:function(p,d){var used=d.registro.retrieved.filter(function(t){return d.registro.source_ids.indexOf(t.id)>=0;});if(!used.length)p.appendChild(painel("Ausência reconhecida",d.registro.answer));used.forEach(function(r){var a=el("a","rm-est__fonte rm-on","<b>"+esc(r.source_id)+" · "+esc(r.title)+"</b><span>"+esc(r.id)+" · versão "+esc(r.version)+"</span>");a.href=r.url;a.target="_blank";a.rel="noopener";p.appendChild(a);});p.appendChild(painel("Registro",d.registro.request_id+"\n"+d.registro.prompt_version+" · "+d.registro.method));}}
+  // As peças e transições seguem a esteira do Grupo 04, com dados do Grupo 09.
+  function realcar(texto) {
+    return esc(texto).replace(/\[(\d+)\]/g, '<b class="rm-est__cit">[$1]</b>').replace(/\n/g, '<br>');
+  }
+  function balao(autor, texto, estudante) {
+    var b = el("div", "rm-est__balao " + (estudante ? "rm-est__balao--eu" : "rm-est__balao--rumo"));
+    b.appendChild(el("small", "", esc(autor)));
+    b.appendChild(el("div", "rm-est__mensagem", realcar(texto)));
+    return b;
+  }
+  function fontes(chat, d, ctx, atraso) {
+    var usadas = d.registro.source_ids.map(function(id) {
+      return d.registro.retrieved.find(function(t) { return t.id === id; });
+    }).filter(Boolean);
+    if (!usadas.length) {
+      var aviso = el("div", "rm-est__recusa", "Sem dados atuais nos trechos · nenhuma ocupação foi inventada");
+      chat.appendChild(aviso);
+      ctx.depois(atraso, function() { aviso.classList.add("rm-on"); });
+      return;
+    }
+    var fs = el("div", "rm-est__fontes");
+    usadas.forEach(function(t, i) {
+      var a = el("a", "rm-est__fonte rm-eixo--" + eixo(t.source_id),
+        '<b>[' + (i + 1) + '] ' + esc(t.source_id) + '</b><span>' + esc(t.title) +
+        '</span><small>' + esc(t.section) + ' · versão ' + esc(t.version) + ' ↗</small>');
+      a.href = t.url; a.target = "_blank"; a.rel = "noopener";
+      fs.appendChild(a);
+      ctx.depois(atraso + i * 300, function() { a.classList.add("rm-on"); });
+    });
+    chat.appendChild(fs);
+  }
+  function hibrida(d) { return d.registro.method === "hibrida_rrf"; }
+  var STOP = new Set(("a ao aos as o os e ou de da das do dos em na nas no nos um uma uns umas " +
+    "para por com sem que qual quais como onde quando quanto quantas quantos " +
+    "se eu voce voces me meu minha seus suas seu sua isso esse essa esses essas " +
+    "este esta estes estas neste nesta nesse nessa ha tem sao ser fica ficam sobre tambem agora").split(" "));
+  function fichas(texto, ctx) {
+    var box = el("div", "rm-est__fichas");
+    (texto.toLowerCase().normalize("NFKD").replace(/[\u0300-\u036f]/g, "").match(/[a-z0-9]+/g) || []).forEach(function(t, i) {
+      var f = el("span", "rm-est__ficha" + (STOP.has(t) || t.length < 2 ? " rm-stop" : ""), esc(t));
+      box.appendChild(f);
+      ctx.depois(700 + i * 80, function() { f.classList.add("rm-on"); });
+    });
+    return box;
+  }
+  function buscaAnimada(p, d, ctx) {
+    var box = el("div", "rm-est__mapa-box");
+    box.appendChild(el("div", "rm-est__painel-tit", "Pergunta → cinco chunks recuperados"));
+    var svg = sv("svg", {viewBox:"0 0 640 310", class:"rm-est__mapa", role:"img",
+      "aria-label":"Esquema animado da pergunta conectada aos cinco trechos reais recuperados"});
+    var q = {x:320, y:155};
+    svg.appendChild(sv("circle", {cx:q.x, cy:q.y, r:90, class:"rm-est__radar"}));
+    d.registro.retrieved.forEach(function(t, i) {
+      var angle = (-90 + i * 72) * Math.PI / 180;
+      var x = q.x + Math.cos(angle) * 230, y = q.y + Math.sin(angle) * 105;
+      var line = sv("line", {x1:q.x, y1:q.y, x2:x, y2:y, class:"rm-est__liga rm-oculto"});
+      var length = Math.hypot(x - q.x, y - q.y);
+      line.style.strokeDasharray = length; line.style.strokeDashoffset = reduzido ? 0 : length;
+      var point = sv("circle", {cx:x, cy:y, r:8, class:"rm-hit rm-oculto rm-eixo--" + eixo(t.source_id)});
+      var label = sv("text", {x:x, y:y + 25, "text-anchor":"middle", class:"rm-est__hit-rot rm-oculto"},
+        (i + 1) + ' · ' + t.source_id + ' · d=' + t.distance.toFixed(3));
+      point.appendChild(sv("title", {}, t.id + ' · ' + t.title));
+      [line, point, label].forEach(function(n) { svg.appendChild(n); });
+      ctx.depois(800 + i * 380, function() {
+        line.classList.remove("rm-oculto"); line.style.strokeDashoffset = 0;
+        point.classList.remove("rm-oculto"); label.classList.remove("rm-oculto");
+      });
+    });
+    var star = [];
+    for (var i = 0; i < 10; i++) {
+      var radius = i % 2 ? 6 : 15, a = (-90 + i * 36) * Math.PI / 180;
+      star.push((q.x + Math.cos(a) * radius) + ',' + (q.y + Math.sin(a) * radius));
+    }
+    svg.appendChild(sv("polygon", {points:star.join(' '), class:"rm-est__estrela"}));
+    svg.appendChild(sv("text", {x:q.x, y:q.y + 32, "text-anchor":"middle", class:"rm-est__hit-rot rm-forte"}, "sua pergunta"));
+    box.appendChild(svg);
+    box.appendChild(el("div", "rm-est__nota", "Distâncias reais; posições esquemáticas, sem projeção dos embeddings."));
+    p.appendChild(box);
+  }
+  var CONSULTA = [
+    {
+      nome:"Pergunta", sub:"estudante", dur:5000,
+      titulo:"1. O estudante faz uma pergunta",
+      texto:"A mensagem chega pelo chat do <b>FCTE Campus</b> à API local. Em um complemento, previousRequestId permite recuperar o assunto anterior. A conversa ajuda a interpretar a pergunta; os fatos ainda precisam de fontes.",
+      arquivo:"PWA → /api/rag/chat → API /api/v1/chat",
+      desenhar:function(p, d, ctx) {
+        var chat = el("div", "rm-est__chat");
+        var anterior = E.demos.find(function(x) { return x.request_id === d.registro.previous_request_id; });
+        if (anterior) {
+          var contexto = balao("Assistente FCTE · mensagem anterior", anterior.answer, false);
+          contexto.classList.add("rm-on", "rm-est__balao--anterior"); chat.appendChild(contexto);
+        }
+        var b = balao("Estudante", "", true), t = b.querySelector(".rm-est__mensagem");
+        t.classList.add("rm-est__digitando"); chat.appendChild(b); p.appendChild(chat);
+        ctx.digitar(t, d.pergunta, 28, function() { t.classList.add("rm-fim"); });
+        if (d.registro.query !== d.pergunta) {
+          var nota = el("div", "rm-est__pbloco rm-est__pbloco--q", '<b>Assunto recuperado para a busca</b><br>' + esc(d.registro.query));
+          chat.appendChild(nota); ctx.depois(2500, function() { nota.classList.add("rm-on"); });
+        }
+      }
+    },
+    {
+      nome:"Vira vetor", sub:"E5 · palavras", dur:6000,
+      titulo:"2. A pergunta vira vetor e termos de busca",
+      texto:function(d) { return "O <b>mesmo E5-small</b> dos documentos recebe a consulta com <code>query:</code> e produz 384 componentes normalizados. " +
+        (hibrida(d) ? "Em paralelo, BM25 procura palavras exatas: acentos e caixa são normalizados, palavras vazias são retiradas. O desenho destaca esses termos." : "Esta execução histórica usou apenas busca densa. BM25 faz parte da versão atual e dos exemplos LEMA e cabines."); },
+      numeros:[["384", "dimensões"], ["L2", "normalização"]], arquivo:"embeddings.py · busca_lexical.py",
+      desenhar:function(p, d, ctx) {
+        var faixa = el("div", "rm-est__faixa"), linha = el("div", "rm-est__linha");
+        faixa.appendChild(el("div", "rm-est__faixa-tit", "Representação por <b>significado</b>"));
+        linha.appendChild(el("div", "rm-est__q", esc('query: ' + d.registro.query)));
+        linha.appendChild(seta()); linha.appendChild(caixaModelo("E5-small", "384 componentes · L2"));
+        linha.appendChild(seta());
+        var vet = el("div", "rm-est__vetor-esquema");
+        for (var i = 0; i < 24; i++) {
+          var celula = el("span", ""); celula.style.animationDelay = (i * .05) + 's'; vet.appendChild(celula);
+        }
+        linha.appendChild(vet); faixa.appendChild(linha); p.appendChild(faixa);
+        p.appendChild(el("div", "rm-est__nota", "Representação visual do processamento; os valores do vetor da pergunta não foram exportados."));
+        if (hibrida(d)) {
+          var termos = el("div", "rm-est__faixa");
+          termos.appendChild(el("div", "rm-est__faixa-tit", "Busca por <b>palavras</b> · termos riscados são ignorados"));
+          termos.appendChild(fichas(d.registro.query, ctx)); p.appendChild(termos);
+        }
+      }
+    },
+    {
+      nome:"Busca", sub:"chunks do Chroma", dur:6000,
+      titulo:"3. A busca encontra candidatos",
+      texto:function(d) { return hibrida(d) ?
+        "A busca densa consulta os vetores no <b>Chroma persistido</b>. BM25 ordena os textos pelos termos da pergunta. Até 30 candidatos de cada lista seguem para a fusão. As conexões ilustram os cinco trechos que chegaram ao resultado desta execução." :
+        "Na avaliação inicial, a busca usava a distância cosseno do Chroma. As conexões mostram os cinco trechos realmente recuperados. Um vizinho pode não responder à pergunta: distância não é probabilidade de verdade."; },
+      arquivo:"busca.py · busca_lexical.py · Chroma PersistentClient",
+      desenhar:buscaAnimada
+    },
+    {
+      nome:"Ranking", sub:"até cinco trechos", dur:6500,
+      titulo:"4. Selecionar os trechos para o contexto",
+      texto:function(d) { return hibrida(d) ?
+        "A <b>fusão RRF</b> soma <code>1 ÷ (60 + posição)</code> nas listas densa e lexical. O sistema seleciona até cinco chunks, no máximo dois por fonte. As barras exibem as notas RRF registradas, relativas à maior nota desta lista; não são percentuais de confiança." :
+        "Neste registro da busca densa, os candidatos foram ordenados pela distância cosseno: <b>menor é mais próximo</b>. Mostramos a distância real, sem atribuir uma nota RRF que essa versão não calculou. O limite é de cinco chunks e dois por fonte."; },
+      numeros:[["5", "trechos"], ["2", "máximo por fonte"]], arquivo:"busca.py · fundir_rrf()",
+      desenhar:function(p, d, ctx) {
+        var funil = el("div", "rm-est__funil");
+        if (hibrida(d)) {
+          funil.appendChild(el("span", "rm-est__pilula", "Até 30 vetoriais"));
+          funil.appendChild(el("span", "rm-est__mais", "+"));
+          funil.appendChild(el("span", "rm-est__pilula", "Até 30 lexicais"));
+          funil.appendChild(el("code", "rm-est__formula", "RRF = Σ 1 / (60 + posição)"));
+        } else funil.appendChild(el("span", "rm-est__pilula", "Avaliação inicial · distância cosseno"));
+        p.appendChild(funil);
+        var lista = el("ol", "rm-est__rank");
+        var max = Math.max.apply(null, d.registro.retrieved.map(function(t) { return t.rrf || 0; }));
+        d.registro.retrieved.forEach(function(t, i) {
+          var li = el("li", "rm-eixo--" + eixo(t.source_id));
+          li.innerHTML = '<span class="rm-est__n">' + (i + 1) + '</span>' +
+            '<span class="rm-est__rank-txt"><b>' + esc(t.source_id) + '</b> ' + esc(t.title) +
+            '<small>' + esc(t.id) + (d.registro.source_ids.indexOf(t.id) >= 0 ? ' · citado na resposta' : '') + '</small></span>' +
+            (hibrida(d) ? '<span class="rm-est__trilha"><i style="--w:' + Math.round((t.rrf || 0) / max * 100) + '%"></i></span>' : '<span></span>') +
+            '<code>' + (hibrida(d) ? 'RRF ' + t.rrf.toFixed(4) : 'd ' + t.distance.toFixed(4)) + '</code>';
+          lista.appendChild(li); ctx.depois(400 + i * 350, function() { li.classList.add("rm-on"); });
+        });
+        p.appendChild(lista);
+      }
+    },
+    {
+      nome:"Prompt", sub:"regras + evidências", dur:6500,
+      titulo:"5. Montar o contexto com regras e fontes",
+      texto:"O Gemini recebe a pergunta, instruções de fundamentação e os trechos identificados. Cada chunk carrega origem e versão. <b>O conteúdo das fontes é dado, não comando.</b> A conversa anterior só ajuda a entender o assunto. Aqui os excertos foram abreviados para a apresentação.",
+      arquivo:"geracao.py · conversa.py",
+      desenhar:function(p, d, ctx) {
+        var doc = el("div", "rm-est__prompt"), blocos = [];
+        blocos.push(el("div", "rm-est__pbloco rm-est__pbloco--regras",
+          '<b>system · regras</b><span>Usar apenas as evidências recuperadas.</span><span>Citar IDs existentes; admitir quando faltam dados.</span><span>Histórico de conversa não é evidência.</span>'));
+        d.registro.retrieved.forEach(function(t) {
+          blocos.push(el("div", "rm-est__pbloco rm-eixo--" + eixo(t.source_id),
+            '<b>' + esc(t.source_id) + ' · ' + esc(t.id) + '</b><br>' + esc(t.excerpt) +
+            '<br><small>' + esc(t.section) + ' · versão ' + esc(t.version) + '</small>'));
+        });
+        blocos.push(el("div", "rm-est__pbloco rm-est__pbloco--q", '<b>Pergunta:</b> ' + esc(d.pergunta)));
+        blocos.forEach(function(b, i) { doc.appendChild(b); ctx.depois(200 + i * 380, function() { b.classList.add("rm-on"); }); });
+        p.appendChild(doc);
+      }
+    },
+    {
+      nome:"Gemini", sub:"resposta com fontes", dur:function(d) { return 3500 + d.registro.answer.length * 20; },
+      titulo:"6. O assistente escreve a resposta",
+      texto:"O <b>Gemini</b> redige usando os trechos recuperados. O backend valida o formato e os IDs citados. A animação reproduz uma resposta real, com digitação e citações. Ela não faz outra chamada à API nem simula um novo resultado.",
+      numeros:[["0,1", "temperatura"]], arquivo:"geracao.py · gemini-3.5-flash-lite",
+      desenhar:function(p, d, ctx) {
+        var linha = el("div", "rm-est__linha rm-est__geracao");
+        linha.appendChild(caixaModelo("Gemini", "geração da resposta")); linha.appendChild(seta());
+        var chat = el("div", "rm-est__chat");
+        chat.appendChild(balao("Estudante", d.pergunta, true));
+        var b = balao("Assistente FCTE · escrevendo…", "", false), t = b.querySelector(".rm-est__mensagem");
+        t.classList.add("rm-est__digitando"); chat.appendChild(b); linha.appendChild(chat); p.appendChild(linha);
+        ctx.depois(650, function() {
+          b.classList.add("rm-on");
+          ctx.digitar(t, d.registro.answer, 20, function() {
+            t.innerHTML = realcar(d.registro.answer); t.classList.add("rm-fim");
+            b.querySelector("small").textContent = "Assistente FCTE · resposta pronta";
+          });
+        });
+      }
+    },
+    {
+      nome:"Resposta", sub:"chat + fontes", dur:7500,
+      titulo:"7. A resposta chega ao estudante com as fontes",
+      texto:function(d) { return d.registro.source_ids.length ?
+        "O estudante recebe a resposta e abre as fontes em cartões. Cada <b>[n]</b> corresponde a um chunk realmente citado, com documento, seção e versão. O registro da consulta preserva a trilha para conferência. Validade do ID não substitui revisão do suporte de cada afirmação." :
+        "Nesta pergunta sobre ocupação atual, o assistente informa o limite dos dados. Não inventa disponibilidade de sala. A recusa registrada pode ser conferida junto dos trechos recuperados na demonstração."; },
+      arquivo:"servico.py · execucoes/chat-<requestId>.json",
+      desenhar:function(p, d, ctx) {
+        var chat = el("div", "rm-est__chat");
+        chat.appendChild(balao("Estudante", d.pergunta, true));
+        var b = balao("Assistente FCTE", d.registro.answer, false); chat.appendChild(b);
+        ctx.depois(300, function() { b.classList.add("rm-on"); });
+        fontes(chat, d, ctx, 1100); p.appendChild(chat);
+        var registro = el("details", "rm-est__registro");
+        registro.appendChild(el("summary", "", "Ver registro desta conversa"));
+        registro.appendChild(el("code", "", esc(d.registro.request_id)));
+        registro.appendChild(el("div", "", esc(d.registro.prompt_version + ' · ' + d.registro.method)));
+        p.appendChild(registro);
+      }
+    }
   ];
   function montar(raiz) {
     if (raiz.getAttribute("data-pronto")) return;
@@ -194,7 +412,7 @@
       var nums = (e.numeros || []).map(function (n) { return "<span><b>" + n[0] + "</b> " + n[1] + "</span>"; }).join("");
       info.innerHTML =
         '<div class="rm-est__fase">' + (est.modo === "ingestao" ? "Fase 1 · Ingestão · offline" : "Fase 2 · Pergunta · online") + "</div>" +
-        "<h4>" + e.titulo + "</h4><div class=rm-est__alerta>" + (e.pendente ? "Planejado · sem execução" : "Implementado · artefatos reais") + "</div><p>" + val(e.texto, d) + "</p>" +
+        "<h4>" + e.titulo + "</h4><div class=rm-est__alerta>" + esc(est.modo === "consulta" ? d.registro.label : "Implementado · artefatos reais") + "</div><p>" + val(e.texto, d) + "</p>" +
         (nums ? '<div class="rm-est__numeros">' + nums + "</div>" : "") +
         '<div class="rm-est__arquivo">No código: <code>' + e.arquivo + "</code></div>";
 

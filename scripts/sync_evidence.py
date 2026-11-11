@@ -200,7 +200,16 @@ def main():
                   '|---|---|---:|---:|---|']
     for q in metrics['por_pergunta']:
         item = next(e for e in baseline['execucoes'] if e['id'] == q['id'])
-        outcome = f"HTTP {item['http_status']}" if item['http_status'] != 200 else item['resposta']['status']
+        if item['http_status'] == 504:
+            outcome = 'Falha técnica: Gemini excedeu 90 s (HTTP 504)'
+        elif item['http_status'] == 502:
+            outcome = 'Falha técnica: indisponibilidade na chamada ao Gemini (HTTP 502)'
+        elif item['http_status'] != 200:
+            outcome = f"Falha técnica (HTTP {item['http_status']})"
+        elif item['resposta']['status'] == 'answered':
+            outcome = 'Resposta com fontes'
+        else:
+            outcome = 'Abstenção indevida: evidência não recuperada' if gold[q['id']]['respondiveis'] else 'Ausência reconhecida corretamente'
         facts = f"{q['fatos_sustentados']}/{q['fatos']}" if q['fatos'] else 'Não aplicável'
         results_md.append(f"| {q['id']} | {gold[q['id']]['pergunta']} | {q['relevantes']}/{q['recuperados']} | {facts} | {outcome} |")
     (ROOT / 'includes/resultados.md').write_text('\n'.join(results_md) + '\n', encoding='utf-8')

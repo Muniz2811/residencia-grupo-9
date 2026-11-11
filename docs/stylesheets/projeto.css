@@ -109,9 +109,22 @@ button:focus-visible, [role="button"]:focus-visible, select:focus-visible, input
   .rm-est__docs .rm-est__doc { font-size: .45rem; }
 }
 
-/* Ranking de execuções reais, mantendo as margens e controles da apresentação. */
-.rm-est__ranking { width: 100%; margin: 0; padding: .4rem 1.1rem; font-size: .65rem; }
-.rm-est__ranking li { padding: .35rem 0; overflow-wrap: anywhere; }
-.rm-est__ranking small { color: var(--rm-texto-suave); }
-.rm-est__visual > .rm-est__painel { max-width: 100%; }
-.rm-est__visual > .rm-est__fonte { margin-bottom: .6rem; }
+/* Chat e transições da referência, com dados reais e sem alterar as margens. */
+.rm-est__geracao > .rm-est__chat { flex: 1; min-width: 0; }
+.rm-est__balao, .rm-est__pbloco, .rm-est__registro { overflow-wrap: anywhere; }
+.rm-est__balao--anterior { font-size: .7rem; opacity: .8; }
+.rm-est__registro { font-size: .62rem; color: var(--rm-texto-suave); margin: 0; }
+.rm-est__registro summary { cursor: pointer; }
+.rm-est__registro code { white-space: normal; }
+.rm-est__rank-txt { white-space: normal; }
+.rm-est__rank-txt small { display: block; overflow-wrap: anywhere; font-size: .55rem; color: var(--rm-texto-suave); }
+.rm-est__vetor-esquema { display: grid; grid-template-columns: repeat(6, 1fr); gap: 4px; width: 5rem; flex: none; }
+.rm-est__vetor-esquema span { aspect-ratio: 1; border-radius: 3px; background: var(--unb-verde); animation: fcte-vetor-processando 1.8s ease-in-out infinite; }
+@keyframes fcte-vetor-processando { 0%, 100% { opacity: .3; transform: scale(.7); } 50% { opacity: 1; transform: scale(1); } }
+@media (max-width: 44em) {
+  .rm-est__vetor-esquema { align-self: center; }
+  .rm-est__balao { max-width: 95%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .rm-est *, .rm-est *::after { animation: none !important; transition: none !important; }
+}

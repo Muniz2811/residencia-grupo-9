@@ -11,6 +11,8 @@ O conhecimento percorre duas fases: **ingestão**, que prepara documentos, chunk
 
 Clique em **▶ Reproduzir**, avance com **▶|** ou selecione uma estação. Na fase de pergunta, escolha LEMA, cabines, COSMOS ou ausência de dados atuais. As setas **← →** também navegam; **Tela cheia** abre o modo de apresentação.
 
+Na fase **Pergunta**, acompanhe a mensagem sendo digitada, a busca dos trechos, o ranking e a montagem do contexto. Ao final, o **Assistente FCTE responde em um chat animado**, com cartões para abrir as fontes citadas.
+
 <div class="rm-est" data-esteira tabindex="0" aria-label="Esteira animada da ingestão e consulta do RAG FCTE"></div>
 
 !!! info "Registros reais, reprodução estática"
