@@ -8,7 +8,7 @@
 
 As prévias são excertos curtos selecionados. Os tokens são da entrada completa usada na codificação. As barras mostram **16 componentes reais de um vetor de documento**, não uma projeção semântica, coordenada ou vetor inventado da pergunta.
 
-## Catálogo dos 94 chunks
+## Catálogo dos 174 chunks
 
 <div data-chunk-catalog></div>
 
@@ -19,7 +19,7 @@ Este filtro procura palavras nos metadados exportados. Não executa E5, BM25 ou 
 | Download | Conteúdo |
 |---|---|
 | [Evidências JSON](../assets/downloads/evidencias.json) | Catálogo, IDs dos chunks, exemplos, componentes vetoriais, integridade, demonstrações e métricas |
-| [Fontes CSV](../assets/downloads/fontes.csv) | 27 fontes, disponibilidade, revisão, validade e 25 indexadas |
+| [Fontes CSV](../assets/downloads/fontes.csv) | 42 fontes, disponibilidade, revisão, validade e 37 indexadas |
 | [Demonstrações JSON](../assets/downloads/demonstracoes.json) | Perguntas, respostas, rankings, excertos, fontes e IDs de cinco execuções selecionadas |
 | [Métricas JSON](../assets/downloads/metricas.json) | Numeradores, denominadores, metas e resultados da rodada híbrida completa |
 | [Avaliação JSON](../assets/downloads/avaliacao.json) | Quinze perguntas, respostas, rankings e todas as 16 chamadas, incluindo a retentativa |

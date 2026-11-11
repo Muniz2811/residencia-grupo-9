@@ -16,13 +16,13 @@ Na fase **Pergunta**, acompanhe a mensagem sendo digitada, a busca dos trechos, 
 <div class="rm-est" data-esteira tabindex="0" aria-label="Esteira animada da ingestão e consulta do RAG FCTE"></div>
 
 !!! info "Registros reais, reprodução estática"
-    Contagens, chunks e componentes vetoriais são dos artefatos atuais: **25 fontes, 94 chunks e 384 dimensões**. LEMA, COSMOS e ausência usam a nova avaliação híbrida completa; cabines demonstra a continuidade de conversa em uma execução adicional identificada. Os controles não chamam a API nem consomem cota Gemini.
+    Contagens, chunks e componentes vetoriais são dos artefatos atuais: **37 fontes, 174 chunks e 384 dimensões**. LEMA, COSMOS e ausência usam a nova avaliação híbrida completa; cabines demonstra a continuidade de conversa em uma execução adicional identificada. Os controles não chamam a API nem consomem cota Gemini.
 
 ## Da fonte ao banco
 
-1. Catalogar 27 fontes aprovadas; excluir da indexação as duas com aquisição bloqueada.
+1. Catalogar 42 fontes aprovadas; excluir da indexação as duas com aquisição bloqueada.
 2. Preservar original, versão e SHA-256; extrair títulos e parágrafos.
-3. Gerar 94 chunks: alvo 300 tokens, até 40 de sobreposição somente em subdivisões, sem misturar fontes.
+3. Gerar 174 chunks: alvo 300 tokens, até 40 de sobreposição somente em subdivisões, sem misturar fontes.
 4. Codificar com E5 local, `passage: `, 384 dimensões e normalização L2.
 5. Persistir no Chroma e conferir a reabertura sem repetir a ingestão.
 

@@ -6,11 +6,11 @@
 
 **Resposta registrada:**
 
-> O laboratório COSMOS fica localizado no Prédio LDTEA, no 2º andar, Sala 304. [1]
+> O laboratório COSMOS fica localizado no prédio LDTEA, no 2º andar, sala 304. [1]
 
-Execução: `2eaa73f0-6d35-425e-a67c-42381c332d2e` · `2026-11-11T18:37:31.179353+00:00` · modelo `gemini-3.5-flash-lite`.
+Execução: `bd9f039c-a5ea-401b-bf7e-b2926f93773a` · `2026-11-11T23:54:23.146691+00:00` · modelo `gemini-3.5-flash-lite`.
 
-Prompt `campus-rag-v2`; mesma coleção de 94 chunks. O ranking abaixo é o registrado nessa execução.
+Prompt `campus-rag-v2`; coleção registrada na execução (demonstração de cabines preservada da base anterior). O ranking abaixo é o registrado nessa execução.
 
 | Posição | Chunk / fonte | Distância cosseno | Usado na resposta? |
 |---:|---|---:|---|
@@ -34,17 +34,17 @@ Prompt `campus-rag-v2`; mesma coleção de 94 chunks. O ranking abaixo é o regi
 
 > A Biblioteca do Campus Gama dispõe de espaço para estudo com cabines individuais e mesas para estudo em grupo. [1]
 
-Execução: `9035962c-8018-4696-8888-a04ee2418e98` · `2026-11-11T18:38:19.880337+00:00` · modelo `gemini-3.5-flash-lite`.
+Execução: `16aba732-7ce3-49b3-885e-02891cd95f06` · `2026-11-11T23:54:46.721232+00:00` · modelo `gemini-3.5-flash-lite`.
 
-Prompt `campus-rag-v2`; mesma coleção de 94 chunks. O ranking abaixo é o registrado nessa execução.
+Prompt `campus-rag-v2`; coleção registrada na execução (demonstração de cabines preservada da base anterior). O ranking abaixo é o registrado nessa execução.
 
 | Posição | Chunk / fonte | Distância cosseno | Usado na resposta? |
 |---:|---|---:|---|
 | 1 | `c_c8a0b710c3c50b09` · DOC-012 | 0.125138 | Sim |
 | 2 | `c_1cfe0848c545f27c` · DOC-012 | 0.141437 | Não |
-| 3 | `c_17241a7563801760` · DOC-008 | 0.140344 | Não |
+| 3 | `c_17241a7563801760` · DOC-008 | 0.140343 | Não |
 | 4 | `c_5faca10e6e792b67` · DOC-006 | 0.141811 | Não |
-| 5 | `c_ff640f1875faa059` · DOC-002 | 0.172656 | Não |
+| 5 | `c_d358c91019bb9877` · DOC-028 | 0.173636 | Não |
 
 ### Evidências citadas
 
@@ -58,19 +58,19 @@ Prompt `campus-rag-v2`; mesma coleção de 94 chunks. O ranking abaixo é o regi
 
 **Resposta registrada:**
 
-> Não há informações nos trechos recuperados sobre a ocupação atual ou a disponibilidade da sala I10.
+> Não encontrei informações sobre a disponibilidade atual da sala I10 nos trechos recuperados.
 
-Execução: `fd1ef96f-814b-4a7d-be70-36818ea6757a` · `2026-11-11T18:40:00.093553+00:00` · modelo `gemini-3.5-flash-lite`.
+Execução: `4c7bc104-42e9-4897-b2e9-7278fe2136ea` · `2026-11-11T23:55:19.188446+00:00` · modelo `gemini-3.5-flash-lite`.
 
-Prompt `campus-rag-v2`; mesma coleção de 94 chunks. O ranking abaixo é o registrado nessa execução.
+Prompt `campus-rag-v2`; coleção registrada na execução (demonstração de cabines preservada da base anterior). O ranking abaixo é o registrado nessa execução.
 
 | Posição | Chunk / fonte | Distância cosseno | Usado na resposta? |
 |---:|---|---:|---|
 | 1 | `c_cd638caa1b0d517e` · DOC-005 | 0.162923 | Não |
 | 2 | `c_0904be5ddfac8a87` · DOC-005 | 0.164374 | Não |
-| 3 | `c_78aefd971e83ca2c` · DOC-016 | 0.170036 | Não |
-| 4 | `c_def12e461bfc328e` · DOC-011 | 0.171277 | Não |
-| 5 | `c_3ec499d6018e067b` · DOC-025 | 0.172945 | Não |
+| 3 | `c_8b347ac6195f3758` · DOC-034 | 0.173354 | Não |
+| 4 | `c_be2a6adafda33729` · DOC-040 | 0.157380 | Não |
+| 5 | `c_2ca840134bd85814` · DOC-039 | 0.159181 | Não |
 
 ### Evidências citadas
 
@@ -84,11 +84,11 @@ Não houve afirmação com fonte emitida: o sistema declarou ausência. Os trech
 
 **Resposta registrada:**
 
-> O Laboratório de Estruturas e Materiais Aeroespaciais (LEMA) está localizado no Prédio LDTEA, no térreo, na sala 103. [1]
+> O Laboratório de Estruturas e Materiais Aeroespaciais (LEMA) está localizado no Prédio LDTEA, no térreo, sala 103. [1]
 
-Execução: `0b0f7b77-8451-4360-91f2-f497954bce4c` · `2026-11-11T18:37:50.407359+00:00` · modelo `gemini-3.5-flash-lite`.
+Execução: `3131541f-9425-42a0-9c84-795a27d00656` · `2026-11-11T23:54:33.003090+00:00` · modelo `gemini-3.5-flash-lite`.
 
-Prompt `campus-rag-v2`; mesma coleção de 94 chunks. O ranking abaixo é o registrado nessa execução.
+Prompt `campus-rag-v2`; coleção registrada na execução (demonstração de cabines preservada da base anterior). O ranking abaixo é o registrado nessa execução.
 
 | Posição | Chunk / fonte | Distância cosseno | Usado na resposta? |
 |---:|---|---:|---|
@@ -114,7 +114,7 @@ Prompt `campus-rag-v2`; mesma coleção de 94 chunks. O ranking abaixo é o regi
 
 Execução: `071e88ec-7cbb-49ec-8229-b054b1b68c15` · `2026-11-11T17:30:30.862779+00:00` · modelo `gemini-3.5-flash-lite`.
 
-Prompt `campus-rag-v2`; mesma coleção de 94 chunks. O ranking abaixo é o registrado nessa execução.
+Prompt `campus-rag-v2`; coleção registrada na execução (demonstração de cabines preservada da base anterior). O ranking abaixo é o registrado nessa execução.
 
 | Posição | Chunk / fonte | Distância cosseno | Usado na resposta? |
 |---:|---|---:|---|

@@ -10,7 +10,7 @@ hide:
 
 1. **O problema:** informações sobre prédios, ambientes e serviços do campus Gama estão espalhadas entre documentos, mapas e observações.
 2. **Nossa frente:** coleta revisada, inventário de locais e um assistente que recupera texto e mostra a fonte. RU e disciplinas pertencem ao Grupo 04.
-3. **Implementado:** 27 fontes aprovadas, 25 indexadas, 94 chunks, E5 de 384 dimensões, Chroma persistente, busca híbrida e resposta Gemini no PWA local.
+3. **Implementado:** 42 fontes aprovadas, 37 indexadas, 174 chunks, E5 de 384 dimensões, Chroma persistente, busca híbrida e resposta Gemini no PWA local.
 4. **Avaliado:** quinze perguntas na primeira versão densa, com julgamentos, métricas e falhas técnicas registrados; correção posterior das cabines e do LEMA verificada separadamente.
 5. **Ainda evolui:** qualidade da recuperação, revisão de vigência, ingestão de KML/coletas, rotas e integração entre grupos.
 

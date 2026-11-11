@@ -1,13 +1,13 @@
 {
   "schema": 2,
-  "exported_at": "2026-11-11T18:47:14.890295+00:00",
+  "exported_at": "2026-11-11T23:58:41.518439+00:00",
   "project": "FCTE Campus · Grupo 09",
   "summary": {
-    "approved_sources": 27,
-    "html_snapshots": 25,
-    "indexed_sources": 25,
-    "chunks": 94,
-    "embeddings_generated": 94,
+    "approved_sources": 42,
+    "html_snapshots": 33,
+    "indexed_sources": 37,
+    "chunks": 174,
+    "embeddings_generated": 174,
     "dimensions": 384,
     "map_points": 14,
     "map_indexed": false
@@ -216,7 +216,7 @@
       "url": "https://unbbr-my.sharepoint.com/:w:/g/personal/pcom_bce_unb_br/IQC1XwhlQhJjRYSw2V83xyz8Aeaj8Xu5xaduqBMukFh1Ycw?e=cbvTSV",
       "scope": "UnB geral",
       "indexed": false,
-      "status": "Aprovada; aquisição bloqueada",
+      "status": "Original indisponível: download do visualizador da FAQ bloqueado por robots.txt em 2026-11-11. Aprovação editorial registrada; conteúdo não indexado.",
       "chunks": 0,
       "version": "",
       "reviewed_at": "2026-11-11",
@@ -356,7 +356,7 @@
       "url": "https://pctec.unb.br/laboratorio-de-tecnologias-em-biomassa/",
       "scope": "Gama",
       "indexed": false,
-      "status": "Aprovada; aquisição bloqueada",
+      "status": "Original indisponível: download da página PCTec bloqueado por robots.txt em 2026-11-11. Aprovação editorial registrada; conteúdo não indexado.",
       "chunks": 0,
       "version": "",
       "reviewed_at": "2026-11-11",
@@ -405,6 +405,216 @@
       "validity": "desconhecida",
       "limitations": "Página de consulta interativa: pode ter pouco texto estático",
       "sha256": "8de3bca65216f39091a2a31f898ef4e3e1e4e1c9031bd4bb26bbe698b15a2932"
+    },
+    {
+      "id": "DOC-028",
+      "title": "Guia do Estudante — Avaliação Socioeconômica UnB 2026",
+      "url": "https://dds.dac.unb.br/wp-content/uploads/2026/08/Guia_do_Estudante___Avaliacao_Socioeconomica_UnB_2026_compressed.pdf",
+      "scope": "UnB geral",
+      "indexed": true,
+      "status": "Aprovada e indexada",
+      "chunks": 11,
+      "version": "2026-11-11",
+      "reviewed_at": "2026-11-11",
+      "validity": "desconhecida",
+      "limitations": "Revisão assistida por Codex; não confirma disponibilidade atual nem verificação em campo. Recorte páginas 2 a 16; retirar alimentação. Localizações de outros campi estão identificadas no texto; não atribuir ao Gama.",
+      "sha256": "3cc1fcd7753a9ed17dcda9ad383da031b2eadcafac0d848d9ec8ae77ea791435"
+    },
+    {
+      "id": "DOC-029",
+      "title": "Mapa cadastral do Campus Gama — CEPLAN",
+      "url": "https://ceplan.unb.br/wp-content/uploads/2026/02/Campus-Gama.pdf",
+      "scope": "Gama",
+      "indexed": false,
+      "status": "Original preservado como evidência cartográfica: levantamento de 2015, sem identificação textual suficiente dos prédios. Não sustenta orientação atual.",
+      "chunks": 0,
+      "version": "2026-11-11",
+      "reviewed_at": "2026-11-11",
+      "validity": "desconhecida",
+      "limitations": "Inspeção visual: folha 02/02, levantamento agosto/2015; data do diretório 2026 não é data de atualização do mapa.",
+      "sha256": "d022bf234df9f2c62c2923bf5960c24a8004f35ea6d4821156f5b0bd3003f998"
+    },
+    {
+      "id": "DOC-030",
+      "title": "UnB Wireless e Eduroam — STI",
+      "url": "https://sti.unb.br/unb-wireless-e-eduroam/",
+      "scope": "UnB geral",
+      "indexed": true,
+      "status": "Aprovada e indexada",
+      "chunks": 2,
+      "version": "2026-11-11",
+      "reviewed_at": "2026-11-11",
+      "validity": "desconhecida",
+      "limitations": "Revisão assistida por Codex; não confirma disponibilidade atual nem verificação em campo.",
+      "sha256": "89b116a741d2c7c0fa28f39bf36cb8b02fbdaacd0e4f292b626152cd8cad93d6"
+    },
+    {
+      "id": "DOC-031",
+      "title": "Perguntas frequentes para estudantes — STI",
+      "url": "https://sti.unb.br/estudante/",
+      "scope": "UnB geral",
+      "indexed": true,
+      "status": "Aprovada e indexada",
+      "chunks": 16,
+      "version": "2026-11-11",
+      "reviewed_at": "2026-11-11",
+      "validity": "desconhecida",
+      "limitations": "Revisão assistida por Codex; não confirma disponibilidade atual nem verificação em campo.",
+      "sha256": "a3931b56f53df7fd6755040473302d6f2f5b86d415f20cf4c6271d81eae192ec"
+    },
+    {
+      "id": "DOC-032",
+      "title": "Empréstimos — Sistema de Bibliotecas da UnB",
+      "url": "https://bce.unb.br/emprestimos/",
+      "scope": "UnB geral",
+      "indexed": true,
+      "status": "Aprovada e indexada",
+      "chunks": 6,
+      "version": "2026-11-11",
+      "reviewed_at": "2026-11-11",
+      "validity": "desconhecida",
+      "limitations": "Revisão assistida por Codex; não confirma disponibilidade atual nem verificação em campo. Recorte de empréstimo geral; instruções físicas e Espaço LER do Darcy excluídos. Conferir regras locais com Biblioteca Gama.",
+      "sha256": "ee92d441ffb6e81b3a9935bc9558d7bd69c1c2ae58847fa12720b0ff930ae686"
+    },
+    {
+      "id": "DOC-033",
+      "title": "Solicitação de atendimento para discentes — DACES",
+      "url": "https://acessibilidade.unb.br/solicitacao-de-atendimento-para-discentes/",
+      "scope": "UnB geral",
+      "indexed": true,
+      "status": "Aprovada e indexada",
+      "chunks": 3,
+      "version": "2026-11-11",
+      "reviewed_at": "2026-11-11",
+      "validity": "desconhecida",
+      "limitations": "Revisão assistida por Codex; não confirma disponibilidade atual nem verificação em campo.",
+      "sha256": "1a8cdcd5e63ca05cc4713df015495d1a4fe3dc552995be2be0ef49a73056984d"
+    },
+    {
+      "id": "DOC-034",
+      "title": "Realocação de sala e adequação de mobiliário — DACES",
+      "url": "https://acessibilidade.unb.br/acessibilidade-urbanistica-e-arquitetonica/",
+      "scope": "UnB geral",
+      "indexed": true,
+      "status": "Aprovada e indexada",
+      "chunks": 1,
+      "version": "2026-11-11",
+      "reviewed_at": "2026-11-11",
+      "validity": "desconhecida",
+      "limitations": "Revisão assistida por Codex; não confirma disponibilidade atual nem verificação em campo.",
+      "sha256": "14a59fdf6baaa0a500619f7c1506c518f6a6f4889368749c5629c36cf46780d8"
+    },
+    {
+      "id": "DOC-035",
+      "title": "Acolhimento psicossocial — DASU",
+      "url": "https://dasu.unb.br/acolhimento-psicossocial/",
+      "scope": "UnB geral",
+      "indexed": true,
+      "status": "Aprovada e indexada",
+      "chunks": 3,
+      "version": "2026-11-11",
+      "reviewed_at": "2026-11-11",
+      "validity": "desconhecida",
+      "limitations": "Revisão assistida por Codex; não confirma disponibilidade atual nem verificação em campo.",
+      "sha256": "328ee2c537644d468840c91083ca40b4f5aab1d9bc688f53ba8853f704523209"
+    },
+    {
+      "id": "DOC-036",
+      "title": "Tutorial de acesso remoto ao Portal CAPES — BCE",
+      "url": "https://bce.unb.br/wp-content/uploads/2025/09/Portal-Capes-Tutorial-acesso-REMOTO.pdf",
+      "scope": "UnB geral",
+      "indexed": true,
+      "status": "Aprovada e indexada",
+      "chunks": 3,
+      "version": "2026-11-11",
+      "reviewed_at": "2026-11-11",
+      "validity": "desconhecida",
+      "limitations": "Revisão assistida por Codex; não confirma disponibilidade atual nem verificação em campo.",
+      "sha256": "d8a61082e7e3f1dd3dbbfb04af620a70b24f73a2250aae6a29c0da08ffca1bbd"
+    },
+    {
+      "id": "DOC-037",
+      "title": "Cartão Mobilidade e regras de integração — BRB",
+      "url": "https://mobilidade.brb.com.br/mobilidade/cartao-mobilidade.html",
+      "scope": "DF",
+      "indexed": false,
+      "status": "Download do BRB indisponível: HTTP 503 em retentativas registradas; sem conteúdo confiável para indexar.",
+      "chunks": 0,
+      "version": "",
+      "reviewed_at": "2026-11-11",
+      "validity": "desconhecida",
+      "limitations": "Revisão assistida por Codex; não confirma disponibilidade atual nem verificação em campo.",
+      "sha256": ""
+    },
+    {
+      "id": "DOC-038",
+      "title": "Manual do Calouro 2026.2 — UnB",
+      "url": "https://vempraunb.unb.br/wp-content/uploads/manual_do_calouro_2026_2.pdf",
+      "scope": "UnB geral",
+      "indexed": true,
+      "status": "Aprovada e indexada",
+      "chunks": 4,
+      "version": "2026-11-11",
+      "reviewed_at": "2026-11-11",
+      "validity": "desconhecida",
+      "limitations": "Revisão assistida por Codex; não confirma disponibilidade atual nem verificação em campo. Recorte páginas 69, 96 e 97 sobre acessibilidade. Conteúdo de disciplinas e RU excluído.",
+      "sha256": "80c4e0d930f873184eed07d9f11595c1b67157d087f820965070a53ef70ccd3f"
+    },
+    {
+      "id": "DOC-039",
+      "title": "Serviços de acessibilidade — DACES",
+      "url": "https://acessibilidade.unb.br/servicos-de-acessibilidade/",
+      "scope": "UnB geral",
+      "indexed": true,
+      "status": "Aprovada e indexada",
+      "chunks": 5,
+      "version": "2026-11-11",
+      "reviewed_at": "2026-11-11",
+      "validity": "desconhecida",
+      "limitations": "Revisão assistida por Codex; não confirma disponibilidade atual nem verificação em campo.",
+      "sha256": "6a773655db9b92f0a0cd11568a192e601b058990711df44f538b7d672b5c7b44"
+    },
+    {
+      "id": "DOC-040",
+      "title": "Biblioteca Digital e Sonora — BCE",
+      "url": "https://bce.unb.br/bibliotecas-digitais/bds/",
+      "scope": "UnB geral",
+      "indexed": true,
+      "status": "Aprovada e indexada",
+      "chunks": 8,
+      "version": "2026-11-11",
+      "reviewed_at": "2026-11-11",
+      "validity": "desconhecida",
+      "limitations": "Revisão assistida por Codex; não confirma disponibilidade atual nem verificação em campo.",
+      "sha256": "6fb0041c2a38f69c49ec7613f0c101508cc1a9001c130b7108a66f0c0b304140"
+    },
+    {
+      "id": "DOC-041",
+      "title": "Perguntas frequentes do Passe Livre Estudantil — BRB",
+      "url": "https://mobilidade.brb.com.br/passelivre/estudante/faq.xhtml",
+      "scope": "DF",
+      "indexed": false,
+      "status": "Download do BRB indisponível: HTTP 503 em retentativas registradas; sem conteúdo confiável para indexar.",
+      "chunks": 0,
+      "version": "",
+      "reviewed_at": "2026-11-11",
+      "validity": "desconhecida",
+      "limitations": "Revisão assistida por Codex; não confirma disponibilidade atual nem verificação em campo.",
+      "sha256": ""
+    },
+    {
+      "id": "DOC-042",
+      "title": "Edital nº 10/2026/DAC — auxílios estudantis",
+      "url": "https://dds.dac.unb.br/wp-content/uploads/2026/03/SEI_13995184_Edital_10.pdf",
+      "scope": "UnB geral",
+      "indexed": true,
+      "status": "Aprovada e indexada",
+      "chunks": 18,
+      "version": "2026-11-11",
+      "reviewed_at": "2026-11-11",
+      "validity": "2026-04-12",
+      "limitations": "Edital histórico 2026.1, inscrições encerradas. Texto original sem consolidação de retificações; excluído de consultas atuais pelo filtro de validade. Não usar para valores ou inscrições presentes.",
+      "sha256": "a6e4f68d0157ef44d0697933fb72e9a340fcfab031289645c4ab55c1325451a8"
     }
   ],
   "examples": [
@@ -440,7 +650,7 @@
           0.0626907
         ],
         "dimensions": 384,
-        "l2_norm": 1.000000051912611
+        "l2_norm": 0.9999999719228009
       }
     },
     {
@@ -457,7 +667,7 @@
       "row": 14,
       "vector": {
         "head": [
-          0.0818332,
+          0.0818333,
           -0.0037072,
           -0.0595541,
           -0.0330302,
@@ -475,7 +685,7 @@
           0.0720637
         ],
         "dimensions": 384,
-        "l2_norm": 1.0000000617952085
+        "l2_norm": 1.0000000585386077
       }
     },
     {
@@ -498,19 +708,19 @@
           -0.0772088,
           0.0685483,
           -0.0437975,
-          0.0205499,
+          0.02055,
           0.097954,
-          0.0214415,
-          -0.0484034,
+          0.0214414,
+          -0.0484035,
           0.0411703,
-          0.0123232,
+          0.0123231,
           0.0545402,
-          -0.0189149,
+          -0.018915,
           0.0075928,
           0.0591555
         ],
         "dimensions": 384,
-        "l2_norm": 1.0000000221066234
+        "l2_norm": 1.000000031059466
       }
     },
     {
@@ -1207,6 +1417,566 @@
       "section": "Pesquisa por Linhas",
       "input_tokens": 68,
       "version": "2026-11-11"
+    },
+    {
+      "id": "c_82bd3a3033b601e8",
+      "source_id": "DOC-028",
+      "section": "Página 2 > Página 3",
+      "input_tokens": 279,
+      "version": "2026-11-11"
+    },
+    {
+      "id": "c_52994df89a1f8745",
+      "source_id": "DOC-028",
+      "section": "Página 4",
+      "input_tokens": 181,
+      "version": "2026-11-11"
+    },
+    {
+      "id": "c_2957e36b9021ae4c",
+      "source_id": "DOC-028",
+      "section": "Página 5 > Página 6",
+      "input_tokens": 242,
+      "version": "2026-11-11"
+    },
+    {
+      "id": "c_a903ea96675d3f11",
+      "source_id": "DOC-028",
+      "section": "Página 7 > Página 8",
+      "input_tokens": 251,
+      "version": "2026-11-11"
+    },
+    {
+      "id": "c_8bf23b6b9f113d20",
+      "source_id": "DOC-028",
+      "section": "Página 9",
+      "input_tokens": 191,
+      "version": "2026-11-11"
+    },
+    {
+      "id": "c_1ed0d667da43c48b",
+      "source_id": "DOC-028",
+      "section": "Página 10",
+      "input_tokens": 144,
+      "version": "2026-11-11"
+    },
+    {
+      "id": "c_a4aaef699e0b8e2b",
+      "source_id": "DOC-028",
+      "section": "Página 11",
+      "input_tokens": 189,
+      "version": "2026-11-11"
+    },
+    {
+      "id": "c_d761aaa7b3df775b",
+      "source_id": "DOC-028",
+      "section": "Página 12",
+      "input_tokens": 242,
+      "version": "2026-11-11"
+    },
+    {
+      "id": "c_d715ea28f4b4bae5",
+      "source_id": "DOC-028",
+      "section": "Página 13",
+      "input_tokens": 239,
+      "version": "2026-11-11"
+    },
+    {
+      "id": "c_fd3a48c43e95ca97",
+      "source_id": "DOC-028",
+      "section": "Página 14 > Página 15",
+      "input_tokens": 182,
+      "version": "2026-11-11"
+    },
+    {
+      "id": "c_d358c91019bb9877",
+      "source_id": "DOC-028",
+      "section": "Página 16",
+      "input_tokens": 213,
+      "version": "2026-11-11"
+    },
+    {
+      "id": "c_df61e15d7cef4083",
+      "source_id": "DOC-030",
+      "section": "",
+      "input_tokens": 86,
+      "version": "2026-11-11"
+    },
+    {
+      "id": "c_a417a3246ac00cdd",
+      "source_id": "DOC-030",
+      "section": "UnB WIRELESS E EDUROAM",
+      "input_tokens": 246,
+      "version": "2026-11-11"
+    },
+    {
+      "id": "c_49cc2046784b3f14",
+      "source_id": "DOC-031",
+      "section": "Perguntas Frequentes (FAQ): ESTUDANTES > Como acessar o e-mail da UnB",
+      "input_tokens": 175,
+      "version": "2026-11-11"
+    },
+    {
+      "id": "c_49ecf6cec2cea042",
+      "source_id": "DOC-031",
+      "section": "Perguntas Frequentes (FAQ): ESTUDANTES > Apelido de e-mail de aluno da UnB, como é gerado?",
+      "input_tokens": 262,
+      "version": "2026-11-11"
+    },
+    {
+      "id": "c_85d951b67a96d3f9",
+      "source_id": "DOC-031",
+      "section": "Perguntas Frequentes (FAQ): ESTUDANTES > Como troco a senha do meu e-mail da UnB",
+      "input_tokens": 262,
+      "version": "2026-11-11"
+    },
+    {
+      "id": "c_4d29c14d1f80d6e3",
+      "source_id": "DOC-031",
+      "section": "Perguntas Frequentes (FAQ): ESTUDANTES > Esqueci a senha do meu e-mail de aluno e do SIG UnB, o que fazer? > Perguntas Frequentes (FAQ): ESTUDANTES > Não sei usar o Outlook, o que eu faço?",
+      "input_tokens": 270,
+      "version": "2026-11-11"
+    },
+    {
+      "id": "c_c668e2955ee05fdb",
+      "source_id": "DOC-031",
+      "section": "Perguntas Frequentes (FAQ): ESTUDANTES > Como crio um redirecionamento do meu e-mail da UnB para outro e-mail qualquer? > Perguntas Frequentes (FAQ): ESTUDANTES > Como crio filtro de e-mail? > Perguntas Frequentes (FAQ): ESTUDANTES > Como crio uma assinatura para o meu e-mail da UnB? > Perguntas Frequentes (FAQ): ESTUDANTES > Existe um limite de envio de e-mails?",
+      "input_tokens": 187,
+      "version": "2026-11-11"
+    },
+    {
+      "id": "c_324d217ce8e76726",
+      "source_id": "DOC-031",
+      "section": "Perguntas Frequentes (FAQ): ESTUDANTES > Como recupero mensagens apagadas?",
+      "input_tokens": 158,
+      "version": "2026-11-11"
+    },
+    {
+      "id": "c_40e0fd39a2a101e7",
+      "source_id": "DOC-031",
+      "section": "Perguntas Frequentes (FAQ): ESTUDANTES > O e-mail de aluno tem prazo de validade?",
+      "input_tokens": 199,
+      "version": "2026-11-11"
+    },
+    {
+      "id": "c_b4e519f45e857a78",
+      "source_id": "DOC-031",
+      "section": "Perguntas Frequentes (FAQ): ESTUDANTES > Resolvi mudar de curso ou obtive dupla diplomação, o que acontecerá com o e-mail de aluno?",
+      "input_tokens": 185,
+      "version": "2026-11-11"
+    },
+    {
+      "id": "c_9ba0d515e4dcb30e",
+      "source_id": "DOC-031",
+      "section": "Perguntas Frequentes (FAQ): ESTUDANTES > Resolvi mudar de curso ou obtive dupla diplomação, o que acontecerá com o e-mail de aluno?",
+      "input_tokens": 250,
+      "version": "2026-11-11"
+    },
+    {
+      "id": "c_99693d80bde51a91",
+      "source_id": "DOC-031",
+      "section": "Perguntas Frequentes (FAQ): ESTUDANTES > Como configuro um programa cliente de e-mail no meu computador? > Perguntas Frequentes (FAQ): ESTUDANTES > Como configurar o e-mail da UnB em outros provedores de correio eletrônico, como por exemplo no Gmail, ICloud Mail, Yahoo! Mail, e outros?",
+      "input_tokens": 222,
+      "version": "2026-11-11"
+    },
+    {
+      "id": "c_15b0b27c0e814676",
+      "source_id": "DOC-031",
+      "section": "Perguntas Frequentes (FAQ): ESTUDANTES > Como configurar o Outlook com outras contas de e-mail, como Gmail, por exemplo?",
+      "input_tokens": 164,
+      "version": "2026-11-11"
+    },
+    {
+      "id": "c_b516d93616cdc444",
+      "source_id": "DOC-031",
+      "section": "Perguntas Frequentes (FAQ): ESTUDANTES > Qual o mecanismo de autenticação do Outlook?",
+      "input_tokens": 220,
+      "version": "2026-11-11"
+    },
+    {
+      "id": "c_6af945feecf002a2",
+      "source_id": "DOC-031",
+      "section": "Perguntas Frequentes (FAQ): ESTUDANTES > Qual o mecanismo de autenticação do Outlook?",
+      "input_tokens": 164,
+      "version": "2026-11-11"
+    },
+    {
+      "id": "c_0da641d479665ed7",
+      "source_id": "DOC-031",
+      "section": "Perguntas Frequentes (FAQ): ESTUDANTES > Como faço para redefinir a configuração do código MFA (Multi-Factor Authentication)? > Perguntas Frequentes (FAQ): ESTUDANTES > Não estou recebendo o código do MFA no meu dispositivo móvel. - Como faço para RESETAR a configuração do código do MFA para refazer esta configuração?",
+      "input_tokens": 269,
+      "version": "2026-11-11"
+    },
+    {
+      "id": "c_7dcccea368d9f906",
+      "source_id": "DOC-031",
+      "section": "Perguntas Frequentes (FAQ): ESTUDANTES > Em caso de problemas não abarcados nesta FAQ, como devo proceder?",
+      "input_tokens": 286,
+      "version": "2026-11-11"
+    },
+    {
+      "id": "c_76d94589bd14c083",
+      "source_id": "DOC-031",
+      "section": "Perguntas Frequentes (FAQ): ESTUDANTES > Em caso de problemas não abarcados nesta FAQ, como devo proceder?",
+      "input_tokens": 163,
+      "version": "2026-11-11"
+    },
+    {
+      "id": "c_24374698ed63adb7",
+      "source_id": "DOC-032",
+      "section": "EMPRÉSTIMOS > Cadastro > EMPRÉSTIMOS > Empréstimo > EMPRÉSTIMOS > Nada Consta > EMPRÉSTIMOS > Multa",
+      "input_tokens": 91,
+      "version": "2026-11-11"
+    },
+    {
+      "id": "c_3522c4e17fd95e3c",
+      "source_id": "DOC-032",
+      "section": "EMPRÉSTIMOS > Multa > Empréstimo de materiais",
+      "input_tokens": 289,
+      "version": "2026-11-11"
+    },
+    {
+      "id": "c_f8ededb7adec2e05",
+      "source_id": "DOC-032",
+      "section": "EMPRÉSTIMOS > Multa > Empréstimo de materiais",
+      "input_tokens": 296,
+      "version": "2026-11-11"
+    },
+    {
+      "id": "c_b83014a572f0a800",
+      "source_id": "DOC-032",
+      "section": "EMPRÉSTIMOS > Multa > Empréstimo de materiais",
+      "input_tokens": 283,
+      "version": "2026-11-11"
+    },
+    {
+      "id": "c_b835d61f603ffe67",
+      "source_id": "DOC-032",
+      "section": "EMPRÉSTIMOS > Multa > Empréstimo de materiais",
+      "input_tokens": 273,
+      "version": "2026-11-11"
+    },
+    {
+      "id": "c_725a0f946b3177e6",
+      "source_id": "DOC-032",
+      "section": "EMPRÉSTIMOS > Multa > Empréstimo de materiais",
+      "input_tokens": 246,
+      "version": "2026-11-11"
+    },
+    {
+      "id": "c_c82e308c01340157",
+      "source_id": "DOC-033",
+      "section": "",
+      "input_tokens": 172,
+      "version": "2026-11-11"
+    },
+    {
+      "id": "c_f6a8ecfbf8190b7e",
+      "source_id": "DOC-033",
+      "section": "Tutorial de cadastro na DACES",
+      "input_tokens": 273,
+      "version": "2026-11-11"
+    },
+    {
+      "id": "c_8727c807a2f4211f",
+      "source_id": "DOC-033",
+      "section": "Tutorial de cadastro na DACES",
+      "input_tokens": 92,
+      "version": "2026-11-11"
+    },
+    {
+      "id": "c_8b347ac6195f3758",
+      "source_id": "DOC-034",
+      "section": "",
+      "input_tokens": 210,
+      "version": "2026-11-11"
+    },
+    {
+      "id": "c_0a902deb2aac8c73",
+      "source_id": "DOC-035",
+      "section": "",
+      "input_tokens": 211,
+      "version": "2026-11-11"
+    },
+    {
+      "id": "c_394e8f8f5d839504",
+      "source_id": "DOC-035",
+      "section": "",
+      "input_tokens": 288,
+      "version": "2026-11-11"
+    },
+    {
+      "id": "c_48cc0f864da3a07c",
+      "source_id": "DOC-035",
+      "section": "",
+      "input_tokens": 230,
+      "version": "2026-11-11"
+    },
+    {
+      "id": "c_cabdb2d027b5c508",
+      "source_id": "DOC-036",
+      "section": "Página 1",
+      "input_tokens": 223,
+      "version": "2026-11-11"
+    },
+    {
+      "id": "c_93fc76a773f4b9bc",
+      "source_id": "DOC-036",
+      "section": "Página 2",
+      "input_tokens": 228,
+      "version": "2026-11-11"
+    },
+    {
+      "id": "c_5d991e58cb719826",
+      "source_id": "DOC-036",
+      "section": "Página 3",
+      "input_tokens": 161,
+      "version": "2026-11-11"
+    },
+    {
+      "id": "c_46e9df9cfa852279",
+      "source_id": "DOC-038",
+      "section": "Página 69",
+      "input_tokens": 231,
+      "version": "2026-11-11"
+    },
+    {
+      "id": "c_a6afa048a2d2ea16",
+      "source_id": "DOC-038",
+      "section": "Página 96",
+      "input_tokens": 241,
+      "version": "2026-11-11"
+    },
+    {
+      "id": "c_8ae0d3692175ee81",
+      "source_id": "DOC-038",
+      "section": "Página 96",
+      "input_tokens": 167,
+      "version": "2026-11-11"
+    },
+    {
+      "id": "c_d1461ff9e4eafadc",
+      "source_id": "DOC-038",
+      "section": "Página 97",
+      "input_tokens": 165,
+      "version": "2026-11-11"
+    },
+    {
+      "id": "c_72ff2c0e5b07212b",
+      "source_id": "DOC-039",
+      "section": "Serviços de Acessibilidade",
+      "input_tokens": 65,
+      "version": "2026-11-11"
+    },
+    {
+      "id": "c_fee1bb341c2e68bd",
+      "source_id": "DOC-039",
+      "section": "Serviços de Acessibilidade > Intérpretes e Guia-Intérpretes",
+      "input_tokens": 296,
+      "version": "2026-11-11"
+    },
+    {
+      "id": "c_e3a8b37e05078fcc",
+      "source_id": "DOC-039",
+      "section": "Serviços de Acessibilidade > Intérpretes e Guia-Intérpretes",
+      "input_tokens": 299,
+      "version": "2026-11-11"
+    },
+    {
+      "id": "c_2ca840134bd85814",
+      "source_id": "DOC-039",
+      "section": "Serviços de Acessibilidade > Intérpretes e Guia-Intérpretes",
+      "input_tokens": 256,
+      "version": "2026-11-11"
+    },
+    {
+      "id": "c_eb1e5d1e76a1d911",
+      "source_id": "DOC-039",
+      "section": "Serviços de Acessibilidade > Tecnologia Assistiva > Serviços de Acessibilidade > Produção de Material Acessível > Serviços de Acessibilidade > Ledores e Transcritores > Serviços de Acessibilidade > Intérpretes e Guia-Intérpretes",
+      "input_tokens": 277,
+      "version": "2026-11-11"
+    },
+    {
+      "id": "c_43e7f318fd4418e1",
+      "source_id": "DOC-040",
+      "section": "Biblioteca Digital e Sonora",
+      "input_tokens": 287,
+      "version": "2026-11-11"
+    },
+    {
+      "id": "c_731826bb1c0cfdfc",
+      "source_id": "DOC-040",
+      "section": "Biblioteca Digital e Sonora",
+      "input_tokens": 298,
+      "version": "2026-11-11"
+    },
+    {
+      "id": "c_5616cea40237a7b6",
+      "source_id": "DOC-040",
+      "section": "Biblioteca Digital e Sonora",
+      "input_tokens": 229,
+      "version": "2026-11-11"
+    },
+    {
+      "id": "c_7fe9ecf7b3146653",
+      "source_id": "DOC-040",
+      "section": "Biblioteca Digital e Sonora",
+      "input_tokens": 273,
+      "version": "2026-11-11"
+    },
+    {
+      "id": "c_be2a6adafda33729",
+      "source_id": "DOC-040",
+      "section": "Biblioteca Digital e Sonora",
+      "input_tokens": 279,
+      "version": "2026-11-11"
+    },
+    {
+      "id": "c_7ac79fffe2c12ae7",
+      "source_id": "DOC-040",
+      "section": "Biblioteca Digital e Sonora",
+      "input_tokens": 263,
+      "version": "2026-11-11"
+    },
+    {
+      "id": "c_8219e096eca84ebf",
+      "source_id": "DOC-040",
+      "section": "Biblioteca Digital e Sonora",
+      "input_tokens": 231,
+      "version": "2026-11-11"
+    },
+    {
+      "id": "c_897e247efcea1137",
+      "source_id": "DOC-040",
+      "section": "Biblioteca Digital e Sonora > Patrícia Nunes da Silva Arantes",
+      "input_tokens": 80,
+      "version": "2026-11-11"
+    },
+    {
+      "id": "c_e3f8ebf95437131a",
+      "source_id": "DOC-042",
+      "section": "Página 1",
+      "input_tokens": 287,
+      "version": "2026-11-11"
+    },
+    {
+      "id": "c_f3e75f2342281b5d",
+      "source_id": "DOC-042",
+      "section": "Página 1",
+      "input_tokens": 294,
+      "version": "2026-11-11"
+    },
+    {
+      "id": "c_87461c72b528706b",
+      "source_id": "DOC-042",
+      "section": "Página 1",
+      "input_tokens": 112,
+      "version": "2026-11-11"
+    },
+    {
+      "id": "c_195973a2268a929c",
+      "source_id": "DOC-042",
+      "section": "Página 2",
+      "input_tokens": 254,
+      "version": "2026-11-11"
+    },
+    {
+      "id": "c_61e22e5c8807ed72",
+      "source_id": "DOC-042",
+      "section": "Página 2",
+      "input_tokens": 297,
+      "version": "2026-11-11"
+    },
+    {
+      "id": "c_3ae30f5f71845ae7",
+      "source_id": "DOC-042",
+      "section": "Página 2",
+      "input_tokens": 280,
+      "version": "2026-11-11"
+    },
+    {
+      "id": "c_e280c60cba17f2cc",
+      "source_id": "DOC-042",
+      "section": "Página 2",
+      "input_tokens": 106,
+      "version": "2026-11-11"
+    },
+    {
+      "id": "c_1e419861166b1c28",
+      "source_id": "DOC-042",
+      "section": "Página 3",
+      "input_tokens": 279,
+      "version": "2026-11-11"
+    },
+    {
+      "id": "c_94d665c7f62d2b1e",
+      "source_id": "DOC-042",
+      "section": "Página 3",
+      "input_tokens": 285,
+      "version": "2026-11-11"
+    },
+    {
+      "id": "c_9c94ca07622ca627",
+      "source_id": "DOC-042",
+      "section": "Página 3",
+      "input_tokens": 134,
+      "version": "2026-11-11"
+    },
+    {
+      "id": "c_494bb55a11961cb5",
+      "source_id": "DOC-042",
+      "section": "Página 4",
+      "input_tokens": 292,
+      "version": "2026-11-11"
+    },
+    {
+      "id": "c_e8222ceed824f798",
+      "source_id": "DOC-042",
+      "section": "Página 4",
+      "input_tokens": 229,
+      "version": "2026-11-11"
+    },
+    {
+      "id": "c_7bad05b1be3650d4",
+      "source_id": "DOC-042",
+      "section": "Página 5",
+      "input_tokens": 255,
+      "version": "2026-11-11"
+    },
+    {
+      "id": "c_ecb87d32283236f3",
+      "source_id": "DOC-042",
+      "section": "Página 5",
+      "input_tokens": 234,
+      "version": "2026-11-11"
+    },
+    {
+      "id": "c_16fb92e055f259cc",
+      "source_id": "DOC-042",
+      "section": "Página 5",
+      "input_tokens": 296,
+      "version": "2026-11-11"
+    },
+    {
+      "id": "c_8b00cd63b7852945",
+      "source_id": "DOC-042",
+      "section": "Página 5",
+      "input_tokens": 83,
+      "version": "2026-11-11"
+    },
+    {
+      "id": "c_79546d4ef9bc9a19",
+      "source_id": "DOC-042",
+      "section": "Página 6",
+      "input_tokens": 246,
+      "version": "2026-11-11"
+    },
+    {
+      "id": "c_37bd4fea5e59ec50",
+      "source_id": "DOC-042",
+      "section": "Página 6",
+      "input_tokens": 234,
+      "version": "2026-11-11"
     }
   ],
   "points": [
@@ -1421,12 +2191,12 @@
       "label": "Reavaliação completa · busca híbrida",
       "question": "Em qual prédio, andar e sala fica o laboratório COSMOS?",
       "query": "Em qual prédio, andar e sala fica o laboratório COSMOS?",
-      "request_id": "2eaa73f0-6d35-425e-a67c-42381c332d2e",
-      "executed_at": "2026-11-11T18:37:31.179353+00:00",
+      "request_id": "bd9f039c-a5ea-401b-bf7e-b2926f93773a",
+      "executed_at": "2026-11-11T23:54:23.146691+00:00",
       "status": "answered",
-      "answer": "O laboratório COSMOS fica localizado no Prédio LDTEA, no 2º andar, Sala 304. [1]",
+      "answer": "O laboratório COSMOS fica localizado no prédio LDTEA, no 2º andar, sala 304. [1]",
       "model": "gemini-3.5-flash-lite",
-      "base_version": "796894d0d378f4f8d42929dc5a5eef75e22c70d2eeafd62d880171be67051267",
+      "base_version": "a0d5e722cd0cf092bea51f0cd09a8c38f3a702773e49b4c52b1c004d2cff7f99",
       "prompt_version": "campus-rag-v2",
       "method": "hibrida_rrf",
       "retrieved": [
@@ -1451,10 +2221,10 @@
           "version": "2026-11-11",
           "url": "https://lite.unb.br/computational-aerospace-simulations-modeling-laboratory/",
           "excerpt": "COSMOS – Computational Aerospace Simulations & Modeling Laboratory Computational Aerospace Simulations & Modeling Laboratory​ O Computational Aerospace Simulations",
-          "distance": 0.13252830505371094,
+          "distance": 0.1325281858444214,
           "rank": 2,
           "relevant": false,
-          "rrf": 0.03009207275993712
+          "rrf": 0.029726775956284153
         },
         {
           "id": "c_0904be5ddfac8a87",
@@ -1464,7 +2234,7 @@
           "version": "2026-11-11",
           "url": "https://fcte.unb.br/homologa_laboratorios/",
           "excerpt": "Diretório de laboratórios da FCTE Laboratórios FCTE Laboratórios de Engenharia de Software Centro de Estudos Desenvolvimento e Inovação",
-          "distance": 0.16061687469482422,
+          "distance": 0.160616934299469,
           "rank": 3,
           "relevant": false,
           "rrf": 0.02967032967032967
@@ -1480,7 +2250,7 @@
           "distance": 0.144400954246521,
           "rank": 4,
           "relevant": false,
-          "rrf": 0.029386529386529386
+          "rrf": 0.02886002886002886
         },
         {
           "id": "c_0cf9944816258a3e",
@@ -1498,7 +2268,7 @@
       ],
       "claims": [
         {
-          "text": "O laboratório COSMOS fica localizado no Prédio LDTEA, no 2º andar, Sala 304.",
+          "text": "O laboratório COSMOS fica localizado no prédio LDTEA, no 2º andar, sala 304.",
           "sourceIds": [
             "c_f2c6f00293fae365"
           ]
@@ -1514,12 +2284,12 @@
       "label": "Reavaliação completa · busca híbrida",
       "question": "Na biblioteca do Gama há lugar para estudar sozinho e em grupo?",
       "query": "Na biblioteca do Gama há lugar para estudar sozinho e em grupo?",
-      "request_id": "9035962c-8018-4696-8888-a04ee2418e98",
-      "executed_at": "2026-11-11T18:38:19.880337+00:00",
+      "request_id": "16aba732-7ce3-49b3-885e-02891cd95f06",
+      "executed_at": "2026-11-11T23:54:46.721232+00:00",
       "status": "answered",
       "answer": "A Biblioteca do Campus Gama dispõe de espaço para estudo com cabines individuais e mesas para estudo em grupo. [1]",
       "model": "gemini-3.5-flash-lite",
-      "base_version": "796894d0d378f4f8d42929dc5a5eef75e22c70d2eeafd62d880171be67051267",
+      "base_version": "a0d5e722cd0cf092bea51f0cd09a8c38f3a702773e49b4c52b1c004d2cff7f99",
       "prompt_version": "campus-rag-v2",
       "method": "hibrida_rrf",
       "retrieved": [
@@ -1531,7 +2301,7 @@
           "version": "2026-11-11",
           "url": "https://bce.unb.br/biblioteca-campus-gama/",
           "excerpt": "espaço para estudo com cabines individuais e mesas para estudo em grupo",
-          "distance": 0.12513822317123413,
+          "distance": 0.12513816356658936,
           "rank": 1,
           "relevant": true,
           "rrf": 0.03278688524590164
@@ -1544,7 +2314,7 @@
           "version": "2026-11-11",
           "url": "https://bce.unb.br/biblioteca-campus-gama/",
           "excerpt": "Biblioteca Campus Gama – BCE Serviços Os empréstimos poderão ser feitos durante o horário de funcionamento da biblioteca,",
-          "distance": 0.14143675565719604,
+          "distance": 0.14143669605255127,
           "rank": 2,
           "relevant": false,
           "rrf": 0.031746031746031744
@@ -1557,10 +2327,10 @@
           "version": "2026-11-11",
           "url": "https://software.unb.br/biblioteca/",
           "excerpt": "Biblioteca – Engenharia de Software A biblioteca do Campus Gama conta atualmente com 2810 exemplares de livros físicos",
-          "distance": 0.1403435468673706,
+          "distance": 0.14034348726272583,
           "rank": 3,
           "relevant": false,
-          "rrf": 0.03128054740957967
+          "rrf": 0.031054405392392875
         },
         {
           "id": "c_5faca10e6e792b67",
@@ -1570,23 +2340,23 @@
           "version": "2026-11-11",
           "url": "https://software.unb.br/laboratorios-de-ensino/",
           "excerpt": "Laboratórios de ensino O espaço físico da Faculdade do Gama é de aproximadamente 5.200 m2 e incluem salas",
-          "distance": 0.14181071519851685,
+          "distance": 0.14181065559387207,
           "rank": 4,
           "relevant": false,
-          "rrf": 0.030330882352941176
+          "rrf": 0.030117753623188408
         },
         {
-          "id": "c_ff640f1875faa059",
-          "source_id": "DOC-002",
-          "title": "Contato da FCTE",
-          "section": "Secretaria de Graduação > ADMINISTRAÇÃO > Secretaria de Graduação > BIBLIOTECA",
+          "id": "c_d358c91019bb9877",
+          "source_id": "DOC-028",
+          "title": "Guia do Estudante — Avaliação Socioeconômica UnB 2026",
+          "section": "Página 16",
           "version": "2026-11-11",
-          "url": "https://fcte.unb.br/contato/",
-          "excerpt": "Contato da FCTE Secretaria de Graduação ADMINISTRAÇÃO Atendimento Presencial: Segunda a sexta-feira Horário: 08h-12h e 14h-18h. Local :",
-          "distance": 0.1726556420326233,
+          "url": "https://dds.dac.unb.br/wp-content/uploads/2026/08/Guia_do_Estudante___Avaliacao_Socioeconomica_UnB_2026_compressed.pdf",
+          "excerpt": "Guia do Estudante — Avaliação Socioeconômica UnB 2026 Página 16 Ficou com dúvida? Se algo não ficou claro,",
+          "distance": 0.17363578081130981,
           "rank": 5,
           "relevant": false,
-          "rrf": 0.02877846790890269
+          "rrf": 0.02797339593114241
         }
       ],
       "claims": [
@@ -1607,12 +2377,12 @@
       "label": "Reavaliação completa · busca híbrida",
       "question": "A sala I10 está livre agora?",
       "query": "A sala I10 está livre agora?",
-      "request_id": "fd1ef96f-814b-4a7d-be70-36818ea6757a",
-      "executed_at": "2026-11-11T18:40:00.093553+00:00",
+      "request_id": "4c7bc104-42e9-4897-b2e9-7278fe2136ea",
+      "executed_at": "2026-11-11T23:55:19.188446+00:00",
       "status": "insufficient",
-      "answer": "Não há informações nos trechos recuperados sobre a ocupação atual ou a disponibilidade da sala I10.",
+      "answer": "Não encontrei informações sobre a disponibilidade atual da sala I10 nos trechos recuperados.",
       "model": "gemini-3.5-flash-lite",
-      "base_version": "796894d0d378f4f8d42929dc5a5eef75e22c70d2eeafd62d880171be67051267",
+      "base_version": "a0d5e722cd0cf092bea51f0cd09a8c38f3a702773e49b4c52b1c004d2cff7f99",
       "prompt_version": "campus-rag-v2",
       "method": "hibrida_rrf",
       "retrieved": [
@@ -1624,10 +2394,10 @@
           "version": "2026-11-11",
           "url": "https://fcte.unb.br/homologa_laboratorios/",
           "excerpt": "Diretório de laboratórios da FCTE Laboratórios FCTE Laboratórios de Engenharia de Software Laboratório de Inteligência Artificial – AILAB",
-          "distance": 0.16292285919189453,
+          "distance": 0.1629226803779602,
           "rank": 1,
           "relevant": false,
-          "rrf": 0.03278688524590164
+          "rrf": 0.032018442622950824
         },
         {
           "id": "c_0904be5ddfac8a87",
@@ -1637,49 +2407,49 @@
           "version": "2026-11-11",
           "url": "https://fcte.unb.br/homologa_laboratorios/",
           "excerpt": "Diretório de laboratórios da FCTE Laboratórios FCTE Laboratórios de Engenharia de Software Centro de Estudos Desenvolvimento e Inovação",
-          "distance": 0.1643739938735962,
+          "distance": 0.16437405347824097,
           "rank": 2,
           "relevant": false,
-          "rrf": 0.030834914611005692
+          "rrf": 0.03007688828584351
         },
         {
-          "id": "c_78aefd971e83ca2c",
-          "source_id": "DOC-016",
-          "title": "Quem somos LITE",
-          "section": "Ambiente Multiusuário",
-          "version": "2026-11-11",
-          "url": "https://lite.unb.br/quem-somos/",
-          "excerpt": "Quem somos LITE Ambiente Multiusuário O Laboratório Integrado de Tecnologias em Engenharias (LITE) oferece um ambiente multiusuário altamente",
-          "distance": 0.17003625631332397,
-          "rank": 3,
-          "relevant": false,
-          "rrf": 0.015625
-        },
-        {
-          "id": "c_def12e461bfc328e",
-          "source_id": "DOC-011",
-          "title": "Laboratórios de pesquisa",
+          "id": "c_8b347ac6195f3758",
+          "source_id": "DOC-034",
+          "title": "Realocação de sala e adequação de mobiliário — DACES",
           "section": "",
           "version": "2026-11-11",
-          "url": "https://software.unb.br/laboratorios-de-pesquisa/",
-          "excerpt": "Laboratórios de pesquisa Desde 2011, o corpo docente do curso de Engenharia de Software vêm criando laboratórios de",
-          "distance": 0.17127728462219238,
-          "rank": 4,
+          "url": "https://acessibilidade.unb.br/acessibilidade-urbanistica-e-arquitetonica/",
+          "excerpt": "Realocação de sala e adequação de mobiliário — DACES A DACES/DAC oferece apoio à estudantes cadastrados para solicitações",
+          "distance": 0.17335379123687744,
+          "rank": 3,
           "relevant": false,
-          "rrf": 0.015151515151515152
+          "rrf": 0.028068137824235385
         },
         {
-          "id": "c_3ec499d6018e067b",
-          "source_id": "DOC-025",
-          "title": "DF no Ponto – apresentação",
-          "section": "Agora, perder o ônibus é coisa do passado. > Planejamento de rota inteligente > Agora, perder o ônibus é coisa do passado. > Horários em tempo real > Agora, perder o ônibus é coisa do passado. > Alertas de serviço > Agora, perder o ônibus é coisa do passado. > Favoritos personalizados",
+          "id": "c_be2a6adafda33729",
+          "source_id": "DOC-040",
+          "title": "Biblioteca Digital e Sonora — BCE",
+          "section": "Biblioteca Digital e Sonora",
           "version": "2026-11-11",
-          "url": "https://dfnoponto.semob.df.gov.br/",
-          "excerpt": "DF no Ponto – apresentação Agora, perder o ônibus é coisa do passado. Planejamento de rota inteligente Descubra",
-          "distance": 0.17294496297836304,
+          "url": "https://bce.unb.br/bibliotecas-digitais/bds/",
+          "excerpt": "Biblioteca Digital e Sonora — BCE Biblioteca Digital e Sonora http://www.planalto.gov.br/ccivil_03/leis/L9610.htm Lei n. 13.146, de 06/07/ Institui a",
+          "distance": 0.15737956762313843,
+          "rank": 4,
+          "relevant": false,
+          "rrf": 0.01639344262295082
+        },
+        {
+          "id": "c_2ca840134bd85814",
+          "source_id": "DOC-039",
+          "title": "Serviços de acessibilidade — DACES",
+          "section": "Serviços de Acessibilidade > Intérpretes e Guia-Intérpretes",
+          "version": "2026-11-11",
+          "url": "https://acessibilidade.unb.br/servicos-de-acessibilidade/",
+          "excerpt": "Serviços de acessibilidade — DACES Serviços de Acessibilidade Intérpretes e Guia-Intérpretes const targetEl = document.querySelector(targetId); if (targetEl) {",
+          "distance": 0.1591806411743164,
           "rank": 5,
           "relevant": false,
-          "rrf": 0.014705882352941176
+          "rrf": 0.016129032258064516
         }
       ],
       "claims": [],
@@ -1691,12 +2461,12 @@
       "label": "Reavaliação completa · busca híbrida",
       "question": "Qual é a localização do LEMA?",
       "query": "Qual é a localização do LEMA?",
-      "request_id": "0b0f7b77-8451-4360-91f2-f497954bce4c",
-      "executed_at": "2026-11-11T18:37:50.407359+00:00",
+      "request_id": "3131541f-9425-42a0-9c84-795a27d00656",
+      "executed_at": "2026-11-11T23:54:33.003090+00:00",
       "status": "answered",
-      "answer": "O Laboratório de Estruturas e Materiais Aeroespaciais (LEMA) está localizado no Prédio LDTEA, no térreo, na sala 103. [1]",
+      "answer": "O Laboratório de Estruturas e Materiais Aeroespaciais (LEMA) está localizado no Prédio LDTEA, no térreo, sala 103. [1]",
       "model": "gemini-3.5-flash-lite",
-      "base_version": "796894d0d378f4f8d42929dc5a5eef75e22c70d2eeafd62d880171be67051267",
+      "base_version": "a0d5e722cd0cf092bea51f0cd09a8c38f3a702773e49b4c52b1c004d2cff7f99",
       "prompt_version": "campus-rag-v2",
       "method": "hibrida_rrf",
       "retrieved": [
@@ -1708,7 +2478,7 @@
           "version": "2026-11-11",
           "url": "https://lite.unb.br/servicos/",
           "excerpt": "Serviços LITE Serviços > Materiais e Estruturas LATAME – Laboratório de Tecnologias Ambientais, Materiais e Energia Equipamentos: Sistemas",
-          "distance": 0.1467711329460144,
+          "distance": 0.14677119255065918,
           "rank": 1,
           "relevant": false,
           "rrf": 0.032266458495966696
@@ -1721,7 +2491,7 @@
           "version": "2026-11-11",
           "url": "https://fcte.unb.br/homologa_laboratorios/",
           "excerpt": "Laboratório de Estruturas e Materiais Aeroespaciais – LEMA … Local: Prédio LDTEA – Térreo – Sala 103",
-          "distance": 0.16081291437149048,
+          "distance": 0.16081303358078003,
           "rank": 2,
           "relevant": true,
           "rrf": 0.03128054740957967
@@ -1768,7 +2538,7 @@
       ],
       "claims": [
         {
-          "text": "O Laboratório de Estruturas e Materiais Aeroespaciais (LEMA) está localizado no Prédio LDTEA, no térreo, na sala 103.",
+          "text": "O Laboratório de Estruturas e Materiais Aeroespaciais (LEMA) está localizado no Prédio LDTEA, no térreo, sala 103.",
           "sourceIds": [
             "c_f2c6f00293fae365"
           ]
@@ -1876,7 +2646,7 @@
   ],
   "metrics": {
     "avaliador": "Codex, julgamento assistido único por leitura; sem dupla revisão humana",
-    "execucao": "20261111T183730Z",
+    "execucao": "20261111T235422Z",
     "configuracao_preservada": true,
     "hit_at_5": {
       "numerador": 12,
@@ -1886,23 +2656,23 @@
       "atingiu_meta": true
     },
     "precisao_todas": {
-      "numerador": 16,
+      "numerador": 17,
       "denominador": 75,
-      "valor": 0.21333333333333335,
+      "valor": 0.22666666666666666,
       "meta": 0.4,
       "atingiu_meta": false
     },
     "precisao_respondiveis": {
-      "numerador": 16,
+      "numerador": 17,
       "denominador": 60,
-      "valor": 0.26666666666666666,
+      "valor": 0.2833333333333333,
       "meta": 0.5,
       "atingiu_meta": false
     },
     "fundamentacao": {
-      "numerador": 48,
+      "numerador": 49,
       "denominador": 49,
-      "valor": 0.9795918367346939,
+      "valor": 1.0,
       "meta": 0.95,
       "atingiu_meta": true
     },
@@ -1933,9 +2703,9 @@
       "atingiu_meta": null
     },
     "cobertura_respostas_respondiveis": {
-      "numerador": 10,
+      "numerador": 11,
       "denominador": 12,
-      "valor": 0.8333333333333334,
+      "valor": 0.9166666666666666,
       "meta": null,
       "atingiu_meta": null
     },
@@ -2000,11 +2770,11 @@
         "relevantes": 3,
         "recuperados": 5,
         "fatos_sustentados": 7,
-        "fatos": 8,
+        "fatos": 7,
         "citacoes_resolvidas": 2,
         "citacoes": 2,
         "ausencia_correta": null,
-        "resposta_completa": false,
+        "resposta_completa": true,
         "premissa_corrigida": null
       },
       {
@@ -2042,12 +2812,12 @@
         "respondivel": true,
         "tipo": "servico",
         "http_ok": true,
-        "relevantes": 1,
+        "relevantes": 2,
         "recuperados": 5,
-        "fatos_sustentados": 3,
-        "fatos": 3,
-        "citacoes_resolvidas": 1,
-        "citacoes": 1,
+        "fatos_sustentados": 5,
+        "fatos": 5,
+        "citacoes_resolvidas": 2,
+        "citacoes": 2,
         "ausencia_correta": null,
         "resposta_completa": false,
         "premissa_corrigida": null
@@ -2059,10 +2829,10 @@
         "http_ok": true,
         "relevantes": 1,
         "recuperados": 5,
-        "fatos_sustentados": 10,
-        "fatos": 10,
-        "citacoes_resolvidas": 3,
-        "citacoes": 3,
+        "fatos_sustentados": 9,
+        "fatos": 9,
+        "citacoes_resolvidas": 2,
+        "citacoes": 2,
         "ausencia_correta": null,
         "resposta_completa": true,
         "premissa_corrigida": null
@@ -2174,20 +2944,20 @@
       }
     ],
     "execucao_tecnica": {
-      "total_chamadas": 16,
-      "falhas": 1,
-      "retentativas": 1,
+      "total_chamadas": 15,
+      "falhas": 0,
+      "retentativas": 0,
       "sucesso_primeira_tentativa": {
-        "numerador": 14,
+        "numerador": 15,
         "denominador": 15,
-        "valor": 0.9333333333333333,
+        "valor": 1.0,
         "meta": null,
         "atingiu_meta": null
       },
       "sucesso_por_chamada": {
         "numerador": 15,
-        "denominador": 16,
-        "valor": 0.9375,
+        "denominador": 15,
+        "valor": 1.0,
         "meta": null,
         "atingiu_meta": null
       },
@@ -2201,7 +2971,7 @@
         "Q07": 1,
         "Q08": 1,
         "Q09": 1,
-        "Q10": 2,
+        "Q10": 1,
         "Q11": 1,
         "Q12": 1,
         "Q13": 1,
@@ -2211,31 +2981,31 @@
     }
   },
   "index": {
-    "collection": "fcte-796894d0d378f4f8d429",
-    "signature": "796894d0d378f4f8d42929dc5a5eef75e22c70d2eeafd62d880171be67051267",
+    "collection": "fcte-a0d5e722cd0cf092bea5",
+    "signature": "a0d5e722cd0cf092bea51f0cd09a8c38f3a702773e49b4c52b1c004d2cff7f99",
     "path": "data/index/chroma",
     "distance": "cosine",
     "local": true
   },
   "embedding_checks": {
     "shape": [
-      94,
+      174,
       384
     ],
     "finite": true,
-    "min_norm": 0.9999999378934418,
-    "max_norm": 1.0000001084227628,
+    "min_norm": 0.9999999352212111,
+    "max_norm": 1.0000001415252715,
     "dtype": "float32"
   },
   "integrity": {
-    "chunks_sha256": "cd73d38679e17b6c4a4eb20a0ed572ed094cd21a7eee5aea609886dfa416cf10",
-    "vectors_sha256": "d4047fa697ce5d00c10af8206794626add967957efd2892f32695efa49c55ee4",
-    "manifest_sha256": "17989fd5e809e40202f1fd879e6e601116ee4dea310daa56074e98b75fb350ed"
+    "chunks_sha256": "d2375243f7faa02139ebd828e2a6e5ddc14442002117c7574a51490b503f0581",
+    "vectors_sha256": "e887abc950bf0afa2bb2a5376a40157a285c52f9c7e2c17f5890d27c309f5322",
+    "manifest_sha256": "4c39dd5ce01be7b98bd023863825386c95a3de05a722665cf12fc4edde8fb8f4"
   },
   "limitations": [
     "Site estático: reproduz registros, sem chamadas à API.",
     "Reavaliação híbrida das mesmas perguntas conhecidas; não é holdout.",
     "Julgamento assistido único, sem dupla revisão humana.",
-    "KML é inventário separado da coleção ativa de 94 chunks."
+    "KML é inventário separado da coleção ativa de 174 chunks."
   ]
 }

@@ -9,7 +9,7 @@ flowchart TB
   subgraph ING[Ingestão no projeto unb-gama-rag]
     C[Catálogo e aprovação] --> O[HTML original, versão e hash]
     O --> E[Extração por títulos e parágrafos]
-    E --> CH[94 chunks com origem e metadados]
+    E --> CH[174 chunks com origem e metadados]
     CH --> V[E5 local, passage, 384 dimensões]
     V --> I[Chroma persistente no disco]
     I --> M[Manifesto da coleção ativa]
@@ -97,4 +97,4 @@ flowchart LR
   R[RU e disciplinas do Grupo 04] -. Contrato futuro .-> O
 ```
 
-Aqui as setas tracejadas são **evoluções ainda não integradas**. A coleção ativa contém 25 fontes textuais, sem KML ou fotos. O RAG não escreve no banco da coleta. O orquestrador comum continua proposto, separado do PWA local que já funciona.
+Aqui as setas tracejadas são **evoluções ainda não integradas**. A coleção ativa contém 37 fontes textuais, sem KML ou fotos. O RAG não escreve no banco da coleta. O orquestrador comum continua proposto, separado do PWA local que já funciona.

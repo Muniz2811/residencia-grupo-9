@@ -18,7 +18,7 @@ Escolha um cenário e clique em **▶ Reproduzir** ou avance com **▶|**. Cada 
 
 | Percurso | O que acompanha | Situação |
 |---|---|---|
-| Ingestão | Catálogo → original → chunks → embeddings → Chroma | 25 fontes e 94 registros persistidos |
+| Ingestão | Catálogo → original → chunks → embeddings → Chroma | 37 fontes e 174 registros persistidos |
 | Consulta do Grupo 09 | PWA → API → busca → Gemini → resposta com fontes | Execução real da localização do LEMA |
 | Integração dos grupos | Encaminhamento e composição de fontes por domínio | Proposta; orquestrador comum não implementado |
 | Pergunta sem dado atual | Consulta sobre ocupação da I10 → insuficiência | Registro real da reavaliação híbrida completa |

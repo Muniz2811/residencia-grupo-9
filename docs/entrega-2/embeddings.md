@@ -1,6 +1,6 @@
 # Estratégia de embeddings
 
-<span class="selo selo--verde">Executada localmente · matriz 94 × 384</span>
+<span class="selo selo--verde">Executada localmente · matriz 174 × 384</span>
 
 ## Um endereço por significado
 
@@ -22,7 +22,7 @@ O modelo multilíngue local foi escolhido para iniciar o experimento sem uma tar
 
 ## O que foi executado
 
-Cada um dos 94 chunks recebeu um vetor. O código confere a entrada completa antes de codificar, recusando excesso em vez de permitir truncamento silencioso. Valida forma, números finitos, vetores não nulos e norma próxima de 1.
+Cada um dos 174 chunks recebeu um vetor. O código confere a entrada completa antes de codificar, recusando excesso em vez de permitir truncamento silencioso. Valida forma, números finitos, vetores não nulos e norma próxima de 1.
 
 A matriz e seus IDs são preservados em `data/index/vetores/<assinatura>.npz`, além da coleção Chroma. O manifesto registra modelo, revisão, bibliotecas, configuração e hashes. Esta implementação não usa os antigos `vectors.npy` e `rows.jsonl` do piloto de 79 chunks.
 

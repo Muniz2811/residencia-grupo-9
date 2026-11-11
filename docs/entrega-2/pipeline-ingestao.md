@@ -6,12 +6,12 @@
 
 | Etapa | Entrada | Saída real | Comando |
 |---|---|---|---|
-| Aquisição | Catálogo de URLs | Originais HTML com versão, data e SHA-256 | `01_adquirir.py` |
+| Aquisição | Catálogo de URLs | Originais HTML/PDF com versão, data e SHA-256 | `01_adquirir.py` |
 | Extração | Original e regras por site/fonte | JSON com títulos, seções, parágrafos e origem | `02_extrair.py` |
-| Curadoria e validação | Catálogo e aprovação expressa | 27 aprovações, 25 indexáveis e dois bloqueios registrados | `03_validar_catalogo.py` |
+| Curadoria e validação | Catálogo e aprovação expressa | 42 aprovações, 37 indexáveis e cinco exclusões registrados | `03_validar_catalogo.py` |
 | Normalização | Nomes e siglas documentados | IDs de entidades nos metadados, sem reescrever o texto | Usada na preparação dos chunks |
-| Chunking | Texto das fontes aprovadas e indexáveis | 94 chunks e manifesto de contagem | `04_chunks.py` |
-| Embeddings | Chunks com prefixo `passage: ` | Matriz E5 94 × 384 e IDs no NPZ | `05_indexar.py` |
+| Chunking | Texto das fontes aprovadas e indexáveis | 174 chunks e manifesto de contagem | `04_chunks.py` |
+| Embeddings | Chunks com prefixo `passage: ` | Matriz E5 174 × 384 e IDs no NPZ | `05_indexar.py` |
 | Indexação | Vetores explícitos, textos e metadados | Coleção Chroma e manifesto publicado após conferência | `05_indexar.py` |
 | Persistência | Coleção já criada | Reabertura, validação e consulta sem ingestão | `06_conferir.py` |
 

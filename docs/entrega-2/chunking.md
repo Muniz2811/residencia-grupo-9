@@ -1,6 +1,6 @@
 # Estratégia de chunking
 
-<span class="selo selo--verde">94 chunks aprovados e indexados</span>
+<span class="selo selo--verde">174 chunks aprovados e indexados</span>
 
 ## A ideia: fichas que fazem sentido sozinhas
 
@@ -32,10 +32,10 @@ A sobreposição usa apenas unidades inteiras que caibam no limite. Pode ser men
 
 | Estatística da base ativa | Valor |
 |---|---:|
-| Documentos | 25 |
-| Chunks | 94 |
+| Documentos | 37 |
+| Chunks | 174 |
 | Mínimo de tokens completos | 17 |
-| Mediana | 202 |
+| Mediana | 222 |
 | Máximo | 300 |
 
 ## Exemplo: a página da biblioteca

@@ -16,4 +16,4 @@ Uma coleta da **Praça da FCTE**, identificada por `77b0b0e5-29a7-44d5-be76-de5f
 
 A descrição menciona vegetação e bancos. O export não informa o arquivo da foto, a identidade do revisor ou acurácia GPS. Esses campos permanecem pendentes na preparação da ficha.
 
-Essa coleta foi preservada separadamente e não integra a coleção textual ativa de 25 fontes e 94 chunks. O KML também permanece como inventário independente. A Praça da FCTE não foi automaticamente identificada como a “Praça Solar” do mapa.
+Essa coleta foi preservada separadamente e não integra a coleção textual ativa de 37 fontes e 174 chunks. O KML também permanece como inventário independente. A Praça da FCTE não foi automaticamente identificada como a “Praça Solar” do mapa.

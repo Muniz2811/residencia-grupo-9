@@ -1,7 +1,7 @@
 {
-  "round": "20261111T183730Z",
-  "started_at": "2026-11-11T18:37:30.886626+00:00",
-  "finished_at": "2026-11-11T18:40:31.297858+00:00",
+  "round": "20261111T235422Z",
+  "started_at": "2026-11-11T23:54:22.765990+00:00",
+  "finished_at": "2026-11-11T23:55:29.463333+00:00",
   "protocol": "Primeiro HTTP 200 válido por pergunta; repetir somente falhas técnicas. Não repetir respostas por erro semântico ou insuficiência. Preservar cada tentativa.",
   "questions": [
     {
@@ -9,12 +9,12 @@
       "label": "Reavaliação completa · busca híbrida",
       "question": "Em qual prédio, andar e sala fica o laboratório COSMOS?",
       "query": "Em qual prédio, andar e sala fica o laboratório COSMOS?",
-      "request_id": "2eaa73f0-6d35-425e-a67c-42381c332d2e",
-      "executed_at": "2026-11-11T18:37:31.179353+00:00",
+      "request_id": "bd9f039c-a5ea-401b-bf7e-b2926f93773a",
+      "executed_at": "2026-11-11T23:54:23.146691+00:00",
       "status": "answered",
-      "answer": "O laboratório COSMOS fica localizado no Prédio LDTEA, no 2º andar, Sala 304. [1]",
+      "answer": "O laboratório COSMOS fica localizado no prédio LDTEA, no 2º andar, sala 304. [1]",
       "model": "gemini-3.5-flash-lite",
-      "base_version": "796894d0d378f4f8d42929dc5a5eef75e22c70d2eeafd62d880171be67051267",
+      "base_version": "a0d5e722cd0cf092bea51f0cd09a8c38f3a702773e49b4c52b1c004d2cff7f99",
       "prompt_version": "campus-rag-v2",
       "method": "hibrida_rrf",
       "retrieved": [
@@ -39,10 +39,10 @@
           "version": "2026-11-11",
           "url": "https://lite.unb.br/computational-aerospace-simulations-modeling-laboratory/",
           "excerpt": "COSMOS – Computational Aerospace Simulations & Modeling Laboratory Computational Aerospace Simulations & Modeling Laboratory​ O Computational Aerospace Simulations",
-          "distance": 0.13252830505371094,
+          "distance": 0.1325281858444214,
           "rank": 2,
           "relevant": false,
-          "rrf": 0.03009207275993712
+          "rrf": 0.029726775956284153
         },
         {
           "id": "c_0904be5ddfac8a87",
@@ -52,7 +52,7 @@
           "version": "2026-11-11",
           "url": "https://fcte.unb.br/homologa_laboratorios/",
           "excerpt": "Diretório de laboratórios da FCTE Laboratórios FCTE Laboratórios de Engenharia de Software Centro de Estudos Desenvolvimento e Inovação",
-          "distance": 0.16061687469482422,
+          "distance": 0.160616934299469,
           "rank": 3,
           "relevant": false,
           "rrf": 0.02967032967032967
@@ -68,7 +68,7 @@
           "distance": 0.144400954246521,
           "rank": 4,
           "relevant": false,
-          "rrf": 0.029386529386529386
+          "rrf": 0.02886002886002886
         },
         {
           "id": "c_0cf9944816258a3e",
@@ -86,7 +86,7 @@
       ],
       "claims": [
         {
-          "text": "O laboratório COSMOS fica localizado no Prédio LDTEA, no 2º andar, Sala 304.",
+          "text": "O laboratório COSMOS fica localizado no prédio LDTEA, no 2º andar, sala 304.",
           "sourceIds": [
             "c_f2c6f00293fae365"
           ]
@@ -102,12 +102,12 @@
       "label": "Reavaliação completa · busca híbrida",
       "question": "Onde encontro o CPL (Chemical Propulsion Laboratory)?",
       "query": "Onde encontro o CPL (Chemical Propulsion Laboratory)?",
-      "request_id": "12d1e2a8-a708-488c-9318-9306457f70c6",
-      "executed_at": "2026-11-11T18:37:40.925639+00:00",
+      "request_id": "cb1e2245-0259-422e-b597-8ec1ccd9aa20",
+      "executed_at": "2026-11-11T23:54:27.985810+00:00",
       "status": "answered",
-      "answer": "O Chemical Propulsion Laboratory (CPL) localiza-se no Contêiner 07. [1]",
+      "answer": "O Chemical Propulsion Laboratory (CPL) está localizado no Contêiner 07. [1]",
       "model": "gemini-3.5-flash-lite",
-      "base_version": "796894d0d378f4f8d42929dc5a5eef75e22c70d2eeafd62d880171be67051267",
+      "base_version": "a0d5e722cd0cf092bea51f0cd09a8c38f3a702773e49b4c52b1c004d2cff7f99",
       "prompt_version": "campus-rag-v2",
       "method": "hibrida_rrf",
       "retrieved": [
@@ -119,7 +119,7 @@
           "version": "2026-11-11",
           "url": "https://fcte.unb.br/homologa_laboratorios/",
           "excerpt": "Computational Aerospace Simulations & Modeling Laboratory – COSMOS … Local: Prédio LDTEA – 2º andar – Sala 304",
-          "distance": 0.1204226016998291,
+          "distance": 0.12042272090911865,
           "rank": 1,
           "relevant": true,
           "rrf": 0.03278688524590164
@@ -132,10 +132,10 @@
           "version": "2026-11-11",
           "url": "https://lite.unb.br/computational-aerospace-simulations-modeling-laboratory/",
           "excerpt": "COSMOS – Computational Aerospace Simulations & Modeling Laboratory Computational Aerospace Simulations & Modeling Laboratory​ O Computational Aerospace Simulations",
-          "distance": 0.14278817176818848,
+          "distance": 0.14278805255889893,
           "rank": 2,
           "relevant": false,
-          "rrf": 0.03128054740957967
+          "rrf": 0.031054405392392875
         },
         {
           "id": "c_553a868a5910bf1c",
@@ -148,7 +148,7 @@
           "distance": 0.15161705017089844,
           "rank": 3,
           "relevant": false,
-          "rrf": 0.027579737335834898
+          "rrf": 0.027432808155699723
         },
         {
           "id": "c_d9b12bba2ecf376c",
@@ -171,7 +171,7 @@
           "version": "2026-11-11",
           "url": "https://fcte.unb.br/homologa_laboratorios/",
           "excerpt": "Diretório de laboratórios da FCTE Laboratórios FCTE Laboratórios de Engenharia Automotiva Laboratório de Desempenho Automotivo Site: http://automotiva.unb.br/laboratorios/laboratorio-de-desempenho-automotivo Coordenador:",
-          "distance": 0.1374741792678833,
+          "distance": 0.13747406005859375,
           "rank": 5,
           "relevant": false,
           "rrf": 0.015873015873015872
@@ -179,7 +179,7 @@
       ],
       "claims": [
         {
-          "text": "O Chemical Propulsion Laboratory (CPL) localiza-se no Contêiner 07.",
+          "text": "O Chemical Propulsion Laboratory (CPL) está localizado no Contêiner 07.",
           "sourceIds": [
             "c_f2c6f00293fae365"
           ]
@@ -195,12 +195,12 @@
       "label": "Reavaliação completa · busca híbrida",
       "question": "Qual é a localização do LEMA?",
       "query": "Qual é a localização do LEMA?",
-      "request_id": "0b0f7b77-8451-4360-91f2-f497954bce4c",
-      "executed_at": "2026-11-11T18:37:50.407359+00:00",
+      "request_id": "3131541f-9425-42a0-9c84-795a27d00656",
+      "executed_at": "2026-11-11T23:54:33.003090+00:00",
       "status": "answered",
-      "answer": "O Laboratório de Estruturas e Materiais Aeroespaciais (LEMA) está localizado no Prédio LDTEA, no térreo, na sala 103. [1]",
+      "answer": "O Laboratório de Estruturas e Materiais Aeroespaciais (LEMA) está localizado no Prédio LDTEA, no térreo, sala 103. [1]",
       "model": "gemini-3.5-flash-lite",
-      "base_version": "796894d0d378f4f8d42929dc5a5eef75e22c70d2eeafd62d880171be67051267",
+      "base_version": "a0d5e722cd0cf092bea51f0cd09a8c38f3a702773e49b4c52b1c004d2cff7f99",
       "prompt_version": "campus-rag-v2",
       "method": "hibrida_rrf",
       "retrieved": [
@@ -212,7 +212,7 @@
           "version": "2026-11-11",
           "url": "https://lite.unb.br/servicos/",
           "excerpt": "Serviços LITE Serviços > Materiais e Estruturas LATAME – Laboratório de Tecnologias Ambientais, Materiais e Energia Equipamentos: Sistemas",
-          "distance": 0.1467711329460144,
+          "distance": 0.14677119255065918,
           "rank": 1,
           "relevant": false,
           "rrf": 0.032266458495966696
@@ -225,7 +225,7 @@
           "version": "2026-11-11",
           "url": "https://fcte.unb.br/homologa_laboratorios/",
           "excerpt": "Laboratório de Estruturas e Materiais Aeroespaciais – LEMA … Local: Prédio LDTEA – Térreo – Sala 103",
-          "distance": 0.16081291437149048,
+          "distance": 0.16081303358078003,
           "rank": 2,
           "relevant": true,
           "rrf": 0.03128054740957967
@@ -272,7 +272,7 @@
       ],
       "claims": [
         {
-          "text": "O Laboratório de Estruturas e Materiais Aeroespaciais (LEMA) está localizado no Prédio LDTEA, no térreo, na sala 103.",
+          "text": "O Laboratório de Estruturas e Materiais Aeroespaciais (LEMA) está localizado no Prédio LDTEA, no térreo, sala 103.",
           "sourceIds": [
             "c_f2c6f00293fae365"
           ]
@@ -288,12 +288,12 @@
       "label": "Reavaliação completa · busca híbrida",
       "question": "Quais setores ficam na Unidade de Ensino e Docência (UED)?",
       "query": "Quais setores ficam na Unidade de Ensino e Docência (UED)?",
-      "request_id": "7b6b5a13-4da3-486a-a355-da38adeb6ba3",
-      "executed_at": "2026-11-11T18:38:00.208634+00:00",
+      "request_id": "72d2a448-9c70-4755-a91b-ab8414922d68",
+      "executed_at": "2026-11-11T23:54:37.422872+00:00",
       "status": "answered",
-      "answer": "Na Unidade de Ensino e Docência (UED) estão locadas as salas de professores, os serviços de secretaria, laboratórios, diretoria e coordenação acadêmica. [1]\n\nO prédio da UED também apresenta setores de atendimento como a Secretaria de Graduação de Enfermagem, Gestão de Pessoas e Pós-Graduação. [2]",
+      "answer": "Na UED estão locadas as salas de professores, os serviços de secretaria, laboratórios, diretoria e coordenação acadêmica. [1]\n\nO prédio da Unidade de Ensino e Docência (UED) apresenta o laboratório de Mocap virtual e um Laboratório de Software e Simulação. [2]",
       "model": "gemini-3.5-flash-lite",
-      "base_version": "796894d0d378f4f8d42929dc5a5eef75e22c70d2eeafd62d880171be67051267",
+      "base_version": "a0d5e722cd0cf092bea51f0cd09a8c38f3a702773e49b4c52b1c004d2cff7f99",
       "prompt_version": "campus-rag-v2",
       "method": "hibrida_rrf",
       "retrieved": [
@@ -318,7 +318,7 @@
           "version": "2026-11-11",
           "url": "https://software.unb.br/laboratorios-de-ensino/",
           "excerpt": "Laboratórios de ensino Prédio da UAC O prédio da Unidade de Ensino e Docência (UED), por sua vez,",
-          "distance": 0.1425437331199646,
+          "distance": 0.14254379272460938,
           "rank": 2,
           "relevant": true,
           "rrf": 0.03225806451612903
@@ -347,7 +347,7 @@
           "distance": 0.14681237936019897,
           "rank": 4,
           "relevant": false,
-          "rrf": 0.0293236301369863
+          "rrf": 0.029138513513513514
         },
         {
           "id": "c_96bceb5f834a79e6",
@@ -357,29 +357,29 @@
           "version": "2026-11-11",
           "url": "https://fcte.unb.br/contato/",
           "excerpt": "Contato da FCTE Secretaria de Graduação ENFERMAGEM Atendimento Presencial: Segunda a sexta-feira Horário: 07 às 19h Local :",
-          "distance": 0.16019797325134277,
+          "distance": 0.16019821166992188,
           "rank": 5,
           "relevant": true,
-          "rrf": 0.027598020555767037
+          "rrf": 0.028006267136701922
         }
       ],
       "claims": [
         {
-          "text": "Na Unidade de Ensino e Docência (UED) estão locadas as salas de professores, os serviços de secretaria, laboratórios, diretoria e coordenação acadêmica.",
+          "text": "Na UED estão locadas as salas de professores, os serviços de secretaria, laboratórios, diretoria e coordenação acadêmica.",
           "sourceIds": [
             "c_45e04c73c85bdc29"
           ]
         },
         {
-          "text": "O prédio da UED também apresenta setores de atendimento como a Secretaria de Graduação de Enfermagem, Gestão de Pessoas e Pós-Graduação.",
+          "text": "O prédio da Unidade de Ensino e Docência (UED) apresenta o laboratório de Mocap virtual e um Laboratório de Software e Simulação.",
           "sourceIds": [
-            "c_96bceb5f834a79e6"
+            "c_cce3adec306aa20f"
           ]
         }
       ],
       "source_ids": [
         "c_45e04c73c85bdc29",
-        "c_96bceb5f834a79e6"
+        "c_cce3adec306aa20f"
       ],
       "previous_request_id": null
     },
@@ -388,12 +388,12 @@
       "label": "Reavaliação completa · busca híbrida",
       "question": "Em qual unidade ficam a biblioteca e o auditório do campus?",
       "query": "Em qual unidade ficam a biblioteca e o auditório do campus?",
-      "request_id": "99d8cf87-9309-4896-9c67-12010164f1cc",
-      "executed_at": "2026-11-11T18:38:10.282697+00:00",
+      "request_id": "48487256-bd87-4af1-89b3-f1d79266d70d",
+      "executed_at": "2026-11-11T23:54:42.115567+00:00",
       "status": "answered",
       "answer": "A biblioteca e o auditório do campus ficam localizados na Unidade Acadêmica (UAC). [1]",
       "model": "gemini-3.5-flash-lite",
-      "base_version": "796894d0d378f4f8d42929dc5a5eef75e22c70d2eeafd62d880171be67051267",
+      "base_version": "a0d5e722cd0cf092bea51f0cd09a8c38f3a702773e49b4c52b1c004d2cff7f99",
       "prompt_version": "campus-rag-v2",
       "method": "hibrida_rrf",
       "retrieved": [
@@ -405,10 +405,23 @@
           "version": "2026-11-11",
           "url": "https://fcte.unb.br/infraestrutura/",
           "excerpt": "Infraestrutura da FCTE Infraestrutura A atual sede do campus da FCTE conta com uma Unidade Acadêmica (UAC), uma",
-          "distance": 0.13446182012557983,
+          "distance": 0.1344618797302246,
           "rank": 1,
           "relevant": true,
           "rrf": 0.03278688524590164
+        },
+        {
+          "id": "c_cce3adec306aa20f",
+          "source_id": "DOC-006",
+          "title": "Laboratórios de ensino",
+          "section": "",
+          "version": "2026-11-11",
+          "url": "https://software.unb.br/laboratorios-de-ensino/",
+          "excerpt": "Laboratórios de ensino Prédio da UAC O prédio da Unidade de Ensino e Docência (UED), por sua vez,",
+          "distance": 0.1558436155319214,
+          "rank": 2,
+          "relevant": false,
+          "rrf": 0.03125763125763126
         },
         {
           "id": "c_17241a7563801760",
@@ -418,10 +431,10 @@
           "version": "2026-11-11",
           "url": "https://software.unb.br/biblioteca/",
           "excerpt": "Biblioteca – Engenharia de Software A biblioteca do Campus Gama conta atualmente com 2810 exemplares de livros físicos",
-          "distance": 0.16725152730941772,
-          "rank": 2,
+          "distance": 0.16725146770477295,
+          "rank": 3,
           "relevant": false,
-          "rrf": 0.03076923076923077
+          "rrf": 0.030536130536130537
         },
         {
           "id": "c_0cf9944816258a3e",
@@ -432,35 +445,22 @@
           "url": "https://software.unb.br/laboratorios-de-ensino/",
           "excerpt": "Laboratórios de ensino Laboratório de Software: laboratório com 40 computadores individuais para disciplinas intermediárias de computação/programação; Laboratório de",
           "distance": 0.15079748630523682,
-          "rank": 3,
-          "relevant": true,
-          "rrf": 0.030621785881252923
-        },
-        {
-          "id": "c_cce3adec306aa20f",
-          "source_id": "DOC-006",
-          "title": "Laboratórios de ensino",
-          "section": "",
-          "version": "2026-11-11",
-          "url": "https://software.unb.br/laboratorios-de-ensino/",
-          "excerpt": "Laboratórios de ensino Prédio da UAC O prédio da Unidade de Ensino e Docência (UED), por sua vez,",
-          "distance": 0.15584349632263184,
           "rank": 4,
-          "relevant": false,
-          "rrf": 0.03057889822595705
+          "relevant": true,
+          "rrf": 0.029827662395050816
         },
         {
-          "id": "c_d18e321ba2d41ac7",
-          "source_id": "DOC-012",
-          "title": "Biblioteca Campus Gama – BCE",
-          "section": "Comunidade Externa > Formulário de atendimento > Comunidade Externa > Acervo especializado > Comunidade Externa > Comunidade Acadêmica",
+          "id": "c_731826bb1c0cfdfc",
+          "source_id": "DOC-040",
+          "title": "Biblioteca Digital e Sonora — BCE",
+          "section": "Biblioteca Digital e Sonora",
           "version": "2026-11-11",
-          "url": "https://bce.unb.br/biblioteca-campus-gama/",
-          "excerpt": "O empréstimo de materiais é disponibilizado apenas para a comunidade acadêmica da UnB.",
-          "distance": 0.17717081308364868,
+          "url": "https://bce.unb.br/bibliotecas-digitais/bds/",
+          "excerpt": "Biblioteca Digital e Sonora — BCE Biblioteca Digital e Sonora Informações Gerais O documento médico comprobatório da deficiência",
+          "distance": 0.16907930374145508,
           "rank": 5,
           "relevant": false,
-          "rrf": 0.02964426877470356
+          "rrf": 0.029437229437229435
         }
       ],
       "claims": [
@@ -481,12 +481,12 @@
       "label": "Reavaliação completa · busca híbrida",
       "question": "Na biblioteca do Gama há lugar para estudar sozinho e em grupo?",
       "query": "Na biblioteca do Gama há lugar para estudar sozinho e em grupo?",
-      "request_id": "9035962c-8018-4696-8888-a04ee2418e98",
-      "executed_at": "2026-11-11T18:38:19.880337+00:00",
+      "request_id": "16aba732-7ce3-49b3-885e-02891cd95f06",
+      "executed_at": "2026-11-11T23:54:46.721232+00:00",
       "status": "answered",
       "answer": "A Biblioteca do Campus Gama dispõe de espaço para estudo com cabines individuais e mesas para estudo em grupo. [1]",
       "model": "gemini-3.5-flash-lite",
-      "base_version": "796894d0d378f4f8d42929dc5a5eef75e22c70d2eeafd62d880171be67051267",
+      "base_version": "a0d5e722cd0cf092bea51f0cd09a8c38f3a702773e49b4c52b1c004d2cff7f99",
       "prompt_version": "campus-rag-v2",
       "method": "hibrida_rrf",
       "retrieved": [
@@ -498,7 +498,7 @@
           "version": "2026-11-11",
           "url": "https://bce.unb.br/biblioteca-campus-gama/",
           "excerpt": "espaço para estudo com cabines individuais e mesas para estudo em grupo",
-          "distance": 0.12513822317123413,
+          "distance": 0.12513816356658936,
           "rank": 1,
           "relevant": true,
           "rrf": 0.03278688524590164
@@ -511,7 +511,7 @@
           "version": "2026-11-11",
           "url": "https://bce.unb.br/biblioteca-campus-gama/",
           "excerpt": "Biblioteca Campus Gama – BCE Serviços Os empréstimos poderão ser feitos durante o horário de funcionamento da biblioteca,",
-          "distance": 0.14143675565719604,
+          "distance": 0.14143669605255127,
           "rank": 2,
           "relevant": false,
           "rrf": 0.031746031746031744
@@ -524,10 +524,10 @@
           "version": "2026-11-11",
           "url": "https://software.unb.br/biblioteca/",
           "excerpt": "Biblioteca – Engenharia de Software A biblioteca do Campus Gama conta atualmente com 2810 exemplares de livros físicos",
-          "distance": 0.1403435468673706,
+          "distance": 0.14034348726272583,
           "rank": 3,
           "relevant": false,
-          "rrf": 0.03128054740957967
+          "rrf": 0.031054405392392875
         },
         {
           "id": "c_5faca10e6e792b67",
@@ -537,23 +537,23 @@
           "version": "2026-11-11",
           "url": "https://software.unb.br/laboratorios-de-ensino/",
           "excerpt": "Laboratórios de ensino O espaço físico da Faculdade do Gama é de aproximadamente 5.200 m2 e incluem salas",
-          "distance": 0.14181071519851685,
+          "distance": 0.14181065559387207,
           "rank": 4,
           "relevant": false,
-          "rrf": 0.030330882352941176
+          "rrf": 0.030117753623188408
         },
         {
-          "id": "c_ff640f1875faa059",
-          "source_id": "DOC-002",
-          "title": "Contato da FCTE",
-          "section": "Secretaria de Graduação > ADMINISTRAÇÃO > Secretaria de Graduação > BIBLIOTECA",
+          "id": "c_d358c91019bb9877",
+          "source_id": "DOC-028",
+          "title": "Guia do Estudante — Avaliação Socioeconômica UnB 2026",
+          "section": "Página 16",
           "version": "2026-11-11",
-          "url": "https://fcte.unb.br/contato/",
-          "excerpt": "Contato da FCTE Secretaria de Graduação ADMINISTRAÇÃO Atendimento Presencial: Segunda a sexta-feira Horário: 08h-12h e 14h-18h. Local :",
-          "distance": 0.1726556420326233,
+          "url": "https://dds.dac.unb.br/wp-content/uploads/2026/08/Guia_do_Estudante___Avaliacao_Socioeconomica_UnB_2026_compressed.pdf",
+          "excerpt": "Guia do Estudante — Avaliação Socioeconômica UnB 2026 Página 16 Ficou com dúvida? Se algo não ficou claro,",
+          "distance": 0.17363578081130981,
           "rank": 5,
           "relevant": false,
-          "rrf": 0.02877846790890269
+          "rrf": 0.02797339593114241
         }
       ],
       "claims": [
@@ -574,12 +574,12 @@
       "label": "Reavaliação completa · busca híbrida",
       "question": "Pessoas de fora da UnB podem usar a Biblioteca do Campus Gama? Podem pegar livros emprestados?",
       "query": "Pessoas de fora da UnB podem usar a Biblioteca do Campus Gama? Podem pegar livros emprestados?",
-      "request_id": "c1550b38-7a20-42ad-8a13-85850fc6dcf3",
-      "executed_at": "2026-11-11T18:38:32.022690+00:00",
+      "request_id": "b98077a0-cba6-4fc0-9deb-7a77e4783eb4",
+      "executed_at": "2026-11-11T23:54:51.074965+00:00",
       "status": "answered",
-      "answer": "A utilização da Biblioteca Campus Gama é aberta à comunidade externa, sem a necessidade de credenciamento ou agendamento. [1]",
+      "answer": "A utilização da Biblioteca Campus Gama é aberta à comunidade externa, sem a necessidade de credenciamento ou agendamento. [1]\n\nPara realizar empréstimos de materiais, é necessário ter cadastro ativo na Biblioteca Central ou Setoriais e não ter nenhuma pendência com a biblioteca. [2]",
       "model": "gemini-3.5-flash-lite",
-      "base_version": "796894d0d378f4f8d42929dc5a5eef75e22c70d2eeafd62d880171be67051267",
+      "base_version": "a0d5e722cd0cf092bea51f0cd09a8c38f3a702773e49b4c52b1c004d2cff7f99",
       "prompt_version": "campus-rag-v2",
       "method": "hibrida_rrf",
       "retrieved": [
@@ -591,7 +591,7 @@
           "version": "2026-11-11",
           "url": "https://software.unb.br/biblioteca/",
           "excerpt": "Biblioteca – Engenharia de Software A biblioteca do Campus Gama conta atualmente com 2810 exemplares de livros físicos",
-          "distance": 0.11234939098358154,
+          "distance": 0.11234921216964722,
           "rank": 1,
           "relevant": false,
           "rrf": 0.03252247488101534
@@ -607,7 +607,7 @@
           "distance": 0.10688495635986328,
           "rank": 2,
           "relevant": true,
-          "rrf": 0.032018442622950824
+          "rrf": 0.03177805800756621
         },
         {
           "id": "c_c8a0b710c3c50b09",
@@ -617,36 +617,36 @@
           "version": "2026-11-11",
           "url": "https://bce.unb.br/biblioteca-campus-gama/",
           "excerpt": "espaço para estudo com cabines individuais e mesas para estudo em grupo",
-          "distance": 0.1269909143447876,
+          "distance": 0.12699079513549805,
           "rank": 3,
           "relevant": false,
-          "rrf": 0.031754032258064516
+          "rrf": 0.03149801587301587
         },
         {
-          "id": "c_5faca10e6e792b67",
-          "source_id": "DOC-006",
-          "title": "Laboratórios de ensino",
-          "section": "",
+          "id": "c_f8ededb7adec2e05",
+          "source_id": "DOC-032",
+          "title": "Empréstimos — Sistema de Bibliotecas da UnB",
+          "section": "EMPRÉSTIMOS > Multa > Empréstimo de materiais",
           "version": "2026-11-11",
-          "url": "https://software.unb.br/laboratorios-de-ensino/",
-          "excerpt": "Laboratórios de ensino O espaço físico da Faculdade do Gama é de aproximadamente 5.200 m2 e incluem salas",
-          "distance": 0.1580798625946045,
+          "url": "https://bce.unb.br/emprestimos/",
+          "excerpt": "Empréstimos — Sistema de Bibliotecas da UnB EMPRÉSTIMOS > Multa Empréstimo de materiais Condições para empréstimo Ter cadastro",
+          "distance": 0.1426372528076172,
           "rank": 4,
-          "relevant": false,
-          "rrf": 0.029211087420042643
+          "relevant": true,
+          "rrf": 0.02919863597612958
         },
         {
-          "id": "c_67bff220dfeab17f",
-          "source_id": "DOC-008",
-          "title": "Biblioteca – Engenharia de Software",
-          "section": "",
+          "id": "c_b83014a572f0a800",
+          "source_id": "DOC-032",
+          "title": "Empréstimos — Sistema de Bibliotecas da UnB",
+          "section": "EMPRÉSTIMOS > Multa > Empréstimo de materiais",
           "version": "2026-11-11",
-          "url": "https://software.unb.br/biblioteca/",
-          "excerpt": "Biblioteca – Engenharia de Software O curso de Engenharia de Software dispõe de assinaturas e acesso a periódicos",
-          "distance": 0.1554294228553772,
+          "url": "https://bce.unb.br/emprestimos/",
+          "excerpt": "Empréstimos — Sistema de Bibliotecas da UnB EMPRÉSTIMOS > Multa Empréstimo de materiais Quantidade máxima de exemplares: 5.",
+          "distance": 0.13655614852905273,
           "rank": 5,
           "relevant": false,
-          "rrf": 0.02919863597612958
+          "rrf": 0.02904040404040404
         }
       ],
       "claims": [
@@ -655,10 +655,17 @@
           "sourceIds": [
             "c_1cfe0848c545f27c"
           ]
+        },
+        {
+          "text": "Para realizar empréstimos de materiais, é necessário ter cadastro ativo na Biblioteca Central ou Setoriais e não ter nenhuma pendência com a biblioteca.",
+          "sourceIds": [
+            "c_f8ededb7adec2e05"
+          ]
         }
       ],
       "source_ids": [
-        "c_1cfe0848c545f27c"
+        "c_1cfe0848c545f27c",
+        "c_f8ededb7adec2e05"
       ],
       "previous_request_id": null
     },
@@ -667,12 +674,12 @@
       "label": "Reavaliação completa · busca híbrida",
       "question": "Como doar livros para a Biblioteca do Campus Gama?",
       "query": "Como doar livros para a Biblioteca do Campus Gama?",
-      "request_id": "28695980-f1bc-4b42-9472-82a0027cbc5c",
-      "executed_at": "2026-11-11T18:38:42.348134+00:00",
+      "request_id": "b458e9f5-485d-4419-8075-185b3578702b",
+      "executed_at": "2026-11-11T23:54:55.804483+00:00",
       "status": "answered",
-      "answer": "Para doar livros para a biblioteca, os interessados devem enviar um e-mail contendo a lista dos títulos, autores, edição e ISBN das obras. [1]\n\nApós a indicação dos materiais pré-selecionados, marca-se um horário para a entrega presencial na Biblioteca do Campus Gama. [1]\n\nNo dia da entrega, é feita a conferência do estado de conservação dos itens, e os aprovados são incorporados ao acervo após processamento técnico. [1]",
+      "answer": "Os interessados em doar para a Biblioteca do Campus Gama devem enviar um e-mail com a lista dos títulos, autores, edição e ISBN das obras. [1]\n\nApós a indicação dos materiais pré-selecionados, marca-se um horário para a entrega presencial na biblioteca, onde é feita a conferência do estado de conservação e os itens aprovados são incorporados ao acervo após processamento técnico. [1]",
       "model": "gemini-3.5-flash-lite",
-      "base_version": "796894d0d378f4f8d42929dc5a5eef75e22c70d2eeafd62d880171be67051267",
+      "base_version": "a0d5e722cd0cf092bea51f0cd09a8c38f3a702773e49b4c52b1c004d2cff7f99",
       "prompt_version": "campus-rag-v2",
       "method": "hibrida_rrf",
       "retrieved": [
@@ -684,7 +691,7 @@
           "version": "2026-11-11",
           "url": "https://bce.unb.br/biblioteca-campus-gama/",
           "excerpt": "Segunda a sexta-feira (exceto feriados) das 7h às 19h",
-          "distance": 0.10283929109573364,
+          "distance": 0.10283935070037842,
           "rank": 1,
           "relevant": true,
           "rrf": 0.03278688524590164
@@ -697,7 +704,7 @@
           "version": "2026-11-11",
           "url": "https://bce.unb.br/biblioteca-campus-gama/",
           "excerpt": "Biblioteca Campus Gama – BCE Serviços Os empréstimos poderão ser feitos durante o horário de funcionamento da biblioteca,",
-          "distance": 0.11988997459411621,
+          "distance": 0.11989003419876099,
           "rank": 2,
           "relevant": false,
           "rrf": 0.031754032258064516
@@ -710,53 +717,47 @@
           "version": "2026-11-11",
           "url": "https://software.unb.br/biblioteca/",
           "excerpt": "Biblioteca – Engenharia de Software A biblioteca do Campus Gama conta atualmente com 2810 exemplares de livros físicos",
-          "distance": 0.13132357597351074,
+          "distance": 0.13132351636886597,
           "rank": 3,
           "relevant": false,
           "rrf": 0.031754032258064516
         },
         {
-          "id": "c_ff640f1875faa059",
-          "source_id": "DOC-002",
-          "title": "Contato da FCTE",
-          "section": "Secretaria de Graduação > ADMINISTRAÇÃO > Secretaria de Graduação > BIBLIOTECA",
+          "id": "c_731826bb1c0cfdfc",
+          "source_id": "DOC-040",
+          "title": "Biblioteca Digital e Sonora — BCE",
+          "section": "Biblioteca Digital e Sonora",
           "version": "2026-11-11",
-          "url": "https://fcte.unb.br/contato/",
-          "excerpt": "Contato da FCTE Secretaria de Graduação ADMINISTRAÇÃO Atendimento Presencial: Segunda a sexta-feira Horário: 08h-12h e 14h-18h. Local :",
-          "distance": 0.16268914937973022,
+          "url": "https://bce.unb.br/bibliotecas-digitais/bds/",
+          "excerpt": "Biblioteca Digital e Sonora — BCE Biblioteca Digital e Sonora Informações Gerais O documento médico comprobatório da deficiência",
+          "distance": 0.16888731718063354,
           "rank": 4,
           "relevant": false,
-          "rrf": 0.029211087420042643
+          "rrf": 0.028169014084507043
         },
         {
-          "id": "c_3d4281f8af790336",
-          "source_id": "DOC-003",
-          "title": "Assistência estudantil",
-          "section": "Assistência Estudantil > Diretoria de Desenvolvimento Social – Serviço de Programas Sociais",
+          "id": "c_93fc76a773f4b9bc",
+          "source_id": "DOC-036",
+          "title": "Tutorial de acesso remoto ao Portal CAPES — BCE",
+          "section": "Página 2",
           "version": "2026-11-11",
-          "url": "https://fcte.unb.br/assistencia-estudantil/",
-          "excerpt": "Assistência estudantil Assistência Estudantil Diretoria de Desenvolvimento Social – Serviço de Programas Sociais V – Programa Auxílio Socioeconômico",
-          "distance": 0.17081457376480103,
+          "url": "https://bce.unb.br/wp-content/uploads/2025/09/Portal-Capes-Tutorial-acesso-REMOTO.pdf",
+          "excerpt": "Tutorial de acesso remoto ao Portal CAPES — BCE Página 2 Universidade de Brasília (UnB) Sistema de Bibliotecas",
+          "distance": 0.16755414009094238,
           "rank": 5,
           "relevant": false,
-          "rrf": 0.02919863597612958
+          "rrf": 0.027984344422700584
         }
       ],
       "claims": [
         {
-          "text": "Para doar livros para a biblioteca, os interessados devem enviar um e-mail contendo a lista dos títulos, autores, edição e ISBN das obras.",
+          "text": "Os interessados em doar para a Biblioteca do Campus Gama devem enviar um e-mail com a lista dos títulos, autores, edição e ISBN das obras.",
           "sourceIds": [
             "c_7487f9e90557b28d"
           ]
         },
         {
-          "text": "Após a indicação dos materiais pré-selecionados, marca-se um horário para a entrega presencial na Biblioteca do Campus Gama.",
-          "sourceIds": [
-            "c_7487f9e90557b28d"
-          ]
-        },
-        {
-          "text": "No dia da entrega, é feita a conferência do estado de conservação dos itens, e os aprovados são incorporados ao acervo após processamento técnico.",
+          "text": "Após a indicação dos materiais pré-selecionados, marca-se um horário para a entrega presencial na biblioteca, onde é feita a conferência do estado de conservação e os itens aprovados são incorporados ao acervo após processamento técnico.",
           "sourceIds": [
             "c_7487f9e90557b28d"
           ]
@@ -772,12 +773,12 @@
       "label": "Reavaliação completa · busca híbrida",
       "question": "Como faço uma pesquisa por origem ou destino no DF no Ponto?",
       "query": "Como faço uma pesquisa por origem ou destino no DF no Ponto?",
-      "request_id": "d0ece80c-7ebf-452f-9591-1dfc7d9f3a84",
-      "executed_at": "2026-11-11T18:38:52.235084+00:00",
+      "request_id": "f6aa13f6-5f4a-44f5-bd5a-0efdd1fea445",
+      "executed_at": "2026-11-11T23:55:00.506897+00:00",
       "status": "answered",
-      "answer": "Para fazer uma pesquisa geral por origem ou destino no DF no Ponto, basta informar o local de partida ou destino para acessar horários, linhas disponíveis e pontos de parada próximos. [1]",
+      "answer": "Para fazer uma pesquisa geral no DF no Ponto informando origem ou destino, basta informar o local de partida ou destino para acessar horários, linhas disponíveis e pontos de parada próximos. [1]",
       "model": "gemini-3.5-flash-lite",
-      "base_version": "796894d0d378f4f8d42929dc5a5eef75e22c70d2eeafd62d880171be67051267",
+      "base_version": "a0d5e722cd0cf092bea51f0cd09a8c38f3a702773e49b4c52b1c004d2cff7f99",
       "prompt_version": "campus-rag-v2",
       "method": "hibrida_rrf",
       "retrieved": [
@@ -844,12 +845,12 @@
           "distance": 0.15720021724700928,
           "rank": 5,
           "relevant": false,
-          "rrf": 0.030303030303030304
+          "rrf": 0.029857397504456328
         }
       ],
       "claims": [
         {
-          "text": "Para fazer uma pesquisa geral por origem ou destino no DF no Ponto, basta informar o local de partida ou destino para acessar horários, linhas disponíveis e pontos de parada próximos.",
+          "text": "Para fazer uma pesquisa geral no DF no Ponto informando origem ou destino, basta informar o local de partida ou destino para acessar horários, linhas disponíveis e pontos de parada próximos.",
           "sourceIds": [
             "c_a329b12b7f9edc9c"
           ]
@@ -865,12 +866,12 @@
       "label": "Reavaliação completa · busca híbrida",
       "question": "Qual é o horário de funcionamento informado na página da Biblioteca Campus Gama?",
       "query": "Qual é o horário de funcionamento informado na página da Biblioteca Campus Gama?",
-      "request_id": "cbe2c5a9-c682-4c08-bc89-3dd70490600b",
-      "executed_at": "2026-11-11T18:39:12.855751+00:00",
+      "request_id": "cad4bd85-6fad-4df6-9adc-3a5f4f4e6146",
+      "executed_at": "2026-11-11T23:55:05.075575+00:00",
       "status": "answered",
-      "answer": "O funcionamento da Biblioteca Campus Gama ocorre de segunda a sexta-feira, exceto feriados, das 7h às 19h. [1]\n\nO atendimento presencial da biblioteca no prédio UAC funciona de segunda a sexta-feira, das 07h às 19h. [2]",
+      "answer": "O funcionamento da Biblioteca Setorial Campus Gama é de segunda a sexta-feira, exceto feriados, das 7h às 19h. [1]\n\nO atendimento presencial da biblioteca ocorre de segunda a sexta-feira, das 07h às 19h, localizado no Prédio UAC. [2]",
       "model": "gemini-3.5-flash-lite",
-      "base_version": "796894d0d378f4f8d42929dc5a5eef75e22c70d2eeafd62d880171be67051267",
+      "base_version": "a0d5e722cd0cf092bea51f0cd09a8c38f3a702773e49b4c52b1c004d2cff7f99",
       "prompt_version": "campus-rag-v2",
       "method": "hibrida_rrf",
       "retrieved": [
@@ -882,7 +883,7 @@
           "version": "2026-11-11",
           "url": "https://bce.unb.br/biblioteca-campus-gama/",
           "excerpt": "Biblioteca Campus Gama – BCE Serviços Os empréstimos poderão ser feitos durante o horário de funcionamento da biblioteca,",
-          "distance": 0.1109238862991333,
+          "distance": 0.11092394590377808,
           "rank": 1,
           "relevant": false,
           "rrf": 0.03278688524590164
@@ -895,7 +896,7 @@
           "version": "2026-11-11",
           "url": "https://bce.unb.br/biblioteca-campus-gama/",
           "excerpt": "Segunda a sexta-feira (exceto feriados) das 7h às 19h",
-          "distance": 0.11948412656784058,
+          "distance": 0.11948424577713013,
           "rank": 2,
           "relevant": true,
           "rrf": 0.03225806451612903
@@ -908,7 +909,7 @@
           "version": "2026-11-11",
           "url": "https://software.unb.br/biblioteca/",
           "excerpt": "Biblioteca – Engenharia de Software A biblioteca do Campus Gama conta atualmente com 2810 exemplares de livros físicos",
-          "distance": 0.1435781717300415,
+          "distance": 0.14357811212539673,
           "rank": 3,
           "relevant": false,
           "rrf": 0.030303030303030304
@@ -924,7 +925,7 @@
           "distance": 0.13802343606948853,
           "rank": 4,
           "relevant": true,
-          "rrf": 0.030090497737556562
+          "rrf": 0.029273504273504274
         },
         {
           "id": "c_89297cda3ce1be6c",
@@ -934,21 +935,21 @@
           "version": "2026-11-11",
           "url": "https://fcte.unb.br/contato/",
           "excerpt": "Contato da FCTE Secretaria de Graduação SECRETARIA DE GRADUAÇÃO Atendimento Presencial: Segunda a sexta-feira Horário: 07h-19h. Loca: prédio",
-          "distance": 0.15501660108566284,
+          "distance": 0.15501666069030762,
           "rank": 5,
           "relevant": false,
-          "rrf": 0.02919863597612958
+          "rrf": 0.02819138376017471
         }
       ],
       "claims": [
         {
-          "text": "O funcionamento da Biblioteca Campus Gama ocorre de segunda a sexta-feira, exceto feriados, das 7h às 19h.",
+          "text": "O funcionamento da Biblioteca Setorial Campus Gama é de segunda a sexta-feira, exceto feriados, das 7h às 19h.",
           "sourceIds": [
             "c_7487f9e90557b28d"
           ]
         },
         {
-          "text": "O atendimento presencial da biblioteca no prédio UAC funciona de segunda a sexta-feira, das 07h às 19h.",
+          "text": "O atendimento presencial da biblioteca ocorre de segunda a sexta-feira, das 07h às 19h, localizado no Prédio UAC.",
           "sourceIds": [
             "c_ff640f1875faa059"
           ]
@@ -965,12 +966,12 @@
       "label": "Reavaliação completa · busca híbrida",
       "question": "O COSMOS fica no térreo da UAC, sala 101, certo?",
       "query": "O COSMOS fica no térreo da UAC, sala 101, certo?",
-      "request_id": "d444464e-57af-4175-bc79-c0050278a753",
-      "executed_at": "2026-11-11T18:39:22.765986+00:00",
+      "request_id": "5526e443-f243-46f8-a0b8-369dea55856b",
+      "executed_at": "2026-11-11T23:55:10.033329+00:00",
       "status": "answered",
-      "answer": "O Computational Aerospace Simulations & Modeling Laboratory fica localizado no Prédio LDTEA, no 2º andar, sala 304, segundo o diretório de laboratórios da FCTE com validade desconhecida. [1]",
+      "answer": "O Computational Aerospace Simulations & Modeling Laboratory (COSMOS) fica localizado no Prédio LDTEA, no 2º andar, sala 304, de acordo com o diretório de laboratórios da FCTE com validade desconhecida. [1]",
       "model": "gemini-3.5-flash-lite",
-      "base_version": "796894d0d378f4f8d42929dc5a5eef75e22c70d2eeafd62d880171be67051267",
+      "base_version": "a0d5e722cd0cf092bea51f0cd09a8c38f3a702773e49b4c52b1c004d2cff7f99",
       "prompt_version": "campus-rag-v2",
       "method": "hibrida_rrf",
       "retrieved": [
@@ -982,23 +983,10 @@
           "version": "2026-11-11",
           "url": "https://fcte.unb.br/homologa_laboratorios/",
           "excerpt": "Computational Aerospace Simulations & Modeling Laboratory – COSMOS … Local: Prédio LDTEA – 2º andar – Sala 304",
-          "distance": 0.1527169942855835,
+          "distance": 0.15271705389022827,
           "rank": 1,
           "relevant": true,
           "rrf": 0.031754032258064516
-        },
-        {
-          "id": "c_0e12f3858918d20b",
-          "source_id": "DOC-005",
-          "title": "Diretório de laboratórios da FCTE",
-          "section": "Laboratórios FCTE > Laboratórios de Engenharia Automotiva",
-          "version": "2026-11-11",
-          "url": "https://fcte.unb.br/homologa_laboratorios/",
-          "excerpt": "Diretório de laboratórios da FCTE Laboratórios FCTE Laboratórios de Engenharia Automotiva Automotive Research Center – ARC Site: https://lite.unb.br/2024/11/14/automotive-research-center/",
-          "distance": 0.15985172986984253,
-          "rank": 2,
-          "relevant": false,
-          "rrf": 0.03076923076923077
         },
         {
           "id": "c_df45b0823ed5a0bc",
@@ -1008,10 +996,36 @@
           "version": "2026-11-11",
           "url": "https://lite.unb.br/computational-aerospace-simulations-modeling-laboratory/",
           "excerpt": "COSMOS – Computational Aerospace Simulations & Modeling Laboratory Computational Aerospace Simulations & Modeling Laboratory​ O Computational Aerospace Simulations",
-          "distance": 0.14885932207107544,
+          "distance": 0.1488591432571411,
+          "rank": 2,
+          "relevant": false,
+          "rrf": 0.03009207275993712
+        },
+        {
+          "id": "c_0e12f3858918d20b",
+          "source_id": "DOC-005",
+          "title": "Diretório de laboratórios da FCTE",
+          "section": "Laboratórios FCTE > Laboratórios de Engenharia Automotiva",
+          "version": "2026-11-11",
+          "url": "https://fcte.unb.br/homologa_laboratorios/",
+          "excerpt": "Diretório de laboratórios da FCTE Laboratórios FCTE Laboratórios de Engenharia Automotiva Automotive Research Center – ARC Site: https://lite.unb.br/2024/11/14/automotive-research-center/",
+          "distance": 0.15985161066055298,
           "rank": 3,
           "relevant": false,
-          "rrf": 0.030679156908665108
+          "rrf": 0.030090497737556562
+        },
+        {
+          "id": "c_0cf9944816258a3e",
+          "source_id": "DOC-006",
+          "title": "Laboratórios de ensino",
+          "section": "",
+          "version": "2026-11-11",
+          "url": "https://software.unb.br/laboratorios-de-ensino/",
+          "excerpt": "Laboratórios de ensino Laboratório de Software: laboratório com 40 computadores individuais para disciplinas intermediárias de computação/programação; Laboratório de",
+          "distance": 0.15652668476104736,
+          "rank": 4,
+          "relevant": false,
+          "rrf": 0.02854251012145749
         },
         {
           "id": "c_45e04c73c85bdc29",
@@ -1021,28 +1035,15 @@
           "version": "2026-11-11",
           "url": "https://fcte.unb.br/infraestrutura/",
           "excerpt": "Infraestrutura da FCTE Infraestrutura A atual sede do campus da FCTE conta com uma Unidade Acadêmica (UAC), uma",
-          "distance": 0.16414862871170044,
-          "rank": 4,
-          "relevant": false,
-          "rrf": 0.029437229437229435
-        },
-        {
-          "id": "c_2d85dbef5af80376",
-          "source_id": "DOC-018",
-          "title": "COSMOS – Computational Aerospace Simulations & Modeling Laboratory",
-          "section": "Computational Aerospace Simulations & Modeling Laboratory​ > Contribuição para Inovação e Formação",
-          "version": "2026-11-11",
-          "url": "https://lite.unb.br/computational-aerospace-simulations-modeling-laboratory/",
-          "excerpt": "COSMOS – Computational Aerospace Simulations & Modeling Laboratory Computational Aerospace Simulations & Modeling Laboratory​ Contribuição para Inovação e",
-          "distance": 0.1576904058456421,
+          "distance": 0.16414868831634521,
           "rank": 5,
           "relevant": false,
-          "rrf": 0.0293236301369863
+          "rrf": 0.028404512489927477
         }
       ],
       "claims": [
         {
-          "text": "O Computational Aerospace Simulations & Modeling Laboratory fica localizado no Prédio LDTEA, no 2º andar, sala 304, segundo o diretório de laboratórios da FCTE com validade desconhecida.",
+          "text": "O Computational Aerospace Simulations & Modeling Laboratory (COSMOS) fica localizado no Prédio LDTEA, no 2º andar, sala 304, de acordo com o diretório de laboratórios da FCTE com validade desconhecida.",
           "sourceIds": [
             "c_f2c6f00293fae365"
           ]
@@ -1058,12 +1059,12 @@
       "label": "Reavaliação completa · busca híbrida",
       "question": "A biblioteca do Gama fica na UED, não é?",
       "query": "A biblioteca do Gama fica na UED, não é?",
-      "request_id": "8b4a4753-2acf-453f-8efa-099dcd035395",
-      "executed_at": "2026-11-11T18:39:35.348136+00:00",
+      "request_id": "1f75b35c-cf4e-4e6b-b76b-a2d0996b77de",
+      "executed_at": "2026-11-11T23:55:14.670187+00:00",
       "status": "answered",
-      "answer": "A biblioteca do Campus Gama está localizada no prédio UAC. [1]",
+      "answer": "A biblioteca do campus Gama está localizada no prédio UAC, e não no prédio UED. [1]",
       "model": "gemini-3.5-flash-lite",
-      "base_version": "796894d0d378f4f8d42929dc5a5eef75e22c70d2eeafd62d880171be67051267",
+      "base_version": "a0d5e722cd0cf092bea51f0cd09a8c38f3a702773e49b4c52b1c004d2cff7f99",
       "prompt_version": "campus-rag-v2",
       "method": "hibrida_rrf",
       "retrieved": [
@@ -1078,7 +1079,7 @@
           "distance": 0.13934004306793213,
           "rank": 1,
           "relevant": false,
-          "rrf": 0.03252247488101534
+          "rrf": 0.03278688524590164
         },
         {
           "id": "c_1cfe0848c545f27c",
@@ -1104,7 +1105,7 @@
           "distance": 0.14896857738494873,
           "rank": 3,
           "relevant": false,
-          "rrf": 0.03128054740957967
+          "rrf": 0.031054405392392875
         },
         {
           "id": "c_ff640f1875faa059",
@@ -1117,25 +1118,25 @@
           "distance": 0.15096747875213623,
           "rank": 4,
           "relevant": true,
-          "rrf": 0.03057889822595705
+          "rrf": 0.02976190476190476
         },
         {
-          "id": "c_5faca10e6e792b67",
-          "source_id": "DOC-006",
-          "title": "Laboratórios de ensino",
-          "section": "",
+          "id": "c_731826bb1c0cfdfc",
+          "source_id": "DOC-040",
+          "title": "Biblioteca Digital e Sonora — BCE",
+          "section": "Biblioteca Digital e Sonora",
           "version": "2026-11-11",
-          "url": "https://software.unb.br/laboratorios-de-ensino/",
-          "excerpt": "Laboratórios de ensino O espaço físico da Faculdade do Gama é de aproximadamente 5.200 m2 e incluem salas",
-          "distance": 0.16218531131744385,
+          "url": "https://bce.unb.br/bibliotecas-digitais/bds/",
+          "excerpt": "Biblioteca Digital e Sonora — BCE Biblioteca Digital e Sonora Informações Gerais O documento médico comprobatório da deficiência",
+          "distance": 0.16050714254379272,
           "rank": 5,
           "relevant": false,
-          "rrf": 0.029211087420042643
+          "rrf": 0.02877846790890269
         }
       ],
       "claims": [
         {
-          "text": "A biblioteca do Campus Gama está localizada no prédio UAC.",
+          "text": "A biblioteca do campus Gama está localizada no prédio UAC, e não no prédio UED.",
           "sourceIds": [
             "c_ff640f1875faa059"
           ]
@@ -1151,12 +1152,12 @@
       "label": "Reavaliação completa · busca híbrida",
       "question": "A sala I10 está livre agora?",
       "query": "A sala I10 está livre agora?",
-      "request_id": "fd1ef96f-814b-4a7d-be70-36818ea6757a",
-      "executed_at": "2026-11-11T18:40:00.093553+00:00",
+      "request_id": "4c7bc104-42e9-4897-b2e9-7278fe2136ea",
+      "executed_at": "2026-11-11T23:55:19.188446+00:00",
       "status": "insufficient",
-      "answer": "Não há informações nos trechos recuperados sobre a ocupação atual ou a disponibilidade da sala I10.",
+      "answer": "Não encontrei informações sobre a disponibilidade atual da sala I10 nos trechos recuperados.",
       "model": "gemini-3.5-flash-lite",
-      "base_version": "796894d0d378f4f8d42929dc5a5eef75e22c70d2eeafd62d880171be67051267",
+      "base_version": "a0d5e722cd0cf092bea51f0cd09a8c38f3a702773e49b4c52b1c004d2cff7f99",
       "prompt_version": "campus-rag-v2",
       "method": "hibrida_rrf",
       "retrieved": [
@@ -1168,10 +1169,10 @@
           "version": "2026-11-11",
           "url": "https://fcte.unb.br/homologa_laboratorios/",
           "excerpt": "Diretório de laboratórios da FCTE Laboratórios FCTE Laboratórios de Engenharia de Software Laboratório de Inteligência Artificial – AILAB",
-          "distance": 0.16292285919189453,
+          "distance": 0.1629226803779602,
           "rank": 1,
           "relevant": false,
-          "rrf": 0.03278688524590164
+          "rrf": 0.032018442622950824
         },
         {
           "id": "c_0904be5ddfac8a87",
@@ -1181,49 +1182,49 @@
           "version": "2026-11-11",
           "url": "https://fcte.unb.br/homologa_laboratorios/",
           "excerpt": "Diretório de laboratórios da FCTE Laboratórios FCTE Laboratórios de Engenharia de Software Centro de Estudos Desenvolvimento e Inovação",
-          "distance": 0.1643739938735962,
+          "distance": 0.16437405347824097,
           "rank": 2,
           "relevant": false,
-          "rrf": 0.030834914611005692
+          "rrf": 0.03007688828584351
         },
         {
-          "id": "c_78aefd971e83ca2c",
-          "source_id": "DOC-016",
-          "title": "Quem somos LITE",
-          "section": "Ambiente Multiusuário",
-          "version": "2026-11-11",
-          "url": "https://lite.unb.br/quem-somos/",
-          "excerpt": "Quem somos LITE Ambiente Multiusuário O Laboratório Integrado de Tecnologias em Engenharias (LITE) oferece um ambiente multiusuário altamente",
-          "distance": 0.17003625631332397,
-          "rank": 3,
-          "relevant": false,
-          "rrf": 0.015625
-        },
-        {
-          "id": "c_def12e461bfc328e",
-          "source_id": "DOC-011",
-          "title": "Laboratórios de pesquisa",
+          "id": "c_8b347ac6195f3758",
+          "source_id": "DOC-034",
+          "title": "Realocação de sala e adequação de mobiliário — DACES",
           "section": "",
           "version": "2026-11-11",
-          "url": "https://software.unb.br/laboratorios-de-pesquisa/",
-          "excerpt": "Laboratórios de pesquisa Desde 2011, o corpo docente do curso de Engenharia de Software vêm criando laboratórios de",
-          "distance": 0.17127728462219238,
-          "rank": 4,
+          "url": "https://acessibilidade.unb.br/acessibilidade-urbanistica-e-arquitetonica/",
+          "excerpt": "Realocação de sala e adequação de mobiliário — DACES A DACES/DAC oferece apoio à estudantes cadastrados para solicitações",
+          "distance": 0.17335379123687744,
+          "rank": 3,
           "relevant": false,
-          "rrf": 0.015151515151515152
+          "rrf": 0.028068137824235385
         },
         {
-          "id": "c_3ec499d6018e067b",
-          "source_id": "DOC-025",
-          "title": "DF no Ponto – apresentação",
-          "section": "Agora, perder o ônibus é coisa do passado. > Planejamento de rota inteligente > Agora, perder o ônibus é coisa do passado. > Horários em tempo real > Agora, perder o ônibus é coisa do passado. > Alertas de serviço > Agora, perder o ônibus é coisa do passado. > Favoritos personalizados",
+          "id": "c_be2a6adafda33729",
+          "source_id": "DOC-040",
+          "title": "Biblioteca Digital e Sonora — BCE",
+          "section": "Biblioteca Digital e Sonora",
           "version": "2026-11-11",
-          "url": "https://dfnoponto.semob.df.gov.br/",
-          "excerpt": "DF no Ponto – apresentação Agora, perder o ônibus é coisa do passado. Planejamento de rota inteligente Descubra",
-          "distance": 0.17294496297836304,
+          "url": "https://bce.unb.br/bibliotecas-digitais/bds/",
+          "excerpt": "Biblioteca Digital e Sonora — BCE Biblioteca Digital e Sonora http://www.planalto.gov.br/ccivil_03/leis/L9610.htm Lei n. 13.146, de 06/07/ Institui a",
+          "distance": 0.15737956762313843,
+          "rank": 4,
+          "relevant": false,
+          "rrf": 0.01639344262295082
+        },
+        {
+          "id": "c_2ca840134bd85814",
+          "source_id": "DOC-039",
+          "title": "Serviços de acessibilidade — DACES",
+          "section": "Serviços de Acessibilidade > Intérpretes e Guia-Intérpretes",
+          "version": "2026-11-11",
+          "url": "https://acessibilidade.unb.br/servicos-de-acessibilidade/",
+          "excerpt": "Serviços de acessibilidade — DACES Serviços de Acessibilidade Intérpretes e Guia-Intérpretes const targetEl = document.querySelector(targetId); if (targetEl) {",
+          "distance": 0.1591806411743164,
           "rank": 5,
           "relevant": false,
-          "rrf": 0.014705882352941176
+          "rrf": 0.016129032258064516
         }
       ],
       "claims": [],
@@ -1235,12 +1236,12 @@
       "label": "Reavaliação completa · busca híbrida",
       "question": "Quantas pessoas estão neste momento na Biblioteca do Campus Gama?",
       "query": "Quantas pessoas estão neste momento na Biblioteca do Campus Gama?",
-      "request_id": "db8d5898-faf0-4196-bbf3-4046b5eaeb84",
-      "executed_at": "2026-11-11T18:40:10.272697+00:00",
+      "request_id": "8860bbd8-7538-443f-935d-681f9b5f3f60",
+      "executed_at": "2026-11-11T23:55:23.703943+00:00",
       "status": "insufficient",
-      "answer": "Não há informações nos trechos recuperados sobre a quantidade de pessoas presentes na Biblioteca do Campus Gama neste momento.",
+      "answer": "Os trechos recuperados não contêm informações sobre o número de pessoas presentes no momento na Biblioteca do Campus Gama.",
       "model": "gemini-3.5-flash-lite",
-      "base_version": "796894d0d378f4f8d42929dc5a5eef75e22c70d2eeafd62d880171be67051267",
+      "base_version": "a0d5e722cd0cf092bea51f0cd09a8c38f3a702773e49b4c52b1c004d2cff7f99",
       "prompt_version": "campus-rag-v2",
       "method": "hibrida_rrf",
       "retrieved": [
@@ -1252,10 +1253,10 @@
           "version": "2026-11-11",
           "url": "https://bce.unb.br/biblioteca-campus-gama/",
           "excerpt": "espaço para estudo com cabines individuais e mesas para estudo em grupo",
-          "distance": 0.11973565816879272,
+          "distance": 0.1197357177734375,
           "rank": 1,
           "relevant": false,
-          "rrf": 0.03252247488101534
+          "rrf": 0.03278688524590164
         },
         {
           "id": "c_7487f9e90557b28d",
@@ -1265,10 +1266,10 @@
           "version": "2026-11-11",
           "url": "https://bce.unb.br/biblioteca-campus-gama/",
           "excerpt": "Segunda a sexta-feira (exceto feriados) das 7h às 19h",
-          "distance": 0.13095253705978394,
+          "distance": 0.1309525966644287,
           "rank": 2,
           "relevant": false,
-          "rrf": 0.032266458495966696
+          "rrf": 0.03200204813108039
         },
         {
           "id": "c_17241a7563801760",
@@ -1278,10 +1279,10 @@
           "version": "2026-11-11",
           "url": "https://software.unb.br/biblioteca/",
           "excerpt": "Biblioteca – Engenharia de Software A biblioteca do Campus Gama conta atualmente com 2810 exemplares de livros físicos",
-          "distance": 0.12833601236343384,
+          "distance": 0.12833577394485474,
           "rank": 3,
           "relevant": false,
-          "rrf": 0.03128054740957967
+          "rrf": 0.031054405392392875
         },
         {
           "id": "c_5faca10e6e792b67",
@@ -1291,23 +1292,23 @@
           "version": "2026-11-11",
           "url": "https://software.unb.br/laboratorios-de-ensino/",
           "excerpt": "Laboratórios de ensino O espaço físico da Faculdade do Gama é de aproximadamente 5.200 m2 e incluem salas",
-          "distance": 0.15583395957946777,
+          "distance": 0.155833899974823,
           "rank": 4,
           "relevant": false,
-          "rrf": 0.02964426877470356
+          "rrf": 0.027809742999616416
         },
         {
-          "id": "c_ff640f1875faa059",
-          "source_id": "DOC-002",
-          "title": "Contato da FCTE",
-          "section": "Secretaria de Graduação > ADMINISTRAÇÃO > Secretaria de Graduação > BIBLIOTECA",
+          "id": "c_731826bb1c0cfdfc",
+          "source_id": "DOC-040",
+          "title": "Biblioteca Digital e Sonora — BCE",
+          "section": "Biblioteca Digital e Sonora",
           "version": "2026-11-11",
-          "url": "https://fcte.unb.br/contato/",
-          "excerpt": "Contato da FCTE Secretaria de Graduação ADMINISTRAÇÃO Atendimento Presencial: Segunda a sexta-feira Horário: 08h-12h e 14h-18h. Local :",
-          "distance": 0.1664515733718872,
+          "url": "https://bce.unb.br/bibliotecas-digitais/bds/",
+          "excerpt": "Biblioteca Digital e Sonora — BCE Biblioteca Digital e Sonora Informações Gerais O documento médico comprobatório da deficiência",
+          "distance": 0.18109142780303955,
           "rank": 5,
           "relevant": false,
-          "rrf": 0.02900988017658188
+          "rrf": 0.027417840375586856
         }
       ],
       "claims": [],
@@ -1319,12 +1320,12 @@
       "label": "Reavaliação completa · busca híbrida",
       "question": "Qual ônibus passa na entrada da FCTE daqui a cinco minutos?",
       "query": "Qual ônibus passa na entrada da FCTE daqui a cinco minutos?",
-      "request_id": "cf7902db-91ec-48a1-81a6-c2243d5d8b1b",
-      "executed_at": "2026-11-11T18:40:29.284573+00:00",
+      "request_id": "c06804b1-0553-451b-9c80-282efd9cda23",
+      "executed_at": "2026-11-11T23:55:28.053774+00:00",
       "status": "insufficient",
-      "answer": "Não foi possível informar qual ônibus passa na entrada da FCTE, pois a base não possui dados de localização ao vivo de ônibus, horários ou planejador de rotas.",
+      "answer": "A base não tem localização ao vivo de ônibus nem planejador de rotas.",
       "model": "gemini-3.5-flash-lite",
-      "base_version": "796894d0d378f4f8d42929dc5a5eef75e22c70d2eeafd62d880171be67051267",
+      "base_version": "a0d5e722cd0cf092bea51f0cd09a8c38f3a702773e49b4c52b1c004d2cff7f99",
       "prompt_version": "campus-rag-v2",
       "method": "hibrida_rrf",
       "retrieved": [
@@ -1336,23 +1337,23 @@
           "version": "2026-11-11",
           "url": "https://fcte.unb.br/contato/",
           "excerpt": "Contato da FCTE Secretaria de Graduação COMPRAS Atendimento Presencial: Segunda a sexta-feira Horário: 08h-12h e 13h-17h. Local :",
-          "distance": 0.14785927534103394,
+          "distance": 0.14785921573638916,
           "rank": 1,
           "relevant": false,
-          "rrf": 0.030679156908665108
+          "rrf": 0.029726775956284153
         },
         {
-          "id": "c_02bee2be0e28a57f",
+          "id": "c_ff640f1875faa059",
           "source_id": "DOC-002",
           "title": "Contato da FCTE",
-          "section": "Secretaria de Graduação > SPS/ASSISTÊNCIA ESTUDANTIL",
+          "section": "Secretaria de Graduação > ADMINISTRAÇÃO > Secretaria de Graduação > BIBLIOTECA",
           "version": "2026-11-11",
           "url": "https://fcte.unb.br/contato/",
-          "excerpt": "Contato da FCTE Secretaria de Graduação SPS/ASSISTÊNCIA ESTUDANTIL Atendimento Presencial: Segunda a sexta-feira Horário: 07 às 17 horas.",
-          "distance": 0.1596900224685669,
+          "excerpt": "Contato da FCTE Secretaria de Graduação ADMINISTRAÇÃO Atendimento Presencial: Segunda a sexta-feira Horário: 08h-12h e 14h-18h. Local :",
+          "distance": 0.15341520309448242,
           "rank": 2,
           "relevant": false,
-          "rrf": 0.029857397504456328
+          "rrf": 0.02886002886002886
         },
         {
           "id": "c_45e04c73c85bdc29",
@@ -1362,10 +1363,10 @@
           "version": "2026-11-11",
           "url": "https://fcte.unb.br/infraestrutura/",
           "excerpt": "Infraestrutura da FCTE Infraestrutura A atual sede do campus da FCTE conta com uma Unidade Acadêmica (UAC), uma",
-          "distance": 0.1480817198753357,
+          "distance": 0.14808166027069092,
           "rank": 3,
           "relevant": false,
-          "rrf": 0.028949545078577336
+          "rrf": 0.028177225029148854
         },
         {
           "id": "c_38179b5938368adb",
@@ -1378,7 +1379,7 @@
           "distance": 0.16075533628463745,
           "rank": 4,
           "relevant": false,
-          "rrf": 0.028404512489927477
+          "rrf": 0.027364110201042444
         },
         {
           "id": "c_ce46e880e27ab7af",
@@ -1391,7 +1392,7 @@
           "distance": 0.16451537609100342,
           "rank": 5,
           "relevant": false,
-          "rrf": 0.027031963470319637
+          "rrf": 0.0261986301369863
         }
       ],
       "claims": [],
@@ -1404,9 +1405,9 @@
       "id": "Q01",
       "attempt": 1,
       "http_status": 200,
-      "started_at": "2026-11-11T18:37:31.177939+00:00",
-      "duration_s": 1.74,
-      "request_id": "2eaa73f0-6d35-425e-a67c-42381c332d2e",
+      "started_at": "2026-11-11T23:54:23.142782+00:00",
+      "duration_s": 1.832,
+      "request_id": "bd9f039c-a5ea-401b-bf7e-b2926f93773a",
       "status": "answered",
       "error": null
     },
@@ -1414,9 +1415,9 @@
       "id": "Q02",
       "attempt": 1,
       "http_status": 200,
-      "started_at": "2026-11-11T18:37:40.923429+00:00",
-      "duration_s": 1.464,
-      "request_id": "12d1e2a8-a708-488c-9318-9306457f70c6",
+      "started_at": "2026-11-11T23:54:27.983566+00:00",
+      "duration_s": 2.007,
+      "request_id": "cb1e2245-0259-422e-b597-8ec1ccd9aa20",
       "status": "answered",
       "error": null
     },
@@ -1424,9 +1425,9 @@
       "id": "Q03",
       "attempt": 1,
       "http_status": 200,
-      "started_at": "2026-11-11T18:37:50.391934+00:00",
-      "duration_s": 1.785,
-      "request_id": "0b0f7b77-8451-4360-91f2-f497954bce4c",
+      "started_at": "2026-11-11T23:54:33.001712+00:00",
+      "duration_s": 1.406,
+      "request_id": "3131541f-9425-42a0-9c84-795a27d00656",
       "status": "answered",
       "error": null
     },
@@ -1434,9 +1435,9 @@
       "id": "Q04",
       "attempt": 1,
       "http_status": 200,
-      "started_at": "2026-11-11T18:38:00.187619+00:00",
-      "duration_s": 2.081,
-      "request_id": "7b6b5a13-4da3-486a-a355-da38adeb6ba3",
+      "started_at": "2026-11-11T23:54:37.421652+00:00",
+      "duration_s": 1.683,
+      "request_id": "72d2a448-9c70-4755-a91b-ab8414922d68",
       "status": "answered",
       "error": null
     },
@@ -1444,9 +1445,9 @@
       "id": "Q05",
       "attempt": 1,
       "http_status": 200,
-      "started_at": "2026-11-11T18:38:10.280386+00:00",
-      "duration_s": 1.584,
-      "request_id": "99d8cf87-9309-4896-9c67-12010164f1cc",
+      "started_at": "2026-11-11T23:54:42.112848+00:00",
+      "duration_s": 1.582,
+      "request_id": "48487256-bd87-4af1-89b3-f1d79266d70d",
       "status": "answered",
       "error": null
     },
@@ -1454,9 +1455,9 @@
       "id": "Q06",
       "attempt": 1,
       "http_status": 200,
-      "started_at": "2026-11-11T18:38:19.878395+00:00",
-      "duration_s": 4.128,
-      "request_id": "9035962c-8018-4696-8888-a04ee2418e98",
+      "started_at": "2026-11-11T23:54:46.719163+00:00",
+      "duration_s": 1.333,
+      "request_id": "16aba732-7ce3-49b3-885e-02891cd95f06",
       "status": "answered",
       "error": null
     },
@@ -1464,9 +1465,9 @@
       "id": "Q07",
       "attempt": 1,
       "http_status": 200,
-      "started_at": "2026-11-11T18:38:32.020760+00:00",
-      "duration_s": 2.312,
-      "request_id": "c1550b38-7a20-42ad-8a13-85850fc6dcf3",
+      "started_at": "2026-11-11T23:54:51.072216+00:00",
+      "duration_s": 1.7,
+      "request_id": "b98077a0-cba6-4fc0-9deb-7a77e4783eb4",
       "status": "answered",
       "error": null
     },
@@ -1474,9 +1475,9 @@
       "id": "Q08",
       "attempt": 1,
       "http_status": 200,
-      "started_at": "2026-11-11T18:38:42.345721+00:00",
-      "duration_s": 1.864,
-      "request_id": "28695980-f1bc-4b42-9472-82a0027cbc5c",
+      "started_at": "2026-11-11T23:54:55.802209+00:00",
+      "duration_s": 1.659,
+      "request_id": "b458e9f5-485d-4419-8075-185b3578702b",
       "status": "answered",
       "error": null
     },
@@ -1484,29 +1485,19 @@
       "id": "Q09",
       "attempt": 1,
       "http_status": 200,
-      "started_at": "2026-11-11T18:38:52.222840+00:00",
-      "duration_s": 1.737,
-      "request_id": "d0ece80c-7ebf-452f-9591-1dfc7d9f3a84",
+      "started_at": "2026-11-11T23:55:00.504890+00:00",
+      "duration_s": 1.553,
+      "request_id": "f6aa13f6-5f4a-44f5-bd5a-0efdd1fea445",
       "status": "answered",
       "error": null
     },
     {
       "id": "Q10",
       "attempt": 1,
-      "http_status": 502,
-      "started_at": "2026-11-11T18:39:01.976350+00:00",
-      "duration_s": 2.865,
-      "request_id": "0a18508a-ddb1-4ba4-a37d-76524f08f27d",
-      "status": null,
-      "error": "O Gemini está indisponível. Tente novamente mais tarde."
-    },
-    {
-      "id": "Q10",
-      "attempt": 2,
       "http_status": 200,
-      "started_at": "2026-11-11T18:39:12.853879+00:00",
-      "duration_s": 1.881,
-      "request_id": "cbe2c5a9-c682-4c08-bc89-3dd70490600b",
+      "started_at": "2026-11-11T23:55:05.073679+00:00",
+      "duration_s": 1.922,
+      "request_id": "cad4bd85-6fad-4df6-9adc-3a5f4f4e6146",
       "status": "answered",
       "error": null
     },
@@ -1514,9 +1505,9 @@
       "id": "Q11",
       "attempt": 1,
       "http_status": 200,
-      "started_at": "2026-11-11T18:39:22.753749+00:00",
-      "duration_s": 4.578,
-      "request_id": "d444464e-57af-4175-bc79-c0050278a753",
+      "started_at": "2026-11-11T23:55:10.030561+00:00",
+      "duration_s": 1.604,
+      "request_id": "5526e443-f243-46f8-a0b8-369dea55856b",
       "status": "answered",
       "error": null
     },
@@ -1524,9 +1515,9 @@
       "id": "Q12",
       "attempt": 1,
       "http_status": 200,
-      "started_at": "2026-11-11T18:39:35.346075+00:00",
-      "duration_s": 16.716,
-      "request_id": "8b4a4753-2acf-453f-8efa-099dcd035395",
+      "started_at": "2026-11-11T23:55:14.668122+00:00",
+      "duration_s": 1.505,
+      "request_id": "1f75b35c-cf4e-4e6b-b76b-a2d0996b77de",
       "status": "answered",
       "error": null
     },
@@ -1534,9 +1525,9 @@
       "id": "Q13",
       "attempt": 1,
       "http_status": 200,
-      "started_at": "2026-11-11T18:40:00.079299+00:00",
-      "duration_s": 2.161,
-      "request_id": "fd1ef96f-814b-4a7d-be70-36818ea6757a",
+      "started_at": "2026-11-11T23:55:19.186677+00:00",
+      "duration_s": 1.479,
+      "request_id": "4c7bc104-42e9-4897-b2e9-7278fe2136ea",
       "status": "insufficient",
       "error": null
     },
@@ -1544,9 +1535,9 @@
       "id": "Q14",
       "attempt": 1,
       "http_status": 200,
-      "started_at": "2026-11-11T18:40:10.260494+00:00",
-      "duration_s": 11.003,
-      "request_id": "db8d5898-faf0-4196-bbf3-4046b5eaeb84",
+      "started_at": "2026-11-11T23:55:23.701741+00:00",
+      "duration_s": 1.323,
+      "request_id": "8860bbd8-7538-443f-935d-681f9b5f3f60",
       "status": "insufficient",
       "error": null
     },
@@ -1554,9 +1545,9 @@
       "id": "Q15",
       "attempt": 1,
       "http_status": 200,
-      "started_at": "2026-11-11T18:40:29.282157+00:00",
-      "duration_s": 2.001,
-      "request_id": "cf7902db-91ec-48a1-81a6-c2243d5d8b1b",
+      "started_at": "2026-11-11T23:55:28.050842+00:00",
+      "duration_s": 1.376,
+      "request_id": "c06804b1-0553-451b-9c80-282efd9cda23",
       "status": "insufficient",
       "error": null
     }

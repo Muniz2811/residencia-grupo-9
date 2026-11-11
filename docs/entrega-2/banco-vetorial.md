@@ -8,8 +8,8 @@ O banco é **local**, na pasta `unb-gama-rag/data/index/chroma/`, aberto com `ch
 
 | Item | Valor real |
 |---|---|
-| Coleção ativa | `fcte-796894d0d378f4f8d429` |
-| Registros | 94 chunks de 25 fontes |
+| Coleção ativa | `fcte-a0d5e722cd0cf092bea5` |
+| Registros | 174 chunks de 37 fontes |
 | Vetor por registro | 384 componentes `float32`, normalizados |
 | Métrica vetorial | Cosseno |
 | Função padrão de embeddings do Chroma | Desativada; o pipeline fornece os vetores E5 |
@@ -36,7 +36,7 @@ O indexador faz `upsert`, remove IDs extras da coleção de destino e confere co
 
 BM25 usa `k1=1.2`, `b=0.75`, normalização de acentos e uma lista de palavras comuns. Não há stemming completo, reranker neural ou limiar de relevância calibrado. O rank híbrido não é a simples soma de cosseno e BM25. A técnica de fusão é descrita na [documentação de RRF da Microsoft](https://learn.microsoft.com/en-us/azure/search/hybrid-search-ranking); nossa implementação não utiliza Azure.
 
-Como há apenas 94 chunks, o código obtém os elegíveis do Chroma e monta o ranking lexical localmente. Isso evita outro serviço neste protótipo; uma base muito maior exigiria um índice lexical próprio.
+Como há apenas 174 chunks, o código obtém os elegíveis do Chroma e monta o ranking lexical localmente. Isso evita outro serviço neste protótipo; uma base muito maior exigiria um índice lexical próprio.
 
 ## Filtros e limitações
 

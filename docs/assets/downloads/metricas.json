@@ -1,6 +1,6 @@
 {
   "avaliador": "Codex, julgamento assistido único por leitura; sem dupla revisão humana",
-  "execucao": "20261111T183730Z",
+  "execucao": "20261111T235422Z",
   "configuracao_preservada": true,
   "hit_at_5": {
     "numerador": 12,
@@ -10,23 +10,23 @@
     "atingiu_meta": true
   },
   "precisao_todas": {
-    "numerador": 16,
+    "numerador": 17,
     "denominador": 75,
-    "valor": 0.21333333333333335,
+    "valor": 0.22666666666666666,
     "meta": 0.4,
     "atingiu_meta": false
   },
   "precisao_respondiveis": {
-    "numerador": 16,
+    "numerador": 17,
     "denominador": 60,
-    "valor": 0.26666666666666666,
+    "valor": 0.2833333333333333,
     "meta": 0.5,
     "atingiu_meta": false
   },
   "fundamentacao": {
-    "numerador": 48,
+    "numerador": 49,
     "denominador": 49,
-    "valor": 0.9795918367346939,
+    "valor": 1.0,
     "meta": 0.95,
     "atingiu_meta": true
   },
@@ -57,9 +57,9 @@
     "atingiu_meta": null
   },
   "cobertura_respostas_respondiveis": {
-    "numerador": 10,
+    "numerador": 11,
     "denominador": 12,
-    "valor": 0.8333333333333334,
+    "valor": 0.9166666666666666,
     "meta": null,
     "atingiu_meta": null
   },
@@ -124,11 +124,11 @@
       "relevantes": 3,
       "recuperados": 5,
       "fatos_sustentados": 7,
-      "fatos": 8,
+      "fatos": 7,
       "citacoes_resolvidas": 2,
       "citacoes": 2,
       "ausencia_correta": null,
-      "resposta_completa": false,
+      "resposta_completa": true,
       "premissa_corrigida": null
     },
     {
@@ -166,12 +166,12 @@
       "respondivel": true,
       "tipo": "servico",
       "http_ok": true,
-      "relevantes": 1,
+      "relevantes": 2,
       "recuperados": 5,
-      "fatos_sustentados": 3,
-      "fatos": 3,
-      "citacoes_resolvidas": 1,
-      "citacoes": 1,
+      "fatos_sustentados": 5,
+      "fatos": 5,
+      "citacoes_resolvidas": 2,
+      "citacoes": 2,
       "ausencia_correta": null,
       "resposta_completa": false,
       "premissa_corrigida": null
@@ -183,10 +183,10 @@
       "http_ok": true,
       "relevantes": 1,
       "recuperados": 5,
-      "fatos_sustentados": 10,
-      "fatos": 10,
-      "citacoes_resolvidas": 3,
-      "citacoes": 3,
+      "fatos_sustentados": 9,
+      "fatos": 9,
+      "citacoes_resolvidas": 2,
+      "citacoes": 2,
       "ausencia_correta": null,
       "resposta_completa": true,
       "premissa_corrigida": null
@@ -298,20 +298,20 @@
     }
   ],
   "execucao_tecnica": {
-    "total_chamadas": 16,
-    "falhas": 1,
-    "retentativas": 1,
+    "total_chamadas": 15,
+    "falhas": 0,
+    "retentativas": 0,
     "sucesso_primeira_tentativa": {
-      "numerador": 14,
+      "numerador": 15,
       "denominador": 15,
-      "valor": 0.9333333333333333,
+      "valor": 1.0,
       "meta": null,
       "atingiu_meta": null
     },
     "sucesso_por_chamada": {
       "numerador": 15,
-      "denominador": 16,
-      "valor": 0.9375,
+      "denominador": 15,
+      "valor": 1.0,
       "meta": null,
       "atingiu_meta": null
     },
@@ -325,7 +325,7 @@
       "Q07": 1,
       "Q08": 1,
       "Q09": 1,
-      "Q10": 2,
+      "Q10": 1,
       "Q11": 1,
       "Q12": 1,
       "Q13": 1,

@@ -6,9 +6,9 @@
 |---|---|---|
 | Coleta | Interface mobile, GPS, análise e revisão | Projeto separado implementado |
 | Mapeamento | 14 pontos da equipe preservados | Inventário separado do índice atual |
-| Curadoria | 27 aprovações expressas, duas aquisições bloqueadas | 25 fontes utilizáveis |
-| Extração e chunking | Estrutura por seções, 94 chunks | Executados |
-| Embeddings | E5 local, matriz 94 × 384 | Executados |
+| Curadoria | 42 aprovações expressas, cinco exclusões registradas | 37 fontes utilizáveis |
+| Extração e chunking | Estrutura por seções, 174 chunks | Executados |
+| Embeddings | E5 local, matriz 174 × 384 | Executados |
 | Banco vetorial | Chroma e manifesto da coleção ativa | Persistido e reaberto sem ingestão |
 | Consulta e geração | API + chat do PWA, Gemini e fontes | Implementados |
 | Avaliação inicial | 15 perguntas com rubrica e julgamento assistido | Resultados e falhas registrados |

@@ -1,10 +1,10 @@
 ### Q01 · Em qual prédio, andar e sala fica o laboratório COSMOS?
 
-> O laboratório COSMOS fica localizado no Prédio LDTEA, no 2º andar, Sala 304. [1]
+> O laboratório COSMOS fica localizado no prédio LDTEA, no 2º andar, sala 304. [1]
 
-**Conferência:** Resposta atende ao solicitado com evidência recuperada. A vigência das páginas é desconhecida; fundamentação textual não comprova situação atual.
+**Conferência:** Julgamento assistido por leitura dos trechos e resposta. Fundamentação textual não confirma atualidade.
 
-**Execução:** `2eaa73f0-6d35-425e-a67c-42381c332d2e` · `2026-11-11T18:37:31.179353+00:00`.
+**Execução:** `bd9f039c-a5ea-401b-bf7e-b2926f93773a` · `2026-11-11T23:54:23.146691+00:00`.
 
 **Fontes citadas:**
 
@@ -12,11 +12,11 @@
 
 ### Q02 · Onde encontro o CPL (Chemical Propulsion Laboratory)?
 
-> O Chemical Propulsion Laboratory (CPL) localiza-se no Contêiner 07. [1]
+> O Chemical Propulsion Laboratory (CPL) está localizado no Contêiner 07. [1]
 
-**Conferência:** Resposta atende ao solicitado com evidência recuperada. A vigência das páginas é desconhecida; fundamentação textual não comprova situação atual.
+**Conferência:** Julgamento assistido por leitura dos trechos e resposta. Fundamentação textual não confirma atualidade.
 
-**Execução:** `12d1e2a8-a708-488c-9318-9306457f70c6` · `2026-11-11T18:37:40.925639+00:00`.
+**Execução:** `cb1e2245-0259-422e-b597-8ec1ccd9aa20` · `2026-11-11T23:54:27.985810+00:00`.
 
 **Fontes citadas:**
 
@@ -24,11 +24,11 @@
 
 ### Q03 · Qual é a localização do LEMA?
 
-> O Laboratório de Estruturas e Materiais Aeroespaciais (LEMA) está localizado no Prédio LDTEA, no térreo, na sala 103. [1]
+> O Laboratório de Estruturas e Materiais Aeroespaciais (LEMA) está localizado no Prédio LDTEA, no térreo, sala 103. [1]
 
-**Conferência:** O diretório correto foi recuperado em segundo lugar e a localização do LEMA foi respondida, corrigindo a falha de recuperação da rodada densa.
+**Conferência:** Julgamento assistido por leitura dos trechos e resposta. Fundamentação textual não confirma atualidade.
 
-**Execução:** `0b0f7b77-8451-4360-91f2-f497954bce4c` · `2026-11-11T18:37:50.407359+00:00`.
+**Execução:** `3131541f-9425-42a0-9c84-795a27d00656` · `2026-11-11T23:54:33.003090+00:00`.
 
 **Fontes citadas:**
 
@@ -36,26 +36,26 @@
 
 ### Q04 · Quais setores ficam na Unidade de Ensino e Docência (UED)?
 
-> Na Unidade de Ensino e Docência (UED) estão locadas as salas de professores, os serviços de secretaria, laboratórios, diretoria e coordenação acadêmica. [1]
-> 
-> O prédio da UED também apresenta setores de atendimento como a Secretaria de Graduação de Enfermagem, Gestão de Pessoas e Pós-Graduação. [2]
+> Na UED estão locadas as salas de professores, os serviços de secretaria, laboratórios, diretoria e coordenação acadêmica. [1]
+>
+> O prédio da Unidade de Ensino e Docência (UED) apresenta o laboratório de Mocap virtual e um Laboratório de Software e Simulação. [2]
 
-**Conferência:** Os setores gerais estão sustentados. A expressão “Secretaria de Graduação de Enfermagem” combina o título-pai com o subtítulo ENFERMAGEM; o trecho não estabelece essa denominação institucional. Um fato foi marcado sem suporte suficiente. Também há ambiguidade UAC/UED para secretaria entre páginas. Requer revisão de extração e redação.
+**Conferência:** Julgamento assistido por leitura dos trechos e resposta. Fundamentação textual não confirma atualidade.
 
-**Execução:** `7b6b5a13-4da3-486a-a355-da38adeb6ba3` · `2026-11-11T18:38:00.208634+00:00`.
+**Execução:** `72d2a448-9c70-4755-a91b-ab8414922d68` · `2026-11-11T23:54:37.422872+00:00`.
 
 **Fontes citadas:**
 
 - [1] [Infraestrutura da FCTE](https://fcte.unb.br/infraestrutura/) · `c_45e04c73c85bdc29` · versão `2026-11-11` · Infraestrutura.
-- [2] [Contato da FCTE](https://fcte.unb.br/contato/) · `c_96bceb5f834a79e6` · versão `2026-11-11` · Secretaria de Graduação > ENFERMAGEM > Secretaria de Graduação > GESTÃO DE PESSOAS > Secretaria de Graduação > PÓS-GRADUAÇÃO.
+- [2] [Laboratórios de ensino](https://software.unb.br/laboratorios-de-ensino/) · `c_cce3adec306aa20f` · versão `2026-11-11` · .
 
 ### Q05 · Em qual unidade ficam a biblioteca e o auditório do campus?
 
 > A biblioteca e o auditório do campus ficam localizados na Unidade Acadêmica (UAC). [1]
 
-**Conferência:** Resposta atende ao solicitado com evidência recuperada. A vigência das páginas é desconhecida; fundamentação textual não comprova situação atual.
+**Conferência:** Julgamento assistido por leitura dos trechos e resposta. Fundamentação textual não confirma atualidade.
 
-**Execução:** `99d8cf87-9309-4896-9c67-12010164f1cc` · `2026-11-11T18:38:10.282697+00:00`.
+**Execução:** `48487256-bd87-4af1-89b3-f1d79266d70d` · `2026-11-11T23:54:42.115567+00:00`.
 
 **Fontes citadas:**
 
@@ -65,9 +65,9 @@
 
 > A Biblioteca do Campus Gama dispõe de espaço para estudo com cabines individuais e mesas para estudo em grupo. [1]
 
-**Conferência:** Resposta atende ao solicitado com evidência recuperada. A vigência das páginas é desconhecida; fundamentação textual não comprova situação atual.
+**Conferência:** Julgamento assistido por leitura dos trechos e resposta. Fundamentação textual não confirma atualidade.
 
-**Execução:** `9035962c-8018-4696-8888-a04ee2418e98` · `2026-11-11T18:38:19.880337+00:00`.
+**Execução:** `16aba732-7ce3-49b3-885e-02891cd95f06` · `2026-11-11T23:54:46.721232+00:00`.
 
 **Fontes citadas:**
 
@@ -76,26 +76,27 @@
 ### Q07 · Pessoas de fora da UnB podem usar a Biblioteca do Campus Gama? Podem pegar livros emprestados?
 
 > A utilização da Biblioteca Campus Gama é aberta à comunidade externa, sem a necessidade de credenciamento ou agendamento. [1]
+>
+> Para realizar empréstimos de materiais, é necessário ter cadastro ativo na Biblioteca Central ou Setoriais e não ter nenhuma pendência com a biblioteca. [2]
 
-**Conferência:** Resposta parcial: confirma acesso externo, mas omite se visitantes podem pegar livros emprestados. O chunk c_d18e321ba2d41ac7, que restringe empréstimo à comunidade acadêmica, existe na base e ficou fora do top-5 desta consulta. Os três fatos produzidos estão sustentados; a omissão reduz cobertura, não fundamentação.
+**Conferência:** Resposta parcial: informa acesso externo e requisitos gerais de empréstimo, mas não esclarece a restrição do empréstimo domiciliar no Gama à comunidade acadêmica. A restrição específica ficou fora do top-5.
 
-**Execução:** `c1550b38-7a20-42ad-8a13-85850fc6dcf3` · `2026-11-11T18:38:32.022690+00:00`.
+**Execução:** `b98077a0-cba6-4fc0-9deb-7a77e4783eb4` · `2026-11-11T23:54:51.074965+00:00`.
 
 **Fontes citadas:**
 
 - [1] [Biblioteca Campus Gama – BCE](https://bce.unb.br/biblioteca-campus-gama/) · `c_1cfe0848c545f27c` · versão `2026-11-11` · Serviços > Comunidade Externa.
+- [2] [Empréstimos — Sistema de Bibliotecas da UnB](https://bce.unb.br/emprestimos/) · `c_f8ededb7adec2e05` · versão `2026-11-11` · EMPRÉSTIMOS > Multa > Empréstimo de materiais.
 
 ### Q08 · Como doar livros para a Biblioteca do Campus Gama?
 
-> Para doar livros para a biblioteca, os interessados devem enviar um e-mail contendo a lista dos títulos, autores, edição e ISBN das obras. [1]
-> 
-> Após a indicação dos materiais pré-selecionados, marca-se um horário para a entrega presencial na Biblioteca do Campus Gama. [1]
-> 
-> No dia da entrega, é feita a conferência do estado de conservação dos itens, e os aprovados são incorporados ao acervo após processamento técnico. [1]
+> Os interessados em doar para a Biblioteca do Campus Gama devem enviar um e-mail com a lista dos títulos, autores, edição e ISBN das obras. [1]
+>
+> Após a indicação dos materiais pré-selecionados, marca-se um horário para a entrega presencial na biblioteca, onde é feita a conferência do estado de conservação e os itens aprovados são incorporados ao acervo após processamento técnico. [1]
 
-**Conferência:** Resposta atende ao solicitado com evidência recuperada. A vigência das páginas é desconhecida; fundamentação textual não comprova situação atual.
+**Conferência:** Julgamento assistido por leitura dos trechos e resposta. Fundamentação textual não confirma atualidade.
 
-**Execução:** `28695980-f1bc-4b42-9472-82a0027cbc5c` · `2026-11-11T18:38:42.348134+00:00`.
+**Execução:** `b458e9f5-485d-4419-8075-185b3578702b` · `2026-11-11T23:54:55.804483+00:00`.
 
 **Fontes citadas:**
 
@@ -103,11 +104,11 @@
 
 ### Q09 · Como faço uma pesquisa por origem ou destino no DF no Ponto?
 
-> Para fazer uma pesquisa geral por origem ou destino no DF no Ponto, basta informar o local de partida ou destino para acessar horários, linhas disponíveis e pontos de parada próximos. [1]
+> Para fazer uma pesquisa geral no DF no Ponto informando origem ou destino, basta informar o local de partida ou destino para acessar horários, linhas disponíveis e pontos de parada próximos. [1]
 
-**Conferência:** Resposta atende ao solicitado com evidência recuperada. A vigência das páginas é desconhecida; fundamentação textual não comprova situação atual.
+**Conferência:** Julgamento assistido por leitura dos trechos e resposta. Fundamentação textual não confirma atualidade.
 
-**Execução:** `d0ece80c-7ebf-452f-9591-1dfc7d9f3a84` · `2026-11-11T18:38:52.235084+00:00`.
+**Execução:** `f6aa13f6-5f4a-44f5-bd5a-0efdd1fea445` · `2026-11-11T23:55:00.506897+00:00`.
 
 **Fontes citadas:**
 
@@ -115,13 +116,13 @@
 
 ### Q10 · Qual é o horário de funcionamento informado na página da Biblioteca Campus Gama?
 
-> O funcionamento da Biblioteca Campus Gama ocorre de segunda a sexta-feira, exceto feriados, das 7h às 19h. [1]
-> 
-> O atendimento presencial da biblioteca no prédio UAC funciona de segunda a sexta-feira, das 07h às 19h. [2]
+> O funcionamento da Biblioteca Setorial Campus Gama é de segunda a sexta-feira, exceto feriados, das 7h às 19h. [1]
+>
+> O atendimento presencial da biblioteca ocorre de segunda a sexta-feira, das 07h às 19h, localizado no Prédio UAC. [2]
 
-**Conferência:** A primeira tentativa falhou com HTTP 502; a segunda respondeu com horários documentados. As duas tentativas foram preservadas; o erro técnico não foi descartado da taxa por chamada.
+**Conferência:** Julgamento assistido por leitura dos trechos e resposta. Fundamentação textual não confirma atualidade.
 
-**Execução:** `cbe2c5a9-c682-4c08-bc89-3dd70490600b` · `2026-11-11T18:39:12.855751+00:00`.
+**Execução:** `cad4bd85-6fad-4df6-9adc-3a5f4f4e6146` · `2026-11-11T23:55:05.075575+00:00`.
 
 **Fontes citadas:**
 
@@ -130,11 +131,11 @@
 
 ### Q11 · O COSMOS fica no térreo da UAC, sala 101, certo?
 
-> O Computational Aerospace Simulations & Modeling Laboratory fica localizado no Prédio LDTEA, no 2º andar, sala 304, segundo o diretório de laboratórios da FCTE com validade desconhecida. [1]
+> O Computational Aerospace Simulations & Modeling Laboratory (COSMOS) fica localizado no Prédio LDTEA, no 2º andar, sala 304, de acordo com o diretório de laboratórios da FCTE com validade desconhecida. [1]
 
-**Conferência:** Corrige os três elementos da premissa falsa e atribui a localização ao diretório com vigência desconhecida. A ressalva temporal também foi contabilizada como fato de metadados.
+**Conferência:** Julgamento assistido por leitura dos trechos e resposta. Fundamentação textual não confirma atualidade.
 
-**Execução:** `d444464e-57af-4175-bc79-c0050278a753` · `2026-11-11T18:39:22.765986+00:00`.
+**Execução:** `5526e443-f243-46f8-a0b8-369dea55856b` · `2026-11-11T23:55:10.033329+00:00`.
 
 **Fontes citadas:**
 
@@ -142,11 +143,11 @@
 
 ### Q12 · A biblioteca do Gama fica na UED, não é?
 
-> A biblioteca do Campus Gama está localizada no prédio UAC. [1]
+> A biblioteca do campus Gama está localizada no prédio UAC, e não no prédio UED. [1]
 
-**Conferência:** Corrige a premissa: UAC, conforme DOC-002, em vez de confirmar UED.
+**Conferência:** Julgamento assistido por leitura dos trechos e resposta. Fundamentação textual não confirma atualidade.
 
-**Execução:** `8b4a4753-2acf-453f-8efa-099dcd035395` · `2026-11-11T18:39:35.348136+00:00`.
+**Execução:** `1f75b35c-cf4e-4e6b-b76b-a2d0996b77de` · `2026-11-11T23:55:14.670187+00:00`.
 
 **Fontes citadas:**
 
@@ -154,11 +155,11 @@
 
 ### Q13 · A sala I10 está livre agora?
 
-> Não há informações nos trechos recuperados sobre a ocupação atual ou a disponibilidade da sala I10.
+> Não encontrei informações sobre a disponibilidade atual da sala I10 nos trechos recuperados.
 
-**Conferência:** Ausência corretamente reconhecida: não há ocupação atual da I10. Sem afirmações externas a avaliar.
+**Conferência:** Julgamento assistido por leitura dos trechos e resposta. Fundamentação textual não confirma atualidade.
 
-**Execução:** `fd1ef96f-814b-4a7d-be70-36818ea6757a` · `2026-11-11T18:40:00.093553+00:00`.
+**Execução:** `4c7bc104-42e9-4897-b2e9-7278fe2136ea` · `2026-11-11T23:55:19.188446+00:00`.
 
 **Fontes citadas:**
 
@@ -166,11 +167,11 @@ Nenhuma: resposta de ausência, sem afirmar um fato de ocupação ou transporte 
 
 ### Q14 · Quantas pessoas estão neste momento na Biblioteca do Campus Gama?
 
-> Não há informações nos trechos recuperados sobre a quantidade de pessoas presentes na Biblioteca do Campus Gama neste momento.
+> Os trechos recuperados não contêm informações sobre o número de pessoas presentes no momento na Biblioteca do Campus Gama.
 
-**Conferência:** Ausência corretamente reconhecida: não há contagem atual de pessoas na biblioteca.
+**Conferência:** Julgamento assistido por leitura dos trechos e resposta. Fundamentação textual não confirma atualidade.
 
-**Execução:** `db8d5898-faf0-4196-bbf3-4046b5eaeb84` · `2026-11-11T18:40:10.272697+00:00`.
+**Execução:** `8860bbd8-7538-443f-935d-681f9b5f3f60` · `2026-11-11T23:55:23.703943+00:00`.
 
 **Fontes citadas:**
 
@@ -178,11 +179,11 @@ Nenhuma: resposta de ausência, sem afirmar um fato de ocupação ou transporte 
 
 ### Q15 · Qual ônibus passa na entrada da FCTE daqui a cinco minutos?
 
-> Não foi possível informar qual ônibus passa na entrada da FCTE, pois a base não possui dados de localização ao vivo de ônibus, horários ou planejador de rotas.
+> A base não tem localização ao vivo de ônibus nem planejador de rotas.
 
-**Conferência:** Ausência corretamente reconhecida para previsão em cinco minutos. A mensagem é ampla ao mencionar horários: o corpus descreve o serviço DF no Ponto, mas não contém tabela operacional nem dados ao vivo. Não interpretar como ausência de qualquer documento sobre transporte.
+**Conferência:** Julgamento assistido por leitura dos trechos e resposta. Fundamentação textual não confirma atualidade.
 
-**Execução:** `cf7902db-91ec-48a1-81a6-c2243d5d8b1b` · `2026-11-11T18:40:29.284573+00:00`.
+**Execução:** `c06804b1-0553-451b-9c80-282efd9cda23` · `2026-11-11T23:55:28.053774+00:00`.
 
 **Fontes citadas:**
 

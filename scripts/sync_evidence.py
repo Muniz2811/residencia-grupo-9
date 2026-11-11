@@ -17,7 +17,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-ROUND = '20261111T183730Z'
+ROUND = '20261111T235422Z'
 BASELINE_ROUND = '20261111T151703Z'
 
 
@@ -91,7 +91,7 @@ def main():
         catalog = list(csv.DictReader(handle))
     sources = [{'id': s['source_id'], 'title': s['titulo'], 'url': s['url'], 'scope': s['abrangencia'],
                 'indexed': s['source_id'] in counts,
-                'status': 'Aprovada e indexada' if s['source_id'] in counts else 'Aprovada; aquisição bloqueada',
+                'status': 'Aprovada e indexada' if s['source_id'] in counts else s['motivo'],
                 'chunks': counts[s['source_id']], 'version': s['versao'], 'reviewed_at': s['data_revisao'],
                 'validity': s['validade'], 'limitations': s['limitacoes'], 'sha256': s['sha256']}
                for s in catalog]
@@ -154,7 +154,7 @@ def main():
     if len({p['id'] for p in points}) != len(points):
         raise ValueError('IDs duplicados no mapa preservado')
     data = {'schema': 2, 'exported_at': datetime.now(timezone.utc).isoformat(), 'project': 'FCTE Campus · Grupo 09',
-            'summary': {'approved_sources': len(catalog), 'html_snapshots': len(counts), 'indexed_sources': len(counts),
+            'summary': {'approved_sources': len(catalog), 'html_snapshots': sum(f['tipo']=='pagina_web' and bool(f['sha256']) for f in catalog), 'indexed_sources': len(counts),
                         'chunks': len(chunks), 'embeddings_generated': len(vectors), 'dimensions': 384,
                         'map_points': len(points), 'map_indexed': False},
             'model': {'name': manifest['embeddings']['modelo'], 'revision': manifest['embeddings']['revisao'],
@@ -172,7 +172,7 @@ def main():
             'limitations': ['Site estático: reproduz registros, sem chamadas à API.',
                             'Reavaliação híbrida das mesmas perguntas conhecidas; não é holdout.',
                             'Julgamento assistido único, sem dupla revisão humana.',
-                            'KML é inventário separado da coleção ativa de 94 chunks.']}
+                            'KML é inventário separado da coleção ativa de 174 chunks.']}
     downloads.mkdir(parents=True, exist_ok=True)
     def save(path, value):
         path.write_text(json.dumps(value, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
@@ -198,7 +198,7 @@ def main():
         demos_md += [f"## {d['id'].capitalize()} · registro real", '', f"**Etapa:** {d['label']}. **Método:** `{d['method']}`.",
                      '', f"**Pergunta:** {d['question']}", '', '**Resposta registrada:**', '', '> ' + d['answer'].replace('\n', '\n> '),
                      '', f"Execução: `{d['request_id']}` · `{d['executed_at']}` · modelo `{d['model']}`.",
-                     '', f"Prompt `{d['prompt_version']}`; mesma coleção de 94 chunks. O ranking abaixo é o registrado nessa execução.", '',
+                     '', f"Prompt `{d['prompt_version']}`; coleção registrada na execução (demonstração de cabines preservada da base anterior). O ranking abaixo é o registrado nessa execução.", '',
                      '| Posição | Chunk / fonte | Distância cosseno | Usado na resposta? |', '|---:|---|---:|---|']
         for t in d['retrieved']:
             used = 'Sim' if t['id'] in d['source_ids'] else 'Não'
@@ -259,7 +259,7 @@ def main():
     checks = ['| Verificação observada | Resultado |', '|---|---|',
               f'| Matriz | {len(chunks)} × 384, float32 |', '| Valores finitos | Sim |',
               f'| Norma L2 mínima / máxima | {min(norms):.8f} / {max(norms):.8f} |',
-              '| Chroma persistido | Sim, 94 registros na coleção ativa |',
+              '| Chroma persistido | Sim, 174 registros na coleção ativa |',
               '| Reabertura sem ingestão | Confirmada em processos novos |']
     (ROOT / 'includes/verificacoes.md').write_text('\n'.join(checks) + '\n', encoding='utf-8')
     bundle = [*sorted((rag / 'src/unb_gama_rag').glob('*.py')), *sorted((rag / 'scripts').glob('*.py'))]

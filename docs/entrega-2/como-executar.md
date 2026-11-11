@@ -38,7 +38,7 @@ $env:PYTHONPATH = 'src'
 .\.venv\Scripts\python.exe scripts/06_conferir.py
 ```
 
-Confira bloqueios e conteúdo extraído. Os nomes dos artefatos e as regras estão em `config/rag.yaml`. Os registros de aprovação preservam a decisão da execução documentada; material atualizado exige revisão da nova versão. Nova aquisição pode encontrar páginas diferentes, então 94 chunks não é uma promessa para qualquer data.
+Confira bloqueios e conteúdo extraído. Os nomes dos artefatos e as regras estão em `config/rag.yaml`. Os registros de aprovação preservam a decisão da execução documentada; material atualizado exige revisão da nova versão. Nova aquisição pode encontrar páginas diferentes, então 174 chunks não é uma promessa para qualquer data.
 
 Para reconstruir **exatamente** a execução documentada, é preciso receber os originais e artefatos daquela versão por um meio autorizado. Eles não são redistribuídos no ZIP público.
 

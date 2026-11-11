@@ -5,8 +5,8 @@
 O protótipo **recupera informações do campus e responde com fontes**. A aplicação FCTE Campus usa uma API Python com embeddings locais, Chroma persistente e Gemini. Esta entrega apresenta artefatos, execução real e avaliação; o Pages reproduz os registros sem executar o modelo no navegador.
 
 <div class="fcte-status-grid">
-  <div class="fcte-status"><strong>25 documentos</strong><span>27 aprovados; dois bloqueados na aquisição</span></div>
-  <div class="fcte-status"><strong>94 × 384</strong><span>Chunks e embeddings E5 no Chroma local</span></div>
+  <div class="fcte-status"><strong>37 documentos</strong><span>42 aprovados; cinco fora do índice</span></div>
+  <div class="fcte-status"><strong>174 × 384</strong><span>Chunks e embeddings E5 no Chroma local</span></div>
   <div class="fcte-status"><strong>15/15 coletadas</strong><span>Rodada híbrida completa, com revisão e tentativas registradas</span></div>
 </div>
 
@@ -15,7 +15,7 @@ O protótipo **recupera informações do campus e responde com fontes**. A aplic
 | Exigência | O que entregamos | Onde conferir |
 |---|---|---|
 | Base curada | Catálogo, aprovação expressa, versões, limitações e seleção dos indexáveis | [Base](base-de-conhecimento.md) |
-| Mínimo de 20 documentos-fonte | **25 fontes efetivamente indexadas**, sem contar chunks como novas fontes | [Catálogo](base-de-conhecimento.md#catalogo-das-fontes) |
+| Mínimo de 20 documentos-fonte | **37 fontes efetivamente indexadas**, sem contar chunks como novas fontes | [Catálogo](base-de-conhecimento.md#catalogo-das-fontes) |
 | Estratégia de chunking | Estrutura de títulos e seções, alvo 300, sobreposição até 40 quando há subdivisão | [Chunking](chunking.md) |
 | Estratégia de embeddings | E5 multilíngue small fixado, 384 dimensões, prefixos e normalização | [Embeddings](embeddings.md) |
 | Banco vetorial implementado | Chroma persistente, coleção ativa e reabertura comprovada | [Banco](banco-vetorial.md) |
@@ -34,10 +34,10 @@ Pense numa biblioteca. Os documentos são os livros; os chunks são fichas de co
 [Ver uma consulta real](demonstracao.md){ .md-button }
 
 !!! info "O que a avaliação mostrou"
-    A rodada híbrida foi concluída nas **15 perguntas**, com uma retentativa técnica registrada. Recuperação: **12/12 respondíveis**; precisão: **16/75 trechos**; fundamentação: **48/49 fatos**; rastreabilidade: **16/16 citações**; ausência: **3/3**. Persistência confirmada novamente. Q04 requer revisão de uma denominação e Q07 ficou parcial; a precisão continua abaixo da meta. [Ver avaliação completa](avaliacao.md).
+    A base ampliada foi avaliada nas **15 perguntas**, todas com HTTP 200 na primeira tentativa. Hit@5 **12/12**; precisão **17/75**; fundamentação **49/49**; rastreabilidade **16/16**; ausência **3/3**. Persistência e 74 testes confirmados. Q07 ficou parcial e a precisão segue abaixo da meta. [Ver avaliação completa](avaliacao.md).
 
 ## Limites da conclusão
 
 O mínimo de fontes, indexação, consulta, resposta, rastreabilidade e documentação estão demonstrados. Isso conclui o protótipo desta entrega, sem declarar qualidade perfeita ou operação em produção. Ainda precisamos reduzir ruído, revisar vigência e ambiguidades e ampliar a avaliação humana. O orquestrador comum, ocupação de salas, transporte em tempo real e rotas continuam fora do implementado.
 
-O piloto antigo de cinco páginas e KML foi substituído na coleção ativa por **25 páginas e 94 chunks**. O mapa de 14 pontos continua como inventário separado; não é apresentado como parte desse índice.
+O piloto antigo de cinco páginas e KML foi substituído na coleção ativa por **37 documentos HTML/PDF e 174 chunks**. O mapa de 14 pontos continua como inventário separado; não é apresentado como parte desse índice.

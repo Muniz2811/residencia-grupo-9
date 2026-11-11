@@ -16,7 +16,7 @@ Esta página apresenta **registros reais**, não apenas respostas esperadas. A p
 - COSMOS, biblioteca, LEMA e ausência são da nova avaliação completa **híbrida**. Cabines é uma verificação adicional de continuidade de conversa, fora das quinze métricas.
 
 !!! info "Registros da implementação atual"
-    As execuções exibidas usam busca híbrida, prompt v2 e a coleção `fcte-796894d0d378f4f8d429`, de 25 fontes e 94 chunks. A assinatura do índice não muda necessariamente ao alterar a busca; método, prompt e execução também são registrados.
+    As execuções exibidas usam busca híbrida, prompt v2 e a coleção `fcte-a0d5e722cd0cf092bea5`, de 37 fontes e 174 chunks. A assinatura do índice não muda necessariamente ao alterar a busca; método, prompt e execução também são registrados.
 
 --8<-- "includes/demonstracoes.md"
 

@@ -1,10 +1,10 @@
 {
-  "executado_em": "2026-11-11T18:41:40.705924+00:00",
+  "executado_em": "2026-11-11T23:55:39.425810+00:00",
   "sem_ingestao": true,
   "sem_gemini": true,
   "modelos_em_modo_offline": true,
-  "manifesto_sha_antes": "17989fd5e809e40202f1fd879e6e601116ee4dea310daa56074e98b75fb350ed",
-  "manifesto_sha_depois": "17989fd5e809e40202f1fd879e6e601116ee4dea310daa56074e98b75fb350ed",
+  "manifesto_sha_antes": "4c39dd5ce01be7b98bd023863825386c95a3de05a722665cf12fc4edde8fb8f4",
+  "manifesto_sha_depois": "4c39dd5ce01be7b98bd023863825386c95a3de05a722665cf12fc4edde8fb8f4",
   "sucesso": true,
   "processos_novos": [
     {
@@ -14,8 +14,8 @@
       "exit_code": 0,
       "reaberto_sem_ingestao": true,
       "autoconsulta_confirmada": true,
-      "chunks": 94,
-      "colecao": "fcte-796894d0d378f4f8d429",
+      "chunks": 174,
+      "colecao": "fcte-a0d5e722cd0cf092bea5",
       "recuperados": []
     },
     {
@@ -28,7 +28,7 @@
       "reaberto_sem_ingestao": null,
       "autoconsulta_confirmada": null,
       "chunks": null,
-      "colecao": "fcte-796894d0d378f4f8d429",
+      "colecao": "fcte-a0d5e722cd0cf092bea5",
       "recuperados": [
         {
           "chunk_id": "c_f2c6f00293fae365",
@@ -38,12 +38,12 @@
         {
           "chunk_id": "c_df45b0823ed5a0bc",
           "source_id": "DOC-018",
-          "distancia": 0.13252830505371094
+          "distancia": 0.1325281858444214
         },
         {
           "chunk_id": "c_0904be5ddfac8a87",
           "source_id": "DOC-005",
-          "distancia": 0.16061687469482422
+          "distancia": 0.160616934299469
         },
         {
           "chunk_id": "c_cd613d115a6c619e",

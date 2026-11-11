@@ -4,12 +4,12 @@
     "label": "Reavaliação completa · busca híbrida",
     "question": "Em qual prédio, andar e sala fica o laboratório COSMOS?",
     "query": "Em qual prédio, andar e sala fica o laboratório COSMOS?",
-    "request_id": "2eaa73f0-6d35-425e-a67c-42381c332d2e",
-    "executed_at": "2026-11-11T18:37:31.179353+00:00",
+    "request_id": "bd9f039c-a5ea-401b-bf7e-b2926f93773a",
+    "executed_at": "2026-11-11T23:54:23.146691+00:00",
     "status": "answered",
-    "answer": "O laboratório COSMOS fica localizado no Prédio LDTEA, no 2º andar, Sala 304. [1]",
+    "answer": "O laboratório COSMOS fica localizado no prédio LDTEA, no 2º andar, sala 304. [1]",
     "model": "gemini-3.5-flash-lite",
-    "base_version": "796894d0d378f4f8d42929dc5a5eef75e22c70d2eeafd62d880171be67051267",
+    "base_version": "a0d5e722cd0cf092bea51f0cd09a8c38f3a702773e49b4c52b1c004d2cff7f99",
     "prompt_version": "campus-rag-v2",
     "method": "hibrida_rrf",
     "retrieved": [
@@ -34,10 +34,10 @@
         "version": "2026-11-11",
         "url": "https://lite.unb.br/computational-aerospace-simulations-modeling-laboratory/",
         "excerpt": "COSMOS – Computational Aerospace Simulations & Modeling Laboratory Computational Aerospace Simulations & Modeling Laboratory​ O Computational Aerospace Simulations",
-        "distance": 0.13252830505371094,
+        "distance": 0.1325281858444214,
         "rank": 2,
         "relevant": false,
-        "rrf": 0.03009207275993712
+        "rrf": 0.029726775956284153
       },
       {
         "id": "c_0904be5ddfac8a87",
@@ -47,7 +47,7 @@
         "version": "2026-11-11",
         "url": "https://fcte.unb.br/homologa_laboratorios/",
         "excerpt": "Diretório de laboratórios da FCTE Laboratórios FCTE Laboratórios de Engenharia de Software Centro de Estudos Desenvolvimento e Inovação",
-        "distance": 0.16061687469482422,
+        "distance": 0.160616934299469,
         "rank": 3,
         "relevant": false,
         "rrf": 0.02967032967032967
@@ -63,7 +63,7 @@
         "distance": 0.144400954246521,
         "rank": 4,
         "relevant": false,
-        "rrf": 0.029386529386529386
+        "rrf": 0.02886002886002886
       },
       {
         "id": "c_0cf9944816258a3e",
@@ -81,7 +81,7 @@
     ],
     "claims": [
       {
-        "text": "O laboratório COSMOS fica localizado no Prédio LDTEA, no 2º andar, Sala 304.",
+        "text": "O laboratório COSMOS fica localizado no prédio LDTEA, no 2º andar, sala 304.",
         "sourceIds": [
           "c_f2c6f00293fae365"
         ]
@@ -97,12 +97,12 @@
     "label": "Reavaliação completa · busca híbrida",
     "question": "Na biblioteca do Gama há lugar para estudar sozinho e em grupo?",
     "query": "Na biblioteca do Gama há lugar para estudar sozinho e em grupo?",
-    "request_id": "9035962c-8018-4696-8888-a04ee2418e98",
-    "executed_at": "2026-11-11T18:38:19.880337+00:00",
+    "request_id": "16aba732-7ce3-49b3-885e-02891cd95f06",
+    "executed_at": "2026-11-11T23:54:46.721232+00:00",
     "status": "answered",
     "answer": "A Biblioteca do Campus Gama dispõe de espaço para estudo com cabines individuais e mesas para estudo em grupo. [1]",
     "model": "gemini-3.5-flash-lite",
-    "base_version": "796894d0d378f4f8d42929dc5a5eef75e22c70d2eeafd62d880171be67051267",
+    "base_version": "a0d5e722cd0cf092bea51f0cd09a8c38f3a702773e49b4c52b1c004d2cff7f99",
     "prompt_version": "campus-rag-v2",
     "method": "hibrida_rrf",
     "retrieved": [
@@ -114,7 +114,7 @@
         "version": "2026-11-11",
         "url": "https://bce.unb.br/biblioteca-campus-gama/",
         "excerpt": "espaço para estudo com cabines individuais e mesas para estudo em grupo",
-        "distance": 0.12513822317123413,
+        "distance": 0.12513816356658936,
         "rank": 1,
         "relevant": true,
         "rrf": 0.03278688524590164
@@ -127,7 +127,7 @@
         "version": "2026-11-11",
         "url": "https://bce.unb.br/biblioteca-campus-gama/",
         "excerpt": "Biblioteca Campus Gama – BCE Serviços Os empréstimos poderão ser feitos durante o horário de funcionamento da biblioteca,",
-        "distance": 0.14143675565719604,
+        "distance": 0.14143669605255127,
         "rank": 2,
         "relevant": false,
         "rrf": 0.031746031746031744
@@ -140,10 +140,10 @@
         "version": "2026-11-11",
         "url": "https://software.unb.br/biblioteca/",
         "excerpt": "Biblioteca – Engenharia de Software A biblioteca do Campus Gama conta atualmente com 2810 exemplares de livros físicos",
-        "distance": 0.1403435468673706,
+        "distance": 0.14034348726272583,
         "rank": 3,
         "relevant": false,
-        "rrf": 0.03128054740957967
+        "rrf": 0.031054405392392875
       },
       {
         "id": "c_5faca10e6e792b67",
@@ -153,23 +153,23 @@
         "version": "2026-11-11",
         "url": "https://software.unb.br/laboratorios-de-ensino/",
         "excerpt": "Laboratórios de ensino O espaço físico da Faculdade do Gama é de aproximadamente 5.200 m2 e incluem salas",
-        "distance": 0.14181071519851685,
+        "distance": 0.14181065559387207,
         "rank": 4,
         "relevant": false,
-        "rrf": 0.030330882352941176
+        "rrf": 0.030117753623188408
       },
       {
-        "id": "c_ff640f1875faa059",
-        "source_id": "DOC-002",
-        "title": "Contato da FCTE",
-        "section": "Secretaria de Graduação > ADMINISTRAÇÃO > Secretaria de Graduação > BIBLIOTECA",
+        "id": "c_d358c91019bb9877",
+        "source_id": "DOC-028",
+        "title": "Guia do Estudante — Avaliação Socioeconômica UnB 2026",
+        "section": "Página 16",
         "version": "2026-11-11",
-        "url": "https://fcte.unb.br/contato/",
-        "excerpt": "Contato da FCTE Secretaria de Graduação ADMINISTRAÇÃO Atendimento Presencial: Segunda a sexta-feira Horário: 08h-12h e 14h-18h. Local :",
-        "distance": 0.1726556420326233,
+        "url": "https://dds.dac.unb.br/wp-content/uploads/2026/08/Guia_do_Estudante___Avaliacao_Socioeconomica_UnB_2026_compressed.pdf",
+        "excerpt": "Guia do Estudante — Avaliação Socioeconômica UnB 2026 Página 16 Ficou com dúvida? Se algo não ficou claro,",
+        "distance": 0.17363578081130981,
         "rank": 5,
         "relevant": false,
-        "rrf": 0.02877846790890269
+        "rrf": 0.02797339593114241
       }
     ],
     "claims": [
@@ -190,12 +190,12 @@
     "label": "Reavaliação completa · busca híbrida",
     "question": "A sala I10 está livre agora?",
     "query": "A sala I10 está livre agora?",
-    "request_id": "fd1ef96f-814b-4a7d-be70-36818ea6757a",
-    "executed_at": "2026-11-11T18:40:00.093553+00:00",
+    "request_id": "4c7bc104-42e9-4897-b2e9-7278fe2136ea",
+    "executed_at": "2026-11-11T23:55:19.188446+00:00",
     "status": "insufficient",
-    "answer": "Não há informações nos trechos recuperados sobre a ocupação atual ou a disponibilidade da sala I10.",
+    "answer": "Não encontrei informações sobre a disponibilidade atual da sala I10 nos trechos recuperados.",
     "model": "gemini-3.5-flash-lite",
-    "base_version": "796894d0d378f4f8d42929dc5a5eef75e22c70d2eeafd62d880171be67051267",
+    "base_version": "a0d5e722cd0cf092bea51f0cd09a8c38f3a702773e49b4c52b1c004d2cff7f99",
     "prompt_version": "campus-rag-v2",
     "method": "hibrida_rrf",
     "retrieved": [
@@ -207,10 +207,10 @@
         "version": "2026-11-11",
         "url": "https://fcte.unb.br/homologa_laboratorios/",
         "excerpt": "Diretório de laboratórios da FCTE Laboratórios FCTE Laboratórios de Engenharia de Software Laboratório de Inteligência Artificial – AILAB",
-        "distance": 0.16292285919189453,
+        "distance": 0.1629226803779602,
         "rank": 1,
         "relevant": false,
-        "rrf": 0.03278688524590164
+        "rrf": 0.032018442622950824
       },
       {
         "id": "c_0904be5ddfac8a87",
@@ -220,49 +220,49 @@
         "version": "2026-11-11",
         "url": "https://fcte.unb.br/homologa_laboratorios/",
         "excerpt": "Diretório de laboratórios da FCTE Laboratórios FCTE Laboratórios de Engenharia de Software Centro de Estudos Desenvolvimento e Inovação",
-        "distance": 0.1643739938735962,
+        "distance": 0.16437405347824097,
         "rank": 2,
         "relevant": false,
-        "rrf": 0.030834914611005692
+        "rrf": 0.03007688828584351
       },
       {
-        "id": "c_78aefd971e83ca2c",
-        "source_id": "DOC-016",
-        "title": "Quem somos LITE",
-        "section": "Ambiente Multiusuário",
-        "version": "2026-11-11",
-        "url": "https://lite.unb.br/quem-somos/",
-        "excerpt": "Quem somos LITE Ambiente Multiusuário O Laboratório Integrado de Tecnologias em Engenharias (LITE) oferece um ambiente multiusuário altamente",
-        "distance": 0.17003625631332397,
-        "rank": 3,
-        "relevant": false,
-        "rrf": 0.015625
-      },
-      {
-        "id": "c_def12e461bfc328e",
-        "source_id": "DOC-011",
-        "title": "Laboratórios de pesquisa",
+        "id": "c_8b347ac6195f3758",
+        "source_id": "DOC-034",
+        "title": "Realocação de sala e adequação de mobiliário — DACES",
         "section": "",
         "version": "2026-11-11",
-        "url": "https://software.unb.br/laboratorios-de-pesquisa/",
-        "excerpt": "Laboratórios de pesquisa Desde 2011, o corpo docente do curso de Engenharia de Software vêm criando laboratórios de",
-        "distance": 0.17127728462219238,
-        "rank": 4,
+        "url": "https://acessibilidade.unb.br/acessibilidade-urbanistica-e-arquitetonica/",
+        "excerpt": "Realocação de sala e adequação de mobiliário — DACES A DACES/DAC oferece apoio à estudantes cadastrados para solicitações",
+        "distance": 0.17335379123687744,
+        "rank": 3,
         "relevant": false,
-        "rrf": 0.015151515151515152
+        "rrf": 0.028068137824235385
       },
       {
-        "id": "c_3ec499d6018e067b",
-        "source_id": "DOC-025",
-        "title": "DF no Ponto – apresentação",
-        "section": "Agora, perder o ônibus é coisa do passado. > Planejamento de rota inteligente > Agora, perder o ônibus é coisa do passado. > Horários em tempo real > Agora, perder o ônibus é coisa do passado. > Alertas de serviço > Agora, perder o ônibus é coisa do passado. > Favoritos personalizados",
+        "id": "c_be2a6adafda33729",
+        "source_id": "DOC-040",
+        "title": "Biblioteca Digital e Sonora — BCE",
+        "section": "Biblioteca Digital e Sonora",
         "version": "2026-11-11",
-        "url": "https://dfnoponto.semob.df.gov.br/",
-        "excerpt": "DF no Ponto – apresentação Agora, perder o ônibus é coisa do passado. Planejamento de rota inteligente Descubra",
-        "distance": 0.17294496297836304,
+        "url": "https://bce.unb.br/bibliotecas-digitais/bds/",
+        "excerpt": "Biblioteca Digital e Sonora — BCE Biblioteca Digital e Sonora http://www.planalto.gov.br/ccivil_03/leis/L9610.htm Lei n. 13.146, de 06/07/ Institui a",
+        "distance": 0.15737956762313843,
+        "rank": 4,
+        "relevant": false,
+        "rrf": 0.01639344262295082
+      },
+      {
+        "id": "c_2ca840134bd85814",
+        "source_id": "DOC-039",
+        "title": "Serviços de acessibilidade — DACES",
+        "section": "Serviços de Acessibilidade > Intérpretes e Guia-Intérpretes",
+        "version": "2026-11-11",
+        "url": "https://acessibilidade.unb.br/servicos-de-acessibilidade/",
+        "excerpt": "Serviços de acessibilidade — DACES Serviços de Acessibilidade Intérpretes e Guia-Intérpretes const targetEl = document.querySelector(targetId); if (targetEl) {",
+        "distance": 0.1591806411743164,
         "rank": 5,
         "relevant": false,
-        "rrf": 0.014705882352941176
+        "rrf": 0.016129032258064516
       }
     ],
     "claims": [],
@@ -274,12 +274,12 @@
     "label": "Reavaliação completa · busca híbrida",
     "question": "Qual é a localização do LEMA?",
     "query": "Qual é a localização do LEMA?",
-    "request_id": "0b0f7b77-8451-4360-91f2-f497954bce4c",
-    "executed_at": "2026-11-11T18:37:50.407359+00:00",
+    "request_id": "3131541f-9425-42a0-9c84-795a27d00656",
+    "executed_at": "2026-11-11T23:54:33.003090+00:00",
     "status": "answered",
-    "answer": "O Laboratório de Estruturas e Materiais Aeroespaciais (LEMA) está localizado no Prédio LDTEA, no térreo, na sala 103. [1]",
+    "answer": "O Laboratório de Estruturas e Materiais Aeroespaciais (LEMA) está localizado no Prédio LDTEA, no térreo, sala 103. [1]",
     "model": "gemini-3.5-flash-lite",
-    "base_version": "796894d0d378f4f8d42929dc5a5eef75e22c70d2eeafd62d880171be67051267",
+    "base_version": "a0d5e722cd0cf092bea51f0cd09a8c38f3a702773e49b4c52b1c004d2cff7f99",
     "prompt_version": "campus-rag-v2",
     "method": "hibrida_rrf",
     "retrieved": [
@@ -291,7 +291,7 @@
         "version": "2026-11-11",
         "url": "https://lite.unb.br/servicos/",
         "excerpt": "Serviços LITE Serviços > Materiais e Estruturas LATAME – Laboratório de Tecnologias Ambientais, Materiais e Energia Equipamentos: Sistemas",
-        "distance": 0.1467711329460144,
+        "distance": 0.14677119255065918,
         "rank": 1,
         "relevant": false,
         "rrf": 0.032266458495966696
@@ -304,7 +304,7 @@
         "version": "2026-11-11",
         "url": "https://fcte.unb.br/homologa_laboratorios/",
         "excerpt": "Laboratório de Estruturas e Materiais Aeroespaciais – LEMA … Local: Prédio LDTEA – Térreo – Sala 103",
-        "distance": 0.16081291437149048,
+        "distance": 0.16081303358078003,
         "rank": 2,
         "relevant": true,
         "rrf": 0.03128054740957967
@@ -351,7 +351,7 @@
     ],
     "claims": [
       {
-        "text": "O Laboratório de Estruturas e Materiais Aeroespaciais (LEMA) está localizado no Prédio LDTEA, no térreo, na sala 103.",
+        "text": "O Laboratório de Estruturas e Materiais Aeroespaciais (LEMA) está localizado no Prédio LDTEA, no térreo, sala 103.",
         "sourceIds": [
           "c_f2c6f00293fae365"
         ]

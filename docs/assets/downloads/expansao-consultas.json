@@ -1,0 +1,92 @@
+[
+  {
+    "pergunta": "Onde fica o atendimento de assistência estudantil no Gama segundo o guia da DDS de 2026?",
+    "tentativa": 1,
+    "http": 200,
+    "answer": "Segundo o guia da DDS de 2026, o atendimento de assistência estudantil no campus Gama ocorre na FCTE/UnB, Prédio UAC, 1º andar, nas salas A1-66/19 e A1-63/19, próximo à sala Multiuso. [1]",
+    "sources": [
+      {
+        "id": "c_d358c91019bb9877",
+        "sourceId": "DOC-028",
+        "title": "Guia do Estudante — Avaliação Socioeconômica UnB 2026",
+        "excerpt": "Guia do Estudante — Avaliação Socioeconômica UnB 2026\nPágina 16\nFicou com dúvida?\nSe algo não ficou claro, procure os canais oficiais da DDS:\nDarcy Ribeiro: Prédio BAES (próximo ao Centro Comunitário Athos Bulcão)\ncoae.dds@unb.br\n15\n(61) 3107-2310 / 3107-2311 (Darcy Ribeiro)\n7h30 as 19h30\nFaculdade de Ceilândia: UAC sala A1 7/9\n(61) 3107-8407\nFaculdade do Gama: FCTE/UnB - Campus Gama - Prédio UAC, 1° andar\nSalas A1-66/19 e A1-63/19 (Próximo à sala Multiuso)\ncoae.fcte@unb.br\nFaculdade de Planaltina\n(61) 3107-8280\nNas próximas páginas você encontrará a tabela dos documentos necessários para\nter sua Avaliação Socioeconômica realizada.\nGUIA DO ESTUDANTE · UnB",
+        "url": "https://dds.dac.unb.br/wp-content/uploads/2026/08/Guia_do_Estudante___Avaliacao_Socioeconomica_UnB_2026_compressed.pdf",
+        "section": "Página 16",
+        "version": "2026-11-11",
+        "reviewedAt": "2026-11-11",
+        "validUntil": "desconhecida",
+        "distance": 0.1240159273147583
+      }
+    ],
+    "request_id": "6f32a2c0-9c89-4958-9c1c-7dc8cdbd1517",
+    "base_version": "a0d5e722cd0cf092bea51f0cd09a8c38f3a702773e49b4c52b1c004d2cff7f99"
+  },
+  {
+    "pergunta": "Como solicitar apoio à DACES pelo SIGAA?",
+    "tentativa": 1,
+    "http": 200,
+    "answer": "Para solicitar apoio à DACES pelo SIGAA, acesse o endereço eletrônico do SIGAA Acadêmico, clique em Outros no menu horizontal, selecione Necessidades Educacionais Específicas e depois Solicitar Apoio a DACES. [1] [2]\n\nNa página de Cadastro de Discente com DACES, preencha os dados da solicitação marcando suas necessidades educacionais, insira a justificativa e as demandas de acessibilidade no campo de texto e clique em Cadastrar. [1] [3]",
+    "sources": [
+      {
+        "id": "c_f6a8ecfbf8190b7e",
+        "sourceId": "DOC-033",
+        "title": "Solicitação de atendimento para discentes — DACES",
+        "excerpt": "Solicitação de atendimento para discentes — DACES\nTutorial de cadastro na DACES\n1º PASSO: Acesse o endereço eletrônico: https://autenticacao.unb.br\nQuando a página carregar clique em ”SIGAA (Acadêmico)”, você será redirecionado para a página de login do estudante.\nApós o redirecionamento, escreva seu login e senha na caixa de autenticação integrada e clique em “ENTRAR”.\n2º PASSO: Após fazer login você será redirecionado para a página inicial do SIGAA.\nNo menu horizontal passe o mouse em cima de “Outros”, depois vá em “Necessidades Educacionais Específicas” e logo em seguida clique em “Solicitar Apoio a DACES”.\n3º PASSO: Você será redirecionado à página de\n“Cadastro de Discente com DACES”.\nEm “DADOS DA SOLICITAÇÃO” você irá marcar quais são suas necessidades educacionais e, abaixo, no campo de texto, você irá escrever a justificativa para a sua solicitação de apoio à DACES. Antecipe informações sobre suas demandas de acessibilidade e as barreiras que você enfrenta no processo de aprendizagem.\nConfira todas as informações e depois clique em “Cadastrar”.",
+        "url": "https://acessibilidade.unb.br/solicitacao-de-atendimento-para-discentes/",
+        "section": "Tutorial de cadastro na DACES",
+        "version": "2026-11-11",
+        "reviewedAt": "2026-11-11",
+        "validUntil": "desconhecida",
+        "distance": 0.09260392189025879
+      },
+      {
+        "id": "c_d1461ff9e4eafadc",
+        "sourceId": "DOC-038",
+        "title": "Manual do Calouro 2026.2 — UnB",
+        "excerpt": "Manual do Calouro 2026.2 — UnB\nPágina 97\n• Acessibilidade pedagógica: Materiais didáticos e pedagógicos em formato acessível, avaliações acessíveis e critérios de correção que respeitem singularidades lin guísticas, oferta de serviços de ledor e transcritor, além da orientação aos docentes para práticas educacionais inclusivas;\nCadastro na DACES/DAC A solicitação deve ser registrada no SIGAA (Acadêmico), em: Outros › Necessidades Educacio nais Específicas › Solicitar Apoio à DACES.\nContatos\n(61) 3107-6323\nacessibilidade.unb.br\ndaces@unb.br\nUniversidade de Brasília\n97",
+        "url": "https://vempraunb.unb.br/wp-content/uploads/manual_do_calouro_2026_2.pdf",
+        "section": "Página 97",
+        "version": "2026-11-11",
+        "reviewedAt": "2026-11-11",
+        "validUntil": "desconhecida",
+        "distance": 0.13994944095611572
+      },
+      {
+        "id": "c_8727c807a2f4211f",
+        "sourceId": "DOC-033",
+        "title": "Solicitação de atendimento para discentes — DACES",
+        "excerpt": "Solicitação de atendimento para discentes — DACES\nTutorial de cadastro na DACES\nConfira todas as informações e depois clique em “Cadastrar”.\n4º PASSO: Após clicar em “Cadastrar” você será redirecionado novamente à página inicial do SIGAA e irá aparecer a mensagem “Operação realizada com sucesso!”.\nPronto, sua solicitação de atendimento à Diretoria de Acessibilidade foi feita!",
+        "url": "https://acessibilidade.unb.br/solicitacao-de-atendimento-para-discentes/",
+        "section": "Tutorial de cadastro na DACES",
+        "version": "2026-11-11",
+        "reviewedAt": "2026-11-11",
+        "validUntil": "desconhecida",
+        "distance": 0.09656369686126709
+      }
+    ],
+    "request_id": "40b8a1f4-195c-40ae-a0b2-8a3c9bfa1629",
+    "base_version": "a0d5e722cd0cf092bea51f0cd09a8c38f3a702773e49b4c52b1c004d2cff7f99"
+  },
+  {
+    "pergunta": "Qual login uso para conectar na rede UnB Wireless e no Eduroam?",
+    "tentativa": 1,
+    "http": 200,
+    "answer": "Para o Eduroam, utiliza-se o login e a senha do e-mail da instituição. [1]\n\nPara a UnB Wireless, utiliza-se o login sem @unb.br ou @aluno.unb.br e a senha do e-mail institucional da UnB. [1]",
+    "sources": [
+      {
+        "id": "c_a417a3246ac00cdd",
+        "sourceId": "DOC-030",
+        "title": "UnB Wireless e Eduroam — STI",
+        "excerpt": "UnB Wireless e Eduroam — STI\nUnB WIRELESS E EDUROAM\nA UnB Wireless e a EDURoam são serviços de acesso sem fio seguros, que permitem que discentes, docentes e técnicos-administrativos da UnB obtenham conectividade à Internet, por meio de conexão sem fio (Wi-Fi), no âmbito da UnB.\nCredenciais de Acesso:\nEDURoam: login e senha do e-mail da sua instituição (para maiores informações, acesse aqui)\nUNB Wireless: login (sem @unb.br ou @aluno.unb.br) senha do e-mail institucional da UnB\nVisitantes sem vínculo com a UnB ou EduRoam:\nO Acesso à Rede Sem Fio para visitantes se dá por meio do cadastro realizado nas unidades acadêmicas e administrativas da UnB realizada pelo agente de relacionamento. É concedido ao visitante apenas o serviço de acesso à UnB Wireless para acesso à Internet.\nPara instruções detalhadas, por favor, selecione o sistema do seu computador ou dispositivo abaixo:\nAndroid\nApple iOS\nWindows\nMAC\nUbuntu",
+        "url": "https://sti.unb.br/unb-wireless-e-eduroam/",
+        "section": "UnB WIRELESS E EDUROAM",
+        "version": "2026-11-11",
+        "reviewedAt": "2026-11-11",
+        "validUntil": "desconhecida",
+        "distance": 0.08044588565826416
+      }
+    ],
+    "request_id": "c3b43974-3d97-4b59-a9a8-604bc7e8501a",
+    "base_version": "a0d5e722cd0cf092bea51f0cd09a8c38f3a702773e49b4c52b1c004d2cff7f99"
+  }
+]

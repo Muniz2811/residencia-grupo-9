@@ -4,7 +4,7 @@ template: mapping.html
 
 # Mapeamento do campus
 
-O arquivo `Mapeamento.kml` fornecido pela equipe contém **14 marcadores Point**. Todos foram preservados no inventário geográfico. Onze foram selecionados no piloto histórico, mas **nenhum deles compõe a coleção textual ativa de 94 chunks**.
+O arquivo `Mapeamento.kml` fornecido pela equipe contém **14 marcadores Point**. Todos foram preservados no inventário geográfico. Onze foram selecionados no piloto histórico, mas **nenhum deles compõe a coleção textual ativa de 174 chunks**.
 
 <div data-campus-map data-map-tiles="https://tile.openstreetmap.org/{z}/{x}/{y}.png"></div>
 
